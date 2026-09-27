@@ -9,7 +9,7 @@
       "product_url": "https://snyk.io/product/open-source-security-management/",
       "is_new_entrant": false,
       "type": "Commercial",
-      "deployment": "SaaS (multi-region incl. EU/AU tenants); Snyk Broker for private SCM/registry connectivity; no true air-gap",
+      "deployment": "SaaS (multi-region incl. EU/AU tenants); Snyk Broker for private SCM/registry connectivity; custom CA certificate upload for internal SCM/registry endpoints (Sept 2026); no true air-gap",
       "languages_coverage": "npm, PyPI, Maven/Gradle, NuGet, Go, RubyGems, Composer, Cocoapods, Swift PM, Cargo (Rust), Elixir/Hex, C/C++ (unmanaged), containers (Snyk Container)",
       "key_features": "Reachability analysis (Java, JS/TS, Python, Go per docs, Nov 2025 update) | License compliance policies | Transitive dependency graph with fix-path | Auto-remediation / fix PRs and Snyk Agent Fix | Policy engine and priority score (CVSS, EPSS, exploit maturity, reachability) | SBOM export (CycloneDX/SPDX) and 'snyk aibom' AI-BOM (CycloneDX 1.6, June 2026)",
       "ai_capabilities": {
@@ -31,9 +31,21 @@
       "indicative_cost_usd": "Team ~$300/dev/year list; Enterprise typically $30k-$150k+/year for 100-500 devs (market estimate, not vendor-disclosed)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first teams standardising on one platform (SCA+SAST+Container+IaC) with strong IDE and agent workflows; not for air-gapped clients",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-27",
       "sources": "https://snyk.io/plans/|https://docs.snyk.io/whats-new|https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/|https://github.com/snyk/agent-scan",
       "recent_updates": [
+        {
+          "date": "2026-09-18",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1307.3 released with policy-file handling fixes and dependency vulnerability resolutions (CVE-2026-63376, CVE-2026-77465).",
+          "source": "https://updates.snyk.io/"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "Feature launch",
+          "summary": "Snyk added custom CA certificate support so organisations can upload internal Certificate Authority certificates and scans trust internal endpoints the same as public ones.",
+          "source": "https://updates.snyk.io/"
+        },
         {
           "date": "2026-06-01",
           "type": "Feature launch",
@@ -50,19 +62,19 @@
       "type": "Commercial",
       "deployment": "SaaS (Polaris) / On-prem (Black Duck Hub) / Hybrid; on-prem supports restricted and air-gapped installs with offline KB updates",
       "languages_coverage": "100+ ecosystems incl. npm, PyPI, Maven/Gradle, NuGet, Go, Cargo, Ruby, PHP, Swift, C/C++ via snippet/binary matching, containers, firmware/binaries (Binary Analysis)",
-      "key_features": "Multi-factor discovery: package manager, signature (CodePrint), snippet and binary matching | Deepest license compliance and obligations KB (Forrester top scores) | Transitive analysis with BOM Engine | Policy engine and Black Duck Security Advisories (BDSA) enriched intel | SBOM import/export (SPDX, CycloneDX) and SBOM validation | AI Model Risk Insights: detects Hugging Face models incl. obfuscated, model licenses and model cards (Nov 2025)",
+      "key_features": "Multi-factor discovery: package manager, signature (CodePrint), snippet and binary matching | Deepest license compliance and obligations KB (Forrester top scores) | Transitive analysis with BOM Engine | Policy engine and Black Duck Security Advisories (BDSA) enriched intel | SBOM import/export (SPDX, CycloneDX) and SBOM validation | AI Model Risk Insights: detects Hugging Face models incl. obfuscated, model licenses and model cards (Nov 2025) | Polaris async SCA notifications for new/reclassified critical and high vulns with project/branch subscriptions (Sept 2026) | Polaris central rule configuration with org/application/project inheritance, audit trail and self-hosted SCM bulk onboarding with PR-driven remediation (Sept 2026)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Partial: BDSA enrichment, exploitability and reachability signals; no published function-level reachability comparable to Endor/Semgrep (unverified)",
-        "ai_auto_remediation_upgrade_prs": "Partial: Black Duck Assist provides AI-driven code fixes in IDE (Aug 2025), oriented to SAST; SCA upgrade guidance not agentic",
+        "ai_auto_remediation_upgrade_prs": "Partial: Black Duck Assist provides AI-driven code fixes in IDE (Aug 2025), oriented to SAST; SCA upgrade guidance not agentic; Polaris self-hosted SCM support enables PR-driven remediation workflows (Sept 2026)",
         "malicious_package_detection_ml_llm": "Partial: malicious package detection listed for some ecosystems; ML/LLM method not disclosed",
         "natural_language_query": "Yes: Polaris AI chatbot with natural-language query (2025)",
-        "agent_mcp_integration": "Partial: Black Duck Assist IDE assistant scans AI-generated code; MCP server not confirmed (unverified)",
+        "agent_mcp_integration": "Partial: Black Duck Assist IDE assistant scans AI-generated code; Signal AI Code Analysis runs six agents (code-focused, not SCA) with results uploaded to Polaris as SARIF under an 'AI' tool type (Sept 2026); MCP server not confirmed (unverified)",
         "ai_model_or_ai_library_dependency_detection": "Yes: AI Model Risk Insights (GA Nov 2025)",
-        "model_used_or_byo_llm": "not publicly disclosed"
+        "model_used_or_byo_llm": "BYO LLM for Signal AI Code Analysis: each agent can use a different provider/model/endpoint across OpenAI, Azure OpenAI, AWS Bedrock, GCP Vertex AI or compatible proxies, run on customer-controlled infrastructure (Polaris, Sept 2026); models behind Polaris chatbot/Assist not publicly disclosed"
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.nasdaq.com/press-release/black-duck-sca-introduces-ai-model-risk-scanning-enhanced-software-security-insights",
-      "integrations": "IDE (VS Code, JetBrains, Eclipse, Visual Studio via Assist/Code Sight), Jenkins, GitHub Actions, GitLab, Azure DevOps, Bamboo, TeamCity, Artifactory, Nexus, Jira, ServiceNow, Coverity/Polaris platform",
+      "integrations": "IDE (VS Code, JetBrains, Eclipse, Visual Studio via Assist/Code Sight), Jenkins, GitHub Actions, GitLab, Azure DevOps, Bamboo, TeamCity, Artifactory, Nexus, Jira, ServiceNow, Coverity/Polaris platform; Polaris self-hosted SCM connectors for GitHub Enterprise Server, GitLab self-managed, Azure DevOps Server, Bitbucket Data Center with repository discovery and bulk onboarding (Sept 2026)",
       "sectors_reference_customers": "Vendor-claimed: automotive, medical devices, financial services, semiconductors, M&A audit; 'Black Duck Audits' widely used in tech due diligence; named customers not listed on public MQ page",
       "analyst_position": "Gartner MQ AST 2025: Leader (8th consecutive; highest Ability to Execute). Forrester Wave SCA Q4 2024: Leader (highest scores in 9 criteria). Gartner MQ SSCS 2026: Leader (June 2026)",
       "cons_known_gaps": "Highest-cost tier in market; complex licensing across Hub, Polaris, Binary Analysis, Audits | Heavy on-prem footprint (Postgres, KB sync) and upgrade effort | Developer experience and scan speed lag developer-first tools | PE ownership since 2024 raises roadmap and pricing uncertainty | Reachability and malicious-package depth trail specialists",
@@ -70,8 +82,16 @@
       "indicative_cost_usd": "Not publicly disclosed; market reports commonly cite $50k-$500k+/year for mid-to-large enterprises (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated enterprises needing on-prem/air-gap, license-obligation rigor, binary and snippet scanning, M&A audits; strong fit for consulting delivery in BFSI, auto, medtech",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.blackduck.com/blog/black-duck-leader-2025-gartner-magic-quadrant-application-security-testing.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/blog/forrester-wave-sca.html|https://clearlake.com/clearlake-and-francisco-partners-complete-acquisition-of-black-duck-software-formerly-known-as-synopsys-software-integrity-group/"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.blackduck.com/blog/black-duck-leader-2025-gartner-magic-quadrant-application-security-testing.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/blog/forrester-wave-sca.html|https://clearlake.com/clearlake-and-francisco-partners-complete-acquisition-of-black-duck-software-formerly-known-as-synopsys-software-integrity-group/",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Feature launch",
+          "summary": "Polaris September 2026 update adds async SCA notifications for new or reclassified critical/high vulnerabilities, central rule configuration with hierarchical policy inheritance, self-hosted SCM onboarding (GitHub, GitLab, Azure DevOps Server, Bitbucket) with PR-driven remediation, CWE Top 25 2024/2025, and Signal AI Code Analysis with bring-your-own LLM (OpenAI, Azure OpenAI, AWS Bedrock, GCP Vertex AI) run on customer infrastructure.",
+          "source": "https://www.blackduck.com/blog/polaris-september-2026-update.html"
+        }
+      ]
     },
     {
       "tool": "Mend SCA (Mend.io platform incl. Renovate and Mend AI)",
@@ -177,7 +197,7 @@
       "key_features": "Agent-based and upload-based SCA with vulnerable-method reachability (Java, .NET, Python, JS) | Package Firewall (Phylum technology, acquired Jan 2025) integrated into the Veracode platform: blocks malicious/risky packages at ingestion via Nexus, Artifactory, Azure Artifacts proxies (Jan 2026), with Package Firewall analytics in the Veracode UI | License compliance and policy | Transitive analysis and fix recommendations | Veracode Fix for code; SCA intelligent policies (2026) | SBOM export (CycloneDX/SPDX); Risk Manager (ASPM)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: Risk Manager AI-assisted prioritisation with reachability and exploit intel",
-        "ai_auto_remediation_upgrade_prs": "Partial: Veracode Fix (LLM-assisted) is documented for SAST findings; SCA remediation is deterministic upgrade/fix-version guidance with intelligent policies (Jan 2026). Veracode Fix coverage of SCA findings is not confirmed on vendor pages (unverified)",
+        "ai_auto_remediation_upgrade_prs": "Partial: Veracode Fix (LLM-assisted) is documented for SAST findings; Veracode CLI exposes a 'veracode fix sca' command for SCA remediation (JavaScript performance improvements in CLI v2.52.1, Sept 2026), but whether SCA fixes are LLM-generated versus deterministic upgrade guidance with intelligent policies (Jan 2026) is not stated on vendor pages (unverified)",
         "malicious_package_detection_ml_llm": "Yes: Phylum heuristics and ML analyse package behaviour, author reputation and code for malware, typosquats and hallucinated packages",
         "natural_language_query": "Not publicly confirmed",
         "agent_mcp_integration": "Partial: IDE plugins; MCP server not confirmed as of Sept 2026 (unverified)",
@@ -194,8 +214,16 @@
       "indicative_cost_usd": "Not publicly disclosed; estimates $50k-$250k+/year for platform bundles (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Veracode SAST, or needing FedRAMP SaaS and an ingestion-time firewall",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge|https://www.veracode.com/blog/introducing-veracode-package-firewall/|https://www.helpnetsecurity.com/2026/01/28/veracode-platform-innovations/|https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge|https://www.veracode.com/blog/introducing-veracode-package-firewall/|https://www.helpnetsecurity.com/2026/01/28/veracode-platform-innovations/|https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Release",
+          "summary": "Veracode CLI v2.52.1 improves performance of the 'veracode fix sca' command for JavaScript projects; same update adds multi-team assignment for DAST targets.",
+          "source": "https://docs.veracode.com/updates"
+        }
+      ]
     },
     {
       "tool": "GitHub Dependabot / Dependency Review (GitHub Code Security)",
@@ -225,8 +253,16 @@
       "indicative_cost_usd": "$0 for Dependabot; ~$360/committer/year for Code Security",
       "pricing_confidence": "High",
       "best_fit_for": "GitHub-native teams as a baseline; pair with a reachability or malware-focused tool for enterprise coverage",
-      "last_verified": "2026-09-26",
-      "sources": "https://github.com/resources/insights/evolving-github-advanced-security|https://docs.github.com/en/enterprise-cloud@latest/code-security/getting-started/github-security-features|https://sdtimes.com/security/github-unbundling-its-github-advanced-security-offering-starting-in-april/|https://www.gartner.com/reviews/market/software-supply-chain-security"
+      "last_verified": "2026-09-27",
+      "sources": "https://github.com/resources/insights/evolving-github-advanced-security|https://docs.github.com/en/enterprise-cloud@latest/code-security/getting-started/github-security-features|https://sdtimes.com/security/github-unbundling-its-github-advanced-security-offering-starting-in-april/|https://www.gartner.com/reviews/market/software-supply-chain-security",
+      "recent_updates": [
+        {
+          "date": "2026-09-18",
+          "type": "Feature launch",
+          "summary": "npm granular access tokens gain a 'Read and write (stage only)' permission so CI automation can stage package versions for maintainer review without direct publish rights, reducing token-theft blast radius in the registry supply chain.",
+          "source": "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation"
+        }
+      ]
     },
     {
       "tool": "GitLab Dependency Scanning (GitLab Ultimate)",
@@ -236,13 +272,13 @@
       "type": "Open-core (scanner open source; features gated to Ultimate)",
       "deployment": "SaaS (gitlab.com, Dedicated) / On-prem (self-managed) / air-gap supported with offline advisory DB",
       "languages_coverage": "npm/yarn/pnpm, PyPI (pip, pipenv, poetry, uv), Maven/Gradle, NuGet, Go, Ruby, PHP, Cargo, Conan, Swift, CocoaPods, Dart via SBOM-based scanning; containers via Container Scanning (Trivy)",
-      "key_features": "SBOM-based dependency scanning (CycloneDX generated then analysed) | Licence compliance with SPDX expression policies | Malware advisories check (GitLab malware advisory DB) | Dependency list and SBOM export | Duo vulnerability resolution and dependency-scanning auto-remediation MRs that repair breaking bumps | Security policies (scan result, merge request approval)",
+      "key_features": "SBOM-based dependency scanning (CycloneDX generated then analysed) | Licence compliance with SPDX expression policies incl. compound expressions (MIT OR Apache-2.0) in dependency list and license approval policies (19.4, Sept 2026) | Malicious package detection against GitLab malware advisory DB for npm, PyPI, Maven, Go, NuGet, Cargo, RubyGems with Critical 'Malware' badges (Beta, 19.4, Sept 2026) | Dependency list and SBOM export | Duo vulnerability resolution and dependency-scanning auto-remediation MRs that repair breaking bumps | Vulnerability Context Flow (authentication, authorization level, sensitive-data indicators) and bulk vulnerability due-date API (19.4) | Security policies (scan result, merge request approval)",
       "ai_capabilities": {
-        "ai_triage_reachability_prioritisation": "Yes: GitLab Duo Security Agent triages vulnerabilities, false-positive detection in security configuration profiles",
+        "ai_triage_reachability_prioritisation": "Yes: GitLab Duo Security Agent triages vulnerabilities, false-positive detection in security configuration profiles; Vulnerability Context Flow adds auth/authz/sensitive-data triage context (19.4, Sept 2026)",
         "ai_auto_remediation_upgrade_prs": "Yes: Duo Vulnerability Resolution MRs; dependency scanning auto-remediation fixes build breaks from version bumps (2026 blog)",
-        "malicious_package_detection_ml_llm": "Partial: advisory-based malware detection, not ML",
+        "malicious_package_detection_ml_llm": "Partial: advisory-based malware detection against GitLab malware advisories (typosquats, compromised accounts, embedded malware) across npm, PyPI, Maven, Go, NuGet, Cargo, RubyGems; Beta in 19.4 (Sept 2026), not ML",
         "natural_language_query": "Yes: Duo Chat",
-        "agent_mcp_integration": "Yes: GitLab MCP server exposes vulnerability tools to agents; GitLab 19.0 agentic DevOps",
+        "agent_mcp_integration": "Yes: GitLab MCP server exposes vulnerability tools to agents; 19.4 (Sept 2026) adds vulnerability list/detail tools plus five write operations (dismiss, confirm, revert, override severity, create linked issue); GitLab 19.0 agentic DevOps",
         "ai_model_or_ai_library_dependency_detection": "No",
         "model_used_or_byo_llm": "Anthropic Claude and Google models via GitLab Duo; self-hosted Duo supports BYO models"
       },
@@ -252,12 +288,26 @@
       "sectors_reference_customers": "Vendor-claimed: public sector, financial services, telecom; Peer Insights 4.4/5 (23 ratings)",
       "analyst_position": "Gartner MQ AST 2025: position unverified (GitLab historically Niche/Challenger). Forrester Wave SCA Q4 2024: Challenger",
       "cons_known_gaps": "No reachability analysis | Advisory DB smaller than commercial KBs | Requires Ultimate tier (~$99/user/month list) | Duo AI features are add-on licences | Weak licence obligation reporting",
-      "pricing_model": "Included in GitLab Ultimate; Duo Enterprise add-on for AI",
+      "pricing_model": "Included in GitLab Ultimate; Duo Enterprise add-on for AI; credit-based AI usage with included then evaluation credits, per-event usage export, configurable credit caps and Flex spend-cap warnings at 50%/80% (19.4, Sept 2026)",
       "indicative_cost_usd": "Ultimate ~$99/user/month list ($1,188/user/year); Duo Enterprise additional (~$39/user/month, verify)",
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab-standardised enterprises and air-gapped/self-managed environments wanting native SCA baseline",
-      "last_verified": "2026-09-26",
-      "sources": "https://about.gitlab.com/direction/supply-chain/|https://about.gitlab.com/blog/dependency-scanning-auto-remediation/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/|https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/"
+      "last_verified": "2026-09-27",
+      "sources": "https://about.gitlab.com/direction/supply-chain/|https://about.gitlab.com/blog/dependency-scanning-auto-remediation/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/|https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/",
+      "recent_updates": [
+        {
+          "date": "2026-09-17",
+          "type": "Feature launch",
+          "summary": "GitLab 19.4 adds malicious package detection (Beta) that checks dependencies against GitLab malware advisories for npm, PyPI, Maven, Go, NuGet, Cargo and RubyGems with Critical-severity Malware badges, SPDX compound license expression support (AND/OR/WITH) in dependency scanning and license approval policies, Vulnerability Context Flow triage context, a bulk vulnerability due-date GraphQL API, and vulnerability read/write tools in the GitLab MCP server.",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-4-released/"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "Pricing change",
+          "summary": "GitLab 19.4 changes credit consumption order (included credits consume before evaluation credits), adds per-event credit usage exports and configurable credit caps, and adds 50%/80% early warnings on Flex spend caps.",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-4-released/"
+        }
+      ]
     },
     {
       "tool": "JFrog Xray / JFrog Advanced Security / JFrog Curation (incl. AI Catalog, Agent Guard, AppTrust)",
@@ -267,7 +317,7 @@
       "type": "Commercial",
       "deployment": "SaaS / On-prem (self-hosted) / Hybrid; air-gap supported with offline Xray DB sync",
       "languages_coverage": "All Artifactory package types: npm, PyPI, Maven, NuGet, Go, Docker/OCI, Conan, Cargo, RubyGems, Composer, Alpine/Debian/RPM, Hugging Face models, generic binaries",
-      "key_features": "Xray SCA on binaries in Artifactory with deep recursive scanning | Contextual Analysis (Advanced Security): exploitability/reachability for containers and applications | Curation: block malicious, licence-violating, risky packages before entering Artifactory | Malicious package identification and JFrog Security Research feed | SBOM export and AppTrust governance/policy-as-code | AI Catalog, MCP Registry, Skills Registry, Agent Guard (Sept 2026)",
+      "key_features": "Xray SCA on binaries in Artifactory with deep recursive scanning | Contextual Analysis (Advanced Security): exploitability/reachability for containers and applications | Curation: block malicious, licence-violating, risky packages before entering Artifactory, incl. Debian and Ubuntu packages (Xray 3.154.4, Sept 2026) and per-policy handling of packages pending Catalog analysis | CISA KEV as a security policy criterion (Xray 3.154, Sept 2026) | Malicious package identification and JFrog Security Research feed | SBOM export and AppTrust governance/policy-as-code | AI Catalog, MCP Registry, Skills Registry, Agent Guard (Sept 2026)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: Contextual Analysis exploitability; AI-assisted prioritisation",
         "ai_auto_remediation_upgrade_prs": "Partial: fix version recommendations; IDE remediation; not fully agentic PRs",
@@ -287,9 +337,15 @@
       "indicative_cost_usd": "SaaS Pro X from ~$150/month (Xray basic); Enterprise+ six figures typical (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Artifactory-centric enterprises wanting binary-level SCA, ingestion curation and AI-asset governance in one control plane",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-27",
       "sources": "https://jfrog.com/gartner-magic-quadrant/|https://jfrog.com/press-room/jfrog-embeds-security-into-the-agentic-workforce/|https://jfrog.com/blog/jfrog-recognized-visionary-gartner-2025-magic-quadrant-ast-report/|https://jfrog.com/advanced-security/",
       "recent_updates": [
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "Xray 3.154.4 extends JFrog Curation to Debian and Ubuntu packages with improved download URL handling and adds input validation hardening; 3.154.8 (16 Sept) reduces unused RabbitMQ transient queues.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
         {
           "date": "2026-09-02",
           "type": "Feature GA",
@@ -335,21 +391,21 @@
       "product_url": "https://www.aikido.dev/",
       "is_new_entrant": false,
       "type": "Commercial (open-source components: Opengrep, Betterleaks, Safe Chain)",
-      "deployment": "SaaS (EU/US) / on-prem scanning and self-hosted options on Pro+ tiers; private registry proxy; FedRAMP ATO claimed on Advanced tier",
+      "deployment": "SaaS (EU/US) / on-prem scanning and self-hosted options on Pro+ tiers; private registry proxy; FedRAMP ATO claimed on Advanced tier; on-prem/air-gapped AI via Aikido Altar open-weight model and Aikido Machine appliance (Sept 2026); available on AWS Marketplace (AWS Security Competency, Sept 2026)",
       "languages_coverage": "npm, PyPI, Maven/Gradle, NuGet, Go, Ruby, PHP, Cargo, Swift, Dart, Elixir, containers, IaC, VMs",
       "key_features": "SCA with reachability analysis | Aikido Intel: proprietary malware feed (~100k malicious packages/day claimed Apr 2026) | Safe Chain: blocks malicious packages at install (npm, pip and others) | AI AutoFix PRs and Aikido Libraries/Images patched versions (Root.io acquisition) | Licence compliance | SBOM export; combined SAST, secrets, CSPM, DAST, AI pentest",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: reachability and auto-triage of false positives",
-        "ai_auto_remediation_upgrade_prs": "Yes: AI AutoFix PRs (unlimited on paid tiers); patched library/image variants",
+        "ai_auto_remediation_upgrade_prs": "Yes: AI AutoFix PRs (unlimited on paid tiers); patched library/image variants; Deep PR Review can run on the on-prem Altar model (Sept 2026)",
         "malicious_package_detection_ml_llm": "Yes: Aikido Intel ML/LLM-assisted malware analysis of packages; Safe Chain enforcement",
         "natural_language_query": "Partial: not publicly confirmed",
         "agent_mcp_integration": "Yes: MCP server and IDE agent integrations; Device Protection inspects packages, extensions and AI tools pre-install",
         "ai_model_or_ai_library_dependency_detection": "Partial: AI tools inventory on devices; AI-BOM not confirmed",
-        "model_used_or_byo_llm": "not publicly disclosed; credits for advanced AI features"
+        "model_used_or_byo_llm": "Aikido Altar: open-weight model derived from Z.ai GLM-5.3 (328 GB, 4x H200 with vLLM), weights on Hugging Face under the GLM-5.3 license, deployable on-prem/air-gapped for Aikido Machine, Attack, Code Security Audit and Deep PR Review (Sept 2026); hosted models for other features not publicly disclosed; credits for advanced AI features"
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.aikido.dev/pricing",
-      "integrations": "IDE (VS Code, JetBrains), GitHub, GitLab, Bitbucket, Azure DevOps, CI (GitHub Actions, GitLab CI, Jenkins), Jira, Linear, Slack, Teams, Vanta/Drata",
+      "integrations": "IDE (VS Code, JetBrains), GitHub, GitLab, Bitbucket, Azure DevOps, CI (GitHub Actions, GitLab CI, Jenkins), Jira, Linear, Slack, Teams, Vanta/Drata, AWS (EC2, ECR, Lambda; AWS Marketplace)",
       "sectors_reference_customers": "Vendor-claimed 100k+ teams; named: Belfius (Belgian bank, Aug 2026); SMB/mid-market and scale-ups; Latio 2026 AppSec Platform Leader; Peer Insights 4.7/5 (15)",
       "analyst_position": "Gartner MQ AST 2025: not rated. Gartner MQ SSCS 2026: not publicly confirmed (unverified). Latio 2026: AppSec Platform Leader",
       "cons_known_gaps": "Enterprise governance and reporting thinner than Black Duck/Sonatype | Licence obligation depth limited | Rapid product sprawl (pentest, cloud, device) | Reachability language coverage not fully documented | Flat repo-count pricing awkward for large enterprises",
@@ -357,8 +413,22 @@
       "indicative_cost_usd": "$3,600-$7,200/year for mid-size teams; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Mid-market and fast-moving teams wanting low-noise all-in-one AppSec with strong malware defence at low cost",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.aikido.dev/pricing|https://en.wikipedia.org/wiki/Aikido_Security|https://www.aikido.dev/blog/latio-2026-appsec-report-aikido-platform-leader|https://www.aikido.dev/blog/shai-hulud-npm-resurfaces"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.aikido.dev/pricing|https://en.wikipedia.org/wiki/Aikido_Security|https://www.aikido.dev/blog/latio-2026-appsec-report-aikido-platform-leader|https://www.aikido.dev/blog/shai-hulud-npm-resurfaces",
+      "recent_updates": [
+        {
+          "date": "2026-09-21",
+          "type": "Feature launch",
+          "summary": "Aikido released Altar, an open-weight security model pruned and quantised from GLM-5.3 (1.51 TB to 328 GB, ~92% of parent vulnerability coverage) that runs on a 4x H200 node with vLLM, published on Hugging Face and offered for on-prem/air-gapped deployment to power Aikido Machine, Aikido Attack, Code Security Audit and Deep PR Review.",
+          "source": "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "Feature launch",
+          "summary": "Aikido achieved AWS Security Competency for Application Security, with the platform integrated with EC2, ECR and Lambda and procurable via AWS Marketplace.",
+          "source": "https://www.globenewswire.com/news-release/2026/09/17/3363903/0/en/aikido-achieves-aws-security-competency-for-application-security.html"
+        }
+      ]
     },
     {
       "tool": "FOSSA",
@@ -481,8 +551,16 @@
       "indicative_cost_usd": "~$420/contributor/year",
       "pricing_confidence": "High",
       "best_fit_for": "Teams already on Semgrep SAST wanting low-noise SCA with code-level reachability",
-      "last_verified": "2026-09-26",
-      "sources": "https://dev.to/rahulxsingh/semgrep-pricing-in-2026-open-source-vs-team-vs-enterprise-costs-3dic|https://semgrep.dev/docs/release-notes/march-2026|https://www.gartner.com/reviews/product/semgrep-supply-chain"
+      "last_verified": "2026-09-27",
+      "sources": "https://dev.to/rahulxsingh/semgrep-pricing-in-2026-open-source-vs-team-vs-enterprise-costs-3dic|https://semgrep.dev/docs/release-notes/march-2026|https://www.gartner.com/reviews/product/semgrep-supply-chain",
+      "recent_updates": [
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "Week of 14 Sept release improves Supply Chain scan-configuration request performance, adds Semgrep Guardian status reporting for AI coding agents (setup status plus scan summary), CSV export for Multimodal workflow issues, and corrects Autofix messaging for AWS Bedrock provider availability.",
+          "source": "https://docs.semgrep.dev/release-notes/2026-09-14"
+        }
+      ]
     },
     {
       "tool": "Cycode (Agentic Development Security Platform, incl. SCA)",
@@ -490,13 +568,13 @@
       "product_url": "https://cycode.com/platform/",
       "is_new_entrant": false,
       "type": "Commercial",
-      "deployment": "SaaS / private cloud; on-prem scanners via connectors; air-gap not standard",
+      "deployment": "SaaS / private cloud; on-prem scanners via connectors; Workstation Protection agentless control deployed via MDM (early access, Sept 2026); air-gap not standard",
       "languages_coverage": "npm, PyPI, Maven, NuGet, Go, Ruby, PHP, Cargo, containers, IaC; multi-SCM incl. GitHub, GitLab, Bitbucket, Azure DevOps",
-      "key_features": "SCA with reachability and Bulk AI Exploitability Analysis for SAST and SCA (July 2026) | Pipeline and SCM posture (CI/CD security) | Malicious package and secrets detection | Licence policies | ASPM risk graph correlating code to cloud | SBOM export",
+      "key_features": "SCA with reachability and Bulk AI Exploitability Analysis for SAST and SCA (July 2026) | Workstation Protection: MDM-deployed real-time package installation blocker with cooldown policies and malicious-package threat intel (early access, Sept 2026) | Pipeline and SCM posture (CI/CD security) | Malicious package and secrets detection | Licence policies | ASPM risk graph correlating code to cloud | SBOM export",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: AI exploitability analysis beyond reachability, batch mode across violations",
         "ai_auto_remediation_upgrade_prs": "Yes: AI fix suggestions and PRs",
-        "malicious_package_detection_ml_llm": "Partial: detection present; ML method not disclosed",
+        "malicious_package_detection_ml_llm": "Partial: detection present, plus Workstation Protection blocks known-malicious packages at install time using threat-intel feeds and cooldown policies (early access Sept 2026); ML method not disclosed",
         "natural_language_query": "Yes: AI assistant on risk graph",
         "agent_mcp_integration": "Yes: MCP and agent governance (ADSP positioning)",
         "ai_model_or_ai_library_dependency_detection": "Partial: AI coding tool visibility",
@@ -512,8 +590,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises consolidating SCA into ASPM with CI/CD pipeline security and AI-era governance",
-      "last_verified": "2026-09-26",
-      "sources": "https://cycode.com/blog/cycode-leader-gartner-magic-quadrant-sscs-2026/|https://cycode.com/blog/bulk-ai-exploitability-analysis/|https://appsecsanta.com/cycode"
+      "last_verified": "2026-09-27",
+      "sources": "https://cycode.com/blog/cycode-leader-gartner-magic-quadrant-sscs-2026/|https://cycode.com/blog/bulk-ai-exploitability-analysis/|https://appsecsanta.com/cycode",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Feature launch",
+          "summary": "Cycode launched Workstation Protection (early access), an MDM-deployed control that intercepts package installs on developer machines, blocking known-malicious packages via threat-intel feeds and enforcing cooldown policies, extending ADLC Security to workstations.",
+          "source": "https://www.globenewswire.com/news-release/2026/09/23/3367485/0/en/cycode-extends-its-adlc-security-capabilities-to-developers-workstations-stopping-software-supply-chain-attacks-before-they-start.html"
+        }
+      ]
     },
     {
       "tool": "Arnica",
@@ -574,8 +660,16 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Lightweight CI gate and SBOM vulnerability check; pairs with Dependency-Track",
-      "last_verified": "2026-09-26",
-      "sources": "https://github.com/google/osv-scanner/releases|https://blog.google/security/announcing-osv-scanner-v2-vulnerability/|https://appsecsanta.com/osv-scanner"
+      "last_verified": "2026-09-27",
+      "sources": "https://github.com/google/osv-scanner/releases|https://blog.google/security/announcing-osv-scanner-v2-vulnerability/|https://appsecsanta.com/osv-scanner",
+      "recent_updates": [
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "OSV-Scanner v2.6.0 adds a multi-arch (linux/arm64) osv-scanner-action image, gRPC retry with exponential backoff, Git repository URL extraction and local OSV tag matching for JavaScript lockfiles, experimental osv-scalibr plugins for more file types, and moves to Go 1.27.",
+          "source": "https://github.com/google/osv-scanner/releases/tag/v2.6.0"
+        }
+      ]
     },
     {
       "tool": "OWASP Dependency-Check",
@@ -616,7 +710,7 @@
       "type": "Open source (Apache-2.0)",
       "deployment": "Self-hosted containers (API server, frontend, PostgreSQL); air-gap supported with mirrored vulnerability sources",
       "languages_coverage": "Ecosystem-agnostic via CycloneDX SBOM ingestion (any language, containers, hardware, AI/ML BOM, SaaSBOM)",
-      "key_features": "Continuous SBOM analysis against NVD, OSV, GitHub Advisories, Snyk, Trivy, EPSS | v5.0 GA (9 June 2026): PostgreSQL-only, horizontal scaling, durable execution, CEL expression policies, component hash integrity checks | Policy engine (licence, security, operational) | VEX/VDR support, portfolio dashboards, notifications",
+      "key_features": "Continuous SBOM analysis against NVD, OSV, GitHub Advisories, Snyk, Trivy, EPSS | v5.0 GA (9 June 2026): PostgreSQL-only, horizontal scaling, durable execution, CEL expression policies, component hash integrity checks | v5.1 (Aug 2026) adds KEV support, JVN data source and Checkmarx SCA analyzer; v4.14.4 (Sept 2026) adds CycloneDX 1.7 BOM ingestion on the 4.x line | Policy engine (licence, security, operational) | VEX/VDR support, portfolio dashboards, notifications",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "No",
         "ai_auto_remediation_upgrade_prs": "No",
@@ -636,8 +730,16 @@
       "indicative_cost_usd": "$0 plus hosting",
       "pricing_confidence": "High",
       "best_fit_for": "SBOM operations backbone for clients with CRA/EO 14028 obligations; pair with Trivy/Syft/OSV-Scanner",
-      "last_verified": "2026-09-26",
-      "sources": "https://dependencytrack.org/news/dependency-track-5-0/|https://owasp.github.io/blog/2026/06/09/dependency-track-v5|https://github.com/DependencyTrack/dependency-track/releases"
+      "last_verified": "2026-09-27",
+      "sources": "https://dependencytrack.org/news/dependency-track-5-0/|https://owasp.github.io/blog/2026/06/09/dependency-track-v5|https://github.com/DependencyTrack/dependency-track/releases",
+      "recent_updates": [
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "Dependency-Track 4.14.4 maintenance release adds ingestion of CycloneDX 1.7 BOMs, modern CycloneDX tools metadata, improved Jira notification handling and fixes for vulnerability mirroring churn and foreign-key errors.",
+          "source": "https://docs.dependencytrack.org/changelog/"
+        }
+      ]
     },
     {
       "tool": "Trivy",
@@ -698,8 +800,16 @@
       "indicative_cost_usd": "$0 OSS; Enterprise not disclosed",
       "pricing_confidence": "Medium",
       "best_fit_for": "SBOM-first container programmes, especially US federal and defence",
-      "last_verified": "2026-09-26",
-      "sources": "https://github.com/anchore/grype/releases|https://anchore.com/blog/syft-grype-grant-50mill-downloads/|https://appsecsanta.com/anchore"
+      "last_verified": "2026-09-27",
+      "sources": "https://github.com/anchore/grype/releases|https://anchore.com/blog/syft-grype-grant-50mill-downloads/|https://appsecsanta.com/anchore",
+      "recent_updates": [
+        {
+          "date": "2026-09-17",
+          "type": "Release",
+          "summary": "Grype v0.119.0 exposes distro-fixed dropped matches via ignoredMatches for --show-suppressed, makes CVE-aggregated advisory merge order deterministic and patches six dependency vulnerabilities; Syft v1.52.0 (same day) adds passthrough-exact-format for syft-json input and hardens .deb, kernel-module and .NET PE/ELF parsing.",
+          "source": "https://github.com/anchore/grype/releases"
+        }
+      ]
     },
     {
       "tool": "Scantist (AppDefender SCA)",
@@ -800,9 +910,9 @@
       "product_url": "https://www.chainguard.dev/",
       "is_new_entrant": false,
       "type": "Commercial (free tier of latest images)",
-      "deployment": "SaaS registry; private registry mirroring; air-gap via image mirroring",
+      "deployment": "SaaS registry; private registry mirroring; EU-jurisdiction Sovereign Artifacts (beta, Sept 2026); air-gap via image mirroring",
       "languages_coverage": "Chainguard Containers (1,500+ images), Chainguard Libraries for Java (Maven), Python (PyPI), JavaScript (npm) rebuilt from source; VMs",
-      "key_features": "Minimal, daily-rebuilt images with near-zero CVEs | Signed SBOMs, Sigstore signatures, SLSA provenance | Libraries rebuilt from source to remove malicious-package exposure | CVE remediation SLAs | FIPS variants; supports FedRAMP, NIS2, CRA evidence",
+      "key_features": "Minimal, daily-rebuilt images with near-zero CVEs | Signed SBOMs, Sigstore signatures, SLSA provenance | Libraries rebuilt from source to remove malicious-package exposure | CVE remediation SLAs | FIPS variants incl. NIST-validated FIPS 140-3 OpenSSL 3.6 provider with hybrid post-quantum key exchange (cert #5523, Sept 2026; images from Oct 2026); supports FedRAMP, NIS2, CRA evidence | Sovereign Artifacts: EU-jurisdiction artifact storage and pull (beta, Sept 2026)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "No (removes CVEs at source instead)",
         "ai_auto_remediation_upgrade_prs": "Partial: automated rebuild/patch pipeline (not LLM)",
@@ -822,8 +932,22 @@
       "indicative_cost_usd": "Not publicly disclosed; reports of $5k-$15k per image/year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Reducing container/library CVE toil at source in regulated and cloud-native estates",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.chainguard.dev/unchained/chainguard-is-named-a-leader-in-the-2026-gartner-magic-quadrant-for-software-supply-chain-security|https://www.securityweek.com/chainguard-raises-hefty-356m-series-d-at-3-5-billion-valuation/|https://www.chainguard.dev/unchained/announcing-chainguards-series-d-building-the-safe-source-for-all-open-source"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.chainguard.dev/unchained/chainguard-is-named-a-leader-in-the-2026-gartner-magic-quadrant-for-software-supply-chain-security|https://www.securityweek.com/chainguard-raises-hefty-356m-series-d-at-3-5-billion-valuation/|https://www.chainguard.dev/unchained/announcing-chainguards-series-d-building-the-safe-source-for-all-open-source",
+      "recent_updates": [
+        {
+          "date": "2026-09-24",
+          "type": "Feature launch",
+          "summary": "Chainguard's FIPS Provider for OpenSSL v3.6 received NIST FIPS 140-3 validation (certificate #5523) with approved hybrid post-quantum key exchange, rolling into Chainguard FIPS container images from 1 October 2026.",
+          "source": "https://www.chainguard.dev/unchained/announcing-chainguards-industry-first-validated-fips-140-3-module-delivering-post-quantum-readiness"
+        },
+        {
+          "date": "2026-09-15",
+          "type": "Feature launch",
+          "summary": "Chainguard announced the Sovereign Artifacts beta, letting organisations store and pull container and library artifacts within EU jurisdiction for data-residency requirements.",
+          "source": "https://www.chainguard.dev/unchained/announcing-the-sovereign-artifacts-beta"
+        }
+      ]
     },
     {
       "tool": "Lineaje (SBOM360, xBOM Manager, Gold Open Source, UnifAI)",
@@ -895,10 +1019,10 @@
       "type": "Commercial",
       "deployment": "SaaS (AppScan on Cloud) / On-prem, sovereign cloud, hybrid and air-gapped (AppScan 360 cloud-native platform)",
       "languages_coverage": "Vendor claims 30+ languages across the platform; SCA covers common package managers (npm, PyPI, Maven, NuGet, Go and others per SCA documentation, exact list not verified because help pages returned 404) plus container/image scanning",
-      "key_features": "Open-source vulnerability detection and third-party component inventory | Container and image scanning | Licence reporting and SBOM (CycloneDX) generation (verify per edition) | Unified SAST, DAST, IAST, SCA, API security in one platform | RapidFix agentic AI triage and fix recommendations | AppScan MCP server for natural-language access to findings",
+      "key_features": "Open-source vulnerability detection and third-party component inventory | SCA scanning of SCM repositories and ZIP archives directly from manifest files when build artifacts are unavailable (AppScan on Cloud, Sept 2026) | Container and image scanning | Licence reporting and SBOM (CycloneDX) generation (verify per edition) | Unified SAST, DAST, IAST, SCA, API security in one platform | RapidFix agentic AI triage and fix recommendations with org and asset-group admin controls (Sept 2026) | Bulk SCM repository onboarding and multi-application reports (Sept 2026) | AppScan MCP server for natural-language access to findings",
       "ai_capabilities": {
-        "ai_triage_reachability_prioritisation": "Yes: Intelligent Finding Analytics (ML false-positive reduction) and RapidFix agentic triage; no function-level SCA reachability documented (unverified)",
-        "ai_auto_remediation_upgrade_prs": "Yes: RapidFix trusted fix recommendations, primarily SAST; SCA upgrade recommendations not confirmed as agentic",
+        "ai_triage_reachability_prioritisation": "Yes: Intelligent Finding Analytics (ML false-positive reduction) and RapidFix agentic triage; AI SAST business-logic flaw detection in scan configuration (Sept 2026); no function-level SCA reachability documented (unverified)",
+        "ai_auto_remediation_upgrade_prs": "Yes: RapidFix trusted fix recommendations, primarily SAST, now with organization and asset-group level administrative controls (Sept 2026); SCA upgrade recommendations not confirmed as agentic",
         "malicious_package_detection_ml_llm": "Not publicly confirmed",
         "natural_language_query": "Yes: MCP server enables natural-language interaction with AppScan data",
         "agent_mcp_integration": "Yes: AppScan MCP server (announced 2025-2026, GA status not stated)",
@@ -910,13 +1034,21 @@
       "integrations": "IDE (VS Code, Eclipse, IntelliJ, Visual Studio), Jenkins, Azure DevOps, GitHub Actions, GitLab CI, Jira, ServiceNow, CodeSweep for developers",
       "sectors_reference_customers": "Vendor-claimed: banking, insurance, government, telecom; 2026 Gartner Voice of the Customer Customers' Choice; named customers not listed on public pages",
       "analyst_position": "Gartner MQ AST 2025: Leader (Oct 2025). Forrester Wave SCA Q4 2024: not included. Gartner MQ SSCS 2026: not publicly confirmed (unverified)",
-      "cons_known_gaps": "SCA is a secondary module to SAST/DAST heritage; no reachability or malicious-package intelligence documented | Vendor documentation for SCA is hard to locate (product help pages returned 404 during verification) | Limited third-party benchmarks of SCA accuracy | Pricing not published",
+      "cons_known_gaps": "SCA is a secondary module to SAST/DAST heritage; no reachability or malicious-package intelligence documented | SCA documentation is thin; the AppScan on Cloud 'What's new' page is the most reliable dated source | Limited third-party benchmarks of SCA accuracy | Pricing not published",
       "pricing_model": "Enterprise subscription per application/scan or per user across AppScan 360 / on Cloud",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Existing HCL AppScan (ex-IBM) estates, sovereign or air-gapped deployments wanting one vendor for SAST, DAST, IAST and SCA",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.hcl-software.com/appscan|https://www.hcl-software.com/appscan/gartner-application-security-testing-report-2025|https://www.gartner.com/reviews/market/application-security-testing"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.hcl-software.com/appscan|https://www.hcl-software.com/appscan/gartner-application-security-testing-report-2025|https://www.gartner.com/reviews/market/application-security-testing",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Feature launch",
+          "summary": "AppScan on Cloud September 27 release lets SCA scan SCM repositories and ZIP archives directly, resolving dependencies from manifest files when build artifacts are unavailable; same release adds RapidFix admin controls at org/asset-group level, AI SAST business-logic flaw detection, bulk SCM repository onboarding, multi-application reports and DAST issue retest.",
+          "source": "https://help.hcl-software.com/appscan/ASoC/appseccloud_whats_new_cm.html"
+        }
+      ]
     },
     {
       "tool": "SafeDep (vet, PMG, SafeDep Cloud)",

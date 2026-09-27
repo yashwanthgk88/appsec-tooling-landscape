@@ -669,13 +669,13 @@
       "type": "Open-core (GitLab) / Commercial with free tier (Snyk Learn)",
       "deployment": "SaaS / On-prem (GitLab self-managed, Dedicated)",
       "languages_coverage": "GitLab: scan execution and merge request approval policies (policy-as-code), compliance frameworks; Snyk Learn: lessons aligned to NIST NICE, CWE-based topics, product training",
-      "key_features": "Policy-as-code enforcement of scanners in pipelines|Compliance frameworks and pipelines (Ultimate)|Vulnerability management in MR|GitLab Duo vulnerability explanation/resolution|Snyk Learn just-in-time lessons tied to Snyk findings",
+      "key_features": "Policy-as-code enforcement of scanners in pipelines|Compliance frameworks and pipelines (Ultimate)|Vulnerability management in MR|GitLab Duo vulnerability explanation/resolution|Automated triage and remediation profiles applied across groups and projects, bulk due-date API and group-level scanner coverage inventory (19.4, Sep 2026)|Vulnerability tools exposed through the GitLab MCP Server for agents (19.4)|Snyk Learn just-in-time lessons tied to Snyk findings",
       "ai_capabilities": {
         "ai_generated_requirements": "No",
         "ai_assistant_over_standards": "GitLab Duo chat (general)",
         "ai_mapping_findings_to_requirements": "No",
         "automated_design_review": "No",
-        "agent_mcp_integration": "GitLab Duo Agent Platform (2025-2026); not requirement-specific",
+        "agent_mcp_integration": "GitLab Duo Agent Platform (2025-2026) and GitLab MCP Server with vulnerability list/get/manage tools (19.4, Sep 2026); not requirement-specific",
         "model_used": "GitLab: Anthropic/Google models (per GitLab docs, unverified this session)"
       },
       "ai_maturity": "GA (Duo); not security-requirements AI",
@@ -688,8 +688,16 @@
       "indicative_cost_usd": "GitLab Ultimate list ~$99/user/month (unverified this session); Snyk Learn $0",
       "pricing_confidence": "Low",
       "best_fit_for": "Enforcing verification of requirements in CI and training developers",
-      "last_verified": "2026-09-26",
-      "sources": "https://docs.gitlab.com/user/application_security/|https://learn.snyk.io/"
+      "last_verified": "2026-09-27",
+      "sources": "https://docs.gitlab.com/user/application_security/|https://learn.snyk.io/",
+      "recent_updates": [
+        {
+          "date": "2026-09-17",
+          "type": "Release",
+          "summary": "GitLab 19.4 (Ultimate) adds vulnerability tools to the GitLab MCP Server so agents can list and manage findings, automated triage and remediation profiles applied across groups via GraphQL, a bulk vulnerability due-date API, group-level aggregated scanner coverage, Vulnerability Context Flow triage context, and beta organization security dashboards and malicious package detection.",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-4-released/"
+        }
+      ]
     },
     {
       "tool": "LLM prompt-based security requirements generation from user stories (Copilot / Claude / ChatGPT with ASVS 5.0 as grounding)",
@@ -787,7 +795,7 @@
       "product_url": "https://www.remysec.com/",
       "is_new_entrant": true,
       "type": "Commercial",
-      "deployment": "SaaS (unverified)",
+      "deployment": "N/A (product discontinued)",
       "languages_coverage": "Design-review triage across design docs; standards not verified",
       "key_features": "Ingests design docs and RFCs to flag security-relevant changes|Prioritises what needs human review|Drafts review questions and requirements (reported)",
       "ai_capabilities": {
@@ -798,18 +806,26 @@
         "agent_mcp_integration": "Unverified",
         "model_used": "Not publicly disclosed"
       },
-      "ai_maturity": "Marketing claim (unverified this session)",
-      "ai_verified_source": "https://www.remysec.com/",
+      "ai_maturity": "None (vendor inactive; product site no longer serves the product as of 27 Sep 2026)",
+      "ai_verified_source": "https://www.ycombinator.com/companies/remy-security",
       "integrations": "Google Docs, Confluence, Jira, Slack (reported)",
       "sectors_reference_customers": "Not publicly disclosed",
-      "analyst_position": "Seed-stage startup (2024-2025); funding not verified",
-      "cons_known_gaps": "Unverified this session|Very early|No compliance/traceability features documented",
-      "pricing_model": "Subscription",
+      "analyst_position": "Defunct: Y Combinator profile marks the company inactive (pivoted to healthcare insurance automation as startremy.com); remysec.com domain serves unrelated gambling content as of 27 Sep 2026",
+      "cons_known_gaps": "Product appears discontinued; vendor inactive per Y Combinator|Domain remysec.com now serves unrelated gambling affiliate content (possible domain lapse)|No compliance/traceability features were ever documented",
+      "pricing_model": "N/A (product discontinued)",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
-      "best_fit_for": "Watchlist",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.remysec.com/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown"
+      "best_fit_for": "Not recommended; remove from shortlists",
+      "last_verified": "2026-09-27",
+      "sources": "https://www.remysec.com/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Shutdown",
+          "summary": "Verified 27 Sep 2026: remysec.com no longer serves the product (it now hosts an unrelated gambling affiliate page) and Y Combinator lists the company as inactive with a pivot to healthcare insurance automation; treat Remy Security as defunct (exact shutdown date not published).",
+          "source": "https://www.ycombinator.com/companies/remy-security"
+        }
+      ]
     },
     {
       "tool": "RequirementONE (adjacent: regulatory change management)",

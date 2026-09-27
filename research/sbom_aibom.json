@@ -9,9 +9,9 @@
       "is_new_entrant": false,
       "type": "Open source",
       "deployment": "CLI / library / container / self-hosted server mode (cdxgen REST)",
-      "languages_coverage": "cdxgen: npm/yarn/pnpm, Maven/Gradle/SBT, pip/poetry/uv, Go, Rust/Cargo, PHP, Ruby, .NET, C/C++ (via atom), Swift, Dart, Elm, Svelte and more; containers/OCI images, rootfs, Docker archives, binaries, OS (OBOM), hardware hosts (HBOM), SaaS (SaaSBOM), cryptographic assets (CBOM); AI-BOM: prompt files, ML models (Hugging Face URLs, GGUF, safetensors, ONNX, PyTorch checkpoints), MCP configs, agent frameworks, local runtimes (Ollama, LM Studio)",
+      "languages_coverage": "cdxgen: npm/yarn/pnpm, Maven/Gradle/SBT, pip/poetry/uv, Go, Rust/Cargo, PHP, Ruby, .NET, C/C++ (via atom), Kotlin (native evidence via kosi, v13.2.0), Swift, Dart, Elm, Svelte/SvelteKit and more; containers/OCI images, rootfs, Docker archives, binaries, OS (OBOM), hardware hosts (HBOM), SaaS (SaaSBOM), cryptographic assets (CBOM); AI-BOM: prompt files, ML models (Hugging Face URLs, GGUF, safetensors, ONNX, PyTorch pickle checkpoints flagged for unsafe deserialization), MCP client configs (Cursor, Windsurf, Zed, Codex and others), MCP Registry server.json manifests, MCPB/DXT bundles, agent frameworks and inference providers, local runtimes (Ollama, LM Studio); 'agentic' project type inventories installed coding assistants",
       "key_features": "CycloneDX JSON/XML/protobuf 1.0-1.7 (cdxgen targets 1.6/1.7 and downgrades to 1.4/1.5; cdx-convert to SPDX 3.0.1 JSON-LD) | CycloneDX CLI: convert, merge, diff, validate, analyze, sign/verify, SPDX 2.3 JSON conversion | Evidence/usage detection via AST (required/optional scopes), BOM auditing rules | JSF signing with component-level signatures; runtime tracing via tracebom | Native VEX/VDR object model in spec; no VEX authoring UI | Regulatory: spec is ECMA-424 2nd ed. (Dec 2025); CISA 2026 minimum elements name CycloneDX as an accepted format; libraries for Java, .NET, Python, Go, JS, PHP, Ruby, Rust, Perl",
-      "ai_capabilities": "AI BOM / ML-BOM generation: yes (cdxgen emits machine-learning-model and data components, prompts, MCP server configs, agent frameworks; governance analysis) | AI model file scanning (pickle/safetensors malware): no | AI license/provenance analysis: partial (model metadata from Hugging Face; CycloneDX 1.7 citations for provenance) | AI-assisted enrichment/VEX: no | Natural-language query: no | MCP/agent integration: cdxgen detects MCP configs; server mode exists; dedicated cdxgen MCP server unverified",
+      "ai_capabilities": "AI BOM / ML-BOM generation: yes (cdxgen emits machine-learning-model and data components, prompts, MCP server configs, agent frameworks; governance analysis; v13.2.0 adds agentic-assistant inventory and MCP Registry/MCPB/DXT manifest parsing) | AI model file scanning (pickle/safetensors malware): no (PyTorch pickle checkpoints are flagged cdx:ai:unsafeDeserialization=true but not scanned) | AI license/provenance analysis: partial (model metadata from Hugging Face; CycloneDX 1.7 citations for provenance) | AI-assisted enrichment/VEX: no | Natural-language query: no | MCP/agent integration: cdxgen detects MCP client and server configs; server mode exists; dedicated cdxgen MCP server unverified",
       "ai_maturity": "GA",
       "ai_verified_source": "https://github.com/CycloneDX/cdxgen/releases/latest",
       "integrations": "GitHub Action, GitLab CI, Jenkins, Azure DevOps, Docker; Dependency-Track upload; OWASP dep-scan; VS Code; any CycloneDX consumer",
@@ -29,7 +29,15 @@
       "pricing_confidence": "High",
       "best_fit_for": "Teams standardising on CycloneDX who want the widest ecosystem and AI-BOM coverage in an OSS generator, feeding Dependency-Track or a commercial manager",
       "sources": "https://cyclonedx.org/news/cyclonedx-v1.7-released/|https://github.com/CycloneDX/cdxgen|https://github.com/CycloneDX/cyclonedx-cli|https://ecma-international.org/publications-and-standards/standards/ecma-424/|https://cyclonedx.org/tool-center/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-22",
+          "type": "Release",
+          "summary": "cdxgen v13.2.0 adds native Kotlin evidence via the kosi companion binary, expands AI-BOM coverage (GGUF, safetensors, ONNX and PyTorch pickle checkpoints flagged cdx:ai:unsafeDeserialization, Ollama/LM Studio runtimes), reads MCP client configs for Cursor/Windsurf/Zed/Codex plus MCP Registry server.json and MCPB/DXT bundles, and introduces an 'agentic' project type that inventories installed coding assistants; also first-class Elm and Svelte support and corrected post-quantum crypto OIDs.",
+          "source": "https://github.com/CycloneDX/cdxgen/releases/tag/v13.2.0"
+        }
+      ]
     },
     {
       "tool": "OWASP Dependency-Track",
@@ -58,7 +66,21 @@
       "pricing_confidence": "High",
       "best_fit_for": "Best OSS SBOM management platform for organisations willing to self-host and pair with cdxgen/Syft",
       "sources": "https://github.com/DependencyTrack/dependency-track/releases/latest|https://docs.dependencytrack.org/changelog/|https://owasp.org/www-project-dependency-track/|https://dependencytrack.org/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-20",
+          "type": "Release",
+          "summary": "Dependency-Track 5.1.1 backport release refactors component metrics computation to avoid bad query plans and fixes 21 bugs including versionless PURLs not being analysed, CVSSv4 score calculation, NVD mirroring, GitHub Advisories proxy auth and v4-to-v5 migration deduplication.",
+          "source": "https://github.com/DependencyTrack/dependency-track/releases/tag/5.1.1"
+        },
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "Dependency-Track v4.14.4 (maintenance line) adds ingestion of CycloneDX 1.7 BOMs, switches BOM export to modern CycloneDX tools metadata, trims unnecessary enrichment on single-project queries, and fixes Jira notification tests, missing User-Agent headers and an HTTP 500 when deleting vulnerabilities referenced by analyses.",
+          "source": "https://docs.dependencytrack.org/changelog/"
+        }
+      ]
     },
     {
       "tool": "Syft + Grype",
@@ -68,7 +90,7 @@
       "type": "Open source",
       "deployment": "CLI / Go library / container / GitHub Action",
       "languages_coverage": "Container images (OCI/Docker), filesystems, archives; OS packages (apk, deb, rpm, etc.) and language ecosystems (Java, JS, Python, Go, Rust, Ruby, PHP, .NET, Swift, Dart, Erlang, Haskell, etc.); Go and other binaries; GGUF/AI model artefacts added in 2026 (Anchore Enterprise 6.2 notes); no firmware unpacking",
-      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.52.0 (Sep 2026) passthrough-exact-format | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
+      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.52.0 (17 Sep 2026) passthrough-exact-format and archive-parsing hardening | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data; v0.119.0 (17 Sep 2026) --show-suppressed exposes distro-fixed dropped matches | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial (GGUF and Docker Model artefact detection reported in Anchore 6.2 blog; broader model/dataset ML-BOM not native) | AI model file scanning: no | AI license/provenance: no | AI-assisted enrichment: no | Natural-language query: no | MCP/agent integration: Anchore Enterprise MCP server (commercial); community MCP wrappers for Syft/Grype unverified",
       "ai_maturity": "Beta or Preview",
       "ai_verified_source": "https://anchore.com/blog/extending-supply-chain-security-to-ai-models-with-anchore-enterprise-v6-2/",
@@ -87,7 +109,21 @@
       "pricing_confidence": "High",
       "best_fit_for": "Container-heavy pipelines needing a fast, scriptable SBOM and vulnerability pair with attestation support",
       "sources": "https://github.com/anchore/syft/releases|https://github.com/anchore/grype|https://anchore.com/blog/|https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-17",
+          "type": "Release",
+          "summary": "Syft v1.52.0 adds passthrough of matching syft-json input unchanged (exact-format passthrough), bounds allocations for compressed kernel modules, .deb archives and UPX-packed binaries, hardens malformed .NET binary parsing, fixes RPM and Java archive version reporting, and remediates six dependency CVEs (gRPC, containerd, x/crypto).",
+          "source": "https://github.com/anchore/syft/releases"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "Release",
+          "summary": "Grype v0.119.0 exposes distro-fixed dropped matches through ignoredMatches so --show-suppressed surfaces them, adds a licensing copyright-owner field for Debian packaging, fixes OpenVEX transformer namespace handling for Go module PURLs and inconsistent advisory merging under --by-cve, and remediates six dependency CVEs.",
+          "source": "https://github.com/anchore/grype/releases/tag/v0.119.0"
+        }
+      ]
     },
     {
       "tool": "Anchore Enterprise",
@@ -272,10 +308,10 @@
       "deployment": "SaaS or self-hosted (Kubernetes)",
       "languages_coverage": "Broad source ecosystems, binaries (Binary Analysis: firmware, containers, legacy languages), snippets; AI/ML models integrated into projects (Hugging Face model detection, model card evaluation)",
       "key_features": "Import and export SPDX and CycloneDX with out-of-box and custom templates; automatic custom component creation for unmatched items | Binary scanning cracks open firmware/binaries | AI model detection with origin, usage and model card evaluation; models added to SBOM | Licence obligation guidance and tracking; EU CRA compliance positioning | VEX: Black Duck supports CycloneDX VEX export and import per docs (unverified from this page) | Regulatory: EU CRA, EO 14028, FDA, PCI DSS marketing",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA (AI model components inside SBOM output) | AI model file scanning (pickle malware): no | AI license/provenance: yes (model licence and origin analysis) | AI-assisted enrichment/VEX: Black Duck Assist/AI triage features claimed (unverified) | Natural-language query: unverified | MCP/agent: unverified",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA (AI model components inside SBOM output) | AI model file scanning (pickle malware): no | AI license/provenance: yes (model licence and origin analysis) | AI-assisted enrichment/VEX: Black Duck Assist/AI triage features claimed (unverified); Black Duck Signal AI code analysis in Polaris supports bring-your-own-LLM with AI findings managed alongside deterministic results (Sep 2026, code-level not SBOM-level) | Natural-language query: unverified | MCP/agent: unverified",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html",
-      "integrations": "Jenkins, GitHub, GitLab, Azure DevOps, Bamboo, Artifactory, Jira, ServiceNow, Coverity, Polaris, Code Sight IDE",
+      "integrations": "Jenkins, GitHub, GitLab, Azure DevOps, Bamboo, Artifactory, Jira, ServiceNow, Coverity, Polaris, Code Sight IDE; Polaris on-premises SCM support for self-hosted GitHub, GitLab, Azure DevOps Server and Bitbucket (Sep 2026)",
       "sectors_reference_customers": "Automotive, medical devices, FS, semiconductors; Black Duck cites 1,000s of enterprise customers",
       "analyst_position": "Leader, Gartner MQ Software Supply Chain Security (June 2026); Leader in Forrester SCA Wave (Q4 2024)",
       "cons_known_gaps": [
@@ -290,7 +326,15 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises needing binary/firmware SBOMs plus licence compliance and CRA-grade reporting",
       "sources": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/resources/analyst-reports/gartner-magic-quadrant-software-supply-chain-security.html",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Feature launch",
+          "summary": "Polaris September 2026 update adds bring-your-own-LLM for Black Duck Signal AI code analysis (per-agent provider configuration), unified management of AI findings alongside deterministic scan results, central rule profiles applied across the org, 2024/2025 CWE Top 25 support, asynchronous SCA notifications for critical dependency changes between scans, and on-premises SCM support for self-hosted GitHub, GitLab, Azure DevOps Server and Bitbucket.",
+          "source": "https://www.blackduck.com/blog/polaris-september-2026-update.html"
+        }
+      ]
     },
     {
       "tool": "Sonatype SBOM Manager (Nexus One platform)",
@@ -305,7 +349,7 @@
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.sonatype.com/products/sbom-manager",
       "integrations": "Nexus Repository, Artifactory, Jenkins, GitHub, GitLab, Azure DevOps, Jira, IDEs, ServiceNow",
-      "sectors_reference_customers": "FS, government, telecom; Sonatype cites large banks and federal agencies",
+      "sectors_reference_customers": "FS, government, telecom; Sonatype cites large banks and federal agencies; Awardable on US DoD Platform One Solutions Marketplace (Sep 2026)",
       "analyst_position": "Leader, Gartner MQ Software Supply Chain Security (June 2026)",
       "cons_known_gaps": [
         "Best value only inside the Sonatype platform; standalone SBOM Manager pricing unclear",
@@ -319,7 +363,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises on Nexus/Lifecycle wanting SBOM lifecycle management with regulatory mapping and AI component visibility",
       "sources": "https://www.sonatype.com/products/sbom-manager|https://www.sonatype.com/press-releases/sonatype-named-a-leader-in-the-2026-gartner-magic-quadrant|https://www.sonatype.com/products/open-source-security-dependency-management",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-22",
+          "type": "Feature launch",
+          "summary": "Sonatype achieved Awardable status on the US Department of Defense Platform One Solutions Marketplace, making Nexus One (Lifecycle, Nexus Repository, Firewall, Guide, SBOM Manager) procurable by DoW organisations without manual review; marketplace availability rather than a product feature.",
+          "source": "https://www.sonatype.com/blog/sonatype-is-now-awardable-on-the-platform-one-solutions-marketplace"
+        }
+      ]
     },
     {
       "tool": "JFrog Xray / JFrog Platform (SBOM, AI Catalog, AppTrust)",
@@ -359,7 +411,7 @@
       "deployment": "SaaS (GitHub.com); GitHub Enterprise Server support for dependency graph",
       "languages_coverage": "Manifest/lockfile ecosystems supported by dependency graph (npm, Maven, pip, Go, NuGet, RubyGems, Composer, Cargo, pub, Swift, etc.); no containers or binaries",
       "key_features": "SPDX 2.3 JSON export via UI and REST API | Includes versions, package identifiers, licences, transitive paths | Actions available for Syft or sbom-tool for CycloneDX | Dependabot alerts and dependency review | No VEX; no ingestion | Regulatory: meets basic NTIA elements; lacks hashes and signatures required by CISA 2026",
-      "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted: Copilot Autofix for code alerts (not SBOM) | NL query: GitHub MCP server (general) | MCP/agent: GitHub MCP server GA (not SBOM-specific)",
+      "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted: Copilot agentic autofix for code security and code quality alerts, now using Copilot Memory for context and fix-pattern reuse (Sep 2026; not SBOM) | NL query: GitHub MCP server (general) | MCP/agent: GitHub MCP server GA (not SBOM-specific)",
       "ai_maturity": "None",
       "ai_verified_source": "https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
       "integrations": "REST API, GitHub Actions, Dependabot",
@@ -377,7 +429,21 @@
       "pricing_confidence": "High",
       "best_fit_for": "Baseline repo-level SBOM for inventory and open-source hygiene, not for regulatory submission",
       "sources": "https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-25",
+          "type": "Feature launch",
+          "summary": "GitHub agentic autofix now uses Copilot Memory to review stored context when resolving security alerts and to persist fix patterns for reuse across autofix and other Copilot capabilities.",
+          "source": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory"
+        },
+        {
+          "date": "2026-09-18",
+          "type": "Feature launch",
+          "summary": "GitHub-owned npm added a 'Read and write (stage only)' granular access token permission so CI can stage package versions via npm stage publish without direct publish rights, ahead of the January 2027 removal of bypass-2FA publish tokens.",
+          "source": "https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation"
+        }
+      ]
     },
     {
       "tool": "GitLab Dependency Scanning / CycloneDX SBOM",
@@ -532,8 +598,8 @@
       "type": "Commercial",
       "deployment": "SaaS; on-prem options claimed",
       "languages_coverage": "Source, containers, third-party SBOMs; xBOM Manager: SBOM, AIBOM, CBOM, FBOM; UnifAI: AI asset discovery across models, agents, agentic apps",
-      "key_features": "SBOM360: generation, integrity attestation, agentic AI find-and-fix for source and containers | xBOM Manager: enterprise xBOM lifecycle and compliance (CRA, EO 14028, PCI) | Gold Open Source: hardened packages and images | UnifAI: AI asset discovery, agentic app security, AI governance | VEX support (unverified detail) | Regulatory mapping across CRA and US EO",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA claim (AIBOM via UnifAI and xBOM Manager; format details not public) | AI model file scanning: unverified | AI license/provenance: AI asset provenance claims | AI-assisted enrichment/VEX: agentic AI remediation (GA claim) | NL query: unverified | MCP/agent: agentic application security claimed",
+      "key_features": "SBOM360: generation, integrity attestation, agentic AI find-and-fix for source and containers | xBOM Manager: enterprise xBOM lifecycle and compliance (CRA, EO 14028, PCI) | Gold Open Source: hardened packages and images | UnifAI: AI asset discovery, agentic app security, AI governance | Frontier Defense (GA 25 Sep 2026): multi-agent AI vulnerability discovery, exploit validation and verified patch generation, separate from the xBOM products | VEX support (unverified detail) | Regulatory mapping across CRA and US EO",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA claim (AIBOM via UnifAI and xBOM Manager; format details not public) | AI model file scanning: unverified | AI license/provenance: AI asset provenance claims | AI-assisted enrichment/VEX: agentic AI remediation (GA claim); Frontier Defense multi-agent discovery-validate-patch-verify engine with BYO frontier models (Anthropic, OpenAI, Llama, Gemini, Gemma, OpenRouter, Bedrock), GA per vendor Sep 2026 | NL query: unverified | MCP/agent: agentic application security claimed",
       "ai_maturity": "Marketing claim (product pages assert GA; independent verification limited)",
       "ai_verified_source": "https://finance.yahoo.com/technology/ai/articles/lineaje-recognized-visionary-2026-gartner-154300110.html",
       "integrations": "GitHub, GitLab, Jenkins, Artifactory, container registries; API",
@@ -551,17 +617,25 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises wanting one vendor for SBOM, AIBOM, CBOM management plus hardened OSS supply",
       "sources": "https://finance.yahoo.com/technology/ai/articles/lineaje-recognized-visionary-2026-gartner-154300110.html|https://www.lineaje.com/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-25",
+          "type": "Feature launch",
+          "summary": "Lineaje announced Frontier Defense as a generally available standalone product: a multi-agent AI engine (nine isolated sandboxes in a Create/Judge/Verify pipeline, gVisor runtime validation) that discovers novel vulnerabilities, validates exploitability, generates verified exploits and compatible patches, and verifies remediation; supports Anthropic, OpenAI, Llama, Gemini, Gemma, OpenRouter and Bedrock models.",
+          "source": "https://www.lineaje.com/post/frontier-defense-vulnerable-code-in-verified-patches-out"
+        }
+      ]
     },
     {
       "tool": "Kusari Platform and Kusari Inspector (GUAC)",
       "vendor": "Kusari",
       "product_url": "https://www.kusari.dev/",
       "is_new_entrant": false,
-      "type": "Open-core (GUAC is OpenSSF open source)",
-      "deployment": "SaaS; GUAC self-hosted",
-      "languages_coverage": "Source-built dependency graphs across major ecosystems, containers; SBOMs and attestations in SPDX, CycloneDX, in-toto",
-      "key_features": "Produces SBOMs and attestations independently verifiable by third parties | GUAC graph for supply chain metadata (SBOM, SLSA, VEX, OpenVEX ingestion) | Reachability and Blast Radius impact analysis | Kusari Inspector: PR-level autonomous review (CVEs, secrets, typosquats, licences, EOL) | AutoFix PR generation | Regulatory: supports SSDF/SLSA evidence; explicit CRA mapping unverified",
+      "type": "Open-core (GUAC is OpenSSF open source; Waybill SBOM toolkit is Kusari Apache-2.0 open source)",
+      "deployment": "SaaS; GUAC self-hosted; Waybill CLI (Linux eBPF tracing optional)",
+      "languages_coverage": "Source-built dependency graphs across major ecosystems, containers; SBOMs and attestations in SPDX, CycloneDX, in-toto; Waybill (OSS, alpha): deb, apk, rpm, Cargo, RubyGems, Go, Maven, npm, pip, Poetry, Pants, vcpkg, Conan readers plus ELF/Mach-O/PE binary scanner",
+      "key_features": "Produces SBOMs and attestations independently verifiable by third parties | Waybill OSS toolkit (Sep 2026, alpha): generate/analyse/enrich SBOMs from source trees, package caches and container images; CycloneDX 1.6, SPDX 2.3 and SPDX 3.0.1 with SHA-256 hashes and discovery evidence; DSSE/Sigstore attestations, in-toto layout verification, eBPF build-time tracing, JSON Patch enrichment; targets CISA 2026 minimum elements including explicit unknowns | GUAC graph for supply chain metadata (SBOM, SLSA, VEX, OpenVEX ingestion) | Reachability and Blast Radius impact analysis | Kusari Inspector: PR-level autonomous review (CVEs, secrets, typosquats, licences, EOL) | AutoFix PR generation | Regulatory: supports SSDF/SLSA evidence; explicit CRA mapping unverified",
       "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted enrichment/VEX: Inspector uses AI for PR review and fixes (GA) | NL query: unverified | MCP/agent: unverified",
       "ai_maturity": "GA (AI-assisted review), None for AI BOM",
       "ai_verified_source": "https://www.kusari.dev/",
@@ -580,7 +654,15 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want graph-based supply chain analysis and attestation verification on top of OSS GUAC",
       "sources": "https://www.kusari.dev/|https://github.com/guacsec/guac",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-18",
+          "type": "Release",
+          "summary": "Kusari's Apache-2.0 open-source Waybill SBOM toolkit (github.com/kusari-oss/waybill; alpha, first public releases early Sep 2026) shipped v0.8.0 (17 Sep), v0.9.0 (18 Sep, per-resolve SBOMs for Pants monorepos, SLSA build provenance on all artifacts) and v0.10.0-alpha.1 (23 Sep); it emits CycloneDX 1.6, SPDX 2.3 and SPDX 3.0.1 with SHA-256 hashes and evidence across 15 ecosystem readers plus ELF/Mach-O/PE binaries, DSSE/Sigstore attestations, in-toto verification and eBPF build tracing, and targets the CISA 2026 minimum elements.",
+          "source": "https://github.com/kusari-oss/waybill/releases"
+        }
+      ]
     },
     {
       "tool": "Interlynk (sbomqs, sbomasm, sbomgr, Interlynk Platform)",
@@ -589,8 +671,8 @@
       "is_new_entrant": false,
       "type": "Open-core",
       "deployment": "CLI tools (OSS); Interlynk SBOM Automation Platform SaaS/on-prem",
-      "languages_coverage": "Format-level tooling for SPDX and CycloneDX (JSON); platform ingests from any generator; no native generation of ML-BOM",
-      "key_features": "sbomqs: 0-10 quality score across identification, provenance, integrity, completeness, licensing, vulnerability, structural, component; compliance profiles NTIA, BSI TR-03183-2 (1.1/2.0/2.1), OpenChain Telco, FSCT v3; CISA 2025/2026 profile not confirmed in README | sbomasm: assemble, edit, enrich (ClearlyDefined), remove, sign/verify | sbomgr: search across SBOMs | Platform: SBOM lifecycle, VEX, sharing, compliance mapping to CRA/BSI/CISA (per vendor claims) | Apache-2.0",
+      "languages_coverage": "Format-level tooling for SPDX and CycloneDX (JSON); platform ingests from any generator; lynkctl (commercial) post-build SBOM generation for embedded C/C++ built with GNU Make, CMake, IAR Embedded Workbench or TI Code Composer Studio (gcc, clang, LLVM, GNU ld, IAR toolchains; Eclipse CDT, Keil, vcpkg, Conan in development); no native generation of ML-BOM",
+      "key_features": "sbomqs: 0-10 quality score across identification, provenance, integrity, completeness, licensing, vulnerability, structural, component; compliance profiles NTIA, BSI TR-03183-2 (1.1/2.0/2.1), OpenChain Telco, FSCT v3; v2.1.x (Sep 2026) NTIA option selects the 2026 profile | sbomasm: assemble, edit, enrich (ClearlyDefined), remove, sign/verify | sbomgr: search across SBOMs | lynkctl embedded C/C++ generator: CycloneDX 1.6+ and SPDX 3.0+ with per-component evidence (source files, compile lines, include paths, confidence tiers), deterministic output, air-gapped operation, positioned for FDA 524B, EU CRA, ISO/SAE 21434 (promoted Sep 2026) | Platform: SBOM lifecycle, VEX, sharing, compliance mapping to CRA/BSI/CISA (per vendor claims) | Apache-2.0 for OSS tools",
       "ai_capabilities": "AI BOM: no native generation; can score/merge AIBOM documents as CycloneDX | Model scanning: no | AI license: no | AI-assisted: unverified | NL query: unverified | MCP/agent: unverified",
       "ai_maturity": "None",
       "ai_verified_source": "https://github.com/interlynk-io/sbomqs",
@@ -601,7 +683,7 @@
         "Quality scoring is heuristic and standard-dependent",
         "Platform vendor is small",
         "CISA 2026 profile support timing unverified",
-        "No generation",
+        "Generation limited to the commercial embedded C/C++ lynkctl tool; no OSS generator",
         "Limited enterprise references"
       ],
       "pricing_model": "OSS free; platform subscription",
@@ -609,7 +691,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Best OSS quality-scoring and assembly toolkit for SBOM intake gates",
       "sources": "https://github.com/interlynk-io/sbomqs|https://github.com/interlynk-io/sbomasm|https://www.interlynk.io/resources/all-about-spdx-3-0",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-19",
+          "type": "Feature launch",
+          "summary": "Interlynk is promoting a new commercial lynkctl embedded C/C++ SBOM generator (banner 'NEW Generate Embedded SBOM for C/C++' on its 19 Sep 2026 firmware-evaluation post): post-build analysis of GNU Make, CMake, IAR and TI Code Composer Studio outputs producing CycloneDX 1.6+ and SPDX 3.0+ with per-component evidence, confidence tiers and offline operation; exact launch date and pricing not stated.",
+          "source": "https://www.interlynk.io/resources/how-to-evaluate-an-sbom-generator-for-embedded-firmware"
+        }
+      ]
     },
     {
       "tool": "Scribe Security (ScribeHub, Valint)",
@@ -648,7 +738,7 @@
       "type": "Commercial",
       "deployment": "SaaS; self-hosted option",
       "languages_coverage": "Major ecosystems with function-level reachability (Java, JS/TS, Python, Go, C#, Rust, etc.), containers; AI: Hugging Face models (50 risk metrics), coding agents, MCP servers, skills, AGENTS.md/CLAUDE.md context files",
-      "key_features": "SBOM Hub: generate and ingest external SBOMs; VEX generation with reachability justification | Compliance guidance for PCI DSS 4.0 and EU CRA | AI Code Governance: inventory of coding agents, models, MCP servers and skills; policy enforcement | AI SAST with dataflow; AI Security Review agents on PRs | Free MCP server (npx endorctl ai-tools mcp-server) for Cursor, Claude Code, VS Code, Codex",
+      "key_features": "SBOM Hub: generate and ingest external SBOMs; asynchronous SBOM and VEX export jobs with AsyncJob REST resource (Sep 2026); VEX generation with reachability justification | Compliance guidance for PCI DSS 4.0 and EU CRA | AI Code Governance: inventory of coding agents, models, MCP servers and skills; policy enforcement (Ask Permission policies advisory-only in Codex, Block still enforced) | AI SAST with dataflow; AI Security Review agents on PRs | Free MCP server (npx endorctl ai-tools mcp-server) for Cursor, Claude Code, VS Code, Codex | Package Firewall for VS Code extensions and NuGet; Conan C/C++ SCA; Threat Center; incremental container scanning and base image remediation (Sep 2026)",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial-to-GA (AI component inventory of models, agents, MCP servers, skills; formal CycloneDX ML-BOM export unverified) | AI model file scanning: no (risk scoring of Hugging Face models, not byte-level malware scan) | AI license/provenance: yes (model risk metrics incl. licence) | AI-assisted VEX: yes (reachability-driven VEX) | NL query: via MCP server | MCP/agent: GA",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
@@ -667,7 +757,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs that want reachability-driven SBOM/VEX plus governance of AI coding agents and MCP servers",
       "sources": "https://www.endorlabs.com/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Feature launch",
+          "summary": "September 2026 release notes (page carries month only, exact day not stated; verified 27 Sep) add asynchronous SBOM and VEX export as background jobs for projects, findings or package versions via the Reports page and an AsyncJob REST resource, Conan C/C++ SCA support, Package Firewall for VS Code extensions and NuGet, incremental container scanning, base image remediation, malware exposure classification, a tenant-wide Threat Center, and change Coding Agent Governance 'Ask Permission' policies to advisory-only in Codex.",
+          "source": "https://docs.endorlabs.com/releasenotes/september-2026"
+        }
+      ]
     },
     {
       "tool": "Chainloop",
@@ -790,7 +888,7 @@
       "type": "Open source (Apache-2.0)",
       "deployment": "pip, Docker, Helm, GitHub Action; self-hosted control plane; MCP server mode",
       "languages_coverage": "MCP server configs, agent and skill definitions, PyPI/npm dependencies, container images and SBOMs, cloud (AWS, Azure, GCP, Snowflake, Kubernetes), IaC, GitHub Actions, secrets",
-      "key_features": "Outputs CycloneDX, SPDX, SARIF, JSON inventory with provenance | Graph findings and evidence model | Runtime gateway allow/warn/block for agents | MCP server mode (86 tools) | Compliance narrative exports | Rapid release cadence (v0.105.0, Sep 2026)",
+      "key_features": "Outputs CycloneDX, SPDX, SARIF, JSON inventory with provenance | Graph findings and evidence model | Runtime gateway allow/warn/block for agents | MCP server mode (86 tools) | Compliance narrative exports | Read-only credential validation (GitHub, Stripe) and multi-tenant scoping of graph REST routes (v0.105-0.106, Sep 2026) | Rapid release cadence (v0.106.1, 27 Sep 2026)",
       "ai_capabilities": "AI BOM / ML-BOM generation: GA (agents, MCP servers, skills, tools, models) | Model file scanning: unverified | AI license/provenance: partial | AI-assisted: no | NL query: via its own MCP server | MCP/agent integration: core purpose",
       "ai_maturity": "GA (community)",
       "ai_verified_source": "https://github.com/msaad00/agent-bom",
@@ -808,7 +906,21 @@
       "pricing_confidence": "High",
       "best_fit_for": "Pilots that need an MCP/agent inventory now, ahead of vendor tooling",
       "sources": "https://github.com/msaad00/agent-bom|https://www.pulsemcp.com/servers/msaad00-agent-bom|https://github.com/CycloneDX/specification/issues/895",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Release",
+          "summary": "agent-bom v0.106.1 scopes the exposure-paths and should-i-deploy graph REST routes to the authenticated tenant, isolates demo data to prevent cross-tenant leakage, and adds bounded tenant-scoped relationship paging across SQLite, Postgres and REST backends.",
+          "source": "https://github.com/msaad00/agent-bom/releases"
+        },
+        {
+          "date": "2026-09-18",
+          "type": "Release",
+          "summary": "agent-bom v0.105.0 adds bounded read-only credential validators for GitHub and Stripe (valid/invalid/unknown verdicts), OAuth configuration for Apache Polaris and Iceberg REST catalogs, refined MCP resource documentation and PyPI packaging alignment.",
+          "source": "https://github.com/msaad00/agent-bom/releases"
+        }
+      ]
     },
     {
       "tool": "HiddenLayer AISec Platform (Model Scanner, AI Supply Chain Security)",
@@ -1144,7 +1256,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Veracode SCA customers who need CycloneDX/SPDX SBOMs from existing policy scans or container images and prefer a single AST vendor over a dedicated SBOM manager",
       "sources": "https://docs.veracode.com/r/Generate_an_SBOM_with_the_REST_API|https://docs.veracode.com/r/veracode_sbom|https://docs.veracode.com/r/veracode_scan|https://docs.veracode.com/r/Supply_chain_management_and_SBOMs|https://docs.veracode.com/updates/r/Veracode_CLI_Updates|https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-27",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Release",
+          "summary": "Veracode CLI v2.52.1 ships performance improvements for the 'veracode fix sca' command on JavaScript projects; same-day platform notes add multiple team assignment for DAST targets (not SBOM-related).",
+          "source": "https://docs.veracode.com/updates/"
+        }
+      ]
     },
     {
       "tool": "OpenText Core SCA (Debricked) SBOM with Fortify SSC / Core Application Security",

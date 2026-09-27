@@ -31,7 +31,7 @@
       "product_url": "https://www.threatmodeler.ai/",
       "is_new_entrant": false,
       "type": "Commercial",
-      "deployment": "SaaS (FedRAMP Moderate authorised) / On-prem and private cloud historically offered (confirm current availability with vendor)",
+      "deployment": "SaaS (ThreatModeler Nexus FedRAMP Moderate authorised, Sept 2026, Knox-sponsored) / On-prem and private cloud historically offered (confirm current availability with vendor)",
       "languages_coverage": "Diagrams and EA imports, IaC (Terraform, CloudFormation, Azure Resource Manager via IaC-Assist), live cloud accounts (AWS, Azure, GCP via CloudModeler), documents, natural language via MCP-connected AI assistants",
       "key_features": "Agentic platform with System Mapping, Graph and Reporting agents over a 'Secure Design Graph' | STRIDE, PASTA and CSA MAESTRO for agentic systems | Control mapping to NIST, ISO 27001, PCI DSS, HIPAA, DORA, EU AI Act; claims 180+ frameworks | CloudModeler live import and threat-drift tracking for AWS/Azure/GCP | IaC-Assist analyses Terraform/CloudFormation/ARM in the IDE | ThreatModeler MCP server for GitHub, IDEs and AI assistants",
       "ai_capabilities": "AI-generated threat model from documents, diagrams, IaC and cloud context (System Mapping Agent) | AI assistant for threats and mitigations (Graph Agent enrichment, Reporting Agent) | LLM-based diagram creation (system map generated from inputs) | AI threat libraries for AI/agentic systems (MAESTRO support, EU AI Act mapping) | Agent/MCP integration (ThreatModeler MCP Server, GA per product pages) | Model used: not publicly disclosed; BYO-LLM not documented | On-prem AI option: not publicly disclosed",
@@ -45,8 +45,16 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals typically six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises and US federal agencies needing cloud-native, portfolio-scale threat modeling with FedRAMP and MCP-driven automation",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.threatmodeler.ai/ | https://www.threatmodeler.ai/products/cloudmodeler | https://www.threatmodeler.ai/platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://finance.yahoo.com/news/threatmodeler-raises-60-million-invictus-133000790.html"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.threatmodeler.ai/ | https://www.threatmodeler.ai/products/cloudmodeler | https://www.threatmodeler.ai/platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://finance.yahoo.com/news/threatmodeler-raises-60-million-invictus-133000790.html",
+      "recent_updates": [
+        {
+          "date": "2026-09-14",
+          "type": "Feature GA",
+          "summary": "ThreatModeler Nexus received FedRAMP Moderate authorization (sponsored by Knox), making the agentic threat modeling platform available to US federal agencies for CUI and moderate-impact systems.",
+          "source": "https://www.threatmodeler.ai/resources/blog/threatmodeler-achieves-fedramp-moderate-authorization"
+        }
+      ]
     },
     {
       "tool": "SD Elements (incl. Navigator AI, MCP Server, SD Elements for Agentic AI Workflow)",
@@ -80,10 +88,10 @@
       "deployment": "SaaS (annual billing); no on-prem published",
       "languages_coverage": "Diagrams (collaborative canvas), natural language architecture descriptions, code repositories via Code Genius (JavaScript, TypeScript, Python, Java, C#, C, C++), agent prompts via MCP",
       "key_features": "10+ methodologies incl. STRIDE, LINDDUN, MAESTRO | Devici Codex curated threat and mitigation library keyed on component attributes | Real-time collaborative diagramming | Jira and Azure DevOps task push | SD Elements export for requirements | Flat enterprise pricing (no per-user/per-model fees)",
-      "ai_capabilities": "AI-generated threat model from description (paste text, canvas rendered with components, flows, trust boundaries) and from code repo (Code Genius, enterprise) | AI assistant for threats and mitigations (Codex attaches threats/default mitigations; AI-curated library covers adversarial ML, prompt injection, data poisoning) | LLM-based diagram creation: yes | AI threat libraries for AI/ML/LLM/agentic: MAESTRO framework plus AI-specific threat content | Agent/MCP: Devici MCP for Cursor, Claude Code, VS Code + Copilot (enterprise) | Model used: not publicly disclosed | On-prem AI: no",
+      "ai_capabilities": "AI-generated threat model from description (paste text, canvas rendered with components, flows, trust boundaries) and from code repo (Code Genius, enterprise) | AI assistant for threats and mitigations (Codex attaches threats/default mitigations; AI-curated library covers adversarial ML, prompt injection, data poisoning) | LLM-based diagram creation: yes | AI threat libraries for AI/ML/LLM/agentic: MAESTRO framework plus AI-specific threat content | Agent/MCP: Devici MCP for Cursor, Claude Code, VS Code + Copilot (enterprise); User-role-scoped API tokens for least-privilege MCP access and /sync-devici-threat-model prompt to sync models with SD Elements MCP (v2.30.0, Sept 2026) | Model used: not publicly disclosed | On-prem AI: no",
       "ai_maturity": "GA (free tier has limited AI; Code Genius and MCP are enterprise features)",
       "ai_verified_source": "https://www.securitycompass.com/devici/ai-infusion/",
-      "integrations": "Jira, Azure DevOps, GitHub, Splunk, SD Elements, MCP (Cursor, Claude, Copilot), SSO/SAML, API",
+      "integrations": "Jira, Azure DevOps, GitHub, Splunk, SD Elements (OTM export and /sync-devici-threat-model MCP workflow prompt), MCP (Cursor, Claude, Copilot; role-scoped API tokens), SSO/SAML, API",
       "sectors_reference_customers": "Not publicly disclosed; positioned for developer teams in mid-market and enterprise",
       "analyst_position": "Gartner Peer Insights listed (0 reviews); no MQ/Wave",
       "cons_known_gaps": "SaaS only, no self-hosted option for air-gapped clients | Code Genius language coverage excludes Go, Rust, Kotlin, Swift and IaC | Positioning versus SD Elements still settling post-acquisition | Small vendor footprint pre-acquisition (1-10 employees per Crunchbase) | LLM and data-handling details not published",
@@ -91,8 +99,16 @@
       "indicative_cost_usd": "Free tier $0; enterprise custom, marketed as not scaling with users or models",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-led teams wanting fast collaborative diagram-based modelling with MAESTRO and AI drafts, without per-seat cost growth",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.securitycompass.com/devici/ai-infusion/ | https://www.securitycompass.com/devici/pricing | https://www.businesswire.com/news/home/20250603655492/en/Security-Compass-Acquires-Devici-to-Expand-Threat-Modeling-Capabilities | https://www.crunchbase.com/organization/devici"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.securitycompass.com/devici/ai-infusion/ | https://www.securitycompass.com/devici/pricing | https://www.businesswire.com/news/home/20250603655492/en/Security-Compass-Acquires-Devici-to-Expand-Threat-Modeling-Capabilities | https://www.crunchbase.com/organization/devici",
+      "recent_updates": [
+        {
+          "date": "2026-09-16",
+          "type": "Release",
+          "summary": "Devici 2.30.0 adds User-role-scoped API tokens for MCP/API access, bulk attribute assignment, admin-issued personal tokens and a /sync-devici-threat-model workflow prompt that keeps threat models in sync with SD Elements via both platforms' MCP servers.",
+          "source": "https://docs.devici.com/latest/release-notes/"
+        }
+      ]
     },
     {
       "tool": "Threat Canvas (ThreatCanvas)",
@@ -103,10 +119,10 @@
       "deployment": "SaaS / self-hosted option per vendor; Docker-based code-analysis runner keeps source in customer infrastructure",
       "languages_coverage": "Natural language descriptions, documentation, architecture diagrams (AI interpretation of existing images), IaC, source code repositories via CI/CD runner (GitHub Actions, GitLab CI, Jenkins, Azure DevOps, CircleCI, Bitbucket)",
       "key_features": "AI generation of complete threat models in seconds from text, IaC, diagram or code | Risk templates for LLMs, agentic systems and AI-generated code | Compliance alignment to NIST SSDF, ISO 27001, PCI DSS, HIPAA, OWASP | Jira and Azure DevOps work-item push | ThreatCanvas Projects for portfolio grouping (Oct 2025) | Built-in threat modeling training",
-      "ai_capabilities": "AI-generated threat model from description, diagram, IaC and code repo (code-repo feature launched 2026-01-13) | AI assistant for threats and mitigations: yes | LLM-based diagram creation: yes | AI threat libraries for LLM/agentic systems: yes (dedicated templates) | Agent/MCP: API and MCP for agent workflows and CI/CD | Model: BYO-LLM credentials supported (Anthropic, Azure OpenAI, OpenAI, Gemini) | On-prem AI: code never leaves infrastructure; only architectural descriptions sent; BYO-LLM allows customer-controlled endpoints",
+      "ai_capabilities": "AI-generated threat model from description, diagram, IaC and code repo (code-repo feature launched 2026-01-13) | AI assistant for threats and mitigations: yes | LLM-based diagram creation: yes | AI threat libraries for LLM/agentic systems: yes (dedicated templates) | Agent/MCP: API and MCP for agent workflows and CI/CD; SecureFlag MCP Server (Sept 2026) generates ThreatCanvas threat models from user stories inside Claude Code and Codex and links findings to training labs | Model: BYO-LLM credentials supported (Anthropic, Azure OpenAI, OpenAI, Gemini) | On-prem AI: code never leaves infrastructure; only architectural descriptions sent; BYO-LLM allows customer-controlled endpoints",
       "ai_maturity": "GA",
       "ai_verified_source": "https://blog.secureflag.com/2026/01/13/code-repo-to-threatcanvas/",
-      "integrations": "Jira (Atlassian Marketplace app), Azure DevOps, GitHub Actions, GitLab CI, Jenkins, CircleCI, Bitbucket Pipelines, MCP, API, AWS Marketplace listing",
+      "integrations": "Jira (Atlassian Marketplace app), Azure DevOps, GitHub Actions, GitLab CI, Jenkins, CircleCI, Bitbucket Pipelines, SecureFlag MCP Server (Claude Code, Codex and other MCP clients), API, AWS Marketplace listing",
       "sectors_reference_customers": "OWASP membership benefit; Gartner PI reviewers from $1B-10B services firms; named logos not disclosed",
       "analyst_position": "Gartner Peer Insights: 5.0/5 (2 reviews, Dec 2025)",
       "cons_known_gaps": "Acquisition rumour in the brief unverified: confirm ownership before contracting | Small review base | Deep library and compliance depth less mature than IriusRisk/SD Elements | Quality of AI-generated models depends on BYO-LLM choice | Enterprise pricing not published",
@@ -114,8 +130,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want AI-first, code-to-threat-model automation with their own LLM keys and existing SecureFlag training",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.secureflag.com/threat-modeling/ | https://blog.secureflag.com/2026/01/13/code-repo-to-threatcanvas/ | https://owasp.github.io/blog/2024/05/30/secureflag-threatcanvas-member-benefit | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/secureflag/product/threat-canvas | https://www.securecodewarrior.com/article/threat-modeling-with-ai-turning-every-developer-into-a-threat-modeler"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.secureflag.com/threat-modeling/ | https://blog.secureflag.com/2026/01/13/code-repo-to-threatcanvas/ | https://owasp.github.io/blog/2024/05/30/secureflag-threatcanvas-member-benefit | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/secureflag/product/threat-canvas | https://www.securecodewarrior.com/article/threat-modeling-with-ai-turning-every-developer-into-a-threat-modeler",
+      "recent_updates": [
+        {
+          "date": "2026-09-15",
+          "type": "Feature launch",
+          "summary": "SecureFlag introduced the SecureFlag MCP Server, letting MCP clients such as Claude Code and Codex generate shareable ThreatCanvas threat models for a user story and pull contextual training labs from inside the coding workflow.",
+          "source": "https://blog.secureflag.com/2026/09/15/secureflag-mcp-server/"
+        }
+      ]
     },
     {
       "tool": "Microsoft Threat Modeling Tool (TMT)",
@@ -470,11 +494,11 @@
       "type": "Commercial",
       "deployment": "SaaS",
       "languages_coverage": "Design specs, Jira tickets, code and pull requests, IDE context (VS Code, Cursor)",
-      "key_features": "Continuous threat modeling generated in under 10 minutes from design artefacts and code | Automated security reviews in GitHub/Jira/IDE | Policy-as-code enforcement on every PR with merge blocking | HealthTech GRC module (HIPAA/FDA) | 'Security layer for agentic development' with secure prompting context for coding agents",
+      "key_features": "Continuous threat modeling generated in under 10 minutes from design artefacts and code | Automated security reviews in GitHub/Jira/IDE (Design Reviewer for Jira tickets and Google Docs designs; Code Reviewer on PRs) | Policy-as-code enforcement on every PR with merge blocking | HealthTech GRC module (HIPAA/FDA) | 'Security layer for agentic development' with secure prompting context for coding agents (AI Guardrails) | IriusRisk XML import for migration (Sept 2026)",
       "ai_capabilities": "AI-generated threat model from design/code: yes | AI assistant for threats/mitigations: yes | LLM-based diagram creation: not disclosed | AI threat libraries for AI systems: guardrails for AI code generation | Agent/MCP: MCP integration listed | Model: not disclosed | On-prem AI: no",
       "ai_maturity": "GA (marketed); early-stage validation",
       "ai_verified_source": "https://www.devarmor.com/",
-      "integrations": "GitHub (Marketplace app), VS Code, Cursor, Jira, Okta, MCP",
+      "integrations": "GitHub (Marketplace app), VS Code, Cursor, Jira, Google Docs, Okta, MCP, IriusRisk XML import",
       "sectors_reference_customers": "Not disclosed; backers include partners from Signal Sciences and Aviso Ventures (per site)",
       "analyst_position": "not rated",
       "cons_known_gaps": "Startup with undisclosed funding and customers | No published methodology or library depth | SaaS-only | Pricing 'usage-based', not public",
@@ -482,8 +506,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs adopting AI coding agents that want design-time guardrails and PR enforcement",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.devarmor.com/ | https://cybersectools.com/categories/threat-modeling"
+      "last_verified": "2026-09-27",
+      "sources": "https://www.devarmor.com/ | https://cybersectools.com/categories/threat-modeling",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Feature launch",
+          "summary": "DevArmor published an IriusRisk-to-DevArmor migration path: import IriusRisk data-model or bulk XML exports, then a 30-day rollout covering SSO, GitHub/Jira integration, Design Reviewer (Jira tickets and Google Docs designs), Code Reviewer and AI Guardrails.",
+          "source": "https://www.devarmor.com/blog/migrating-from-iriusrisk-to-devarmor"
+        }
+      ]
     },
     {
       "tool": "Oplane",
@@ -643,8 +675,16 @@
       "indicative_cost_usd": "$0 (printing cost)",
       "pricing_confidence": "High",
       "best_fit_for": "Developer education and lightweight threat elicitation in sprints",
-      "last_verified": "2026-09-26",
-      "sources": "https://owasp.org/www-project-cornucopia/ | https://owasp.org/www-project-cumulus/ | https://github.com/owasp/threat-dragon/releases"
+      "last_verified": "2026-09-27",
+      "sources": "https://owasp.org/www-project-cornucopia/ | https://owasp.org/www-project-cumulus/ | https://github.com/owasp/threat-dragon/releases",
+      "recent_updates": [
+        {
+          "date": "2026-09-20",
+          "type": "Release",
+          "summary": "OWASP Cornucopia v3.5.4 shipped as a maintenance release (dependency bumps, sveltekit-i18n 3.0 migration) and added documentation for a spoofing scenario on the Elevation of Privilege SP4 card.",
+          "source": "https://github.com/OWASP/cornucopia/releases/tag/v3.5.4"
+        }
+      ]
     },
     {
       "tool": "MITRE ATLAS (Adversarial Threat Landscape for AI Systems)",
@@ -835,6 +875,43 @@
           "type": "New entrant",
           "summary": "Added to landscape; OWASP project designation; website lists v0.4.0 with BYO-LLM threat suggestion and MCP server",
           "source": "https://www.precogly.org/"
+        },
+        {
+          "date": "2026-09-15",
+          "type": "Release",
+          "summary": "Precogly v0.4.0 released with LLM-based threat suggestor on per-tenant bring-your-own-model infrastructure, taxonomy packs (CAPEC, CWE, MITRE ATT&CK, MITRE ATLAS), CycloneDX 2.0 TM-BOM import/export, risk register with kanban view, OAuth 2.1 authorization server and a 41-component AWS library pack.",
+          "source": "https://github.com/precogly/precogly/blob/main/CHANGELOG.md"
+        }
+      ]
+    },
+    {
+      "tool": "Red Hat agentic-threat-modeling (open-source Lola module for AI coding agents)",
+      "vendor": "Red Hat Product Security",
+      "product_url": "https://github.com/RedHatProductSecurity/agentic-threat-modeling",
+      "is_new_entrant": true,
+      "type": "Open source",
+      "deployment": "On-prem / local (installed into the developer's AI coding agent via the Lola package manager; runs wherever Claude Code, Cursor or Gemini CLI runs)",
+      "languages_coverage": "Six threat-modelling methodologies (STRIDE, PASTA, LINDDUN, VAST, Attack Trees, OCTAVE); code-agnostic (reads source and design context); no ASVS, CWE or compliance-framework mapping documented",
+      "key_features": "Narrative threat model generated from a repo or feature with citations to specific files and lines|Modes: quick scan, guided session, comprehensive analysis, PR-scoped review, iterative update|THREAT_MODEL.md output with executive summary, architecture, threat actors, asset and data-classification inventory, attack surface, kill-chain scenarios and mitigation roadmap|PR Threat Assessment for branch/PR changes|Runs inside Claude Code, Cursor, Gemini CLI and other agents supported by Lola",
+      "ai_capabilities": "AI-generated threat model from code and design context: yes (STRIDE, PASTA, LINDDUN, VAST, Attack Trees, OCTAVE) | AI assistant for threats and mitigations: yes, mitigation roadmap and per-threat mitigations in THREAT_MODEL.md | PR-scoped threat assessment: yes | LLM-based diagram creation: no (Markdown narrative only) | Agent/MCP: delivered as a Lola module for Claude Code, Cursor and Gemini CLI, not an MCP server | Model used: BYO, whatever model the host coding agent uses",
+      "ai_maturity": "Beta or Preview (initial open-source release 21 Sep 2026; 5 commits, 0 stars, 2 forks at 27 Sep 2026)",
+      "ai_verified_source": "https://developers.redhat.com/articles/2026/09/21/ai-threat-modeling-shouldnt-be-a-bottleneck-so-we-open-sourced-ours",
+      "integrations": "Claude Code, Cursor, Gemini CLI (via Lola); Git/PR workflow; Markdown output only",
+      "sectors_reference_customers": "Used internally by Red Hat Product Security (per vendor article); no external references",
+      "analyst_position": "Not rated. Open-source skill pack from Red Hat Product Security showing threat modelling being pushed into AI coding agents; free baseline against Devici, IriusRisk, Seezo, STRIDE GPT and SD Elements Agentic AI Workflow",
+      "cons_known_gaps": "No requirement library, standards mapping or compliance reporting|Output is Markdown only; no Jira/ADO push or traceability|Depends on Lola package manager and a paid frontier-model coding agent|Very early: 0 stars, 5 commits, no releases|LLM output quality unvalidated independently",
+      "pricing_model": "Free (Apache 2.0)",
+      "indicative_cost_usd": "$0 plus LLM/agent subscription costs",
+      "pricing_confidence": "High",
+      "best_fit_for": "Teams already on Claude Code/Cursor wanting a free, methodology-driven threat model and mitigation list per PR before buying a platform",
+      "last_verified": "2026-09-27",
+      "sources": "https://developers.redhat.com/articles/2026/09/21/ai-threat-modeling-shouldnt-be-a-bottleneck-so-we-open-sourced-ours|https://github.com/RedHatProductSecurity/agentic-threat-modeling",
+      "recent_updates": [
+        {
+          "date": "2026-09-21",
+          "type": "New entrant",
+          "summary": "Red Hat Product Security open-sourced agentic-threat-modeling (Apache 2.0), a Lola module that runs STRIDE/PASTA/LINDDUN/VAST/Attack Trees/OCTAVE inside Claude Code, Cursor and Gemini CLI and emits a THREAT_MODEL.md with code-cited threats and mitigations.",
+          "source": "https://developers.redhat.com/articles/2026/09/21/ai-threat-modeling-shouldnt-be-a-bottleneck-so-we-open-sourced-ours"
         }
       ]
     }
