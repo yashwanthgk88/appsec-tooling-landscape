@@ -1,0 +1,44 @@
+Subject: AppSec tooling landscape weekly update 2026-09-28: 0 new tools, 11 updates
+Run: weekly update, window 2026-09-14 to 2026-09-28, second run of the day (started 12:18 IST, pushed after the 12:21 IST run and rebased on top of it)
+Headline: 241 tools tracked, 0 new tools, 27 tools updated (10 with new dated updates, 17 with data corrections only), 214 unchanged (51 checked with no change, 42 could not be verified, 121 not reached this run).
+
+New tools added:
+None
+
+AI maturity changes:
+Prime Security, Threat Modeling, Marketing claim to GA, vendor site at primesec.ai verified this run (platform GA June 2025, Series A Dec 2025); vendor claim
+Faraday, Platforms and ASPM, Marketing claim to GA for its MCP Server, shipped in v5.21 in June 2026 per the vendor release page; AI triage still unverified
+Clover Security, Platforms and ASPM, Beta or Preview to GA, vendor released Kura adaptive security context on 3 Aug 2026; no independent check
+
+Notable updates:
+Prime Security, Security Requirements and Threat Modeling, 2026-09-23: vendor now says it charges by code volume and risk rather than per developer seat; no list price published (vendor claim)
+ThreatModeler Nexus, Security Requirements, 2026-09-16: FedRAMP Moderate authorization through Knox Systems, so US federal agencies can use it for controlled unclassified data
+Endor Labs, SCA and Platforms and ASPM, September release notes: C and C++ dependency scanning via Conan, a tenant-wide Threat Center, a firewall for VS Code extensions and NuGet, faster container scanning, malware exposure labels
+Snyk, SBOM and AI BOM, 2026-09-18: Evo MCP Server lets any AI agent client query Snyk's AI asset inventory and policies (same event as the SCA row dated 22 Sept)
+Snyk, SBOM and AI BOM, 2026-09-23: CLI 1.1307.4 adds a trial command that plugs Snyk into AI coding tools and new filters for AI fixes
+Snyk Code, SAST, 2026-09-14: September release adds Java 25, eight Java frameworks, LangChain LiteLLM as an untrusted source and new rules for Ruby, Java, Python and Rust
+Konvu, SCA, 2026-09-24: describes an AI pipeline that tries to reproduce exploits for reported vulnerabilities; SCA and SAST use of it is in early access
+JFrog Xray, SBOM and AI BOM, 2026-09-16: maintenance builds 3.154.4 and 3.154.8 (Debian and Ubuntu curation, NuGet metadata)
+Greptile, SAST, 2026-09-16: review summaries redesigned with a confidence score and security findings ranked first
+Entro Security, Secret Scanning, correction: SailPoint completed the acquisition on 29 June 2026; row said "being acquired"
+Jit, Secret Scanning and Platforms and ASPM, correction: acquired by Torq in May 2026; vendor updated
+Tromzo, Security Requirements and Platforms and ASPM, correction: Checkmarx acquisition (Dec 2025) confirmed; vendor set to Checkmarx
+IriusRisk and ThreatModeler, Security Requirements, correction: ThreatModeler acquired IriusRisk in Jan 2026; both rows updated
+SD Elements, Security Requirements, correction: release notes confirm ASVS 5.0, EU CRA and ISA 62443 content and MCP tools on by default since 29 Aug; the ASVS 5.0 gap is closed
+Echo, SCA, correction: site moved to echo.ai with a wider product line; link updated
+
+Other updates recorded: SAST 2, SCA 2, Secret Scanning 0, SBOM and AI BOM 3, Threat Modeling 1, Security Requirements 2, Platforms and ASPM 1
+
+Checked with no change: SAST 9, SCA 2, Secret Scanning 9, SBOM and AI BOM 9, Threat Modeling 8, Security Requirements 2, Platforms and ASPM 12
+
+Could not be verified this run:
+SAST: Mobb, Amplify Security, Arnica, ZeroPath, Opengrep, Bandit, Brakeman, SpotBugs and FindSecBugs, gosec, PMD
+SCA: Sonatype Lifecycle, Checkmarx SCA, FOSSA, OSV-Scanner
+Secret Scanning: Gitleaks, Betterleaks, Checkmarx 2ms, Aikido Secrets, Arnica, detect-secrets, Cremit
+SBOM and AI BOM: Scribe Security, Safeguard
+Threat Modeling: securiCAD, ThreatModeler Nexus (site blocked), Threat Canvas
+Security Requirements: Devici, Jit, Conviso, Kondukto (Invicti), Seezo, SAMMY
+Platforms and ASPM: Mobb, Legit Security, OpenText, Mend.io, Invicti ASPM, Pixee, ZeroPath, Nullify, Gomboc AI, Seemplicity
+
+Where to look: Feature Updates tab (11 new rows), New Entrants tab (sweep notes only, no new rows), category tabs SAST, SCA, Secret Scanning, SBOM and AI BOM, Threat Modeling, Security Requirements, Platforms and ASPM (27 rows changed), Executive Summary unchanged (totals did not move). CHANGELOG.md has the full entry. Commits: https://github.com/yashwanthgk88/appsec-tooling-landscape/commits/main
+Email: no Gmail or Outlook tool was available in this session, so the summary was not emailed.

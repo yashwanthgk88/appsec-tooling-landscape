@@ -112,7 +112,7 @@
       "is_new_entrant": false,
       "type": "Commercial (Renovate is open source)",
       "deployment": "SaaS; self-hosted Renovate Enterprise; on-prem SCA via agent-based scanning (limited); no full air-gap SaaS",
-      "languages_coverage": "200+ languages/ecosystems claimed: npm, PyPI, Maven/Gradle, NuGet, Go, Ruby, PHP, Cargo, Swift, C/C++, containers, images (malicious package detection extended to container images July 2026)",
+      "languages_coverage": "200+ languages/ecosystems claimed: npm, Bun (bun.lock/bun.lockb, added Sept 2026), PyPI, Maven/Gradle, NuGet, Go, Ruby, PHP, Cargo, Swift, C/C++, containers, images (malicious package detection extended to container images July 2026)",
       "key_features": "SCA Reachability (Java, JS, Python and more) | License compliance and policy automation | Renovate: dependency update PRs at scale (open source, 100M+ PRs) and 'Least Vulnerable Package' upgrade strategy | Malicious package detection incl. container images (GA July 2026) | Mend AI: detects AI models, frameworks, inference providers; Mend AI Premium behavioural risk testing (GA Mar 2025) | SBOM export (SPDX/CycloneDX)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: reachability-based prioritisation in SCA; AI-native platform positioning",
@@ -381,8 +381,8 @@
       "is_new_entrant": false,
       "type": "Commercial (free AURI for Developers tier)",
       "deployment": "SaaS; self-hosted scanner option; on-prem/air-gap not standard (unverified)",
-      "languages_coverage": "Function-level reachability claimed in 40+ languages incl. Java, Kotlin, JS/TS, Python, Go, C#, Rust, Ruby, PHP, Swift, Scala; containers; Package Firewall for npm, PyPI, Maven and more",
-      "key_features": "Function-level reachability across first-party, OSS and containers (claims 92% average noise cut) | Endor Patches: security-only backports for EOL/unfixed versions | Package Firewall: 150+ risk signals, blocks malicious packages at install | Policy engine, licence compliance, OSS quality scores | SBOM Hub (ingest/export CycloneDX/SPDX, VEX) | AI Coding Agent Governance, MCP/skills security, AI model governance (50 risk metrics), AURI security harness",
+      "languages_coverage": "Function-level reachability claimed in 40+ languages incl. Java, Kotlin, JS/TS, Python, Go, C#, Rust, Ruby, PHP, Swift, Scala; C/C++ via Conan (Sept 2026); Bazel rules_apple incl. watchOS/tvOS/visionOS; containers; Package Firewall for npm, PyPI, Maven, NuGet, VS Code extensions and more",
+      "key_features": "Function-level reachability across first-party, OSS and containers (claims 92% average noise cut) | Endor Patches: security-only backports for EOL/unfixed versions | Package Firewall: 150+ risk signals, blocks malicious packages at install; extended to NuGet and to VS Code extensions via MDM (Sept 2026) | Threat Center: tenant-wide view of emerging malware, vulnerabilities and AI-model threats (Sept 2026) | Incremental container scanning and base image remediation with upgrade impact analysis (Sept 2026) | Policy engine, licence compliance, OSS quality scores | SBOM Hub (ingest/export CycloneDX/SPDX, VEX; async export) | AI Coding Agent Governance, MCP/skills security, AI model governance (50 risk metrics), AURI security harness",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: reachability plus EPSS/KEV prioritisation; AI SAST",
         "ai_auto_remediation_upgrade_prs": "Yes: AURI agents fix vulnerabilities and secrets; upgrade impact analysis and Endor Patches",
@@ -402,8 +402,16 @@
       "indicative_cost_usd": "Not publicly disclosed; reseller estimates $30-$50/dev/month (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises drowning in SCA noise that need function-level reachability and agent-era governance; strong for modernising delivery teams",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.endorlabs.com/pricing|https://techcrunch.com/2025/04/23/endor-labs-which-builds-tools-to-scan-ai-generated-code-for-vulnerabilities-lands-93m/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security|https://www.endorlabs.com/learn/best-sca-tools-05b7a"
+      "last_verified": "2026-09-28",
+      "sources": "https://www.endorlabs.com/pricing|https://techcrunch.com/2025/04/23/endor-labs-which-builds-tools-to-scan-ai-generated-code-for-vulnerabilities-lands-93m/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security|https://www.endorlabs.com/learn/best-sca-tools-05b7a",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Feature launch",
+          "summary": "Endor Labs September 2026 release notes (month-level page, exact day not stated; dated to match the 27 Sep sweep) add Conan support for C/C++ SCA with transitive resolution from conanfile.txt/conanfile.py and private registries (Artifactory, CodeArtifact), a tenant-wide Threat Center for emerging malware, vulnerabilities and AI-model threats, Package Firewall for VS Code extensions enforced via MDM (Intune, Jamf, Kandji), NuGet Package Firewall, incremental container scanning against a baseline, base image remediation with upgrade impact analysis, malware exposure classification (Definitely vs Potentially Affected), and asynchronous SBOM/VEX export.",
+          "source": "https://docs.endorlabs.com/releasenotes/september-2026"
+        }
+      ]
     },
     {
       "tool": "Aikido Security",
@@ -1118,12 +1126,12 @@
     {
       "tool": "Echo (vulnerability-free container images; acquired Minimus)",
       "vendor": "Echo Software",
-      "product_url": "https://www.echohq.com/",
+      "product_url": "https://www.echo.ai/",
       "is_new_entrant": true,
       "type": "Commercial",
       "deployment": "SaaS registry; mirror to private registries",
       "languages_coverage": "Container base and application images; distro-agnostic after Minimus acquisition",
-      "key_features": "AI agents rebuild OSS images replacing vulnerable components | Images ship with SBOM, signatures, attestations | Minimus assets acquired Aug 2026 for minimal images | Competes with Chainguard/RapidFort",
+      "key_features": "AI agents rebuild OSS images replacing vulnerable components | Images ship with SBOM, signatures, attestations | Minimus assets acquired Aug 2026 for minimal images | Product line per echo.ai site: Containers, Libraries, VMs, Serverless runtimes, OS packages, Helm charts, EOL support (vendor claim) | Competes with Chainguard/RapidFort",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "No",
         "ai_auto_remediation_upgrade_prs": "Yes: AI agents research and remediate vulnerabilities in rebuilt images",
@@ -1156,16 +1164,16 @@
       "languages_coverage": "Scanner-agnostic; agent checks across code, config and runtime signals",
       "key_features": "AI-native vulnerability triage agents on top of existing SCA/SAST | Evidence-backed exploitability verdicts | Prioritisation delivered into existing workflows | Infosecurity Europe Cyber Startup Award June 2026",
       "ai_capabilities": {
-        "ai_triage_reachability_prioritisation": "Yes: core product",
+        "ai_triage_reachability_prioritisation": "Yes: core product; AI reproduction pipeline deploys affected versions in isolation and attempts exploits to return evidence-backed verdicts (bug bounty path shipped, SCA/SAST paths early access Sept 2026, vendor claim)",
         "ai_auto_remediation_upgrade_prs": "Partial",
         "malicious_package_detection_ml_llm": "No",
         "natural_language_query": "Partial",
         "agent_mcp_integration": "Partial",
         "ai_model_or_ai_library_dependency_detection": "No",
-        "model_used_or_byo_llm": "not publicly disclosed"
+        "model_used_or_byo_llm": "not publicly disclosed; vendor blog says tiers use different capable models with overridable model assignment"
       },
-      "ai_maturity": "GA (early)",
-      "ai_verified_source": "https://www.infosecurity-magazine.com/news/konvu-wins-cyber-startup-award/",
+      "ai_maturity": "GA (early; SCA/SAST exploit reproduction in early access)",
+      "ai_verified_source": "https://konvu.com/blog/from-vulnerability-finding-to-exploit-proof",
       "integrations": "Connectors to SCA/SAST tools, Jira, Slack (per vendor)",
       "sectors_reference_customers": "Not disclosed; seed round led by Emblem (amount undisclosed)",
       "analyst_position": "not rated",
@@ -1174,8 +1182,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Overlay triage for teams with existing SCA noise problems",
-      "last_verified": "2026-09-26",
-      "sources": "https://www.infosecurity-magazine.com/news/konvu-wins-cyber-startup-award/|https://www.crunchbase.com/organization/konvu|https://konvu.com/about"
+      "last_verified": "2026-09-28",
+      "sources": "https://www.infosecurity-magazine.com/news/konvu-wins-cyber-startup-award/|https://www.crunchbase.com/organization/konvu|https://konvu.com/about",
+      "recent_updates": [
+        {
+          "date": "2026-09-24",
+          "type": "Feature launch",
+          "summary": "Konvu described its AI reproduction pipeline, which deploys the affected software version in an isolated environment, runs tiered automated exploit attempts and returns an evidence-backed exploitability verdict; bug bounty reproduction is shipped while the SCA and SAST paths are rolling out in early access to customers (vendor claim, vendor blog).",
+          "source": "https://konvu.com/blog/from-vulnerability-finding-to-exploit-proof"
+        }
+      ]
     },
     {
       "tool": "AIR (AI agent skills and add-on supply chain security) - adjacent",
@@ -1302,6 +1318,12 @@
         "name": "RapidFort (not new but newly rated)",
         "note": "Gartner Cool Vendor 2025 and recognised in 2026 SSCS MQ; curated OSS catalogue and image hardening incl. LLM and MCP components",
         "url": "https://www.rapidfort.com/"
+      },
+      {
+        "tool": "Ossprey",
+        "vendor": "Ossprey (UK)",
+        "link": "https://securitybrief.co.uk/story/ossprey-raises-usd-2-65-million-for-supply-chain-security",
+        "reason": "UK startup securing AI-driven software supply chains; $2.65M pre-seed reported July 2026 (outside window), worth watching for a future row."
       }
     ],
     "unverified_items": [

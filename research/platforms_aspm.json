@@ -524,7 +524,7 @@
     },
     {
       "tool": "Jit Open ASPM",
-      "vendor": "Jit (reported acquired by Torq, May 2026; unverified this session)",
+      "vendor": "Torq (acquired Jit, announced May 19, 2026; reported at roughly $70M, unconfirmed)",
       "product_url": "https://www.jit.io/",
       "is_new_entrant": false,
       "type": "Commercial (orchestrates open-source scanners)",
@@ -537,12 +537,12 @@
       "integrations": "GitHub, GitLab, AWS, Jira, Slack, Linear",
       "sectors_reference_customers": "Start-ups and mid-market; logos not verified",
       "analyst_position": "Not rated",
-      "cons_known_gaps": "Depends on open-source engines; enterprise SAST accuracy limited | Acquisition by Torq (reported) creates roadmap uncertainty and possible re-platforming | Thin third-party ingestion | No on-prem | Small vendor support scale",
+      "cons_known_gaps": "Depends on open-source engines; enterprise SAST accuracy limited | Acquired by Torq (May 2026) to feed an AI SOC context graph; standalone ASPM roadmap uncertain and re-platforming possible | Thin third-party ingestion | No on-prem | Small vendor support scale",
       "pricing_model": "Per developer subscription; free tier historically",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Small dev-first teams wanting fast, opinionated coverage; not a fit for enterprise consolidation",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.jit.io/ | https://appsecsanta.com/aspm-tools"
     },
     {
@@ -652,8 +652,8 @@
       "is_new_entrant": false,
       "type": "Commercial",
       "deployment": "SaaS; self-hosted/on-prem option for enterprise reported (unverified)",
-      "languages_coverage": "Modules: SCA with function-level reachability (flagship), AI SAST (dataflow across repos and PRs), secrets, container scanning (reachability from code), SBOM/VEX, Package Firewall (malicious package blocking), Endor Patches (backported fixes), AI Code Governance (coding agents, models, MCP servers, skills), AI Security Review (agent-based architectural risk detection on PRs), ASPM-lite (own findings; limited third-party ingestion). DAST: none. Language breadth: reachability for Java, Python, JS/TS, Go, C#, Rust, Kotlin, Ruby, PHP, Swift, Scala (expanding; list partly unverified)",
-      "key_features": "Reachability-based SCA cuts noise up to 95-97% (vendor) | AI Security Code Review agent on every PR (claims 2.6x higher true positives vs frontier models) | Endor Patches for fixes without major upgrades | AI Code Governance: inventory and policy for agents, models, MCP servers | MCP servers for Claude, Cursor, VS Code | Package Firewall at install time",
+      "languages_coverage": "Modules: SCA with function-level reachability (flagship), AI SAST (dataflow across repos and PRs), secrets, container scanning (reachability from code; incremental scanning and base-image attribution added Sept 2026), SBOM/VEX (async export jobs), Package Firewall (malicious package blocking; NuGet and VS Code extensions added Sept 2026), Endor Patches (backported fixes), AI Code Governance (coding agents, models, MCP servers, skills), AI Security Review (agent-based architectural risk detection on PRs), Threat Center (emerging threat view, Sept 2026), ASPM-lite (own findings; limited third-party ingestion). DAST: none. Language breadth: reachability for Java, Python, JS/TS, Go, C#, Rust, Kotlin, Ruby, PHP, Swift, Scala (expanding; list partly unverified); Conan C/C++ manifests resolved (Sept 2026)",
+      "key_features": "Reachability-based SCA cuts noise up to 95-97% (vendor) | AI Security Code Review agent on every PR (claims 2.6x higher true positives vs frontier models) | Endor Patches for fixes without major upgrades | AI Code Governance: inventory and policy for agents, models, MCP servers | MCP servers for Claude, Cursor, VS Code | Package Firewall at install time, now also blocks malicious VS Code extensions (Sept 2026) | Threat Center: tenant-wide view of emerging malware, packages, vulnerabilities and AI models (Sept 2026) | Incremental container scanning and base-image vs app-layer attribution (Sept 2026) | Conan C/C++ support (Sept 2026)",
       "ai_capabilities": "AI triage: reachability plus AI SAST dataflow. AI autofix: Endor Patches and remediation workflows with codebase context; auto-PR upgrades. AI agents: AI Security Review agent (PR), AI SAST agents. MCP / IDE-agent: MCP servers for Claude, Cursor, VS Code (verified). AI code governance: yes, GA (agents, models, MCP servers, skills). AI-SPM: partial (AI code/model governance rather than runtime). NL query: via MCP. Model: vendor-hosted (multiple frontier models); BYO not documented. On-prem AI: not documented.",
       "ai_maturity": "GA (AI SAST, AI Security Review, MCP, AI Code Governance)",
       "ai_verified_source": "https://www.endorlabs.com/",
@@ -666,7 +666,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering-led organisations prioritising SCA accuracy, AI-generated code review and governance of coding agents",
       "last_verified": "2026-09-28",
-      "sources": "https://www.endorlabs.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs"
+      "sources": "https://www.endorlabs.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Release",
+          "summary": "September 2026 release notes (month-level page, exact day not stated; dated to match the 27 Sep sweep) add Conan C/C++ dependency resolution, a tenant-wide Threat Center for emerging malware, packages, vulnerabilities and AI models, Package Firewall blocking of malicious VS Code extensions via MDM, incremental container scanning against a baseline, base-image versus application-layer attribution with upgrade suggestions, malware exposure classification (Definitely vs Potentially Affected), NuGet support in Package Firewall, watchOS/tvOS/visionOS for Bazel, Codex policy adjustments and async SBOM/VEX exports. Threat Center and the VS Code extension firewall began rolling out per a Sept 9 blog post updated Sept 16 (vendor claim on availability).",
+          "source": "https://docs.endorlabs.com/releasenotes/september-2026"
+        }
+      ]
     },
     {
       "tool": "Semgrep AppSec Platform",
@@ -865,10 +873,10 @@
       "type": "Open-core (Community Edition GPL; Cloud/Enterprise commercial)",
       "deployment": "Self-hosted (Community, Enterprise) / SaaS (Cloud)",
       "languages_coverage": "Modules: vulnerability management aggregator (100+ tool plugins), Agents Dispatcher for remote scanning, Faraday Enrichment (prioritisation), Faraday Cart (attack simulation), Faraday OPS (external attack surface), pentest collaboration/reporting. No native SAST/SCA/DAST engines (orchestrates ZAP, Nuclei, Nmap, etc.). ASPM: partial (infra/pentest-centric). Autofix: none. Language breadth: n/a",
-      "key_features": "Open-source vulnerability manager with 100+ integrations | Collaborative pentest workflow and reporting | AI-powered continuous pentesting with triage (commercial) | Agent dispatcher for distributed scanning | Self-hostable",
-      "ai_capabilities": "AI triage: AI-powered triage in commercial tiers (marketed). AI autofix: none. AI agents: automated attack simulation (Cart). MCP / IDE-agent: not verified. AI code governance: none. AI-SPM: none. NL query: not verified.",
-      "ai_maturity": "Marketing claim / unverified",
-      "ai_verified_source": "https://faradaysec.com/",
+      "key_features": "Open-source vulnerability manager with 100+ integrations | Collaborative pentest workflow and reporting | AI-powered continuous pentesting with triage (commercial) | Agent dispatcher for distributed scanning | Self-hostable | MCP Server support so AI agents and LLMs can connect to vulnerability management workflows (v5.21, June 2026) | CVE-based grouping and prioritisation refinements (v5.20, May 2026)",
+      "ai_capabilities": "AI triage: AI-powered triage in commercial tiers (marketed). AI autofix: none. AI agents: automated attack simulation (Cart). MCP / IDE-agent: MCP Server support introduced in Faraday v5.21 (June 2026, per vendor release page). AI code governance: none. AI-SPM: none. NL query: via MCP-connected agents (implied, not verified).",
+      "ai_maturity": "GA (MCP Server in v5.21, June 2026 per vendor release page); AI triage: Marketing claim / unverified",
+      "ai_verified_source": "https://faradaysec.com/latest-release/",
       "integrations": "Nessus, OpenVAS, Burp, ZAP, Nuclei, Nmap, Jira, Slack, ServiceNow, GitLab, 100+ tools",
       "sectors_reference_customers": "Pentest firms, MSSPs, LATAM/EU enterprises; logos not verified",
       "analyst_position": "Not rated",
@@ -877,7 +885,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Offensive security and pentest delivery teams needing a shared findings workspace, not a consolidation platform for SDLC AppSec",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://faradaysec.com/ | https://appsecsanta.com/aspm-tools"
     },
     {
@@ -1035,24 +1043,24 @@
     {
       "tool": "Clover Security (design-time / secure-by-design AI AppSec)",
       "vendor": "Clover Security",
-      "product_url": "https://www.cloversecurity.com/",
+      "product_url": "https://clover.security/",
       "is_new_entrant": true,
       "type": "Commercial",
       "deployment": "SaaS (unverified)",
       "languages_coverage": "Modules: design-time security (requirements, threat modelling and security design derived from tickets/specs), AI-driven controls before code; scanners: none. ASPM: none. Autofix: n/a. Language breadth: n/a",
-      "key_features": "Shifts security to design phase (Jira/spec ingestion) | Reported $36M funding at launch (November 2025) | AI-generated security requirements | Complements scanners rather than replacing them",
-      "ai_capabilities": "AI triage: n/a. AI autofix: n/a. AI agents: design-time AI agents (marketed). MCP / IDE-agent: not verified. AI code governance: partial. AI-SPM: none. Model: not disclosed.",
-      "ai_maturity": "Beta or Preview (new launch; unverified)",
-      "ai_verified_source": "https://appsecsanta.com/aspm-tools",
+      "key_features": "Shifts security to design phase (Jira/spec ingestion) | Reported $36M funding at launch (November 2025); ServiceNow investment reported March 2026 | AI-generated security requirements | Kura: adaptive security context for coding agents that keeps a live threat model and generates task-scoped threats and countermeasures during code generation (released Aug 3, 2026; vendor claims 94% vulnerability prevention vs 37% for frontier models with generic context) | One-click connection to existing coding agents (vendor claim) | Complements scanners rather than replacing them",
+      "ai_capabilities": "AI triage: n/a. AI autofix: n/a (prevention at generation time). AI agents: design-time AI agents (marketed). MCP / IDE-agent: Kura connects to existing coding agents with a single-click integration (vendor claim, Aug 2026; protocol not confirmed). AI code governance: partial (task-scoped security context for agents). AI-SPM: none. Model: not disclosed.",
+      "ai_maturity": "GA (Kura adaptive security context, Aug 2026, per vendor; independent verification none)",
+      "ai_verified_source": "https://clover.security/news/",
       "integrations": "Jira and SDLC planning tools (reported)",
       "sectors_reference_customers": "Not publicly disclosed",
       "analyst_position": "Not rated",
-      "cons_known_gaps": "Very new; product depth unverified | Not a scanner or ASPM | Adoption depends on engineering process discipline | Vendor page not fetched this session (URL unverified) | Funding-stage risk",
+      "cons_known_gaps": "Very new; product depth unverified | Not a scanner or ASPM | Adoption depends on engineering process discipline | Vendor efficacy claims (94% prevention) are self-reported | Funding-stage risk",
       "pricing_model": "Not publicly disclosed",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Threat-modelling-heavy programmes wanting AI assistance at design time (watch-list only)",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://appsecsanta.com/aspm-tools"
     },
     {
@@ -1127,12 +1135,12 @@
     {
       "tool": "Seemplicity (remediation operations / RemOps)",
       "vendor": "Seemplicity",
-      "product_url": "https://seemplicity.io/",
+      "product_url": "https://seemplicity.ai/",
       "is_new_entrant": false,
       "type": "Commercial",
       "deployment": "SaaS",
       "languages_coverage": "Modules: remediation operations layer above scanners: routing, ownership, SLA, AI agents for workflow; ingests AppSec, cloud, infra findings. No scanners; ASPM-adjacent (exposure management). Autofix: workflow automation, not code fixes. Language breadth: n/a",
-      "key_features": "AI agents automate routing, ownership and SLA tracking | Vendor figures: 1.5B findings/day processed, up to 80% less manual work | Sits above ASPM/CNAPP/VM tools | Executive reporting",
+      "key_features": "AI agents automate routing, ownership and SLA tracking | Vendor figures: 1.5B findings/day processed, up to 80% less manual work | Sits above ASPM/CNAPP/VM tools | Executive reporting | Automated Response Options to apply mitigations that remove exploitability while patches are pending (announced Sept 3, 2026; vendor claim)",
       "ai_capabilities": "AI triage: workflow prioritisation. AI autofix: none (workflow). AI agents: remediation-ops agents. MCP: unverified. AI code governance: none. AI-SPM: none.",
       "ai_maturity": "GA (per third-party description; unverified)",
       "ai_verified_source": "https://appsecsanta.com/aspm-tools",
@@ -1144,30 +1152,30 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises with an ASPM already in place that still struggle with remediation throughput",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://seemplicity.io/ | https://appsecsanta.com/aspm-tools"
     },
     {
       "tool": "Tromzo (ASPM; tromzo.com now redirects to checkmarx.com)",
-      "vendor": "Tromzo (redirect to Checkmarx indicates acquisition/absorption; transaction not verified this session)",
+      "vendor": "Checkmarx (acquired Tromzo, announced Dec 9, 2025; terms not disclosed)",
       "product_url": "https://www.tromzo.com/",
       "is_new_entrant": false,
       "type": "Commercial",
       "deployment": "SaaS (historical)",
       "languages_coverage": "Modules (historical): ASPM aggregator with 70+ scanner integrations, asset inventory, ownership mapping, risk scoring, remediation workflows; no native scanners; SBOM ingest. Autofix: none",
-      "key_features": "Historically strong ownership/context mapping and low-friction onboarding | Now appears folded into Checkmarx One ASPM (unverified) | Existing customers should confirm roadmap and migration terms",
+      "key_features": "Historically strong ownership/context mapping and low-friction onboarding | Acquired by Checkmarx Dec 2025; Tromzo's reasoning engine positioned as a core intelligence layer across Checkmarx One and the Checkmarx Assist agents, with new Assist agents planned for early 2026 | Existing customers should confirm roadmap and migration terms",
       "ai_capabilities": "AI triage: contextual prioritisation (historical). Others: none verified. Status post-redirect unknown.",
       "ai_maturity": "None / unverified",
       "ai_verified_source": "https://www.tromzo.com/",
       "integrations": "GitHub, GitLab, Jira, Snyk, Checkmarx, Veracode, Wiz, etc. (historical)",
       "sectors_reference_customers": "Not publicly disclosed",
       "analyst_position": "Gartner Market Guide ASPM: representative vendor (2023-2024; historical)",
-      "cons_known_gaps": "Product independence ended; roadmap now tied to Checkmarx | Do not shortlist standalone | Acquisition details unverified",
+      "cons_known_gaps": "Product independence ended; roadmap now tied to Checkmarx One (acquisition announced Dec 9, 2025, terms not disclosed) | Do not shortlist standalone | Standalone product page no longer exists (redirects to checkmarx.com)",
       "pricing_model": "Historically per application/asset",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Not recommended as a standalone contender in 2026",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.tromzo.com/ | https://checkmarx.com/press-releases/"
     }
   ],
@@ -1339,6 +1347,24 @@
         "tool": "Endor Labs and Aikido (scale-ups)",
         "note": "Not new, but 2025 funding rounds moved both from point tools to platform contenders",
         "url": "https://www.endorlabs.com/"
+      },
+      {
+        "tool": "Gartner Emerging Market Quadrant for AI Application Security (2026)",
+        "vendor": "Gartner",
+        "link": "https://www.globenewswire.com/news-release/2026/09/21/3365510/0/en/varonis-recognized-as-a-pace-setter-in-the-gartner-emerging-market-quadrant-for-ai-application-security-established-vendors.html",
+        "reason": "New Gartner report published around Sept 21, 2026 with Established Vendors and Startup Vendors editions (Varonis named Pace Setter; PointGuard AI named Pioneer in the startup edition). Covers AI application security rather than ASPM; worth checking whether any tracked platform vendors were placed."
+      },
+      {
+        "tool": "Pillar Security",
+        "vendor": "Pillar Security",
+        "link": "https://www.pillar.security/blog/pillar-security-named-as-a-2026-gartner-r-cool-vendor-in-ai-software-security",
+        "reason": "Named a 2026 Gartner Cool Vendor in AI Software Security; date not confirmed within the window and the product is AI security rather than an AppSec platform or ASPM."
+      },
+      {
+        "tool": "Pulse Security",
+        "vendor": "Pulse Security",
+        "link": "https://pulse2.com/pulse-security-raises-8-million-seed-funding-and-launches-ai-platform-for-cisos/",
+        "reason": "$8M seed and launch of an AI platform for CISOs surfaced in a September 2026 funding search; date and AppSec relevance not verified."
       }
     ],
     "verification_caveats": [

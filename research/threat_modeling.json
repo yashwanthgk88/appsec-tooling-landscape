@@ -241,9 +241,9 @@
       "type": "Open source (MIT)",
       "deployment": "Desktop / self-hosted (pip CLI, Streamlit web UI, Docker) / hosted MCP at mcp.stridegpt.ai",
       "languages_coverage": "Natural language app descriptions, architecture diagram images (multimodal), GitHub and GitHub Enterprise repositories (agentic codebase analysis), DFD editing",
-      "key_features": "STRIDE threat model with subsystem analysis | Attack trees (Mermaid), DREAD scoring, Gherkin test cases | MITRE ATT&CK and ATLAS mapping | OWASP LLM Top 10 and Agentic (ASI) threat support | Markdown/JSON/SARIF/HTML output | Operationalisation guide for enterprise",
+      "key_features": "STRIDE threat model with subsystem analysis | Attack trees (Mermaid), DREAD scoring, Gherkin test cases | MITRE ATT&CK and ATLAS mapping | OWASP LLM Top 10 and Agentic (ASI) threat support | Markdown/JSON/SARIF/HTML output | Operationalisation guide for enterprise | v0.20.0: checkpoint resumption of interrupted repo analyses, evidence-verified report_threat tool, per-phase token accounting, subsystem outcome tracking",
       "ai_capabilities": "AI-generated threat model from description, image and code repo: yes | AI assistant for threats and mitigations: yes | LLM-based diagram creation: DFD generation | AI threat libraries for LLM/agentic: OWASP LLM Top 10 and ASI mapping, ATLAS | Agent/MCP: mcp-stride-gpt exposes 8 tools (framework, mitigations, DREAD, attack trees, tests, report, coverage, repo analysis guide) for Claude Code/Desktop and generic MCP clients | Model: BYO-LLM across OpenAI, Anthropic, Google, Mistral, Groq, DeepSeek, OpenRouter (added v0.20.0), LiteLLM, LM Studio | On-prem AI: yes via LM Studio/local models | Agentic CLI: /analyze command autonomously explores a codebase and produces a STRIDE threat model, with checkpoint resume and per-phase token accounting since v0.20.0",
-      "ai_maturity": "GA for an OSS project (v0.19.0, 2026-07-19); no vendor support",
+      "ai_maturity": "GA for an OSS project (v0.20.0, 2026-09-26); no vendor support",
       "ai_verified_source": "https://github.com/mrwadams/stride-gpt",
       "integrations": "GitHub, MCP clients, other MCP servers (Terraform, Kubernetes, AWS, Docker Hub); no Jira/ADO",
       "sectors_reference_customers": "Community; 1.1k stars, 319 forks",
@@ -527,7 +527,7 @@
     },
     {
       "tool": "Oplane",
-      "vendor": "Oplane",
+      "vendor": "Oplane (Malmo, Sweden; EUR 4.5M seed led by Seed Capital with Icebreaker.vc, June 2026)",
       "product_url": "https://www.oplane.com/",
       "is_new_entrant": true,
       "type": "Commercial",
@@ -537,10 +537,10 @@
       "ai_capabilities": "AI-generated threat model from code: yes | AI assistant: findings in PR/IDE | LLM-based diagram creation: architecture map inferred | AI threat libraries for agentic systems: yes (agent tools, MCP threats) | Agent/MCP: yes | Model: not disclosed | On-prem AI: no",
       "ai_maturity": "Beta or Preview (free trial; limited public evidence)",
       "ai_verified_source": "https://www.oplane.com/",
-      "integrations": "GitHub, GitLab, IDE, MCP",
-      "sectors_reference_customers": "Not disclosed",
+      "integrations": "GitHub, GitLab, IDE, MCP; Claude Code, Cursor and GitHub Copilot integrations announced as planned (June 2026)",
+      "sectors_reference_customers": "Miro and Tandem Health named as production users in June 2026 funding coverage",
       "analyst_position": "not rated",
-      "cons_known_gaps": "No funding, customer or pricing disclosure | No design-doc or diagram input; code-only | Unproven at enterprise scale",
+      "cons_known_gaps": "No pricing disclosure | No design-doc or diagram input; code-only | Unproven at enterprise scale | Seed-stage vendor (EUR 4.5M seed, June 2026)",
       "pricing_model": "Free trial; quote",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
@@ -551,25 +551,33 @@
     {
       "tool": "Prime Security (AI Security Architect)",
       "vendor": "Prime Security",
-      "product_url": "https://www.prime.security/",
+      "product_url": "https://www.primesec.ai/",
       "is_new_entrant": true,
       "type": "Commercial",
-      "deployment": "SaaS (unverified)",
+      "deployment": "SaaS on AWS (multi-tenant, logically isolated customer data; SOC 2 Type II per vendor); also listed on AWS Marketplace",
       "languages_coverage": "Development plans, design docs and tickets (scans plans for design flaws); chat-interface agent for developers",
-      "key_features": "AI-driven automated security design reviews and risk analysis | AI security architect agent via chat | Design-flaw detection before implementation",
-      "ai_capabilities": "AI-generated design review/threat model from plans: yes (marketed) | AI assistant: yes | Model: not disclosed | Agent/MCP: chat agent; MCP unverified | On-prem AI: unverified",
-      "ai_maturity": "Marketing claim (site could not be fetched this session; description from CybersecTools directory)",
-      "ai_verified_source": "https://cybersectools.com/categories/threat-modeling?page=2",
-      "integrations": "Unverified",
+      "key_features": "Autonomous AI design reviews from specs, architecture docs and data flows (before the code) | AI security code review of human and AI-generated code and security guardrails for coding agents (in the code) | Continuous white-box pentesting mapping data flows and attack paths (after the code) | Learn / Detect / Validate / Mitigate / Enforce workflow that turns recurring risks into agent guardrails | Attack-path based vulnerability prioritisation",
+      "ai_capabilities": "AI-generated design review/threat model from plans and design docs: yes (vendor claim, autonomous design reviews) | AI assistant: yes (agentic reviewer in Jira, Confluence, PRs) | LLM-based diagram creation: architecture and data-flow map inferred from code and cloud context (vendor claim) | AI threat libraries for AI systems: not disclosed | Agent/MCP: guardrails delivered into Claude Code and Cursor; MCP server not confirmed | Model: not disclosed (LLM-based reasoning across code, architecture and cloud context) | On-prem AI: no (AWS-hosted SaaS)",
+      "ai_maturity": "GA (GA announced June 2025, $20M Series A Dec 2025; product page verified 2026-09-28; agent quality not independently validated)",
+      "ai_verified_source": "https://www.primesec.ai/ai-security-architect",
+      "integrations": "GitHub, GitLab, Azure DevOps, Claude Code, Cursor, Jira, Confluence, Linear, Google Drive, Terraform, Miro, Slack, AWS Marketplace",
       "sectors_reference_customers": "Not disclosed",
       "analyst_position": "not rated",
-      "cons_known_gaps": "Unverified vendor claims this session | Funding reportedly seed-stage (unverified) | No methodology transparency",
-      "pricing_model": "Quote",
+      "cons_known_gaps": "Vendor claims not independently validated | No public list prices; consumption metric not defined publicly | No methodology transparency on how design reviews are generated | Limited public customer references",
+      "pricing_model": "Consumption-based (code volume and risk, not per seat) per vendor blog; quote only",
       "indicative_cost_usd": "Not publicly disclosed",
-      "pricing_confidence": "None",
+      "pricing_confidence": "Low",
       "best_fit_for": "Watch-list only until independently validated",
-      "last_verified": "2026-09-26",
-      "sources": "https://cybersectools.com/categories/threat-modeling?page=2 | https://www.prime.security/"
+      "last_verified": "2026-09-28",
+      "sources": "https://cybersectools.com/categories/threat-modeling?page=2 | https://www.prime.security/",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Pricing change",
+          "summary": "Prime Security blog post (23 Sep 2026) states the product is priced on consumption (code volume and risk) rather than per developer seat; vendor claim, no list prices published. Product page verified this session: now positioned as the Prime Security Platform / Agentic Product Security Platform with autonomous design reviews, AI code review, coding-agent guardrails and continuous white-box pentesting, integrating GitHub, GitLab, Claude Code, Cursor, Jira, Confluence, Azure DevOps, Linear, Terraform and Miro.",
+          "source": "https://www.primesec.ai/resources/code-volume-headcount-appsec-pricing"
+        }
+      ]
     },
     {
       "tool": "LLM prompt-based threat modeling (general-purpose LLM: ChatGPT, Claude, Gemini, GitHub Copilot Chat)",
@@ -1025,7 +1033,19 @@
       "ThreatModeler Nexus agentic platform and MCP server (2026 rebrand of ThreatModeler)",
       "SD Elements for Agentic AI Workflow (Feb 2026)",
       "OWASP Top 10 for Agentic Applications 2026 and Agent Control Standard (Sept 2026)",
-      "Precogly (OWASP Precogly): open-source, self-hosted threat modeling with BYO-LLM suggestions, MCP server and CycloneDX TM-BOM; added 27 Sep 2026 after user flag; https://www.precogly.org/"
+      "Precogly (OWASP Precogly): open-source, self-hosted threat modeling with BYO-LLM suggestions, MCP server and CycloneDX TM-BOM; added 27 Sep 2026 after user flag; https://www.precogly.org/",
+      {
+        "tool": "Apiiro AI Threat Modeling",
+        "vendor": "Apiiro",
+        "link": "https://www.helpnetsecurity.com/2026/03/23/apiiro-ai-threat-modeling/",
+        "reason": "ASPM vendor launched AI Threat Modeling (design-stage risk from tickets and docs) in March 2026; outside the window and likely covered under ASPM, but not present in the threat modeling inventory."
+      },
+      {
+        "tool": "SD Elements 2026.9.1 Devici sync (agentic workflow)",
+        "vendor": "Security Compass",
+        "link": "https://docs.sdelements.com/release/latest/guide/docs/release_notes/",
+        "reason": "Released 2026-09-12 (just before the window): /sync-devici-threat-model MCP command exports an Open Threat Model from Devici into an SD Elements project, plus OWASP Top 10 countermeasure skill files for Rust and Go. Flagged for the coordinator in case the prior run missed it."
+      }
     ],
     "free_options_summary": "Fully free: Microsoft TMT, OWASP Threat Dragon, pytm, Threagile, STRIDE GPT (plus LLM tokens), Threat Composer (plus Bedrock), CAIRIS, ThreatSpec, Cornucopia/EoP/Cumulus. Free tiers: IriusRisk Community, Devici (3 models/3 users), Tidal Community, Threat Canvas for OWASP members.",
     "excluded_or_unverified": [

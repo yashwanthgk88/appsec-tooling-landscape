@@ -80,7 +80,7 @@
       "vendor": "Snyk",
       "type": "Commercial (free tier)",
       "deployment": "SaaS (multi-region incl. EU, AU, US Gov); Snyk Broker for private SCM connectivity; no full on-prem; air-gap not supported",
-      "languages_coverage": "Java, JavaScript/TypeScript, Python, C#, Go, PHP, Ruby, Kotlin, Swift, Scala, C/C++, Apex, VB.NET, Groovy, Rust (beta) and others (~19 languages, vendor docs)",
+      "languages_coverage": "Java (incl. Java SE 25 support, Sep 2026), JavaScript/TypeScript, Python, C#, Go, PHP, Ruby, Kotlin, Swift, Scala, C/C++, Apex, VB.NET, Groovy, Rust (beta) and others (~19 languages, vendor docs)",
       "key_features": "Fast symbolic-AI SAST engine (DeepCode) with real-time IDE scanning | Snyk Agent Fix: verified AI fixes in IDE with re-scan loop | Snyk Studio / MCP server for AI coding assistants | Unified developer platform: Code, Open Source, Container, IaC, AppRisk (ASPM) | PR checks and security gates | Evo AI security products (AI-SPM, Continuous Offensive Security, Agentic Development Security) | CLI 'snyk studio' command (experimental, Sep 2026) wires Snyk scanning into AI coding tools; 'snyk fix --agentic' with severity/breakability filters",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "ML-driven prioritisation; DeepCode engine trained on curated dataset; explicit 'AI triage' agent not documented as separate product",
@@ -113,6 +113,12 @@
           "type": "Release",
           "summary": "Snyk CLI v1.1307.4 adds an experimental 'snyk studio' command that installs background security scanning into AI coding tools (Cursor, Claude Code, Codex, Copilot, Gemini, Kiro, Windsurf), and adds severity, breakability and exclude-ID filters to 'snyk fix --agentic', which now keeps failed fix changes for review by default. It also fixes --code and other scan flags being silently dropped for orgs on the unified test API.",
           "source": "https://github.com/snyk/cli/releases/tag/v1.1307.4"
+        },
+        {
+          "date": "2026-09-14",
+          "type": "Release",
+          "summary": "Snyk Code September 2026 release (documented via the snyk/user-docs PR for the 14 Sep 2026 release): Java SE 25 support and eight new Java frameworks (incl. Apache Commons Collections, Flyway, MSAL4J), LangChain LiteLLM modelled as an untrusted source for Python, expanded Kotlin framework list, new rules (HSTS Disabled for Ruby and Java, CRLF Sequences and UI Layers/Frames for Python, XPath Injection for Rust), corrected COBOL CWE mappings, and a behaviour change so that .gitignore rules now exclude only untracked files, meaning committed files are analysed.",
+          "source": "https://github.com/snyk/user-docs/pull/1664"
         }
       ]
     },
@@ -1193,11 +1199,19 @@
       "indicative_cost_usd": "Pro $30/seat/month ($360/yr) with 50 credits; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Small teams wanting one AI reviewer that also runs Opengrep and SCA; not an enterprise SAST",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.greptile.com/content-library/best-security-code-review-tools | https://www.greptile.com/pricing",
       "product_url": "https://www.greptile.com/",
       "is_new_entrant": true,
-      "is_new_entrant_basis": "Security scanning features added 2025-2026; Series A 2025 (prior knowledge, unverified)"
+      "is_new_entrant_basis": "Security scanning features added 2025-2026; Series A 2025 (prior knowledge, unverified)",
+      "recent_updates": [
+        {
+          "date": "2026-09-16",
+          "type": "Feature launch",
+          "summary": "Greptile redesigned its review summaries: a confidence score and verdict at the top, a findings list ordered by severity with P1 badges for security issues and direct links to comments, unresolved findings persisting across reviews, a 'What we checked' section for clean reviews, and a consolidated 'Fix All' button for agent actions (vendor changelog).",
+          "source": "https://www.greptile.com/changelog"
+        }
+      ]
     },
     {
       "tool": "Jit (Open ASPM orchestrating Semgrep/Opengrep SAST)",

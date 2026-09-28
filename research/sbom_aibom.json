@@ -279,7 +279,7 @@
       "deployment": "SaaS (multi-region incl. EU/AU); Snyk CLI local; broker for private repos",
       "languages_coverage": "snyk sbom: all Snyk-supported package managers (Maven, Gradle, npm, Yarn, pip, Go, NuGet, etc.) plus unmanaged C/C++; containers via snyk container sbom | snyk aibom: Python, Java, JavaScript, Go source projects; detects models, agents, tools, MCP clients/servers",
       "key_features": "snyk sbom: CycloneDX 1.4/1.5/1.6 (JSON/XML), SPDX 2.3 JSON; Enterprise plan only | snyk sbom test: scan a third-party SBOM for vulnerabilities | Reachability and fix advice, Snyk Risk Score, EPSS | VEX: limited (ignore policies exportable; formal CycloneDX VEX export unverified) | AI-BOM upload to org (--upload) for inventory | Regulatory: EO 14028 and CRA marketing; no formal element-level compliance report",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA (snyk aibom, CycloneDX 1.6 JSON, HTML view; models, agents, tools, MCP client-server chains) | AI model file scanning: no | AI license/provenance: model card and licence metadata included where available | AI-assisted enrichment/VEX: Snyk Agent Fix and DeepCode AI for remediation; VEX generation not AI-based | Natural-language query: Snyk MCP server exposes scans to coding agents | MCP/agent integration: GA MCP server; Snyk Labs Evo agent security research",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA (snyk aibom, CycloneDX 1.6 JSON, HTML view; models, agents, tools, MCP client-server chains) | AI model file scanning: no | AI license/provenance: model card and licence metadata included where available | AI-assisted enrichment/VEX: Snyk Agent Fix and DeepCode AI for remediation; VEX generation not AI-based | Natural-language query: Snyk MCP server exposes scans to coding agents; Evo MCP Server (Sept 2026) lets any MCP client ask about the AI asset inventory, connections and policies | MCP/agent integration: GA MCP server; Evo MCP Server for AI asset and policy management (vendor claim, product updates page 2026-09-18); experimental 'snyk studio' command for AI coding tools (CLI v1.1307.4)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://docs.snyk.io/developer-tools/snyk-cli/commands/aibom.md",
       "integrations": "GitHub, GitLab, Bitbucket, Azure Repos, Jenkins, CircleCI, Jira, IDEs, Docker Hub, ECR/ACR/GCR, Artifactory/Nexus, ServiceNow",
@@ -297,7 +297,21 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first enterprises on Snyk wanting a GA, code-level AI-BOM that maps MCP dependencies",
       "sources": "https://docs.snyk.io/developer-tools/snyk-cli/commands/aibom.md|https://docs.snyk.io/developer-tools/snyk-cli/commands/sbom|https://labs.snyk.io/resources/mcps-snyk-ai-bom/|https://labs.snyk.io/resources/aibom-cli-snyk/",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-09-28",
+      "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1307.4 adds an experimental 'snyk studio' command that sets up Snyk Studio inside supported AI coding tools, adds severity and breakability filter flags for 'snyk fix --agentic', and fixes flag routing for --iac, --docker, --container and --code (published date, page shows '4 days ago' relative to 2026-09-28).",
+          "source": "https://github.com/snyk/cli/releases/tag/v1.1307.4"
+        },
+        {
+          "date": "2026-09-18",
+          "type": "Feature launch",
+          "summary": "Snyk Evo MCP Server is now available: any MCP client (Claude, Codex, Cursor and others) can connect to Evo, Snyk's AI security platform, to query AI assets and their connections, read policies, and create or update policies from inside the agent the developer already uses (vendor claim, Snyk product updates page).",
+          "source": "https://updates.snyk.io/evo-mcp-server-now-available/"
+        }
+      ]
     },
     {
       "tool": "Black Duck SCA (SBOM and AI Model Risk)",
@@ -400,7 +414,15 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Artifactory wanting SBOM, attestations and AI model governance in one control plane",
       "sources": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/|https://jfrog.com/gartner-magic-quadrant/|https://investors.jfrog.com/news/news-details/2026/JFrog-Positioned-as-a-Leader-in-the-First-Gartner-Magic-Quadrant-for-Software-Supply-Chain-Security/default.aspx",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-09-28",
+      "recent_updates": [
+        {
+          "date": "2026-09-16",
+          "type": "Release",
+          "summary": "Xray maintenance releases 3.154.4 (2026-09-14) and 3.154.8 (2026-09-16): Curation support extended to Debian and Ubuntu packages with repeated archive path prefixes, improved NuGet metadata request handling and input validation, and fewer unused RabbitMQ transient queues declared by Xray services. No SBOM, VEX or AI feature changes in these builds.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        }
+      ]
     },
     {
       "tool": "GitHub SBOM export (Dependency Graph)",
@@ -995,9 +1017,9 @@
       "deployment": "SaaS with network-embedded enforcement (Cisco Secure Access, firewalls)",
       "languages_coverage": "AI workloads, apps and models across clouds; model files and related artefacts (AI Supply Chain Risk Management); third-party GenAI apps (AI Access, ex-Aim)",
       "key_features": "AI Cloud Visibility inventories models and data sources | AI Model and Application Validation (algorithmic red teaming) | AI Supply Chain Risk Management for models and files | AI Runtime Protection guardrails | AI Access (shadow AI, from Aim Security) | Foundation AI: open-weight security models (Foundation-sec-8b) | Alignment: NIST, MITRE ATLAS, OWASP LLM Top 10",
-      "ai_capabilities": "AI BOM / ML-BOM generation: partial (AI asset inventory; standards export unverified) | AI model file scanning: GA claim (supply chain risk management) | AI license/provenance: unverified | AI-assisted: yes | NL query: unverified | MCP/agent: agent security features announced 2026 (unverified)",
+      "ai_capabilities": "AI BOM / ML-BOM generation: partial (AI asset inventory in AI Defense; open-source 'aibom' CLI at github.com/cisco-ai-defense/aibom scans source code and container images for agents, prompts, models and tools across 10+ frameworks such as LangChain, OpenAI, AWS Bedrock, AutoGen, Anthropic SDK and Google GenAI and builds a dependency graph, announced Feb 2026 as an early-stage tool; CycloneDX/SPDX export unverified) | AI model file scanning: GA claim (supply chain risk management) | AI license/provenance: unverified | AI-assisted: yes | NL query: unverified | MCP/agent: agent security features announced 2026 (unverified)",
       "ai_maturity": "GA",
-      "ai_verified_source": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
+      "ai_verified_source": "https://blogs.cisco.com/ai/know-your-ai-stack-introducing-ai-bom-in-cisco-ai-defense",
       "integrations": "Cisco Secure Access, Splunk, Hypershield, cloud providers",
       "sectors_reference_customers": "Cisco enterprise base; not disclosed",
       "analyst_position": "not rated in SSCS MQ",
@@ -1481,6 +1503,12 @@
       {
         "tool": "Lineaje UnifAI",
         "note": "AI asset discovery; MQ Visionary Jun 2026"
+      },
+      {
+        "tool": "Cisco AI Defense aibom (open-source CLI)",
+        "vendor": "Cisco",
+        "link": "https://github.com/cisco-ai-defense/aibom",
+        "reason": "Open-source AI-BOM generator CLI announced Feb 2026 (outside window); folded into the existing Cisco AI Defense row via field_changes rather than a new row."
       }
     ],
     "recommendation_for_team": "Standardise on CycloneDX 1.6/1.7 plus ML-BOM as the house format, run Dependency-Track internally, and position Sonatype or JFrog for clients with existing repositories and Black Duck for embedded/CRA clients. For AI BOM, treat Snyk aibom or cdxgen output as the inventory baseline, add a model file scanner (Prisma AIRS/HiddenLayer/ModelScan) and a runtime or agent discovery layer (Noma/Oligo/Endor MCP governance) since no single tool covers models, datasets, prompts, agents and MCP servers with standards output today.",

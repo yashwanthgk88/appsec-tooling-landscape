@@ -1,5 +1,73 @@
 # Change log
 
+## 2026-09-28, second run (weekly update, window 2026-09-14 to 2026-09-28, run started 12:18 IST)
+Second scheduled run of the Weekly job on the same day. The 12:21 IST run pushed first, so this run was rebased on top of it: events it had already recorded (GitGuardian 25 Sept, ggshield 1.55.0, Mend 26.9.1, STRIDE GPT 0.20.0, GitLab 19.4 on the SBOM row) were dropped here, and columns it had already refreshed were left as it wrote them. Net of that, 241 tool rows total (0 new). 11 new dated updates across 10 tool rows; 17 further rows corrected on data columns only (acquisitions and releases outside the window, and rows earlier runs could not verify); 51 rows checked with no change; 42 rows could not be verified; the remaining rows were not re-checked in this run.
+
+### New tools
+- None. Sweeps of funding news, OWASP projects, launch listings and open-source releases found no SAST, SCA, secrets, SBOM/AI-BOM, threat modeling, security requirements or ASPM tool launched, open-sourced or first funded in the window that is not already on file. Names noted on the New Entrants sheet without a full row: Gartner Emerging Market Quadrant for AI Application Security (published around 21 Sept; Varonis and PointGuard AI placed), Pillar Security (Gartner Cool Vendor), Pulse Security (USD 8M seed, date unverified), Ossprey (pre-seed, July), Gurucul AI Risk and Response (24 Sept, adjacent), Akeyless Agentic Runtime Authority and Orchid Security kill switches (9 Sept, NHI adjacent), Cisco open-source aibom CLI (Feb 2026, folded into the Cisco row), Apiiro AI Threat Modeling (March 2026).
+
+### Feature updates (tool, type, what changed, source)
+- Prime Security (Security Requirements and Threat Modeling rows), Pricing change, 23 Sept: vendor blog states consumption-based pricing (code volume and risk) rather than per seat; vendor claim, no list price. product_url corrected to primesec.ai and both rows refreshed (deployment, integrations incl. Claude Code, Cursor, Codex MCP, sectors, pricing_model). https://www.primesec.ai/resources/code-volume-headcount-appsec-pricing
+- ThreatModeler Nexus (Security Requirements row), Feature launch, 16 Sept: FedRAMP Moderate authorization via Knox Systems; deployment and sectors updated. https://www.prnewswire.com/news-releases/threatmodeler-achieves-fedramp-moderate-authorization-through-partnership-with-knox-systems-302880133.html
+- Endor Labs (SCA and Platforms rows), Feature launch / Release, dated 27 Sept to match the SBOM row (month-level release notes page): Conan C/C++ SCA, Threat Center, Package Firewall for VS Code extensions via MDM, NuGet firewall, incremental container scanning, base image remediation, malware exposure classification; key_features and languages_coverage updated. https://docs.endorlabs.com/releasenotes/september-2026
+- Snyk SBOM and AI-BOM (SBOM and AI BOM), Feature launch, 18 Sept: Snyk Evo MCP Server lets any MCP client query AI assets, connections and policies (the SCA row carries the same event dated 22 Sept from the vendor blog). https://updates.snyk.io/evo-mcp-server-now-available/
+- Snyk SBOM and AI-BOM (SBOM and AI BOM), Release, 23 Sept: CLI 1.1307.4 adds an experimental snyk studio command and snyk fix --agentic filters. https://github.com/snyk/cli/releases/tag/v1.1307.4
+- Snyk Code (SAST), Release, 14 Sept: September release adds Java SE 25, eight Java frameworks, LangChain LiteLLM as an untrusted source and new Ruby, Java, Python and Rust rules; languages_coverage updated. https://github.com/snyk/user-docs/pull/1664
+- Konvu (SCA), Feature launch, 24 Sept: AI exploit reproduction pipeline described (bug bounty path shipped, SCA and SAST exploit reproduction in early access); ai_capabilities updated. https://konvu.com/blog/from-vulnerability-finding-to-exploit-proof
+- JFrog Xray (SBOM and AI BOM), Release, 16 Sept: maintenance builds 3.154.4 and 3.154.8 (Debian and Ubuntu curation, NuGet metadata, RabbitMQ queues). https://docs.jfrog.com/releases/docs/xray
+- Greptile (SAST), Feature launch, 16 Sept: redesigned review summaries with confidence score, severity-ordered findings and P1 badges for security issues. https://www.greptile.com/changelog
+
+### AI maturity changes
+- Prime Security (Threat Modeling): Marketing claim to GA. Vendor site at primesec.ai verified this run; platform GA announced June 2025, USD 20M Series A Dec 2025. The Security Requirements row was already moved to GA by the 12:21 IST run. Agent quality not independently validated.
+- Faraday (Platforms and ASPM): Marketing claim / unverified to GA for the MCP Server shipped in v5.21 (June 2026, vendor release page); AI triage still unverified.
+- Clover Security (Platforms and ASPM): Beta or Preview to GA per vendor for Kura adaptive security context (released 3 Aug 2026); no independent verification.
+- Konvu (SCA) and STRIDE GPT (Threat Modeling): maturity level unchanged (GA), qualifier text refreshed only.
+
+### Data corrections outside the window (no dated entry, columns updated)
+- Entro Security (Secret Scanning): SailPoint completed the acquisition on 29 June 2026; vendor and cons_known_gaps corrected (row said "being acquired").
+- Jit (Secret Scanning and Platforms rows): acquired by Torq, announced 19 May 2026; vendor and cons_known_gaps corrected.
+- Tromzo (Security Requirements and Platforms rows): Checkmarx acquisition confirmed by the 9 Dec 2025 press release; vendor set to Checkmarx.
+- IriusRisk and ThreatModeler Nexus (Security Requirements): ThreatModeler acquired IriusRisk, announced 8 Jan 2026; vendor, analyst_position and cons_known_gaps updated.
+- SD Elements (Security Requirements): official release notes confirm ASVS 5.0 (all three levels), EU CRA and ISA 62443 content and MCP tools on by default in 2026.8.2 (29 Aug), plus the Devici sync prompt in 2026.9.1 (12 Sept); the ASVS 5.0 gap flagged on 27 Sept is removed.
+- ArmorCode ASPM (Security Requirements): the 21 Sept Security Boulevard article re-covers the four Anya agents launched 4 Aug at Black Hat, so no dated entry; key_features, ai_capabilities and integrations refreshed, CRA module (June) and Anthropic Cyber Verification Program membership (July) added.
+- Echo (SCA): marketing site moved to echo.ai with Containers, Libraries, VMs, Serverless and OS packages lines; product_url and key_features updated, no dated announcement found so not recorded as a rebrand event.
+- Seemplicity (Platforms): site now seemplicity.ai; Automated Response Options (3 Sept, vendor claim) added to key_features.
+- Oplane (Threat Modeling): EUR 4.5M seed (June 2026) and named customers added; funding gap removed.
+- Cisco AI Defense (SBOM and AI BOM): open-source aibom CLI (Feb 2026) added to ai_capabilities.
+- Mend SCA (SCA): languages_coverage now lists Bun (26.9.1). ggshield (Secret Scanning): key_features mention the withheld tool output behaviour and Kiro and Junie hooks. STRIDE GPT (Threat Modeling): key_features and ai_maturity qualifier updated to v0.20.0.
+
+### Checked, no change in window
+- SAST (9): Checkmarx One, Veracode Static Analysis, SonarQube, Contrast Security, Endor Labs (Endor Code), DryRun Security, Kodem, CodeRabbit Security, Cursor Security Review
+- SCA (2): Socket, Trivy
+- Secret Scanning (9): GitHub Secret Protection, GitLab Secret Detection, TruffleHog, Snyk Secrets, Cycode Secrets Detection, Semgrep Secrets, Nightfall AI, HCP Vault Radar, Legit Security
+- SBOM and AI BOM (9): Oligo Security, sbom-scorecard, Trivy, FOSSA, Mend SCA SBOM and Mend AI, HiddenLayer, Noma Security, Prompt Security, Checkmarx One SBOM
+- Threat Modeling (8): Tidal Cyber, Aptori, IriusRisk, SD Elements, OWASP Threat Dragon, Threat Composer, OWASP Top 10 for LLM Applications, OWASP Agentic Security Initiative
+- Security Requirements (2): Aptori, Secure Code Warrior
+- Platforms and ASPM (12): Checkmarx One, ArmorCode Agentic Control Plane, Cortex Cloud Application Security, Orca Security, Sysdig Secure, Sonatype Nexus One Platform, JFrog Platform, Contrast One, Escape, Aptori, Amplify Security, DryRun Security
+
+### Could not be verified this run (vendor pages blocked, undated, or release feeds unreachable)
+- SAST: Mobb, Amplify Security, Arnica, ZeroPath, Opengrep, Bandit, Brakeman, SpotBugs + Find Security Bugs, gosec, PMD
+- SCA: Sonatype Lifecycle / Nexus One, Checkmarx SCA, FOSSA, Google OSV-Scanner
+- Secret Scanning: Gitleaks, Betterleaks, Checkmarx One Secrets Detection and 2ms, Aikido Security (Secrets), Arnica, detect-secrets, Cremit
+- SBOM and AI BOM: Scribe Security, Safeguard
+- Threat Modeling: securiCAD, ThreatModeler Nexus (site fetch blocked; the FedRAMP news was captured on the Security Requirements row), Threat Canvas
+- Security Requirements: Devici, Jit, Conviso Platform, Kondukto ASPM (Invicti), Seezo, SAMMY
+- Platforms and ASPM: Mobb, Legit Security, OpenText Application Security, Mend.io AppSec Platform, Invicti ASPM, Pixee, ZeroPath, Nullify, Gomboc AI, Seemplicity
+- Not re-checked this run (verified 2026-09-27 or outside the web budget): the remaining rows, including the OWASP project rows in Security Requirements, the long-tail OSS SAST scanners, most SBOM generators and the framework rows in Threat Modeling. They rotate to the front of the queue next week.
+
+### Assumptions made
+- Two runs of the Weekly job fired on 2026-09-28. This run fetched main before pushing, found the 12:21 IST commit, re-applied its patches on top of it, and dropped any dated entry whose tool, date and type were already on file. Column values the earlier run had already refreshed for the same event (GitGuardian, ggshield, GitLab SBOM row, STRIDE GPT ai_capabilities, Prime Security ai_maturity on the Security Requirements row) were kept as that run wrote them.
+- Endor Labs September 2026 release notes carry no day-level dates; the SCA and Platforms entries are dated 27 Sept to match the SBOM row from the 27 Sept sweep.
+- Prime Security's 23 Sept post is a vendor opinion piece; it is the only public statement of the pricing model, so it is recorded as a Pricing change with pricing_confidence Low and labelled vendor claim.
+- The ThreatModeler FedRAMP authorization is typed Feature launch because no closer type exists in the allowed list.
+- Snyk Code's 14 Sept release date comes from the snyk/user-docs pull request describing that release; the 12:21 IST run left it out because the merge date was unconfirmed. It is included here with the source shown.
+- Snyk Evo MCP Server is dated 18 Sept from the updates.snyk.io release note on the SBOM row; the SCA row (12:21 IST run) dates the same event 22 Sept from the vendor blog.
+- JFrog Xray 3.154.4 and 3.154.8 were combined into one Release entry dated by the later build.
+- Acquisitions and releases outside the window (Entro, Jit, Tromzo, IriusRisk, SD Elements 2026.8.2, Clover Kura, Faraday 5.21, Oplane seed, Cisco aibom, Seemplicity) were applied to data columns only, with no dated entry, to keep the Feature Updates sheet inside the window.
+- Rows in "checked, no change" keep their previous last_verified date; last_verified moves to 2026-09-28 only on rows whose columns changed.
+- Environment limits: WebFetch refused most URLs not first surfaced by a search result, GitHub API and MCP access were limited to this repository, and Sonatype and Checkmarx help-centre release notes render client-side. These caused most of the could-not-verify entries.
+- No mail tool (Gmail or Outlook) was available in this session, so the run summary was not emailed.
+
 ## 2026-09-28 (weekly sweep, window 2026-09-14 to 2026-09-28)
 Scheduled Weekly job, run started 2026-09-28 12:21 IST. 241 tool rows total (0 new). 11 dated updates recorded across 9 tool rows, plus 1 AI maturity correction (10 rows changed). 90 rows checked with no change; 141 rows not verified this run.
 
