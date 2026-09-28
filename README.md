@@ -8,6 +8,7 @@ Master data and build script for the internal AppSec tool analysis workbook.
 - `build_workbook.py` : regenerates `AppSec_Tooling_Landscape_2026.xlsx` from the JSON. Run `python3 build_workbook.py` then recalculate with LibreOffice (or open in Excel).
 - `CHANGELOG.md` : one entry per update run.
 - `WEEKLY_RUNBOOK.md` : what the scheduled task does each week and month.
+- `summaries/` : one plain-text run summary per scheduled run, named `weekly_YYYY-MM-DD_HHMM.txt` or `monthly_YYYY-MM-DD_HHMM.txt` (IST). Same text as the notification email.
 
 Tool row schema (all string fields; pipe-separated lists): tool, vendor, product_url, is_new_entrant (bool), type, deployment, languages_coverage, key_features, ai_capabilities, ai_maturity (GA | Beta or Preview | Marketing claim | None), ai_verified_source, integrations, sectors_reference_customers, analyst_position, cons_known_gaps, pricing_model, indicative_cost_usd, pricing_confidence (High | Medium | Low | None), best_fit_for, last_verified (YYYY-MM-DD), sources.
 

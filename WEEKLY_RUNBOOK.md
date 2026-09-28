@@ -7,12 +7,13 @@
 4. Append new rows with is_new_entrant true and every field filled; write "not publicly disclosed" or "unverified" rather than guessing.
 5. Run build_workbook.py, recalculate, confirm zero formula errors.
 6. Add a dated CHANGELOG.md entry: new tools (name, category, link), AI changes (tool, what changed), anything checked with no change.
-7. Commit and push. Notify with the changelog entry and attach the xlsx.
+7. Write the run summary (fixed structure: subject, headline, new tools, AI maturity changes, notable updates, other updates per category, checked with no change, could not be verified, where to look) to summaries/weekly_YYYY-MM-DD_HHMM.txt using the run start time in IST.
+8. Commit and push. Notify with the summary and attach the xlsx; email the summary to yashwanth.k@gds.ey.com when a mail tool is connected.
 
 ## Monthly (first Monday 08:00 IST): full re-verification
 1. Same setup. For every row older than 30 days in last_verified, re-check product_url (dead links, rebrands, acquisitions), ai_maturity, pricing_model and indicative_cost_usd, analyst_position (new Gartner MQ or Forrester Wave), deployment.
 2. Refresh OWASP project versions and the Market Notes.
-3. Rebuild, changelog, commit, push, notify with a summary of rows changed.
+3. Rebuild, changelog, write summaries/monthly_YYYY-MM-DD_HHMM.txt, commit, push, notify with the summary of rows changed.
 
 ## Rules
 - JSON is the source of truth. Never hand-edit the xlsx.
