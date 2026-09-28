@@ -22,7 +22,7 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals commonly reported in the mid five to six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated enterprises wanting library-driven, compliance-mapped threat models with an AI on-ramp; teams already on IriusRisk Community",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.iriusrisk.com/ai-threat-modeling | https://www.iriusrisk.com/documentation/use-our-ai-assistant-jeff | https://www.iriusrisk.com/threat-modeling-platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://www.gartner.com/reviews/market/threat-modeling-automation"
     },
     {
@@ -76,7 +76,7 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals commonly six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Compliance-driven organisations that need traceable security requirements and audit evidence, and want agents to consume them via MCP",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.securitycompass.com/sdelements/ | https://www.securitycompass.com/sdelements/navigator/ | https://finance.yahoo.com/news/security-compass-releases-solution-address-133000786.html | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/security-compass/product/sd-elements"
     },
     {
@@ -161,7 +161,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Quick STRIDE DFD exercises, training, Microsoft-stack teams with no budget",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-releases | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://www.gartner.com/reviews/market/threat-modeling-automation"
     },
     {
@@ -184,7 +184,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Teams needing a free, auditable diagram-based tool with Git-native storage and Cornucopia gameplay",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/owasp/threat-dragon/releases | https://owasp.org/www-project-threat-dragon/ | https://github.com/OWASP/threat-dragon"
     },
     {
@@ -242,7 +242,7 @@
       "deployment": "Desktop / self-hosted (pip CLI, Streamlit web UI, Docker) / hosted MCP at mcp.stridegpt.ai",
       "languages_coverage": "Natural language app descriptions, architecture diagram images (multimodal), GitHub and GitHub Enterprise repositories (agentic codebase analysis), DFD editing",
       "key_features": "STRIDE threat model with subsystem analysis | Attack trees (Mermaid), DREAD scoring, Gherkin test cases | MITRE ATT&CK and ATLAS mapping | OWASP LLM Top 10 and Agentic (ASI) threat support | Markdown/JSON/SARIF/HTML output | Operationalisation guide for enterprise",
-      "ai_capabilities": "AI-generated threat model from description, image and code repo: yes | AI assistant for threats and mitigations: yes | LLM-based diagram creation: DFD generation | AI threat libraries for LLM/agentic: OWASP LLM Top 10 and ASI mapping, ATLAS | Agent/MCP: mcp-stride-gpt exposes 8 tools (framework, mitigations, DREAD, attack trees, tests, report, coverage, repo analysis guide) for Claude Code/Desktop and generic MCP clients | Model: BYO-LLM across OpenAI, Anthropic, Google, Mistral, Groq, DeepSeek, LiteLLM, LM Studio | On-prem AI: yes via LM Studio/local models",
+      "ai_capabilities": "AI-generated threat model from description, image and code repo: yes | AI assistant for threats and mitigations: yes | LLM-based diagram creation: DFD generation | AI threat libraries for LLM/agentic: OWASP LLM Top 10 and ASI mapping, ATLAS | Agent/MCP: mcp-stride-gpt exposes 8 tools (framework, mitigations, DREAD, attack trees, tests, report, coverage, repo analysis guide) for Claude Code/Desktop and generic MCP clients | Model: BYO-LLM across OpenAI, Anthropic, Google, Mistral, Groq, DeepSeek, OpenRouter (added v0.20.0), LiteLLM, LM Studio | On-prem AI: yes via LM Studio/local models | Agentic CLI: /analyze command autonomously explores a codebase and produces a STRIDE threat model, with checkpoint resume and per-phase token accounting since v0.20.0",
       "ai_maturity": "GA for an OSS project (v0.19.0, 2026-07-19); no vendor support",
       "ai_verified_source": "https://github.com/mrwadams/stride-gpt",
       "integrations": "GitHub, MCP clients, other MCP servers (Terraform, Kubernetes, AWS, Docker Hub); no Jira/ADO",
@@ -253,8 +253,16 @@
       "indicative_cost_usd": "$0 plus LLM tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AppSec teams prototyping AI-assisted STRIDE, or as a reference implementation for an internal BYO-LLM tool",
-      "last_verified": "2026-09-26",
-      "sources": "https://github.com/mrwadams/stride-gpt | https://github.com/mrwadams/stride-gpt/releases | https://github.com/mrwadams/mcp-stride-gpt | https://pypi.org/project/stride-gpt/"
+      "last_verified": "2026-09-28",
+      "sources": "https://github.com/mrwadams/stride-gpt | https://github.com/mrwadams/stride-gpt/releases | https://github.com/mrwadams/mcp-stride-gpt | https://pypi.org/project/stride-gpt/",
+      "recent_updates": [
+        {
+          "date": "2026-09-26",
+          "type": "Release",
+          "summary": "STRIDE GPT v0.20.0 added OpenRouter as a model provider, resumable /analyze agent runs from checkpoints, evidence-backed threat reporting via a dedicated tool and per-phase token usage tracking, plus sandboxing and CodeQL hardening fixes.",
+          "source": "https://github.com/mrwadams/stride-gpt/releases/tag/v0.20.0"
+        }
+      ]
     },
     {
       "tool": "Threat Composer (incl. Threat Composer CLI/MCP and awslabs threat-modeling-mcp-server)",
@@ -276,7 +284,7 @@
       "indicative_cost_usd": "$0 plus Bedrock tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AWS-centric teams wanting lightweight threat statements in Git and agent-driven starter models from code",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/awslabs/threat-composer | https://github.com/awslabs/threat-composer/releases | https://github.com/awslabs/threat-modeling-mcp-server | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/"
     },
     {
@@ -537,7 +545,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "AI-first engineering teams wanting always-on architecture threat findings from code",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.oplane.com/ | https://cybersectools.com/categories/threat-modeling"
     },
     {

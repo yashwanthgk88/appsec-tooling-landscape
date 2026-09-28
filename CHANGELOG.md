@@ -1,5 +1,55 @@
 # Change log
 
+## 2026-09-28 (weekly sweep, window 2026-09-14 to 2026-09-28)
+Scheduled Weekly job, run started 2026-09-28 12:21 IST. 241 tool rows total (0 new). 11 dated updates recorded across 9 tool rows, plus 1 AI maturity correction (10 rows changed). 90 rows checked with no change; 141 rows not verified this run.
+
+### New tools
+- None. Candidates reviewed and rejected: Equs (credential SDK for AI agents, out of scope for secret scanning), Eve Security, AIR, Tenet, Capsule (AI agent runtime security, out of ASPM scope), Ossprey and CRACI (funded before the window), alpha-omega-security/threat-model (no in-window date), philocyber/agentic-threat-modeler-v2 (no product page), sbom-tool/sbom-tools (no in-window launch date).
+
+### Feature updates
+- Semgrep Supply Chain (SCA), Feature GA, 2026-09-24: Malware Detection and Response Automation GA; Malware Firewall in Semgrep Guardian in private beta. https://semgrep.dev/blog/2026/introducing-malware-detection-and-response-automation/
+- GitGuardian Platform (Secret Scanning), Feature launch, 2026-09-25: AI Hooks withhold secret-bearing tool output from the model on Claude Code, Codex and Mistral Vibe; secret blocking extended to Amazon Kiro and JetBrains Junie CLI. https://docs.gitguardian.com/releases/saas/2026/09/25/changelog
+- GitGuardian Platform (Secret Scanning), Release, 2026-09-25: self-hosted 2026.9 adds GitGuardian Bridge for isolated networks, endpoint honeytokens, NHI secret classification, AI Hooks and agent/MCP inventory on self-hosted. https://docs.gitguardian.com/releases/self-hosted/2026-09-changelog
+- ggshield (Secret Scanning), Release, 2026-09-24: v1.55.0 adds Kiro and Junie CLI hooks, withholds secret-bearing tool output, configurable API timeout. https://github.com/GitGuardian/ggshield/releases/tag/v1.55.0
+- Snyk Open Source (SCA), Feature launch, 2026-09-22: Evo MCP server lets Claude Code and Cursor query the Evo AI-SPM inventory and create policies. https://snyk.io/blog/so-i-asked-my-agent-instead/
+- Snyk Code (SAST) and Snyk Open Source (SCA), Release, 2026-09-23: CLI v1.1307.4 adds experimental 'snyk studio' command for AI coding tools and new filters for 'snyk fix --agentic'. https://github.com/snyk/cli/releases/tag/v1.1307.4
+- Socket (SCA), Release, 2026-09-16: alert and event data older than one year will age out from November 2026 (cons_known_gaps updated). https://socket.dev/changelog/alert-event-data-older-than-1-year-will-age-out-starting-november-2026
+- GitLab Dependency Scanning / CycloneDX SBOM (SBOM and AI BOM), Release, 2026-09-17: GitLab 19.4 malicious package detection (Beta), SPDX license expressions (GA), vulnerability tools on GitLab MCP server (GA). Already recorded on other GitLab rows yesterday; now on the SBOM row. https://docs.gitlab.com/releases/19/gitlab-19-4-released/
+- Mend SCA (SCA), Release, 2026-09-27: 26.9.1 adds Bun package manager support (open beta), reachability memory improvements, Maven and Gradle accuracy fixes. https://docs.mend.io/platform/latest/mend-sca-release-notes
+- STRIDE GPT (Threat Modeling), Release, 2026-09-26: v0.20.0 adds OpenRouter provider, resumable agent runs, evidence-backed threat reporting. https://github.com/mrwadams/stride-gpt/releases/tag/v0.20.0
+
+### AI maturity changes
+- Prime Security (Security Requirements): Marketing claim to GA. Correction of a stale value, not an in-window event: vendor post "Prime Security Is Now GA" (16 Jun 2025, vendor claim) at https://www.primesec.ai/resources/prime-security-is-now-ga
+
+### Checked, no change in window
+- SAST (7): Checkmarx One, Veracode Static Analysis, SonarQube, Semgrep Code, Contrast Security, Endor Labs, DryRun Security
+- SCA (12): Black Duck SCA, Sonatype Lifecycle, Checkmarx SCA, Veracode SCA, GitLab Dependency Scanning, JFrog Xray, Aikido, FOSSA, Cycode, Trivy, OWASP Dependency-Check, Echo
+- Secret Scanning (19): GitHub Secret Protection, GitLab Secret Detection, TruffleHog, Snyk Secrets, Checkmarx One Secrets and 2ms, Cycode, Aikido, Nightfall AI, HCP Vault Radar, Entro Security, Legit Security, Arnica, Spectral, Cremit, Veracode, HCL AppScan, OpenText Fortify, Black Duck, Betterleaks
+- SBOM and AI BOM (13): Snyk SBOM and AI-BOM, JFrog Xray, Checkmarx One SBOM, Mend SCA SBOM and Mend AI, Sonatype SBOM Manager, Black Duck SCA, Endor Labs, Trivy, Finite State, HiddenLayer, Prisma AIRS, Cisco AI Defense, Cybeats SBOM Studio
+- Threat Modeling (6): SD Elements, IriusRisk, OWASP Threat Dragon, Threat Composer, Microsoft Threat Modeling Tool, Oplane
+- Security Requirements (19): SD Elements, Devici, IriusRisk, ThreatModeler Nexus, Jit, Secure Code Warrior, SAMMY, OWASP ASVS, OWASP SAMM, OWASP MASVS/MASTG, OpenCRE, Aptori, ArmorCode, Kondukto (Invicti), Tromzo, LLM prompt-based requirements, Seezo, Remy Security, Jira/Azure DevOps plugins
+- Platforms and ASPM (14): Checkmarx One, Snyk AI Security Platform, Veracode Platform, Cycode, ArmorCode, Legit Security, OX Security, Aikido, Invicti ASPM, Endor Labs, Semgrep AppSec Platform, Mend.io, JFrog Platform, Sonatype Nexus One
+
+### Could not be verified this run (141 rows)
+Reasons: search budget spent on Leaders first; GitHub release pages and API blocked or rate limited; some vendor pages refused or undated. Most of these rows were verified on 2026-09-26 or 2026-09-27.
+- SAST (25): Opengrep, Bandit, Brakeman, SpotBugs + FindSecBugs, gosec, PMD, ZeroPath, Amplify Security, Pixee, Mobb, Nullify, Arnica, Greptile, Jit, GitHub Advanced Security / CodeQL, GitLab Ultimate SAST, Black Duck Coverity / Polaris, HCL AppScan, OpenText Fortify, Aikido, Bearer, Corgea, Kodem, CodeRabbit Security, Cursor Security Review
+- SCA (17): GitHub Dependabot, Endor Labs, Phylum, Arnica, OSV-Scanner, OWASP Dependency-Track, Grype, Scantist, OpenText Fortify SCA, Kusari, Chainguard, Lineaje, Xygeni, HCL AppScan SCA, SafeDep, Konvu, AIR
+- Secret Scanning (4): Gitleaks, detect-secrets, Semgrep Secrets, Jit
+- SBOM and AI BOM (28): OWASP CycloneDX ecosystem, OWASP Dependency-Track, Syft + Grype, Anchore Enterprise, Microsoft sbom-tool, SPDX tools, FOSSA, GitHub SBOM export, Manifest, Lineaje, Kusari, Interlynk, Scribe Security, Chainloop, bomctl, sbom-scorecard, OWASP AIBOM Generator, agent-bom, Legit Security, Noma Security, Oligo Security, Prompt Security, AIR, ZeroPath AI-BOM, Safeguard, Veracode SBOM, OpenText Core SCA SBOM, HCL AppScan SBOM
+- Threat Modeling (30): ThreatModeler Nexus, Devici, Threat Canvas, OWASP pytm, Threagile, Seezo, Aribot, Aptori, Tutamen, CAIRIS, ThreatSpec, Threatest, Tidal Cyber, securiCAD, DevArmor, Prime Security, LLM prompt-based threat modeling, Microsoft Copilot-based threat modeling, Amazon Q Developer / Bedrock, Shostack + Associates tools, OWASP Cornucopia, MITRE ATLAS, OWASP Top 10 for LLM, OWASP Agentic Security Initiative, OWASP AI Exchange, NIST AI RMF, MAESTRO, Microsoft AI/ML guidance and Google SAIF, Precogly, Red Hat agentic-threat-modeling
+- Security Requirements (8): OWASP SecurityRAT, OWASP DSOMM, OWASP requirement checklists, Conviso Platform, Jama Connect, IBM DOORS Next / Siemens Polarion, GitLab policies and Snyk Learn, RequirementONE
+- Platforms and ASPM (29): Black Duck Polaris, OpenText Application Security, HCL AppScan 360, GitHub Advanced Security, GitLab Ultimate, Apiiro, Wiz Code, Cortex Cloud, CrowdStrike Falcon ASPM, Jit, Phoenix Security, Orca, Sysdig, Contrast One, Escape, OWASP DefectDojo, Faraday, Mobb, Pixee, ZeroPath, Corgea, DryRun Security, Aptori, Clover, Nullify, Gomboc AI, Amplify Security, Seemplicity, Tromzo
+
+### Assumptions
+- Window taken as 14 days ending on the run date (2026-09-14 to 2026-09-28). The previous sweep (2026-09-27) covered almost the same window, so this run only added items it missed or items dated 26 to 28 Sep; duplicates were filtered by the merge script.
+- Socket data retention change recorded as type Release because no allowed type fits a retention policy change.
+- ggshield 1.55.0 dated 2026-09-24 from the GitHub release page (the fetched page rendered the year oddly); GitGuardian's 25 Sep changelog requires 1.55.0, which confirms it.
+- Snyk Evo MCP server GA status inferred from the vendor blog (no beta label); vendor claim.
+- STRIDE GPT ai_maturity field change was rejected by the validator because the proposed text is not an allowed maturity value; the existing value was kept and the other column updates applied.
+- Items seen but not recorded because they fall outside the window or have no per-item date: ArmorCode Anya agents (announced 4 to 5 Aug, re-reported 21 Sep), Endor Labs September release notes (undated entries), Snyk Code September docs change (merge date unconfirmed), SD Elements 2026.9.1 (12 Sep), Sonar Hunter Agent GA (27 Aug), HiddenLayer Series B (2 Sep), Oplane seed (Jun).
+- Backlog for the monthly re-verification (unchanged from last run, plus new): GitHub MCP Server secret scanning GA since 2026-05-05 (row says preview); SailPoint completed the Entro acquisition 2026-06-29 (row says being acquired); Torq acquired Jit 2026-05-19; Prime Security domain is primesec.ai; OWASP Threat Dragon v2.6.2 and v2.6.0 dates in the owasp block may be a year off (GitHub shows 2026).
+- No mail tool (Gmail or Outlook) was connected in this session, so the summary email was not sent.
+
 ## 2026-09-27 (weekly sweep, window 2026-09-13 to 2026-09-27)
 Test run of the Weekly job. 241 tool rows total (1 new). 97 dated updates recorded across 74 tool rows; 138 rows checked with no change in the window.
 

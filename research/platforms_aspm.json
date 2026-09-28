@@ -23,7 +23,7 @@
       "indicative_cost_usd": "Not publicly disclosed; market anecdotes put full-platform enterprise deals in the low-to-mid six figures per year for 500+ developers (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises wanting one vendor for native scanners plus governance, with strong SAST accuracy requirements and public-sector/FedRAMP needs",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://checkmarx.com/product/checkmarx-one/ | https://checkmarx.com/product/developer-assist/ | https://checkmarx.com/press-releases/ | https://checkmarx.com/blog/checkmarx-named-a-leader-for-the-7th-time-in-the-2025-gartner-magic-quadrant-for-application-security-testing/ | https://checkmarx.com/checkmarx-named-a-leader-in-the-2026-gartner-magic-quadrant-for-software-supply-chain-security/",
       "recent_updates": [
         {
@@ -54,7 +54,7 @@
       "indicative_cost_usd": "Team tier historically listed around $25 per product per contributing developer per month; Enterprise custom, commonly quoted at several hundred USD per developer per year for multi-product bundles (unverified)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-centric organisations on modern cloud stacks that accept SaaS and want deep IDE/coding-agent integration with a single scanner family",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://snyk.io/platform/ | https://snyk.io/blog/ | https://snyk.io/blog/snyk-named-a-leader-in-the-2025-forrester-sast-wave-sast-solutions-q3-2025/ | https://snyk.io/lp/forrester-wave-sast/",
       "recent_updates": [
         {
@@ -91,7 +91,7 @@
       "indicative_cost_usd": "Not publicly disclosed; market anecdotes: mid-to-high five figures per year for mid-size estates, six figures for large programmes (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Compliance-driven enterprises and regulated industries that value policy governance and audit-grade reporting over bleeding-edge agentic features",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.veracode.com/products/ | https://www.veracode.com/products/risk-manager/ | https://www.veracode.com/blog/leader-in-sast-forrester-wave-2025/ | https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/",
       "recent_updates": [
         {
@@ -275,7 +275,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations prioritising SCM/CI/CD hardening, secrets and supply chain with a graph-based ASPM and willingness to adopt native scanners",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://cycode.com/ | https://cycode.com/blog/gartner-cycode-coverage-q2-2025/ | https://cycode.com/blog/cycode-named-in-the-gartner-market-guide-for-software-supply-chain-security-2025/ | https://guptadeepak.com/tools/top-5-aspm-platforms-2026/",
       "recent_updates": [
         {
@@ -306,7 +306,7 @@
       "indicative_cost_usd": "Not publicly disclosed; anecdotal enterprise deals from high five to mid six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises with scanner sprawl (10+ tools) that want a neutral correlation and remediation-ops layer without replacing scanners",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.armorcode.com/ | https://www.armorcode.com/anya | https://www.armorcode.com/application-security-posture-management | https://appsecsanta.com/aspm-tools"
     },
     {
@@ -360,7 +360,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises focused on SDLC/supply chain posture and governance of AI-assisted development across many pipelines",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.legitsecurity.com/ | https://appsecsanta.com/aspm-tools"
     },
     {
@@ -383,7 +383,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Teams drowning in scanner noise that want exploitability-first prioritisation plus supply chain/pipeline visibility in one SaaS",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.ox.security/ | https://guptadeepak.com/tools/top-5-aspm-platforms-2026/ | https://appsecsanta.com/aspm-tools",
       "recent_updates": [
         {
@@ -505,7 +505,7 @@
       "indicative_cost_usd": "$3,600 to $7,200+ per year for teams of 10-50; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Mid-market and scale-up clients wanting broad coverage fast at predictable cost, or as a low-cost baseline for smaller client engagements",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.aikido.dev/pricing | https://appsecsanta.com/aspm-tools",
       "recent_updates": [
         {
@@ -565,7 +565,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations with strong DAST needs who want a low-friction aggregator and proof-based exploitability",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.invicti.com/product/aspm/ | https://appsecsanta.com/aspm-tools"
     },
     {
@@ -665,7 +665,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Engineering-led organisations prioritising SCA accuracy, AI-generated code review and governance of coding agents",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.endorlabs.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs"
     },
     {
@@ -688,7 +688,7 @@
       "indicative_cost_usd": "Team tier historically around $40 per contributor per month per product; Enterprise custom (verify current pricing page)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Security engineering teams wanting customisable, fast SAST with strong AI triage, typically fed into a separate ASPM",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://semgrep.dev/",
       "recent_updates": [
         {
@@ -725,7 +725,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations prioritising dependency hygiene automation (Renovate) and LLM application security alongside SCA",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.mend.io/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/"
     },
     {
@@ -748,7 +748,7 @@
       "indicative_cost_usd": "Published entry tiers start in low hundreds USD/month for SaaS; Enterprise+ with security add-ons custom (typically six figures)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Enterprises standardised on Artifactory needing supply chain gating, SBOM/AI-BOM governance and air-gapped deployment",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://jfrog.com/platform/ | https://jfrog.com/gartner-magic-quadrant/"
     },
     {
@@ -771,7 +771,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations standardised on Nexus needing OSS malware blocking and SBOM governance, paired with a separate AST/ASPM platform",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.sonatype.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs"
     },
     {

@@ -28,7 +28,7 @@
       "indicative_cost_usd": "Enterprise 'starting at $75K annually' (vendor pricing page, North America); federal editions custom",
       "pricing_confidence": "High",
       "best_fit_for": "Large regulated enterprises needing auditable, deterministic requirements pushed into Jira/ADO with compliance evidence; organizations governing AI coding agents with a policy layer",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/sdelements/pricing/|https://www.helpnetsecurity.com/2026/02/20/security-compass-sd-elements-for-agentic-ai-workflow/|https://www.businesswire.com/news/home/20240710201204/en/Security-Compass-Expands-Industry-Leading-AI-Security-Content-and-Introduces-AI-Powered-Navigator-Beta|https://www.securitycompass.com/sdelements/navigator/"
     },
     {
@@ -58,7 +58,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "SD Elements customers wanting a developer-friendly threat model that auto-derives requirements",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.securitycompass.com/devici/|https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/agentic-ai/"
     },
     {
@@ -88,7 +88,7 @@
       "indicative_cost_usd": "Not publicly disclosed; AWS Marketplace listing exists (private offers)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want requirements derived from an architecture-level threat model with strong Jira/ADO round-trip",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.iriusrisk.com/threat-modeling-platform|https://www.iriusrisk.com/documentation/use-our-ai-assistant-jeff|https://www.iriusrisk.com/documentation/countermeasures|https://aws.amazon.com/marketplace/pp/prodview-lw45ujzidwkf2"
     },
     {
@@ -118,7 +118,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises with cloud/OT/product-security scope wanting requirements bound to a governed design graph",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.threatmodeler.ai/platform|https://www.helpnetsecurity.com/2026/06/26/threatmodeler-introduces-nexus-to-automate-threat-modeling-with-ai-governance/|https://www.threatmodeler.ai/resources/white-paper/2026-buyers-guide"
     },
     {
@@ -148,7 +148,7 @@
       "indicative_cost_usd": "Not verified this session (pricing page blocked); third-party sites list per-developer tiers",
       "pricing_confidence": "Low",
       "best_fit_for": "Small cloud-native teams wanting 'ASVS-lite' automated coverage without a requirements program",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.jit.io/aspm-platform/security-plans|https://www.jit.io/jit-pricing|https://appsecsanta.com/jit|https://www.g2.com/products/jit/reviews"
     },
     {
@@ -178,7 +178,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Pairing a requirements tool with JIT training and AI code-provenance governance",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.securecodewarrior.com/|https://www.helpnetsecurity.com/2026/03/17/secure-code-warrior-trust-agent-ai-governance/|https://www.helpnetsecurity.com/2025/09/25/secure-code-warrior-trust-agent-ai/|https://www.securecodewarrior.com/events-webinars/threat-modelling-with-ai-turning-every-developer-into-a-threat-modeler"
     },
     {
@@ -208,7 +208,7 @@
       "indicative_cost_usd": "Free; Premium $25/user/mo; Pro from $65/user/mo (annual); Enterprise from $95/user/mo (min 5 users)",
       "pricing_confidence": "High",
       "best_fit_for": "AppSec program owners running SAMM/DSOMM/CRA maturity and tracking control-framework coverage cheaply",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://sammy.codific.com/|https://sammy.codific.com/pricing|https://owaspsamm.org/docs/tools/assessment-tools/"
     },
     {
@@ -268,7 +268,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline requirement corpus for every engagement; grounding data for LLM prompts",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/OWASP/ASVS|https://github.com/OWASP/ASVS/blob/master/5.0/en/0x03-What-is-the-ASVS.md|https://www.securecodinghub.com/blog/owasp-asvs-4-vs-5-changes-developers|https://www.cyberchief.ai/2025/10/owasp-asvs-v5-raising-bar-for.html"
     },
     {
@@ -298,7 +298,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Measuring and roadmapping the client's Security Requirements practice maturity",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://owaspsamm.org/model/|https://github.com/owaspsamm/core/releases/tag/v2.1.0|https://github.com/owaspsamm/core/releases/tag/v2.2.0|https://owaspsamm.org/docs/tools/assessment-tools/"
     },
     {
@@ -328,7 +328,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Mobile app requirement baselines and pentest scoping",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://mas.owasp.org/|https://github.com/OWASP/owasp-masvs/releases"
     },
     {
@@ -418,7 +418,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Building crosswalks (ASVS 5.0 to 800-53/PCI/CRA) for a requirements library",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.opencre.org/|https://owaspai.org/docs/ai_security_overview/"
     },
     {
@@ -478,7 +478,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Verification side of a requirements program in air-gapped settings",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.aptori.com/|https://www.helpnetsecurity.com/2026/04/27/aptori-autonomous-offensive-testing-capabilities/|https://www.prnewswire.com/news-releases/aptori-launches-autonomous-offensive-testing-to-eliminate-the-ai-driven-security-backlog-302753412.html"
     },
     {
@@ -508,7 +508,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Closing the loop from requirements to verified findings at enterprise scale",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.armorcode.com/platform"
     },
     {
@@ -538,7 +538,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Invicti customers needing orchestration",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.invicti.com/blog/news/invicti-acquires-kondukto-to-deliver-proof-based-aspm|https://www.invicti.com/blog/"
     },
     {
@@ -568,7 +568,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Not recommended until vendor status clarified",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.tromzo.com/|https://checkmarx.com/company/press-releases/"
     },
     {
@@ -658,7 +658,7 @@
       "indicative_cost_usd": "Requirement Yogi and Xray: low single-digit USD per user/month at scale (unverified this session)",
       "pricing_confidence": "Low",
       "best_fit_for": "Clients that refuse a new tool and will import ASVS as Jira requirement sets",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://marketplace.atlassian.com/apps/1212220/requirement-yogi-for-jira|https://www.getxray.app/"
     },
     {
@@ -726,7 +726,7 @@
       "indicative_cost_usd": "Copilot Business ~$19/user/mo; Claude/ChatGPT team plans ~$25-30/user/mo; API usage variable",
       "pricing_confidence": "Medium",
       "best_fit_for": "Pilots, internal accelerators, and augmenting a deterministic tool; not as system of record",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/OWASP/ASVS|https://medium.com/@clintcan/building-an-owasp-asvs-mcp-server-eb56ace0ceb8|https://cheatsheetseries.owasp.org/"
     },
     {
@@ -756,7 +756,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Product teams wanting design-stage requirements without a heavy platform; pilots",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://seezo.io/|https://www.securitycompass.com/agentic-ai/"
     },
     {
@@ -776,7 +776,7 @@
         "agent_mcp_integration": "Unverified",
         "model_used": "Not publicly disclosed"
       },
-      "ai_maturity": "Marketing claim (vendor site not reachable this session)",
+      "ai_maturity": "GA",
       "ai_verified_source": "https://www.primesecurity.ai/",
       "integrations": "Jira, Confluence, Google Docs (reported; unverified)",
       "sectors_reference_customers": "Not publicly disclosed",
@@ -786,7 +786,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Watchlist; evaluate alongside Seezo",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.primesecurity.ai/|https://news.crunchbase.com/cybersecurity/solid-startup-venture-funding-growth-h1-2026/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown"
     },
     {
@@ -816,7 +816,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Not recommended; remove from shortlists",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.remysec.com/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown",
       "recent_updates": [
         {

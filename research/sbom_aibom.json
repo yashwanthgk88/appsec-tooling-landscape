@@ -181,7 +181,7 @@
       "pricing_confidence": "High (OSS) / None (Aqua)",
       "best_fit_for": "Teams already using Trivy for image scanning who want SBOM plus VEX filtering in CI with minimal tooling",
       "sources": "https://trivy.dev/latest/docs/supply-chain/sbom/|https://trivy.dev/latest/docs/supply-chain/vex/|https://github.com/aquasecurity/trivy/releases",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Microsoft sbom-tool",
@@ -297,7 +297,7 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first enterprises on Snyk wanting a GA, code-level AI-BOM that maps MCP dependencies",
       "sources": "https://docs.snyk.io/developer-tools/snyk-cli/commands/aibom.md|https://docs.snyk.io/developer-tools/snyk-cli/commands/sbom|https://labs.snyk.io/resources/mcps-snyk-ai-bom/|https://labs.snyk.io/resources/aibom-cli-snyk/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Black Duck SCA (SBOM and AI Model Risk)",
@@ -326,7 +326,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises needing binary/firmware SBOMs plus licence compliance and CRA-grade reporting",
       "sources": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/resources/analyst-reports/gartner-magic-quadrant-software-supply-chain-security.html",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "recent_updates": [
         {
           "date": "2026-09-23",
@@ -363,7 +363,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises on Nexus/Lifecycle wanting SBOM lifecycle management with regulatory mapping and AI component visibility",
       "sources": "https://www.sonatype.com/products/sbom-manager|https://www.sonatype.com/press-releases/sonatype-named-a-leader-in-the-2026-gartner-magic-quadrant|https://www.sonatype.com/products/open-source-security-dependency-management",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "recent_updates": [
         {
           "date": "2026-09-22",
@@ -400,7 +400,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Artifactory wanting SBOM, attestations and AI model governance in one control plane",
       "sources": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/|https://jfrog.com/gartner-magic-quadrant/|https://investors.jfrog.com/news/news-details/2026/JFrog-Positioned-as-a-Leader-in-the-First-Gartner-Magic-Quadrant-for-Software-Supply-Chain-Security/default.aspx",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "GitHub SBOM export (Dependency Graph)",
@@ -453,8 +453,8 @@
       "type": "Open-core (SBOM features in Ultimate)",
       "deployment": "SaaS (GitLab.com), Self-Managed, Dedicated",
       "languages_coverage": "Lockfile-based ecosystems (npm, Maven/Gradle, pip/Poetry, Go, NuGet, Composer, Cargo, Conan, etc.), container images via Container Scanning; no firmware or ML models",
-      "key_features": "Pipelines emit CycloneDX JSON SBOM job artifacts (gl-sbom-*.cdx.json); SBOM-based dependency scanning GA (Gemnasium analyzer deprecated 17.9, removal 20.0) | Dependency list and group-level export | Vulnerability matching against GitLab advisory and malware advisory DBs, continuous rescan | VEX: limited (vulnerability status dismissals; formal VEX export unverified) | Regulatory: CycloneDX output meets format requirement; hashes/signatures not default",
-      "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted: GitLab Duo vulnerability explanation and resolution (code-level) | NL query: GitLab Duo Chat | MCP/agent: GitLab MCP server (beta 2025-2026, unverified)",
+      "key_features": "Pipelines emit CycloneDX JSON SBOM job artifacts (gl-sbom-*.cdx.json); SBOM-based dependency scanning GA (Gemnasium analyzer deprecated 17.9, removal 20.0) | Dependency list and group-level export | Vulnerability matching against GitLab advisory and malware advisory DBs, continuous rescan; malicious package detection in dependency scanning (Beta, Ultimate, 19.4: npm, PyPI, Maven, Go, NuGet, Cargo, RubyGems, enforceable via MR approval policies) | VEX: limited (vulnerability status dismissals; formal VEX export unverified) | Regulatory: CycloneDX output meets format requirement; hashes/signatures not default | SPDX license expressions (compound, e.g. MIT OR Apache-2.0) carried in dependency and license scanning and CycloneDX SBOM output (GA, Ultimate, 19.4)",
+      "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted: GitLab Duo vulnerability explanation and resolution (code-level) | NL query: GitLab Duo Chat | MCP/agent: GitLab MCP server with vulnerability tools list_vulnerabilities, get_vulnerability, save_vulnerability (GA, Ultimate, 19.4); automated triage and remediation profiles via Duo Agent Platform (GA, Ultimate, 19.4)",
       "ai_maturity": "None",
       "ai_verified_source": "https://docs.gitlab.com/user/application_security/dependency_scanning/",
       "integrations": "Native CI; export to Dependency-Track via CI job; Jira",
@@ -472,7 +472,15 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab Ultimate shops wanting pipeline-native CycloneDX SBOMs feeding an external manager",
       "sources": "https://docs.gitlab.com/user/application_security/dependency_scanning/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28",
+      "recent_updates": [
+        {
+          "date": "2026-09-17",
+          "type": "Release",
+          "summary": "GitLab 19.4 adds malicious package detection to dependency scanning (Beta, Ultimate) using GitLab malware advisories across seven ecosystems, SPDX license expressions in dependency and license scanning (GA), and vulnerability tools on the GitLab MCP server plus automated triage and remediation profiles (GA, Ultimate).",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-4-released/"
+        }
+      ]
     },
     {
       "tool": "Mend SCA SBOM and Mend AI",
@@ -501,7 +509,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Mend SCA customers wanting AI component discovery and governance inside the existing AppSec platform",
       "sources": "https://www.mend.io/mend-ai/|https://www.mend.io/sbom/|https://www.mend.io/blog/the-vision-behind-mends-recognition/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Cybeats SBOM Studio",
@@ -530,7 +538,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Product security teams managing supplier SBOMs for FDA and CRA obligations",
       "sources": "https://www.cybeats.com/sbom-studio|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Finite State Platform",
@@ -559,7 +567,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "IoT/OT and medical device manufacturers needing binary-derived SBOMs and CRA/FDA evidence",
       "sources": "https://finitestate.io/platform|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Manifest Platform (SBOM, AIBOM, AI Risk)",
@@ -757,7 +765,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs that want reachability-driven SBOM/VEX plus governance of AI coding agents and MCP servers",
       "sources": "https://www.endorlabs.com/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "recent_updates": [
         {
           "date": "2026-09-27",
@@ -948,7 +956,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Organisations consuming many third-party models needing deep model file scanning and MLOps integration",
       "sources": "https://hiddenlayer.com/|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Palo Alto Networks Prisma AIRS (ex-Protect AI Guardian, Radar, Recon; ModelScan OSS)",
@@ -976,7 +984,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Palo Alto customers wanting model scanning and AI posture inside Prisma; ModelScan for free CI gating of pickle risk",
       "sources": "https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai|https://github.com/protectai/modelscan",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Cisco AI Defense (incl. Foundation AI; Aim Security acquired 2025)",
@@ -1004,7 +1012,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Cisco-standardised enterprises wanting AI asset visibility and runtime guardrails at the network layer",
       "sources": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html|https://www.aim.security/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Legit Security ASPM (AI-BOM, VibeGuard)",
@@ -1227,7 +1235,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Existing Checkmarx One customers who want SBOM export and AI asset inventory from the same SCA scans without adding a separate SBOM tool",
       "sources": "https://checkmarx.com/product/sbom/|https://checkmarx.com/solutions/ai-supply-chain-security/|https://vmblog.com/news/checkmarx-delivers-complete-ai-asset-visibility-and-governance-for-the-software-supply-chain-closing-the-shadow-ai-gap/|https://github.com/Checkmarx/ast-cli/blob/main/internal/commands/result.go|https://checkmarx.com/blog/sbom-how-to-create-one-using-checkmarx-sca/|https://checkmarx.com/solutions/checkmarx-mcp/|https://checkmarx.com/packaging/|https://docs.checkmarx.com/en/34965-388392-checkmarx-one-sbom-reports.html",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-09-28"
     },
     {
       "tool": "Veracode SBOM (SCA SBOM API, Veracode CLI sbom/scan, Package Firewall)",

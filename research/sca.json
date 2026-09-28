@@ -17,7 +17,7 @@
         "ai_auto_remediation_upgrade_prs": "Yes: Snyk Agent Fix (formerly DeepCode AI Fix) for code; fix PRs / upgrade PRs for open source",
         "malicious_package_detection_ml_llm": "Partial: package health checks (snyk_package_health_check GA May 2025); malicious package detection not a headline capability",
         "natural_language_query": "Yes: Evo Chat (platform)",
-        "agent_mcp_integration": "Yes: Snyk Studio (formerly Snyk MCP Server, rebranded Oct 2025) quickstarts for Cursor, Windsurf, Claude Code, Devin, Continue, JetBrains AI; snyk/agent-scan for MCP servers and agent skills",
+        "agent_mcp_integration": "Yes: Snyk Studio (formerly Snyk MCP Server, rebranded Oct 2025) quickstarts for Cursor, Windsurf, Claude Code, Devin, Continue, JetBrains AI; snyk/agent-scan for MCP servers and agent skills; experimental 'snyk studio' CLI command auto-configures Snyk Studio in AI coding tools (CLI v1.1307.4, Sept 2026); Evo MCP server (https://evo.snyk.io/mcp) lets Claude, Cursor and other MCP clients query the Evo AI asset inventory, policies and violations (Sept 2026)",
         "ai_model_or_ai_library_dependency_detection": "Yes: snyk aibom generates CycloneDX 1.6 AI-BOM for Python, Java, JS, Go (June 2026)",
         "model_used_or_byo_llm": "Proprietary DeepCode models plus hosted LLMs; specifics not publicly disclosed"
       },
@@ -31,9 +31,21 @@
       "indicative_cost_usd": "Team ~$300/dev/year list; Enterprise typically $30k-$150k+/year for 100-500 devs (market estimate, not vendor-disclosed)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first teams standardising on one platform (SCA+SAST+Container+IaC) with strong IDE and agent workflows; not for air-gapped clients",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://snyk.io/plans/|https://docs.snyk.io/whats-new|https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/|https://github.com/snyk/agent-scan",
       "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1307.4 adds an experimental 'snyk studio' command that sets up Snyk Studio in AI coding tools (Cursor, Claude Code, Copilot, Gemini and others) and adds --severity-filter, --breakability-filter and --exclude-ids options to 'snyk fix --agentic'; failed fixes are now kept for review unless --enable-revert is set.",
+          "source": "https://github.com/snyk/cli/releases/tag/v1.1307.4"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "Feature launch",
+          "summary": "Snyk made an Evo MCP server available so MCP clients such as Claude Code and Cursor can query the Evo AI-SPM asset inventory (models, agents, MCP servers, skills), policy violations and create policies without leaving the agent.",
+          "source": "https://snyk.io/blog/so-i-asked-my-agent-instead/"
+        },
         {
           "date": "2026-09-18",
           "type": "Release",
@@ -82,7 +94,7 @@
       "indicative_cost_usd": "Not publicly disclosed; market reports commonly cite $50k-$500k+/year for mid-to-large enterprises (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated enterprises needing on-prem/air-gap, license-obligation rigor, binary and snippet scanning, M&A audits; strong fit for consulting delivery in BFSI, auto, medtech",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.blackduck.com/blog/black-duck-leader-2025-gartner-magic-quadrant-application-security-testing.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/blog/forrester-wave-sca.html|https://clearlake.com/clearlake-and-francisco-partners-complete-acquisition-of-black-duck-software-formerly-known-as-synopsys-software-integrity-group/",
       "recent_updates": [
         {
@@ -121,8 +133,16 @@
       "indicative_cost_usd": "Not publicly disclosed; third-party estimates $20-$40/dev/month at volume (Low confidence)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want dependency hygiene at scale (Renovate) plus SCA and AI-component inventory; good fit for Azure-centric clients via Defender integration",
-      "last_verified": "2026-09-26",
-      "sources": "https://docs.mend.io/platform/latest/mend-platform-release-notes|https://www.businesswire.com/news/home/20260310509064/en/Mend.io-Launches-System-Prompt-Hardening-Industrys-First-Dedicated-Solution-to-Secure-the-AI-Instruction-Layer|https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-mend-io|https://www.gartner.com/reviews/market/software-supply-chain-security"
+      "last_verified": "2026-09-28",
+      "sources": "https://docs.mend.io/platform/latest/mend-platform-release-notes|https://www.businesswire.com/news/home/20260310509064/en/Mend.io-Launches-System-Prompt-Hardening-Industrys-First-Dedicated-Solution-to-Secure-the-AI-Instruction-Layer|https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-mend-io|https://www.gartner.com/reviews/market/software-supply-chain-security",
+      "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Release",
+          "summary": "Mend SCA 26.9.1 adds Bun package manager support (open beta) for JavaScript dependency detection, optimises reachability engine memory use, improves Java multi-module Maven accuracy and per-module Gradle timeout handling, and fixes Jira issue creation for application-level roles.",
+          "source": "https://docs.mend.io/platform/latest/mend-sca-release-notes"
+        }
+      ]
     },
     {
       "tool": "Sonatype Lifecycle / Nexus One Platform (incl. Repository Firewall, SBOM Manager, Sonatype Guide/AI)",
@@ -152,7 +172,7 @@
       "indicative_cost_usd": "Not publicly disclosed; historical resale quotes ~$100-$150/dev/year for Lifecycle, Firewall priced per repository manager (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises wanting ingestion-time blocking (Firewall) plus policy-driven SCA and SBOM lifecycle; strong for air-gapped and government clients",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://www.sonatype.com/press-releases/sonatype-unveils-nexus-one-platform|https://www.sonatype.com/press-releases/sonatype-named-a-leader-in-the-2026-gartner-magic-quadrant|https://www.sonatype.com/press-releases/sonatype-named-visionary-on-2025-gartner-magic-quadrant|https://www.infoq.com/news/2026/03/sonatype-guide-safety-mcp-server"
     },
     {
@@ -183,7 +203,7 @@
       "indicative_cost_usd": "Not publicly disclosed; market estimates $60k-$300k+/year for enterprise bundles (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises already on Checkmarx SAST wanting correlated SAST+SCA exploitable-path reduction and a single platform",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://checkmarx.com/blog/checkmarx-named-a-leader-for-the-7th-time-in-the-2025-gartner-magic-quadrant-for-application-security-testing/|https://checkmarx.com/blog/checkmarx-named-a-leader-in-inaugural-2026-gartner-magic-quadrant-for-software-supply-chain-security/|https://checkmarx.com/checkmarx-one-developer-assist/|https://www.businesswire.com/news/home/20251014963115/en/Checkmarx-One-Surpasses-%2524150M-ARR-and-Expands-Global-Leadership-in-AI-Powered-Application-Security"
     },
     {
@@ -214,7 +234,7 @@
       "indicative_cost_usd": "Not publicly disclosed; estimates $50k-$250k+/year for platform bundles (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Veracode SAST, or needing FedRAMP SaaS and an ingestion-time firewall",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge|https://www.veracode.com/blog/introducing-veracode-package-firewall/|https://www.helpnetsecurity.com/2026/01/28/veracode-platform-innovations/|https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/",
       "recent_updates": [
         {
@@ -292,7 +312,7 @@
       "indicative_cost_usd": "Ultimate ~$99/user/month list ($1,188/user/year); Duo Enterprise additional (~$39/user/month, verify)",
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab-standardised enterprises and air-gapped/self-managed environments wanting native SCA baseline",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://about.gitlab.com/direction/supply-chain/|https://about.gitlab.com/blog/dependency-scanning-auto-remediation/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/|https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/",
       "recent_updates": [
         {
@@ -337,7 +357,7 @@
       "indicative_cost_usd": "SaaS Pro X from ~$150/month (Xray basic); Enterprise+ six figures typical (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Artifactory-centric enterprises wanting binary-level SCA, ingestion curation and AI-asset governance in one control plane",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://jfrog.com/gartner-magic-quadrant/|https://jfrog.com/press-room/jfrog-embeds-security-into-the-agentic-workforce/|https://jfrog.com/blog/jfrog-recognized-visionary-gartner-2025-magic-quadrant-ast-report/|https://jfrog.com/advanced-security/",
       "recent_updates": [
         {
@@ -413,7 +433,7 @@
       "indicative_cost_usd": "$3,600-$7,200/year for mid-size teams; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Mid-market and fast-moving teams wanting low-noise all-in-one AppSec with strong malware defence at low cost",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://www.aikido.dev/pricing|https://en.wikipedia.org/wiki/Aikido_Security|https://www.aikido.dev/blog/latio-2026-appsec-report-aikido-platform-leader|https://www.aikido.dev/blog/shai-hulud-npm-resurfaces",
       "recent_updates": [
         {
@@ -458,7 +478,7 @@
       "indicative_cost_usd": "Business ~$240/project/year; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Licence compliance, OSPO and SBOM programmes rather than vulnerability-first security",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://fossa.com/pricing/|https://appsecsanta.com/fossa|https://www.gartner.com/reviews/market/software-supply-chain-security"
     },
     {
@@ -484,13 +504,21 @@
       "integrations": "GitHub app, GitLab, Bitbucket, Azure DevOps (Enterprise), GitHub Actions, CLI, Slack, Vanta, webhooks",
       "sectors_reference_customers": "Vendor-claimed: Vercel, Figma, Brave, Metamask (marketing); $60M Series C May 2026 at $1B valuation (Thrive Capital)",
       "analyst_position": "Gartner MQ AST 2025: not rated. Gartner MQ SSCS 2026: not publicly confirmed (unverified)",
-      "cons_known_gaps": "Enterprise governance and reporting still maturing | Licence obligation depth limited | Multi-SCM only on Enterprise | No on-prem | Reachability newer than Endor/Semgrep",
+      "cons_known_gaps": "Enterprise governance and reporting still maturing | Licence obligation depth limited | Multi-SCM only on Enterprise | No on-prem | Reachability newer than Endor/Semgrep | Alert and event data older than 1 year ages out from November 2026; long-term audit history requires customer-side exports",
       "pricing_model": "Free $0; Team $25/dev/month (min 5); Business $50/dev/month (min 20); Enterprise custom; 20% off annual",
       "indicative_cost_usd": "$300-$600/dev/year",
       "pricing_confidence": "High",
       "best_fit_for": "Teams prioritising malicious-package and AI-tool supply-chain defence; excellent complement to a traditional SCA",
-      "last_verified": "2026-09-26",
-      "sources": "https://socket.dev/pricing|https://www.startuphub.ai/investment_rounds/socketc-series-c-2026|https://docs.socket.dev/docs/socket-firewall-overview|https://socket.dev/blog"
+      "last_verified": "2026-09-28",
+      "sources": "https://socket.dev/pricing|https://www.startuphub.ai/investment_rounds/socketc-series-c-2026|https://docs.socket.dev/docs/socket-firewall-overview|https://socket.dev/blog",
+      "recent_updates": [
+        {
+          "date": "2026-09-16",
+          "type": "Release",
+          "summary": "Socket announced it will enforce a 1-year retention (TTL) on alert and event data for all users starting November 2026, recommending data exports or the historical alerts and events APIs to keep older data.",
+          "source": "https://socket.dev/changelog/alert-event-data-older-than-1-year-will-age-out-starting-november-2026"
+        }
+      ]
     },
     {
       "tool": "Phylum (now Veracode Package Firewall)",
@@ -531,11 +559,11 @@
       "type": "Commercial (Semgrep CE open source; Supply Chain is commercial)",
       "deployment": "SaaS with local scanning (code never leaves CI); hybrid; no air-gap SaaS",
       "languages_coverage": "Reachability for Java, Kotlin, JS/TS, Python, Go, Ruby, C#, PHP, Scala, Swift, Rust (lockfile-only for some); Maven, npm, PyPI, NuGet, Go, RubyGems, Cargo, Composer, Swift PM",
-      "key_features": "Code-level reachability using Semgrep rules written per advisory | Malicious dependency detection | Licence compliance | Transitive analysis and dependency graph | Semgrep Assistant AI triage and remediation guidance | SBOM export (CycloneDX)",
+      "key_features": "Code-level reachability using Semgrep rules written per advisory | Malicious dependency detection | Licence compliance | Transitive analysis and dependency graph | Semgrep Assistant AI triage and remediation guidance | SBOM export (CycloneDX) | Malware Detection with incident-specific rules and automated rescans plus Response Automation policies (Jira, Slack, webhooks, rescans) GA Sept 2026; Malware Firewall via Semgrep Guardian (private beta)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: Semgrep Assistant auto-triage (vendor claims ~60% of triage handled, 95% agreement) plus reachability",
         "ai_auto_remediation_upgrade_prs": "Yes: Assistant remediation suggestions; PR comments; not autonomous upgrade PRs",
-        "malicious_package_detection_ml_llm": "Yes: malicious dependency detection (method not disclosed)",
+        "malicious_package_detection_ml_llm": "Yes: Malware Detection GA Sept 2026 using AI-assisted, expert-verified incident rules with automated rescans (vendor claim); Malware Firewall in Semgrep Guardian blocks installs (private beta); ML/LLM detection method not disclosed",
         "natural_language_query": "Partial: Assistant chat",
         "agent_mcp_integration": "Yes: Semgrep MCP server (open source)",
         "ai_model_or_ai_library_dependency_detection": "No",
@@ -551,9 +579,15 @@
       "indicative_cost_usd": "~$420/contributor/year",
       "pricing_confidence": "High",
       "best_fit_for": "Teams already on Semgrep SAST wanting low-noise SCA with code-level reachability",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://dev.to/rahulxsingh/semgrep-pricing-in-2026-open-source-vs-team-vs-enterprise-costs-3dic|https://semgrep.dev/docs/release-notes/march-2026|https://www.gartner.com/reviews/product/semgrep-supply-chain",
       "recent_updates": [
+        {
+          "date": "2026-09-24",
+          "type": "Feature GA",
+          "summary": "Semgrep Supply Chain added Malware Detection (AI-assisted, expert-verified incident rules added within minutes plus automated full rescans) and Response Automation (org-wide policies that open Jira tickets, send Slack alerts or trigger rescans) as GA; a Malware Firewall embedded in Semgrep Guardian that blocks malicious packages at install is in private beta.",
+          "source": "https://semgrep.dev/blog/2026/introducing-malware-detection-and-response-automation/"
+        },
         {
           "date": "2026-09-14",
           "type": "Release",
@@ -590,7 +624,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises consolidating SCA into ASPM with CI/CD pipeline security and AI-era governance",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-09-28",
       "sources": "https://cycode.com/blog/cycode-leader-gartner-magic-quadrant-sscs-2026/|https://cycode.com/blog/bulk-ai-exploitability-analysis/|https://appsecsanta.com/cycode",
       "recent_updates": [
         {
@@ -699,7 +733,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Legacy Java pipelines and audits where a free NVD-based check is acceptable; migrate to OSV-Scanner/Trivy + Dependency-Track",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/dependency-check/DependencyCheck/releases|https://github.com/dependency-check/DependencyCheck/issues/8298|https://appsecsanta.com/owasp-dependency-check"
     },
     {
@@ -769,7 +803,7 @@
       "indicative_cost_usd": "$0 OSS",
       "pricing_confidence": "High",
       "best_fit_for": "Container and Kubernetes supply chain scanning baseline; SBOM generation",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://github.com/aquasecurity/trivy/releases|https://github.com/aquasecurity/trivy-mcp|https://docs.gitlab.com/user/application_security/dependency_scanning/"
     },
     {
@@ -1109,7 +1143,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Alternative to Chainguard for hardened images",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-09-28",
       "sources": "https://siliconangle.com/2026/08/27/vulnerability-free-container-image-startup-echo-acquires-minimus/|https://www.citybiz.co/article/725475/echo-secures-15m-seed-funding/|https://aws.amazon.com/marketplace/pp/prodview-nfcqsctywhhyw"
     },
     {
