@@ -1,0 +1,48 @@
+This is a dry run of the notification path. No data was changed.
+
+Subject: DRY RUN: AppSec tooling landscape weekly update 2026-09-27: 1 new tool, 97 updates
+Run: weekly sweep, window 2026-09-13 to 2026-09-27, run started 2026-09-28 12:58 IST (dry run; content replays the 2026-09-27 changelog entry)
+Headline: 241 tools tracked, 1 new tool, 74 tools updated, 138 tools checked with no change.
+
+New tools added:
+Red Hat agentic-threat-modeling, Threat Modeling, open-source module that runs STRIDE, PASTA, LINDDUN, VAST, Attack Trees and OCTAVE inside Claude Code, Cursor and Gemini CLI and writes a THREAT_MODEL.md with code-cited threats, https://github.com/RedHatProductSecurity/agentic-threat-modeling
+
+AI maturity changes:
+Black Duck Polaris, Platforms and ASPM (also SAST, SCA, Secrets, SBOM), on-prem AI not possible to on-prem AI possible, bring-your-own-LLM for Signal AI across six agents shipped 23 Sep
+Aikido Security, Platforms and ASPM (also SAST, SCA, Secrets), on-prem AI no to on-prem AI yes, Altar-1 open-weight security model released 21 Sep
+Cycode Secrets Detection, Secret Scanning, GA to Beta or Preview for the new capability, Workstation Protection early access 23 Sep
+OX Security, Platforms and ASPM, Beta or Preview to GA, OX Cloud generally available 16 Sep
+HCL AppScan on Cloud, SAST (also SCA, Secrets, Platforms), GA extended, AI SAST business-logic flaw detection and per-group AI admin controls 27 Sep
+
+Notable updates:
+Remy Security, Security Requirements, 2026-09-27: appears shut down; the website no longer serves the product and Y Combinator lists the company as inactive. Row kept and flagged.
+Checkmarx One, SAST, 2026-09-17: Triage and Remediation Assist agent launched, metered in credits, opens fix pull requests on GitHub. Pricing model updated.
+GitLab 19.4, all tabs, 2026-09-17: Kotlin, Dart and Scala added to Advanced SAST; vulnerability tools in the GitLab MCP Server; automated triage profiles; malicious package detection beta; credit consumption order changed.
+Wiz and CrowdStrike Falcon, Platforms and ASPM, 2026-09-24: both named Leaders in the Forrester Wave for Proactive Security Platforms Q3 2026.
+GitHub Advanced Security, SAST, Secrets, SBOM and Platforms, 15 to 25 Sep: configuration enforcement GA; AI Scan separated from CodeQL default setup (preview); agentic autofix uses Copilot Memory (preview); CodeQL 2.27.1; credential inventory export GA.
+OpenText Fortify, SAST, about 2026-09-20: VS Code extension 26.4 applies Aviator fixes inside the IDE and ships Fortify MCP servers.
+Semgrep, SAST, SCA, Secrets and Platforms, 2026-09-24: Supply Chain malware detection and response automation GA.
+ThreatModeler Nexus, Threat Modeling, 2026-09-14: FedRAMP Moderate authorised.
+Lineaje, SBOM and AI BOM, 2026-09-25: Frontier Defense multi-agent AI engine GA.
+Phoenix Security, Platforms and ASPM, 2026-09-21: MIT-licensed CLI and MCP server open-sourced.
+Apiiro, Platforms and ASPM, 2026-09-24: Claude Compliance API added to the Software Graph for AI-BOM.
+GitGuardian, Secret Scanning, 14 and 24 Sep: Detection Engine 2.172 with 10 new detectors; Docker Sandbox Mixin Kit with ggshield AI hooks.
+Veracode, SAST, SCA and Secrets, 16 and 23 Sep: DryRun Security integration; static engine v2026.09 improves .NET hardcoded-credential detection; CLI 2.52.1 speeds up SCA fixes.
+Devici 2.30.0, Threat Modeling, 2026-09-16: role-scoped API tokens for MCP and a sync prompt with SD Elements.
+Threat Canvas, Threat Modeling, 2026-09-15: SecureFlag MCP Server builds models from user stories in Claude Code and Codex.
+
+Other updates recorded:
+SAST 18, SCA 18, Secret Scanning 14, SBOM and AI BOM 16, Threat Modeling 6, Security Requirements 2, Platforms and ASPM 23. Total 97 dated entries across 74 rows.
+
+Checked with no change:
+SAST 18, SCA 17, Secret Scanning 14, SBOM and AI BOM 22, Threat Modeling 23, Security Requirements 23, Platforms and ASPM 21. Total 138 rows.
+
+Could not be verified this run:
+Mobb, Amplify Security, Aptori, Faraday, Clover, Tromzo, Echo, Konvu, Tidal Cyber, securiCAD, Prime Security, Oligo, Safeguard, Cisco AI Defense, Scribe, sbom-scorecard, OWASP Top 10 for LLM 2026 and Agentic Security Initiative pages. Sonatype and Checkmarx help-centre release notes render client-side and were not read.
+
+Where to look:
+Sheet tabs: Feature Updates (97 entries), New Entrants (1 new row), Threat Modeling (row 37), Executive Summary (totals moved to 241). No tabs changed in this dry run.
+Commit of the replayed run: https://github.com/yashwanthgk88/appsec-tooling-landscape/commit/1d1cd46
+Workbook: https://github.com/yashwanthgk88/appsec-tooling-landscape/blob/main/AppSec_Tooling_Landscape_2026.xlsx
+
+Email to yashwanth.k@gds.ey.com was not sent: no Gmail or Outlook mail tool is available in this session.
