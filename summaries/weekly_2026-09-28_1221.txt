@@ -1,0 +1,40 @@
+Subject: AppSec tooling landscape weekly update 2026-09-28: 0 new tools, 11 updates
+Run: weekly sweep, window 2026-09-14 to 2026-09-28, run started 2026-09-28 12:21 IST
+Headline: 241 tools tracked, 0 new tools, 10 tools updated (11 dated updates plus 1 AI maturity fix), 231 unchanged (90 checked, 141 not reached this run).
+
+New tools added:
+None
+
+AI maturity changes:
+Prime Security, Security Requirements, Marketing claim to GA, fix of an old value based on the vendor's own GA post from June 2025 (vendor claim)
+
+Notable updates:
+Semgrep Supply Chain, SCA, 2026-09-24: malware detection and automatic response are now generally available; an install-time malware firewall is in private beta
+GitGuardian Platform, Secret Scanning, 2026-09-25: AI coding agents (Claude Code, Codex, Mistral Vibe) no longer see tool output that contains secrets; blocking now also covers Amazon Kiro and JetBrains Junie
+GitGuardian Platform, Secret Scanning, 2026-09-25: self-hosted release 2026.9 can scan isolated networks, plants decoy cloud keys on laptops to catch key-stealing malware, and brings the AI agent controls to self-hosted customers
+Snyk Open Source, SCA, 2026-09-22: new Snyk Evo MCP server lets AI agents query the AI asset inventory and create policies
+Socket, SCA, 2026-09-16: alert and event data older than one year will be deleted from November 2026; export it if you need it
+GitLab Dependency Scanning, SBOM and AI BOM, 2026-09-17: GitLab 19.4 adds malicious package detection (Beta) and SPDX license expressions
+Snyk Code and Snyk Open Source, SAST and SCA, 2026-09-23: CLI adds a trial command that plugs Snyk into AI coding tools, plus filters for AI fixes
+ggshield, Secret Scanning, 2026-09-24: version 1.55.0 adds the Kiro and Junie hooks and a configurable timeout
+Mend SCA, SCA, 2026-09-27: version 26.9.1 adds Bun package support (open beta) and better Java build accuracy
+STRIDE GPT, Threat Modeling, 2026-09-26: version 0.20.0 adds OpenRouter models and lets long analysis runs resume
+
+Other updates recorded:
+SAST 1, SCA 5, Secret Scanning 3, SBOM and AI BOM 1, Threat Modeling 1, Security Requirements 0 (plus 1 maturity fix), Platforms and ASPM 0
+
+Checked with no change:
+SAST 7, SCA 12, Secret Scanning 19, SBOM and AI BOM 13, Threat Modeling 6, Security Requirements 19, Platforms and ASPM 14
+
+Could not be verified this run:
+141 rows, mostly because GitHub release pages were blocked and the search budget went to the leaders first. Most were verified on 26 or 27 Sep.
+SAST 25, SCA 17, Secret Scanning 4, SBOM and AI BOM 28, Threat Modeling 30, Security Requirements 8, Platforms and ASPM 29.
+Full list by name is in CHANGELOG.md under 2026-09-28.
+Leaders not reached: GitHub Advanced Security, GitLab Ultimate SAST, Black Duck, HCL AppScan, OpenText Fortify, Apiiro, Wiz Code, ThreatModeler Nexus, Devici.
+
+Where to look:
+Sheet tabs changed: Feature Updates, SAST, SCA, Secret Scanning, SBOM & AI BOM, Threat Modeling, Security Requirements, AI Capabilities, Executive Summary (AI maturity count for Security Requirements moved)
+Commit: https://github.com/yashwanthgk88/appsec-tooling-landscape/commit/97f746181b8e1bc2799f253b16770b5b7b0c2ee0
+Workbook: https://github.com/yashwanthgk88/appsec-tooling-landscape/blob/main/AppSec_Tooling_Landscape_2026.xlsx
+
+Email to yashwanth.k@gds.ey.com was not sent: no Gmail or Outlook mail tool is connected in this session.
