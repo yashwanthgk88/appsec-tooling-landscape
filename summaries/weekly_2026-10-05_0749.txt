@@ -1,0 +1,56 @@
+Subject: AppSec tooling landscape weekly update 2026-10-05: 0 new tools, 43 updates
+Run: weekly sweep, window 2026-09-21 to 2026-10-05, run started 2026-10-05 07:49 IST
+Headline: 241 tools tracked, 0 new tools, 39 tool rows updated (43 dated updates on 31 rows, plus 8 rows with data corrections only), 202 unchanged (64 checked with no change, 52 could not be verified, 86 not reached this run).
+
+New tools added:
+None
+Note: the search for new tools was only partial this week because the web search allowance for the run ran out. Funding news up to 27 Sep, one product roundup and Hacker News launches were checked and showed nothing in the seven categories.
+
+AI maturity changes:
+None
+
+Notable updates:
+SonarQube, SAST, 2026-09-29: the AI agents that fix and find issues (Remediation Agent, Hunter Agent, Vortex) are now generally available on self-managed SonarQube Server, Enterprise and Data Center editions, not only on the cloud version
+Invicti ASPM, Platforms and ASPM, 2026-09-29: Invicti was named a Leader in the IDC MarketScape for dynamic testing (DAST) 2026; source is the vendor's press release and the report covers DAST, not the ASPM product
+GitGuardian Platform, Secret Scanning, 2026-09-30: new Wiz integration is generally available; leaked secrets found by GitGuardian now show up in Wiz as findings, synced daily
+GitHub Advanced Security, SAST and Secret Scanning, 2026-09-30: GitHub Team customers can now start a trial of code security and secret protection themselves; trial length and price were not stated
+GitHub Dependabot, SCA, 2026-09-29: repository admins can now choose which runners Dependabot uses, per repository (generally available)
+GitLab Ultimate, SAST and Platforms and ASPM, 2026-09-23: critical patch release 19.4.1 fixes 11 security bugs, two of them rated 9.9 out of 10; self-managed GitLab servers need to upgrade
+GitLab Ultimate SAST, SAST, 2026-10-02: a second 9.9 rated flaw was patched in the self-hosted AI Gateway used by GitLab Duo; date is from the press report
+Legit Security, Platforms and ASPM, SBOM and AI BOM, Secret Scanning, 2026-09-30: the AI fix agent now also fixes vulnerable open-source dependencies and opens a pull request once the fix is checked (vendor claim, GA status not stated)
+Noma Security, SBOM and AI BOM, 2026-09-28: new endpoint product lists the AI agents, MCP servers and skills on staff laptops and controls what they may do (vendor claim, GA status not stated)
+Betterleaks, Secret Scanning, 2026-09-30: version 2.0.0 release candidate can tell who a leaked credential belongs to, what it can access, and can revoke it; still a pre-release
+Snyk Code, SAST, 2026-09-23: Snyk confirmed a scoring change that reorders Snyk Code findings; no findings were added or removed
+Snyk Code and Snyk Open Source, SAST and SCA, 2026-09-23: the Snyk for Jira app is moving to Atlassian's new platform; existing installs are migrated during October
+JFrog Xray, SCA and SBOM and AI BOM, 2026-09-27: version 3.155.3 adds a Threat Hub news feed with impact search and newer severity scores in report exports
+Syft and Grype, SBOM and AI BOM, 2026-10-01 and 2026-10-02: Syft 1.54.0 adds Perl package detection; Grype 0.120.0 adds signed release checksums
+Nightfall AI, Secret Scanning, 2026-09-29: now checks Claude Enterprise and Claude Platform conversations for leaked credentials and personal data (vendor claim)
+
+Other updates recorded:
+All dated updates per category, including the ones listed above: SAST 12, SCA 5, Secret Scanning 9, SBOM and AI BOM 7, Threat Modeling 0, Security Requirements 1, Platforms and ASPM 9.
+The same news item is counted once on each row it applies to.
+Rows with data corrections only (older facts fixed, no dated entry): Threat Modeling 3, Security Requirements 3, Platforms and ASPM 2.
+
+Checked with no change:
+SAST 10, SCA 9, Secret Scanning 10, SBOM and AI BOM 7, Threat Modeling 11, Security Requirements 8, Platforms and ASPM 9
+
+Could not be verified this run:
+52 rows had no dated vendor page that could be read:
+SAST (5): OpenText Fortify, Endor Labs, Bearer (Cycode SAST), Mobb, Arnica
+SCA (5): Sonatype Lifecycle, Checkmarx SCA, FOSSA, Semgrep Supply Chain, Aikido
+Secret Scanning (4): HCP Vault Radar, Cremit, Entro Security, Jit
+SBOM and AI BOM (12): Snyk SBOM, Sonatype SBOM Manager, Black Duck SCA, GitLab Dependency Scanning, GitHub SBOM export, Trivy, Scribe Security, Manifest, FOSSA, OWASP AIBOM Generator, Oligo Security, Prompt Security
+Threat Modeling (8): IriusRisk, ThreatModeler Nexus, securiCAD, Tidal Cyber, STRIDE GPT, NIST AI RMF, MAESTRO and PLOT4ai, OWASP AI Exchange
+Security Requirements (8): ThreatModeler Nexus, Jit, Kondukto ASPM, Secure Code Warrior, SAMMY, OpenCRE, OWASP requirement checklists, Aptori
+Platforms and ASPM (10): Checkmarx One, GitHub Advanced Security, Apiiro, JFrog Platform, Sonatype Nexus One, Cycode, ArmorCode, Mobb, Pixee, Nullify
+A further 86 rows were not reached before the web search allowance ran out:
+SAST 10, SCA 16, Secret Scanning 5, SBOM and AI BOM 17, Threat Modeling 15, Security Requirements 8, Platforms and ASPM 15.
+They keep their old check date and go first next week. Names are in CHANGELOG.md under 2026-10-05.
+
+Where to look:
+Sheet tabs changed: Feature Updates, SAST, SCA, Secret Scanning, SBOM & AI BOM, Threat Modeling, Security Requirements, Platforms & ASPM, AI Capabilities, Scoring Matrix (a few rank positions in Platforms & ASPM shifted by one)
+Executive Summary totals did not move (still 241 tools, same AI maturity counts; only the cut-off date changed); New Entrants tab has no new rows
+Commit: https://github.com/yashwanthgk88/appsec-tooling-landscape/commit/0f261eb27366533ccad63437b00c15f5ed398b26
+Workbook: https://github.com/yashwanthgk88/appsec-tooling-landscape/blob/main/AppSec_Tooling_Landscape_2026.xlsx
+
+Email to yashwanth.k@gds.ey.com was not sent: no Gmail or Outlook mail tool is connected in this session.
