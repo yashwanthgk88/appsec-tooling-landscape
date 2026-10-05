@@ -15,7 +15,7 @@
         "ai_assistant_over_standards": "Navigator: built-in AI assistant answering security/regulatory questions in context of a requirement (beta July 2024; Navigator v7 model default since 2026.6.3; disabled by default on AI Services deployments with a disclaimer since 2026.2.1)",
         "ai_mapping_findings_to_requirements": "Automated validation of requirements against SAST results (ZeroPath integration); 'scan-for-verification-validation' workflow prompt uses LLM scans to post verification notes against countermeasures (2026.5.2); '/verify-with-scanner' available by default since 2026.8.2",
         "automated_design_review": "Via Devici (sister product) threat modelling; '/sync-devici-threat-model' workflow prompt exports Open Threat Models from Devici into SD Elements (2026.9.1, 12 Sept 2026); not native LLM design review",
-        "agent_mcp_integration": "MCP server with integration tools and workflow prompts enabled by default (no feature flag) since 2026.8.2; pre-built countermeasure skill files for OWASP Top 10 Web/API, Docker; delivers requirements to GitHub Copilot, Cursor, Claude and generic LLM agents; 'SD Elements for Agentic AI Workflow' announced 20 Feb 2026 (paid upgrade)",
+        "agent_mcp_integration": "MCP server with integration tools and workflow prompts enabled by default (no feature flag) since 2026.8.2; pre-built countermeasure skill files for OWASP Top 10 Web/API, Docker, and OWASP Top 10 for Web in Rust and Go (added in 2026.9.1, 12 Sept 2026); delivers requirements to GitHub Copilot, Cursor, Claude and generic LLM agents; 'SD Elements for Agentic AI Workflow' announced 20 Feb 2026 (paid upgrade)",
         "model_used": "Not publicly disclosed; no BYO-LLM statement found"
       },
       "ai_maturity": "GA (Agentic AI Workflow / MCP announced Feb 2026 as released; Navigator model and data handling not disclosed)",
@@ -28,7 +28,7 @@
       "indicative_cost_usd": "Enterprise 'starting at $75K annually' (vendor pricing page, North America); federal editions custom",
       "pricing_confidence": "High",
       "best_fit_for": "Large regulated enterprises needing auditable, deterministic requirements pushed into Jira/ADO with compliance evidence; organizations governing AI coding agents with a policy layer",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/sdelements/pricing/|https://www.helpnetsecurity.com/2026/02/20/security-compass-sd-elements-for-agentic-ai-workflow/|https://www.businesswire.com/news/home/20240710201204/en/Security-Compass-Expands-Industry-Leading-AI-Security-Content-and-Introduces-AI-Powered-Navigator-Beta|https://www.securitycompass.com/sdelements/navigator/"
     },
     {
@@ -39,13 +39,13 @@
       "type": "Commercial",
       "deployment": "SaaS",
       "languages_coverage": "Threat library with mitigations; requirements/compliance mapping (PCI DSS, SOC 2, NIST, HIPAA) is delivered by exporting the model to SD Elements via Open Threat Model (OTM)",
-      "key_features": "Diagram-first collaborative threat modelling|Agent-generated threats when components are added|Code Genius: generate canvas from GitHub repositories (enterprise)|Export to SD Elements (OTM) for prescriptive requirements|Mitigations pushed to Jira/Azure DevOps with status sync back",
+      "key_features": "Diagram-first collaborative threat modelling|Agent-generated threats when components are added|Code Genius: generate canvas from GitHub repositories (enterprise)|Export to SD Elements (OTM) for prescriptive requirements|Mitigations pushed to Jira/Azure DevOps with status sync back|API tokens can be scoped to the User role and admins can issue personal tokens on behalf of users (v2.30.0, 16 Sept 2026)|Bulk assignment of an attribute across multiple elements (v2.30.0)",
       "ai_capabilities": {
         "ai_generated_requirements": "Indirect: AI-generated threat model, requirements generated deterministically in SD Elements",
         "ai_assistant_over_standards": "Not described",
         "ai_mapping_findings_to_requirements": "Not described",
         "automated_design_review": "Yes: text description or repo to rendered canvas with components, flows, trust boundaries and threats",
-        "agent_mcp_integration": "Devici MCP hosted endpoint for Cursor, Claude, VS Code Copilot; vendor states source code and chat history never leave the client",
+        "agent_mcp_integration": "Devici MCP hosted endpoint for Cursor, Claude, VS Code Copilot; vendor states source code and chat history never leave the client; '/sync-devici-threat-model' workflow prompt keeps threat models synchronised between Devici and SD Elements (v2.30.0, 16 Sept 2026)",
         "model_used": "Not publicly disclosed"
       },
       "ai_maturity": "GA",
@@ -58,7 +58,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "SD Elements customers wanting a developer-friendly threat model that auto-derives requirements",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.securitycompass.com/devici/|https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/agentic-ai/"
     },
     {
@@ -88,7 +88,7 @@
       "indicative_cost_usd": "Not publicly disclosed; AWS Marketplace listing exists (private offers)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want requirements derived from an architecture-level threat model with strong Jira/ADO round-trip",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.iriusrisk.com/threat-modeling-platform|https://www.iriusrisk.com/documentation/use-our-ai-assistant-jeff|https://www.iriusrisk.com/documentation/countermeasures|https://aws.amazon.com/marketplace/pp/prodview-lw45ujzidwkf2"
     },
     {
@@ -246,7 +246,7 @@
       "indicative_cost_usd": "$0 plus hosting",
       "pricing_confidence": "High",
       "best_fit_for": "Teams needing a free ASVS-to-Jira requirement generator and willing to maintain it themselves",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/SecurityRAT|https://github.com/SecurityRAT/SecurityRAT|https://devguide.owasp.org/en/03-requirements/04-security-rat/"
     },
     {
@@ -276,7 +276,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline requirement corpus for every engagement; grounding data for LLM prompts",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/OWASP/ASVS|https://github.com/OWASP/ASVS/blob/master/5.0/en/0x03-What-is-the-ASVS.md|https://www.securecodinghub.com/blog/owasp-asvs-4-vs-5-changes-developers|https://www.cyberchief.ai/2025/10/owasp-asvs-v5-raising-bar-for.html"
     },
     {
@@ -306,7 +306,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Measuring and roadmapping the client's Security Requirements practice maturity",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://owaspsamm.org/model/|https://github.com/owaspsamm/core/releases/tag/v2.1.0|https://github.com/owaspsamm/core/releases/tag/v2.2.0|https://owaspsamm.org/docs/tools/assessment-tools/"
     },
     {
@@ -316,7 +316,7 @@
       "is_new_entrant": false,
       "type": "Standard or framework",
       "deployment": "N/A",
-      "languages_coverage": "MASVS 2.1.0 (18 Jan 2024): 8 control groups (STORAGE, CRYPTO, AUTH, NETWORK, PLATFORM, CODE, RESILIENCE, PRIVACY), 28 controls; MASTG tests and MASWE weaknesses; profiles L1/L2/R/P; Android and iOS",
+      "languages_coverage": "MASVS 2.1.0 (18 Jan 2024): 8 control groups (STORAGE, CRYPTO, AUTH, NETWORK, PLATFORM, CODE, RESILIENCE, PRIVACY), 28 controls; MASTG v2.0.0 (30 June 2026, first stable release of the v2 refactor, with tests, demos, techniques and best practices cross-linked to MASVS and MASWE) and MASWE weaknesses; profiles L1/L2/R/P; Android and iOS",
       "key_features": "Requirement-level controls for mobile|MASTG test cases per control (verification mapping)|MAS Checklist spreadsheet for traceability|MASWE weakness catalogue|CycloneDX support",
       "ai_capabilities": {
         "ai_generated_requirements": "No",
@@ -331,12 +331,12 @@
       "integrations": "Spreadsheet/YAML; vendor libraries (IriusRisk, SD Elements) reference MASVS",
       "sectors_reference_customers": "Referenced by Google App Defense Alliance / CASA",
       "analyst_position": "Reference standard for mobile security requirements",
-      "cons_known_gaps": "MASTG v2 test refactor still ongoing in parts|Only 28 controls; detail lives in MASTG tests|No official tooling beyond checklist",
+      "cons_known_gaps": "MASTG v2 refactor reached its first stable release (v2.0.0) only on 30 June 2026|Only 28 controls; detail lives in MASTG tests|No official tooling beyond checklist",
       "pricing_model": "Free",
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Mobile app requirement baselines and pentest scoping",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://mas.owasp.org/|https://github.com/OWASP/owasp-masvs/releases"
     },
     {
@@ -366,7 +366,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Tracking DevSecOps activity maturity alongside SAMM",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://dsomm.owasp.org/|https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel|https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel/releases"
     },
     {
@@ -437,10 +437,10 @@
       "type": "Commercial",
       "deployment": "SaaS (AWS Marketplace listing)",
       "languages_coverage": "OWASP ASVS (4.0.2 cited in vendor blog; 5.0 update not confirmed) with CWE mapping; CAPEC-based threat patterns; PCI DSS ASV services",
-      "key_features": "Requirements generated from threat modelling (CAPEC x architecture item)|ASVS-based requirement library|GraphQL API for requirements and vulnerabilities|Requirements vs findings compliance reporting|ASPM vulnerability management",
+      "key_features": "Requirements generated from threat modelling (CAPEC x architecture item)|ASVS-based requirement library|GraphQL API for requirements and vulnerabilities|Requirements vs findings compliance reporting|ASPM vulnerability management|Continuous Living Threat Modeling with persistent Architecture-as-Code and Automated Requirement Sync (release notes, 23 Mar 2026)|Custom Project Requirements to tailor security activities per project (release notes, 12 Mar 2026)|AI Pentest: autonomous runs plus Assisted mode with a human-in-the-loop war room (2 Oct 2026)",
       "ai_capabilities": {
         "ai_generated_requirements": "Not documented for requirements module",
-        "ai_assistant_over_standards": "AI features marketed elsewhere on platform (unverified for requirements)",
+        "ai_assistant_over_standards": "AI Pentest (autonomous and, since 2 Oct 2026, analyst-supervised Assisted mode) is documented in platform release notes; no AI assistant over standards documented for the requirements module",
         "ai_mapping_findings_to_requirements": "Scripted comparison via API (not AI)",
         "automated_design_review": "Threat modelling module",
         "agent_mcp_integration": "Not documented",
@@ -456,8 +456,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "LatAm clients wanting ASPM plus requirements in one platform",
-      "last_verified": "2026-09-26",
-      "sources": "https://blog.convisoappsec.com/en/automation-of-security-requirements-with-the-conviso-platform-api/|https://www.convisoappsec.com/conviso-platform|https://docs.convisoappsec.com/|https://aws.amazon.com/marketplace/pp/prodview-mzkypegjogyl2"
+      "last_verified": "2026-10-05",
+      "sources": "https://blog.convisoappsec.com/en/automation-of-security-requirements-with-the-conviso-platform-api/|https://www.convisoappsec.com/conviso-platform|https://docs.convisoappsec.com/|https://aws.amazon.com/marketplace/pp/prodview-mzkypegjogyl2",
+      "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "type": "Feature launch",
+          "summary": "Conviso Platform release notes add AI Pentest Assisted: a human-in-the-loop 'war room' where a lead analyst monitors AI-driven penetration test runs live, steers them with directives, and must confirm draft findings before they are promoted. Per vendor, it costs the same credits as autonomous runs; this is not a requirements-module change.",
+          "source": "https://docs.convisoappsec.com/releases/2026-10-02-ai-pentest-assisted"
+        }
+      ]
     },
     {
       "tool": "Aptori (adjacent: autonomous AppSec, secure-by-design/CRA reporting)",
@@ -516,7 +524,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Closing the loop from requirements to verified findings at enterprise scale",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.armorcode.com/platform"
     },
     {
@@ -764,7 +772,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Product teams wanting design-stage requirements without a heavy platform; pilots",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://seezo.io/|https://www.securitycompass.com/agentic-ai/"
     },
     {
@@ -794,7 +802,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Watchlist; evaluate alongside Seezo",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.primesecurity.ai/|https://news.crunchbase.com/cybersecurity/solid-startup-venture-funding-growth-h1-2026/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown",
       "recent_updates": [
         {

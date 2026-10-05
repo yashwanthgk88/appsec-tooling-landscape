@@ -65,7 +65,7 @@
       "deployment": "SaaS / On-prem (self-managed) - on-prem historically offered; confirm current terms",
       "languages_coverage": "Questionnaires/surveys (primary), imported threat models (Devici, diagrams), code repository scans, natural language questions to Navigator, agent queries via MCP",
       "key_features": "Survey-driven generation of security requirements (8,000+ pre-built) | 100+ compliance frameworks incl. PCI DSS, NIST 800-53, ISO 27001, SOC 2, HIPAA, OWASP | Just-in-Time Training | Jira/ADO push and CI/CD gating | Devici integration for diagrammatic threat models | ZeroPath AI SAST validation loop (per vendor page)",
-      "ai_capabilities": "AI-generated threat model from diagram/code: no (requirements are rule-derived; Devici supplies AI diagram generation) | AI assistant for threats and mitigations: Navigator answers requirement, control and regulatory questions in context | LLM-based diagram creation: no (via Devici) | AI threat libraries for AI/ML/LLM/agentic systems: content for AI-generated code and agentic workflows; 'SD Elements for Agentic AI Workflow' released 2026-02-19 | Agent/MCP: SD Elements MCP Server lets Copilot, Cursor, Claude query requirements while coding | Model used: not publicly disclosed | On-prem AI: not disclosed",
+      "ai_capabilities": "AI-generated threat model from diagram/code: no (requirements are rule-derived; Devici supplies AI diagram generation) | AI assistant for threats and mitigations: Navigator answers requirement, control and regulatory questions in context | LLM-based diagram creation: no (via Devici) | AI threat libraries for AI/ML/LLM/agentic systems: content for AI-generated code and agentic workflows; 'SD Elements for Agentic AI Workflow' released 2026-02-19, documented from release 2026.8.1 as a four-stage prompt pipeline (Survey, Generate, Apply, Verify) with /generate-security-skill-files (SKILL.md generation), /verify-with-scanner and /generate-issue-tracker-tasks prompts | Agent/MCP: SD Elements MCP Server lets Copilot, Cursor, Claude query requirements while coding; /sync-devici-threat-model workflow prompt imports Devici threat models into SD Elements projects (release 2026.9.1; needs the devici and zeropath features enabled) | Model used: not publicly disclosed | On-prem AI: not disclosed",
       "ai_maturity": "GA (Navigator and MCP server marketed as available; Agentic AI Workflow launched Feb 2026)",
       "ai_verified_source": "https://www.securitycompass.com/sdelements/navigator/",
       "integrations": "Jira, GitHub, GitLab, Azure DevOps, Jenkins, GitHub Actions, GitLab CI, Copilot, Claude, Cursor, REST API, Devici, Splunk",
@@ -76,7 +76,7 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals commonly six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Compliance-driven organisations that need traceable security requirements and audit evidence, and want agents to consume them via MCP",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.securitycompass.com/sdelements/ | https://www.securitycompass.com/sdelements/navigator/ | https://finance.yahoo.com/news/security-compass-releases-solution-address-133000786.html | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/security-compass/product/sd-elements"
     },
     {
@@ -99,7 +99,7 @@
       "indicative_cost_usd": "Free tier $0; enterprise custom, marketed as not scaling with users or models",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-led teams wanting fast collaborative diagram-based modelling with MAESTRO and AI drafts, without per-seat cost growth",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "sources": "https://www.securitycompass.com/devici/ai-infusion/ | https://www.securitycompass.com/devici/pricing | https://www.businesswire.com/news/home/20250603655492/en/Security-Compass-Acquires-Devici-to-Expand-Threat-Modeling-Capabilities | https://www.crunchbase.com/organization/devici",
       "recent_updates": [
         {
@@ -130,7 +130,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want AI-first, code-to-threat-model automation with their own LLM keys and existing SecureFlag training",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "sources": "https://www.secureflag.com/threat-modeling/ | https://blog.secureflag.com/2026/01/13/code-repo-to-threatcanvas/ | https://owasp.github.io/blog/2024/05/30/secureflag-threatcanvas-member-benefit | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/secureflag/product/threat-canvas | https://www.securecodewarrior.com/article/threat-modeling-with-ai-turning-every-developer-into-a-threat-modeler",
       "recent_updates": [
         {
@@ -161,7 +161,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Quick STRIDE DFD exercises, training, Microsoft-stack teams with no budget",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-releases | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://www.gartner.com/reviews/market/threat-modeling-automation"
     },
     {
@@ -184,7 +184,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Teams needing a free, auditable diagram-based tool with Git-native storage and Cornucopia gameplay",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/owasp/threat-dragon/releases | https://owasp.org/www-project-threat-dragon/ | https://github.com/OWASP/threat-dragon"
     },
     {
@@ -195,19 +195,19 @@
       "type": "Open source",
       "deployment": "Desktop / CI (Python library, CLI, Docker)",
       "languages_coverage": "Threat-model-as-code in Python; natural language via pytmGPT (OpenAI) to draft models",
-      "key_features": "Programmatic model definition with 100+ threat rules (INP, CR, AC, DS, DE, DO, HA, SC, AA, LB, API, DR, LLM01-LLM09) | DFD and sequence diagram generation | Markdown/HTML/JSON/reveal.js outputs | OpenSSF Best Practices badge | Version-control friendly",
+      "key_features": "Programmatic model definition with 100+ threat rules (INP, CR, AC, DS, DE, DO, HA, SC, AA, LB, API, DR, LLM01-LLM09) | DFD and sequence diagram generation | Markdown/HTML/JSON/reveal.js outputs | OpenSSF Best Practices badge | Version-control friendly | v1.4.0 (latest on GitHub Releases): dedicated LLM element class with LLM-specific threat definitions, likelihood field on findings, Pydantic v2 internal model, Python 3.11 minimum, sqlDump removed",
       "ai_capabilities": "AI-generated threat model from description: pytmGPT (OpenAI) drafts a pytm model from natural language | AI assistant: no | LLM threat library: LLM01-LLM09 rules covering LLM application threats | Agent/MCP: none official | Model: OpenAI via user key | On-prem AI: not built in",
       "ai_maturity": "Beta or Preview (pytmGPT is community-contributed helper)",
       "ai_verified_source": "https://github.com/OWASP/pytm",
       "integrations": "CI/CD via CLI; Git; no Jira/ADO connectors",
       "sectors_reference_customers": "Engineering-centric teams; 1.2k GitHub stars",
       "analyst_position": "not rated",
-      "cons_known_gaps": "Requires Python skills; low accessibility for non-engineers | No GUI or collaboration | Threat rule quality is coarse (attribute-flag matching) | Sparse release cadence; version/date not surfaced on repo page | pytmGPT is a thin OpenAI wrapper",
+      "cons_known_gaps": "Requires Python skills; low accessibility for non-engineers | No GUI or collaboration | Threat rule quality is coarse (attribute-flag matching) | Sparse release cadence (latest release v1.4.0; no release in the 21 Sep to 5 Oct 2026 window) | v1.4.0 raises the minimum Python to 3.11 and requires Pydantic v2, which can break older model scripts | pytmGPT is a thin OpenAI wrapper",
       "pricing_model": "Free",
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Platform and DevSecOps teams that want threat models versioned next to code in CI",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/OWASP/pytm | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://cybersectools.com/categories/threat-modeling"
     },
     {
@@ -230,7 +230,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "DevSecOps teams wanting version-controlled, pipeline-executed threat models with PDF evidence",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/Threagile/threagile | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://plurilock.com/glossary/threat-modeling-as-code/"
     },
     {
@@ -284,7 +284,7 @@
       "indicative_cost_usd": "$0 plus Bedrock tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AWS-centric teams wanting lightweight threat statements in Git and agent-driven starter models from code",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/awslabs/threat-composer | https://github.com/awslabs/threat-composer/releases | https://github.com/awslabs/threat-modeling-mcp-server | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/"
     },
     {
@@ -307,7 +307,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "High-velocity product teams that want design reviews from existing docs without drawing diagrams",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://seezo.io/ | https://www.crunchbase.com/organization/seezo | https://www.gartner.com/reviews/product/seezo | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/"
     },
     {
@@ -545,7 +545,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "AI-first engineering teams wanting always-on architecture threat findings from code",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.oplane.com/ | https://cybersectools.com/categories/threat-modeling"
     },
     {
@@ -568,7 +568,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Watch-list only until independently validated",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://cybersectools.com/categories/threat-modeling?page=2 | https://www.prime.security/",
       "recent_updates": [
         {
@@ -710,19 +710,19 @@
       "type": "Framework or method",
       "deployment": "Web (knowledge base, Navigator layers, STIX data)",
       "languages_coverage": "Threat knowledge base for AI systems; used as reference in STRIDE GPT, Devici, ThreatModeler",
-      "key_features": "ATT&CK-style tactics and techniques for ML/LLM systems | Case studies of real attacks | Mitigations catalogue | 2025 additions covering agentic AI and LLM techniques (unverified this session) | Arsenal and CALDERA plugins for emulation",
+      "key_features": "ATT&CK-style tactics and techniques for ML/LLM/agentic systems | atlas-data v2026.09 (15 Sep 2026): 1 matrix, 16 tactics, 120 techniques, 88 sub-techniques, 40 mitigations, 73 case studies | Monthly data releases through 2026; techniques carry platform designations (Predictive AI, Generative AI, Agentic AI, Enterprise) since v2026.05 | v2026.09 added 11 techniques (incl. Triggers in Multimodal Inputs, AI Agent Response Biasing, Crafted AI Assistant Links) and the AI Honeypots mitigation | Case studies of real attacks | Mitigations catalogue | Arsenal and CALDERA plugins for emulation",
       "ai_capabilities": "Framework only",
       "ai_maturity": "None",
       "ai_verified_source": "https://github.com/mrwadams/stride-gpt",
       "integrations": "ATT&CK Navigator, STIX, tool mappings",
       "sectors_reference_customers": "Government, defence, AI vendors",
       "analyst_position": "not rated",
-      "cons_known_gaps": "Adversary-technique view; needs pairing with STRIDE-style system decomposition | Site not fetched this session; version number unverified",
+      "cons_known_gaps": "Adversary-technique view; needs pairing with STRIDE-style system decomposition | Monthly data releases mean technique IDs and counts move quickly; pin a version when mapping threat libraries",
       "pricing_model": "Free",
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Threat library for AI-system models and red-team scenario mapping",
-      "last_verified": "2026-09-26 (partially)",
+      "last_verified": "2026-10-05",
       "sources": "https://atlas.mitre.org/ | https://github.com/mrwadams/stride-gpt"
     },
     {
@@ -745,7 +745,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline threat checklist for any LLM-integrated feature",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://genai.owasp.org/llm-top-10/ | https://genai.owasp.org/ | https://github.com/OWASP/pytm"
     },
     {
@@ -768,7 +768,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Primary threat catalogue for agentic and MCP-based systems",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://genai.owasp.org/initiatives/agentic-security-initiative/ | https://genai.owasp.org/initiatives/ | https://genai.owasp.org/"
     },
     {

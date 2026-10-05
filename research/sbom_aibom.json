@@ -9,7 +9,7 @@
       "is_new_entrant": false,
       "type": "Open source",
       "deployment": "CLI / library / container / self-hosted server mode (cdxgen REST)",
-      "languages_coverage": "cdxgen: npm/yarn/pnpm, Maven/Gradle/SBT, pip/poetry/uv, Go, Rust/Cargo, PHP, Ruby, .NET, C/C++ (via atom), Kotlin (native evidence via kosi, v13.2.0), Swift, Dart, Elm, Svelte/SvelteKit and more; containers/OCI images, rootfs, Docker archives, binaries, OS (OBOM), hardware hosts (HBOM), SaaS (SaaSBOM), cryptographic assets (CBOM); AI-BOM: prompt files, ML models (Hugging Face URLs, GGUF, safetensors, ONNX, PyTorch pickle checkpoints flagged for unsafe deserialization), MCP client configs (Cursor, Windsurf, Zed, Codex and others), MCP Registry server.json manifests, MCPB/DXT bundles, agent frameworks and inference providers, local runtimes (Ollama, LM Studio); 'agentic' project type inventories installed coding assistants",
+      "languages_coverage": "cdxgen: npm/yarn/pnpm, Maven/Gradle/SBT, pip/poetry/uv, Go, Rust/Cargo, PHP, Ruby, .NET, C/C++ (via atom; v13.3.0 also resolves from CMake caches and compilation databases), Kotlin (native evidence via kosi, v13.2.0), Swift, Dart, Elm, Svelte/SvelteKit and more; containers/OCI images (Windows containers via WSL from v13.3.0), rootfs, Docker archives, binaries, OS (OBOM), hardware hosts (HBOM), SaaS (SaaSBOM), cryptographic assets (CBOM); AI-BOM: prompt files, ML models (Hugging Face URLs, GGUF, safetensors, ONNX, PyTorch pickle checkpoints flagged for unsafe deserialization), MCP client configs (Cursor, Windsurf, Zed, Codex and others), MCP Registry server.json manifests, MCPB/DXT bundles, agent frameworks and inference providers, local runtimes (Ollama, LM Studio); 'agentic' project type inventories installed coding assistants",
       "key_features": "CycloneDX JSON/XML/protobuf 1.0-1.7 (cdxgen targets 1.6/1.7 and downgrades to 1.4/1.5; cdx-convert to SPDX 3.0.1 JSON-LD) | CycloneDX CLI: convert, merge, diff, validate, analyze, sign/verify, SPDX 2.3 JSON conversion | Evidence/usage detection via AST (required/optional scopes), BOM auditing rules | JSF signing with component-level signatures; runtime tracing via tracebom | Native VEX/VDR object model in spec; no VEX authoring UI | Regulatory: spec is ECMA-424 2nd ed. (Dec 2025); CISA 2026 minimum elements name CycloneDX as an accepted format; libraries for Java, .NET, Python, Go, JS, PHP, Ruby, Rust, Perl",
       "ai_capabilities": "AI BOM / ML-BOM generation: yes (cdxgen emits machine-learning-model and data components, prompts, MCP server configs, agent frameworks; governance analysis; v13.2.0 adds agentic-assistant inventory and MCP Registry/MCPB/DXT manifest parsing) | AI model file scanning (pickle/safetensors malware): no (PyTorch pickle checkpoints are flagged cdx:ai:unsafeDeserialization=true but not scanned) | AI license/provenance analysis: partial (model metadata from Hugging Face; CycloneDX 1.7 citations for provenance) | AI-assisted enrichment/VEX: no | Natural-language query: no | MCP/agent integration: cdxgen detects MCP client and server configs; server mode exists; dedicated cdxgen MCP server unverified",
       "ai_maturity": "GA",
@@ -29,8 +29,14 @@
       "pricing_confidence": "High",
       "best_fit_for": "Teams standardising on CycloneDX who want the widest ecosystem and AI-BOM coverage in an OSS generator, feeding Dependency-Track or a commercial manager",
       "sources": "https://cyclonedx.org/news/cyclonedx-v1.7-released/|https://github.com/CycloneDX/cdxgen|https://github.com/CycloneDX/cyclonedx-cli|https://ecma-international.org/publications-and-standards/standards/ecma-424/|https://cyclonedx.org/tool-center/",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "type": "Release",
+          "summary": "cdxgen v13.3.0 resolves C/C++ dependencies from CMake caches and compilation databases in the build tree, adds Windows container scanning through WSL, restores Swift evidence collection, shrinks and speeds up the standalone binaries, improves Ruby, JavaScript workspace and .NET accuracy, and closes six command-execution and injection vectors (per release notes).",
+          "source": "https://github.com/cdxgen/cdxgen/releases/tag/v13.3.0"
+        },
         {
           "date": "2026-09-22",
           "type": "Release",
@@ -66,7 +72,7 @@
       "pricing_confidence": "High",
       "best_fit_for": "Best OSS SBOM management platform for organisations willing to self-host and pair with cdxgen/Syft",
       "sources": "https://github.com/DependencyTrack/dependency-track/releases/latest|https://docs.dependencytrack.org/changelog/|https://owasp.org/www-project-dependency-track/|https://dependencytrack.org/",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "recent_updates": [
         {
           "date": "2026-09-20",
@@ -89,8 +95,8 @@
       "is_new_entrant": false,
       "type": "Open source",
       "deployment": "CLI / Go library / container / GitHub Action",
-      "languages_coverage": "Container images (OCI/Docker), filesystems, archives; OS packages (apk, deb, rpm, etc.) and language ecosystems (Java, JS, Python, Go, Rust, Ruby, PHP, .NET, Swift, Dart, Erlang, Haskell, etc.); Go and other binaries; GGUF/AI model artefacts added in 2026 (Anchore Enterprise 6.2 notes); no firmware unpacking",
-      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.52.0 (17 Sep 2026) passthrough-exact-format and archive-parsing hardening | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data; v0.119.0 (17 Sep 2026) --show-suppressed exposes distro-fixed dropped matches | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
+      "languages_coverage": "Container images (OCI/Docker), filesystems, archives; OS packages (apk, deb, rpm, etc.) and language ecosystems (Java, JS, Python, Go, Rust, Ruby, PHP, .NET, Swift, Dart, Erlang, Haskell, Perl/CPAN from v1.54.0, etc.); Go and other binaries; GGUF/AI model artefacts added in 2026 (Anchore Enterprise 6.2 notes); no firmware unpacking",
+      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.54.0 (1 Oct 2026) Perl/CPAN cataloger and non-daemon Podman analysis | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data; v0.120.0 (2 Oct 2026) NVD SSVC decision points in the v6 database, SLES comprehensive distro matching, Sigstore-signed release checksums | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial (GGUF and Docker Model artefact detection reported in Anchore 6.2 blog; broader model/dataset ML-BOM not native) | AI model file scanning: no | AI license/provenance: no | AI-assisted enrichment: no | Natural-language query: no | MCP/agent integration: Anchore Enterprise MCP server (commercial); community MCP wrappers for Syft/Grype unverified",
       "ai_maturity": "Beta or Preview",
       "ai_verified_source": "https://anchore.com/blog/extending-supply-chain-security-to-ai-models-with-anchore-enterprise-v6-2/",
@@ -109,8 +115,20 @@
       "pricing_confidence": "High",
       "best_fit_for": "Container-heavy pipelines needing a fast, scriptable SBOM and vulnerability pair with attestation support",
       "sources": "https://github.com/anchore/syft/releases|https://github.com/anchore/grype|https://anchore.com/blog/|https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "type": "Release",
+          "summary": "Grype v0.120.0 stores NVD SSVC decision points in a new v6 database decorator table, marks SLES as a comprehensive distro, adds a Locations column to the HTML report template, and signs release checksums with a Sigstore bundle.",
+          "source": "https://github.com/anchore/grype/releases/tag/v0.120.0"
+        },
+        {
+          "date": "2026-10-01",
+          "type": "Release",
+          "summary": "Syft v1.54.0 adds a Perl ecosystem package cataloger (CPAN packages, with the Perl interpreter reported as a CPAN package) and analysis with non-daemon Podman, plus 21 bug fixes including GGUF and safetensors file handling, SPDX licence URL matching and several cataloger panics.",
+          "source": "https://github.com/anchore/syft/releases/tag/v1.54.0"
+        },
         {
           "date": "2026-09-17",
           "type": "Release",
@@ -152,7 +170,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated and public-sector container platforms needing SBOM-driven policy and air-gapped deployment",
       "sources": "https://anchore.com/platform/|https://anchore.com/blog/extending-supply-chain-security-to-ai-models-with-anchore-enterprise-v6-2/|https://anchore.com/blog/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05"
     },
     {
       "tool": "Trivy (SBOM and VEX)",
@@ -210,7 +228,7 @@
       "pricing_confidence": "High",
       "best_fit_for": "Microsoft-stack shops needing an SPDX generator with SPDX 3.0 output in Azure DevOps",
       "sources": "https://github.com/microsoft/sbom-tool|https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05"
     },
     {
       "tool": "SPDX tools (tools-python, tools-java, SPDX Online Tools; spdx-sbom-generator archived)",
@@ -395,7 +413,7 @@
       "type": "Commercial",
       "deployment": "SaaS (multi-cloud) or self-hosted",
       "languages_coverage": "All Artifactory package types (Maven, npm, PyPI, Docker/OCI, Helm, Go, NuGet, Conan, etc.), binaries in repositories, ML models via Hugging Face remote repos and Model Registry",
-      "key_features": "SBOM export CycloneDX and SPDX for builds and release bundles (versions not verified from docs) | Xray SCA, contextual analysis, secrets, IaC; Advanced Security | JFrog Evidence / AppTrust: signed attestations (in-toto/Sigstore style) attached to packages | AI Catalog: policy-driven control of AI models and agents; MCP Registry | VEX: Xray exports CycloneDX VEX/VDR per docs (unverified) | Regulatory: FedRAMP High offering, SSDF and CRA positioning",
+      "key_features": "SBOM export CycloneDX and SPDX for builds and release bundles (versions not verified from docs) | Xray SCA, contextual analysis, secrets, IaC; Advanced Security; Threat Hub feed with impact search for SBOM-entitled users (Xray 3.155.3, Sep 2026) | JFrog Evidence / AppTrust: signed attestations (in-toto/Sigstore style) attached to packages | AI Catalog: policy-driven control of AI models and agents; MCP Registry | VEX: Xray exports CycloneDX VEX/VDR per docs (unverified) | Regulatory: FedRAMP High offering, SSDF and CRA positioning",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial (model lineage through Artifactory, model registry; formal CycloneDX ML-BOM output unverified) | AI model file scanning: Xray scans Hugging Face models for malicious code/licence (GA per JFrog docs, unverified here) | AI license/provenance: yes (model licence and provenance in catalog) | AI-assisted: JFrog AI-driven curation and MCP server for Artifactory | Natural-language query: via JFrog MCP server | MCP/agent: MCP Registry in AI Catalog (2026)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/",
@@ -414,8 +432,14 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Artifactory wanting SBOM, attestations and AI model governance in one control plane",
       "sources": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/|https://jfrog.com/gartner-magic-quadrant/|https://investors.jfrog.com/news/news-details/2026/JFrog-Positioned-as-a-Leader-in-the-First-Gartner-Magic-Quadrant-for-Software-Supply-Chain-Security/default.aspx",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Release",
+          "summary": "Xray 3.155.3 adds a Threat Hub feed on the Overview page with source links and impact search for SBOM-entitled users, lets source code scans run with Xray permissions only, adds JFrog Research Severity and CVSS v4 details to CSV report exports, and speeds up violation processing. A fix-only 3.153.10 followed on 2026-09-30.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
         {
           "date": "2026-09-16",
           "type": "Release",
@@ -531,7 +555,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Mend SCA customers wanting AI component discovery and governance inside the existing AppSec platform",
       "sources": "https://www.mend.io/mend-ai/|https://www.mend.io/sbom/|https://www.mend.io/blog/the-vision-behind-mends-recognition/",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-10-05"
     },
     {
       "tool": "Cybeats SBOM Studio",
@@ -787,7 +811,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs that want reachability-driven SBOM/VEX plus governance of AI coding agents and MCP servers",
       "sources": "https://www.endorlabs.com/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "recent_updates": [
         {
           "date": "2026-09-27",
@@ -824,7 +848,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Compliance teams needing a signed evidence store bridging CI outputs to Dependency-Track/GUAC",
       "sources": "https://github.com/chainloop-dev/chainloop|https://chainloop.dev/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05",
+      "recent_updates": [
+        {
+          "date": "2026-09-30",
+          "type": "Release",
+          "summary": "Chainloop v1.112.0 lists one notable change: a specification (spec 002) for capturing AI coding sessions as evidence. The release notes show a spec only, so shipped capture functionality is unverified.",
+          "source": "https://github.com/chainloop-dev/chainloop/releases/tag/v1.112.0"
+        }
+      ]
     },
     {
       "tool": "bomctl",
@@ -1044,7 +1076,7 @@
       "type": "Commercial",
       "deployment": "SaaS",
       "languages_coverage": "SCM/CI/CD environments; detects AI models, code assistants, MCP servers and AI-generated code in developer environments; SBOM generation for repos",
-      "key_features": "AI Visibility and AI-BOM of models, assistants, MCP servers | Reputation scores and approval workflows for AI tools | VibeGuard IDE guardrails (Cursor, Copilot) | ASPM correlation and remediation | SBOM generation for compliance",
+      "key_features": "AI Visibility and AI-BOM of models, assistants, MCP servers | Reputation scores and approval workflows for AI tools | VibeGuard IDE guardrails (Cursor, Copilot) | ASPM correlation and remediation; Agentic Remediation opens verified fix pull requests for code and, from Sep 2026, open-source dependencies (release status not stated) | SBOM generation for compliance",
       "ai_capabilities": "AI BOM / ML-BOM generation: GA (AI-BOM; standards export format unverified) | Model file scanning: no | AI license/provenance: partial (reputation scoring) | AI-assisted: yes | NL query: unverified | MCP/agent: MCP server discovery GA",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.legitsecurity.com/",
@@ -1062,7 +1094,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "ASPM buyers wanting AI tool and MCP discovery across developer environments",
       "sources": "https://www.legitsecurity.com/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05",
+      "recent_updates": [
+        {
+          "date": "2026-09-30",
+          "type": "Feature launch",
+          "summary": "Legit extended Agentic Remediation from first-party code to open-source dependencies: the agent identifies direct or transitive vulnerable packages, picks a safe upgrade (minor bumps preferred), updates manifests and lockfiles, re-scans to verify and opens a pull request, with AI-assisted code adaptation for major upgrades. GA or preview status and supported ecosystems are not stated.",
+          "source": "https://www.legitsecurity.com/blog/agentic-remediation-just-got-bigger-now-fixing-vulnerabilities-in-your-dependencies-not-just-your-code"
+        }
+      ]
     },
     {
       "tool": "Noma Security",
@@ -1072,11 +1112,11 @@
       "type": "Commercial",
       "deployment": "SaaS with connectors to cloud, data platforms and SaaS",
       "languages_coverage": "AI agents, models, MCPs, tools, notebooks, data pipelines across cloud and SaaS; endpoint and homegrown agents",
-      "key_features": "AI-SPM asset discovery (agents, models, MCPs, tools) | Agent access control | AI-DR runtime detection | AI red teaming | $100M Series B (Jul 2025, Evolution Equity) | Certifications: SOC 2, ISO 27001, HIPAA",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA inventory (standards export unverified) | Model file scanning: supply chain scanning of models and notebooks (vendor claim) | AI license/provenance: partial | AI-assisted: yes | NL query: unverified | MCP/agent: core",
+      "key_features": "AI-SPM asset discovery (agents, models, MCPs, tools) | Agent access control | Endpoint agent security (announced Sep 2026, per vendor; GA status not stated): inventory of agents, MCP servers and skills on managed devices, Governed Registry with approve/review/block status, IdP-aware policy for Claude Code, Claude Cowork, Cursor, Codex, Windsurf, Kiro, Antigravity and OpenClaw | AI-DR runtime detection | AI red teaming | $100M Series B (Jul 2025, Evolution Equity) | Certifications: SOC 2, ISO 27001, HIPAA",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA inventory (standards export unverified) | Model file scanning: supply chain scanning of models and notebooks (vendor claim) | AI license/provenance: partial | AI-assisted: yes | NL query: unverified | MCP/agent: core (endpoint inventory of agents, MCP servers and skills with Governed Registry, announced Sep 2026 per vendor, GA status not stated)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://noma.security/",
-      "integrations": "AWS, Azure, GCP, Databricks, Snowflake, Hugging Face, SaaS agents",
+      "integrations": "AWS, Azure, GCP, Databricks, Snowflake, Hugging Face, SaaS agents, EDR/MDM tools, IdP users and groups, coding agents (Claude Code, Cursor, Codex, Windsurf, Kiro, Antigravity)",
       "sectors_reference_customers": "UiPath, Kantar, Endor Labs, Best Buy, Nielsen",
       "analyst_position": "Gartner 2026 Emerging Market Quadrant for AI Application Security: Market Shaper (per vendor); not in SSCS MQ",
       "cons_known_gaps": [
@@ -1090,7 +1130,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises needing runtime discovery and control of agents/MCPs beyond code scanning",
       "sources": "https://noma.security/|https://www.securityweek.com/noma-security-raises-100-million-for-ai-security-platform/",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05",
+      "recent_updates": [
+        {
+          "date": "2026-09-28",
+          "type": "Feature launch",
+          "summary": "Noma announced endpoint agent security (vendor press release; GA or preview status not stated): a live inventory of agents, MCP servers and skills on managed devices, a governed registry with approval status, identity-aware tool and action level access control, and AI-DR runtime protection for coding agents and assistants (Claude Code, Claude Cowork, Cursor, Codex, Windsurf, Kiro, Antigravity, OpenClaw), deployed through EDR/MDM integration.",
+          "source": "https://www.prnewswire.com/news-releases/noma-extends-agent-security-and-governance-to-the-employee-endpoint-302890925.html"
+        }
+      ]
     },
     {
       "tool": "Oligo Security (Runtime AI Security)",
@@ -1228,7 +1276,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Watchlist only",
       "sources": "https://safeguard.sh/|https://safeguard.sh/resources/blog/best-aibom-tools-2026",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-05"
     },
     {
       "tool": "Checkmarx One SBOM (SCA SBOM reports, AI Supply Chain Security / AI-BOM)",
@@ -1257,7 +1305,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Existing Checkmarx One customers who want SBOM export and AI asset inventory from the same SCA scans without adding a separate SBOM tool",
       "sources": "https://checkmarx.com/product/sbom/|https://checkmarx.com/solutions/ai-supply-chain-security/|https://vmblog.com/news/checkmarx-delivers-complete-ai-asset-visibility-and-governance-for-the-software-supply-chain-closing-the-shadow-ai-gap/|https://github.com/Checkmarx/ast-cli/blob/main/internal/commands/result.go|https://checkmarx.com/blog/sbom-how-to-create-one-using-checkmarx-sca/|https://checkmarx.com/solutions/checkmarx-mcp/|https://checkmarx.com/packaging/|https://docs.checkmarx.com/en/34965-388392-checkmarx-one-sbom-reports.html",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-10-05"
     },
     {
       "tool": "Veracode SBOM (SCA SBOM API, Veracode CLI sbom/scan, Package Firewall)",

@@ -23,7 +23,7 @@
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://docs.snyk.io/whats-new",
-      "integrations": "IDE (VS Code, JetBrains, Visual Studio, Eclipse), CLI, GitHub/GitLab/Bitbucket/Azure Repos, CI (Jenkins, GitHub Actions, GitLab CI, Azure Pipelines, CircleCI), registries (Artifactory, Nexus, ECR/ACR/GCR, Docker Hub), Jira, ServiceNow, Slack",
+      "integrations": "IDE (VS Code, JetBrains, Visual Studio, Eclipse), CLI, GitHub/GitLab/Bitbucket/Azure Repos, CI (Jenkins, GitHub Actions, GitLab CI, Azure Pipelines, CircleCI), registries (Artifactory, Nexus, ECR/ACR/GCR, Docker Hub), Jira (app moving from Atlassian Connect to Forge, migration from Oct 2026), ServiceNow, Slack",
       "sectors_reference_customers": "Vendor-claimed: financial services, SaaS, retail, public sector; named logos on snyk.io include Salesforce, Atlassian, Google, Twilio, Asurion (marketing site, not independently verified)",
       "analyst_position": "Gartner MQ AST 2025: Leader (Oct 2025). Forrester Wave SCA Q4 2024: Leader. Gartner MQ SSCS 2026: position not publicly confirmed by vendor as of this check (unverified)",
       "cons_known_gaps": "Enterprise moves to credit-based pricing (1 credit = $1) which is hard to forecast | Reachability limited to a subset of languages | No on-prem/air-gap option | Malicious package detection weaker than Socket/Phylum-class tools | Noise complaints on transitive findings in large monorepos (Peer Insights 4.0/5, 15 ratings)",
@@ -31,9 +31,21 @@
       "indicative_cost_usd": "Team ~$300/dev/year list; Enterprise typically $30k-$150k+/year for 100-500 devs (market estimate, not vendor-disclosed)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first teams standardising on one platform (SCA+SAST+Container+IaC) with strong IDE and agent workflows; not for air-gapped clients",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://snyk.io/plans/|https://docs.snyk.io/whats-new|https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/|https://github.com/snyk/agent-scan",
       "recent_updates": [
+        {
+          "date": "2026-09-23",
+          "type": "Feature launch",
+          "summary": "Snyk Agent Supply Chain Security (ADS) installer now ships as signed macOS .pkg and Windows .msi packages that register their own scheduled job, removing the dependency on an MDM tool for deployment.",
+          "source": "https://updates.snyk.io/ads-installer-now-available-as-a-packaged-binary/"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "Release",
+          "summary": "Snyk for Jira is moving from Atlassian Connect to Atlassian Forge: new installations use the Forge version from 30 Sep 2026 and existing installations are migrated during October, with permissions, configuration and existing Jira issues carried over (per vendor).",
+          "source": "https://updates.snyk.io/snyk-for-jira-moves-from-atlassian-connect-to-forge/"
+        },
         {
           "date": "2026-09-23",
           "type": "Release",
@@ -94,7 +106,7 @@
       "indicative_cost_usd": "Not publicly disclosed; market reports commonly cite $50k-$500k+/year for mid-to-large enterprises (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated enterprises needing on-prem/air-gap, license-obligation rigor, binary and snippet scanning, M&A audits; strong fit for consulting delivery in BFSI, auto, medtech",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.blackduck.com/blog/black-duck-leader-2025-gartner-magic-quadrant-application-security-testing.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/blog/forrester-wave-sca.html|https://clearlake.com/clearlake-and-francisco-partners-complete-acquisition-of-black-duck-software-formerly-known-as-synopsys-software-integrity-group/",
       "recent_updates": [
         {
@@ -133,7 +145,7 @@
       "indicative_cost_usd": "Not publicly disclosed; third-party estimates $20-$40/dev/month at volume (Low confidence)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want dependency hygiene at scale (Renovate) plus SCA and AI-component inventory; good fit for Azure-centric clients via Defender integration",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://docs.mend.io/platform/latest/mend-platform-release-notes|https://www.businesswire.com/news/home/20260310509064/en/Mend.io-Launches-System-Prompt-Hardening-Industrys-First-Dedicated-Solution-to-Secure-the-AI-Instruction-Layer|https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-mend-io|https://www.gartner.com/reviews/market/software-supply-chain-security",
       "recent_updates": [
         {
@@ -234,7 +246,7 @@
       "indicative_cost_usd": "Not publicly disclosed; estimates $50k-$250k+/year for platform bundles (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Veracode SAST, or needing FedRAMP SaaS and an ingestion-time firewall",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge|https://www.veracode.com/blog/introducing-veracode-package-firewall/|https://www.helpnetsecurity.com/2026/01/28/veracode-platform-innovations/|https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/",
       "recent_updates": [
         {
@@ -253,7 +265,7 @@
       "type": "Commercial (free on public repos; core Dependabot free on private repos; Dependency Review Action needs Code Security)",
       "deployment": "SaaS (github.com, GHE Cloud) / On-prem (GitHub Enterprise Server 3.x with Dependabot via Actions runners); air-gap possible with GHES but advisory sync needs connectivity",
       "languages_coverage": "npm, PyPI, Maven/Gradle, NuGet, Go, RubyGems, Composer, Cargo, Hex, pub, Swift, Docker, GitHub Actions, Terraform, devcontainers",
-      "key_features": "Dependabot alerts from GitHub Advisory Database | Dependabot security and version update PRs | Dependency Review Action blocks PRs introducing vulnerable/licence-violating deps | Dependency graph and SBOM export (SPDX) | Copilot Autofix for code scanning (SCA fixes via Dependabot PRs) | Auto-triage rules and grouped updates",
+      "key_features": "Dependabot alerts from GitHub Advisory Database | Dependabot security and version update PRs | Dependency Review Action blocks PRs introducing vulnerable/licence-violating deps | Dependency graph and SBOM export (SPDX) | Copilot Autofix for code scanning (SCA fixes via Dependabot PRs) | Auto-triage rules and grouped updates | Dependabot runner type, labels and runner groups configurable per organisation and per repository (repository level GA Sept 2026)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Partial: Dependabot auto-triage rules and EPSS in alerts; no reachability",
         "ai_auto_remediation_upgrade_prs": "Partial: Dependabot PRs are deterministic; Copilot Autofix targets code scanning; Copilot coding agent can be assigned dependency issues",
@@ -273,9 +285,21 @@
       "indicative_cost_usd": "$0 for Dependabot; ~$360/committer/year for Code Security",
       "pricing_confidence": "High",
       "best_fit_for": "GitHub-native teams as a baseline; pair with a reachability or malware-focused tool for enterprise coverage",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/resources/insights/evolving-github-advanced-security|https://docs.github.com/en/enterprise-cloud@latest/code-security/getting-started/github-security-features|https://sdtimes.com/security/github-unbundling-its-github-advanced-security-offering-starting-in-april/|https://www.gartner.com/reviews/market/software-supply-chain-security",
       "recent_updates": [
+        {
+          "date": "2026-09-30",
+          "type": "Feature launch",
+          "summary": "npm trusted publishing configurations can now be given opt-in permission to manage dist-tags with short-lived OIDC credentials, so maintainers no longer need a separate long-lived token for tag changes after releases or rollbacks.",
+          "source": "https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing/"
+        },
+        {
+          "date": "2026-09-29",
+          "type": "Feature GA",
+          "summary": "Repository administrators can now set the runner type, custom labels and runner groups for Dependabot version and security updates per repository (GA), extending the earlier organisation-level controls across self-hosted and larger GitHub-hosted runners.",
+          "source": "https://github.blog/changelog/2026-09-29-repository-custom-runner-settings-for-dependabot/"
+        },
         {
           "date": "2026-09-18",
           "type": "Feature launch",
@@ -337,7 +361,7 @@
       "type": "Commercial",
       "deployment": "SaaS / On-prem (self-hosted) / Hybrid; air-gap supported with offline Xray DB sync",
       "languages_coverage": "All Artifactory package types: npm, PyPI, Maven, NuGet, Go, Docker/OCI, Conan, Cargo, RubyGems, Composer, Alpine/Debian/RPM, Hugging Face models, generic binaries",
-      "key_features": "Xray SCA on binaries in Artifactory with deep recursive scanning | Contextual Analysis (Advanced Security): exploitability/reachability for containers and applications | Curation: block malicious, licence-violating, risky packages before entering Artifactory, incl. Debian and Ubuntu packages (Xray 3.154.4, Sept 2026) and per-policy handling of packages pending Catalog analysis | CISA KEV as a security policy criterion (Xray 3.154, Sept 2026) | Malicious package identification and JFrog Security Research feed | SBOM export and AppTrust governance/policy-as-code | AI Catalog, MCP Registry, Skills Registry, Agent Guard (Sept 2026)",
+      "key_features": "Xray SCA on binaries in Artifactory with deep recursive scanning | Contextual Analysis (Advanced Security): exploitability/reachability for containers and applications | Curation: block malicious, licence-violating, risky packages before entering Artifactory, incl. Debian and Ubuntu packages (Xray 3.154.4, Sept 2026) and per-policy handling of packages pending Catalog analysis | CISA KEV as a security policy criterion (Xray 3.154, Sept 2026) | Malicious package identification and JFrog Security Research feed | SBOM export and AppTrust governance/policy-as-code | AI Catalog, MCP Registry, Skills Registry, Agent Guard (Sept 2026) | Threat Hub feed in Xray Overview with impact analysis, and CVSS v4 plus JFrog Research Severity in vulnerability report exports (Xray 3.155.3, Sept 2026)",
       "ai_capabilities": {
         "ai_triage_reachability_prioritisation": "Yes: Contextual Analysis exploitability; AI-assisted prioritisation",
         "ai_auto_remediation_upgrade_prs": "Partial: fix version recommendations; IDE remediation; not fully agentic PRs",
@@ -357,9 +381,15 @@
       "indicative_cost_usd": "SaaS Pro X from ~$150/month (Xray basic); Enterprise+ six figures typical (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Artifactory-centric enterprises wanting binary-level SCA, ingestion curation and AI-asset governance in one control plane",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://jfrog.com/gartner-magic-quadrant/|https://jfrog.com/press-room/jfrog-embeds-security-into-the-agentic-workforce/|https://jfrog.com/blog/jfrog-recognized-visionary-gartner-2025-magic-quadrant-ast-report/|https://jfrog.com/advanced-security/",
       "recent_updates": [
+        {
+          "date": "2026-09-27",
+          "type": "Release",
+          "summary": "Xray 3.155.3 adds Threat Hub to the Xray Overview (enabled by default, shows each feed item's primary source link, impact analysis for entitled users), adds JFrog Research Severity and CVSS v4 score and vector columns to vulnerability report CSV exports, lets source code scans run with Xray permissions only, and speeds up violation processing.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
         {
           "date": "2026-09-14",
           "type": "Release",
@@ -402,7 +432,7 @@
       "indicative_cost_usd": "Not publicly disclosed; reseller estimates $30-$50/dev/month (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises drowning in SCA noise that need function-level reachability and agent-era governance; strong for modernising delivery teams",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://www.endorlabs.com/pricing|https://techcrunch.com/2025/04/23/endor-labs-which-builds-tools-to-scan-ai-generated-code-for-vulnerabilities-lands-93m/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security|https://www.endorlabs.com/learn/best-sca-tools-05b7a",
       "recent_updates": [
         {
@@ -517,7 +547,7 @@
       "indicative_cost_usd": "$300-$600/dev/year",
       "pricing_confidence": "High",
       "best_fit_for": "Teams prioritising malicious-package and AI-tool supply-chain defence; excellent complement to a traditional SCA",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://socket.dev/pricing|https://www.startuphub.ai/investment_rounds/socketc-series-c-2026|https://docs.socket.dev/docs/socket-firewall-overview|https://socket.dev/blog",
       "recent_updates": [
         {
@@ -556,7 +586,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Veracode customers needing install-time malware blocking",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-05",
       "sources": "https://www.businesswire.com/news/home/20250106967344/en|https://www.veracode.com/products/veracode-package-firewall/|https://docs.veracode.com/r/Analytics_for_package_firewall"
     },
     {
@@ -702,7 +732,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Lightweight CI gate and SBOM vulnerability check; pairs with Dependency-Track",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/google/osv-scanner/releases|https://blog.google/security/announcing-osv-scanner-v2-vulnerability/|https://appsecsanta.com/osv-scanner",
       "recent_updates": [
         {
@@ -811,7 +841,7 @@
       "indicative_cost_usd": "$0 OSS",
       "pricing_confidence": "High",
       "best_fit_for": "Container and Kubernetes supply chain scanning baseline; SBOM generation",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/aquasecurity/trivy/releases|https://github.com/aquasecurity/trivy-mcp|https://docs.gitlab.com/user/application_security/dependency_scanning/"
     },
     {
@@ -842,7 +872,7 @@
       "indicative_cost_usd": "$0 OSS; Enterprise not disclosed",
       "pricing_confidence": "Medium",
       "best_fit_for": "SBOM-first container programmes, especially US federal and defence",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-05",
       "sources": "https://github.com/anchore/grype/releases|https://anchore.com/blog/syft-grype-grant-50mill-downloads/|https://appsecsanta.com/anchore",
       "recent_updates": [
         {
