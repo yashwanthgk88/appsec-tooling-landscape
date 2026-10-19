@@ -1,0 +1,58 @@
+Subject: AppSec tooling landscape weekly update 2026-10-19: 0 new tools, 63 updates
+Run: weekly sweep, window 2026-10-05 to 2026-10-19, run started 2026-10-19 07:49 IST
+Headline: 241 tools tracked, 0 new tools, 52 tool rows updated (63 dated updates on 44 rows, plus 8 rows with data corrections only), 189 unchanged (74 checked with no change, 51 could not be verified, 64 not reached this run).
+Note: there was no run on 2026-10-12, so this window covers two weeks of vendor news.
+
+New tools added:
+None
+Note: all seven category sweeps ran this week. The candidates found were funded or launched before the window (Zast.AI, Clearly AI, Rein Security, FossID Workflows), had no product page or confirmable launch date (Dependency Guardian, "OWASP Threat Advisor", GuardBee, aihound, sbom-tools), or were small hobby repositories. Clearly AI and Zast.AI are worth adding as regular rows in a later run.
+
+AI maturity changes:
+None
+No row moved between GA, Beta or Preview, Marketing claim and None. Wording changed on five rows: GitHub Advanced Security (agentic autofix and AI Scan now GA, no longer preview), GitHub Secret Protection (purpose-built secret detection model, MCP server scanning marked GA), Wiz Code (new AI SAST in public preview), Endor Labs (bring your own key in private beta), Red Hat agentic-threat-modeling (repository details refreshed).
+
+Notable updates:
+GitHub Advanced Security, SAST and Platforms and ASPM, 2026-10-15: the agentic autofix for code scanning alerts and AI Scan for pull requests are both generally available on Enterprise Cloud; both are now billed through a new Code Security AI Credits line and the free "Generate fix" button is replaced, so expect a cost impact
+GitLab Ultimate, all seven categories touched, 2026-10-15: GitLab 19.5 makes the GitLab MCP server generally available on all tiers, makes the OpenBao based Secrets Manager generally available, tracks vulnerabilities on up to three non-default branches, and starts a closed beta of a Business Logic Security Analyzer
+Checkmarx One, SAST, SCA and Platforms and ASPM, 2026-10-15: Checkmarx joined the Claude Marketplace; US customers can buy Fusion, Triage Assist and Remediation Assist with committed Anthropic spend on one Anthropic invoice (packaging change, no list price published)
+GitHub, SCA and SBOM and AI BOM, 2026-10-16: open source license compliance is generally available for Enterprise Cloud with Code Security; license policy is enforced through rulesets and license data now appears in SBOM exports
+Sonatype, SCA, SBOM and AI BOM and Platforms and ASPM, 2026-10-14: new Nexus Repository Pro+ tier builds Repository Firewall into the repository, screening open source packages, AI models and MCP servers at the moment a developer or AI agent requests them (vendor claim; Enterprise tier to follow)
+GitHub Secret Protection, Secret Scanning, 2026-10-07 and 2026-10-13: a purpose-built model now finds leaked passwords without a known token format, and push protection blocks Anthropic API keys by default; AI push protection is in private preview
+Wiz Code, Platforms and ASPM, 2026-10-06: Wiz launched Wiz AI SAST in public preview for Wiz Code customers, aimed at intent dependent flaws such as broken access control (vendor claim)
+Endor Labs, SAST and Platforms and ASPM, 2026-10-14: bring your own key for AI SAST and AI Chat in private beta, routing model calls to the customer's own OpenAI, Azure OpenAI, Gemini or Vertex AI account; no Anthropic or Bedrock option yet
+Snyk Code, SAST, about 2026-10-13: Snyk Code October engine update goes live on 2026-10-26 with deeper analysis for nine languages; Snyk warns finding counts will rise noticeably, so pull request gates may start failing (post is only relatively dated)
+SonarQube, SAST, 2026-10-13: Sonar joined the OpenAI Daybreak cyber partner programme; GPT Cyber Models will back the Hunter Agent for logic and access control flaws (vendor claim)
+GitGuardian Platform, Secret Scanning, 2026-10-07 to 2026-10-15: validity and permission checks of vaulted secrets now run inside the customer network, Harbor container registry scanning is in beta, and each secret's environment is inferred automatically
+JFrog Xray, SCA and SBOM and AI BOM, 2026-10-15: version 3.157.2 blocks cached packages whose checksum does not match the JFrog Catalog and adds Curation support for Chainguard Java libraries and Echo Maven and npm repositories
+Trivy, SCA and SBOM and AI BOM, 2026-10-14: version 0.76.0 reports a security level and a post-quantum category per cryptographic algorithm in CBOM output and detects vulnerabilities in Echo patched packages
+Mend.io, Platforms and ASPM, 2026-10-08: 184 open source organisations moved to the Renovate Community (OSS) plan; a plan change for maintainers, not a commercial list price change
+Socket, SCA, 2026-10-06 and 2026-10-14: scanning of VS Code Marketplace extensions and a new integration with the Origin code hosting platform
+
+Other updates recorded:
+All dated updates per category, including the ones listed above: SAST 14, SCA 15, Secret Scanning 9, SBOM and AI BOM 8, Threat Modeling 1, Security Requirements 1, Platforms and ASPM 15.
+The same news item is counted once on each row it applies to.
+Rows with data corrections only (older facts fixed, no dated entry): SCA 1, Secret Scanning 1, Threat Modeling 5, Security Requirements 1.
+
+Checked with no change:
+SAST 4, SCA 9, Secret Scanning 10, SBOM and AI BOM 11, Threat Modeling 22, Security Requirements 12, Platforms and ASPM 6
+
+Could not be verified this run:
+51 rows had no dated vendor page that could be read (blocked pages, undated blogs or changelogs, or stale cached release pages):
+SAST (11): OpenText Fortify, Aikido Security, Bearer, Jit, Pixee, Mobb, Arnica, CodeRabbit Security, Cursor Security Review, Contrast Security, Kodem
+SCA (2): Aikido Security, Cycode
+Secret Scanning (4): Aikido Security, Cycode Secrets Detection, OpenText Fortify hardcoded credential detection, Betterleaks
+SBOM and AI BOM (10): OpenText Core SCA, HCL AppScan SBOM, Scribe Security, Syft and Grype, Chainloop, agent-bom, Kusari, Lineaje, HiddenLayer, Noma Security
+Threat Modeling (5): Aptori, Seezo, Oplane, OWASP Top 10 for LLM Applications, OWASP Agentic Security Initiative
+Security Requirements (8): OWASP requirement checklists, Jama Connect, Secure Code Warrior, Seezo, Jit, Kondukto ASPM, OWASP SecurityRAT, Aptori
+Platforms and ASPM (11): OpenText Application Security, Cycode, ArmorCode, Apiiro, Aikido Security, Mobb, Tromzo, OX Security, Orca Security, Sysdig Secure, Contrast One
+A further 64 rows were not reached before the per-category web search allowance ran out:
+SAST 10, SCA 9, Secret Scanning 5, SBOM and AI BOM 13, Threat Modeling 4, Security Requirements 6, Platforms and ASPM 17.
+They keep their old check date and go first next week. Names are in CHANGELOG.md under 2026-10-19.
+
+Where to look:
+Sheet tabs changed: Feature Updates, SAST, SCA, Secret Scanning, SBOM & AI BOM, Threat Modeling, Security Requirements, Platforms & ASPM, AI Capabilities, Scoring Matrix
+Executive Summary totals did not move (still 241 tools, same AI maturity counts; only the cut-off date changed); New Entrants tab has no new rows
+Commit: https://github.com/yashwanthgk88/appsec-tooling-landscape/commit/1be64fe30627aba0f504ebab44b9846ef394d7cb
+Workbook: https://github.com/yashwanthgk88/appsec-tooling-landscape/blob/main/AppSec_Tooling_Landscape_2026.xlsx
+
+Email to yashwanth.k@gds.ey.com was not sent: no Gmail or Outlook mail tool is connected in this session.
