@@ -11,21 +11,27 @@
       "type": "Commercial",
       "deployment": "SaaS (multi-region incl. FedRAMP Moderate 'Checkmarx One for Government', July 2026) / On-prem legacy CxSAST still sold; full One platform on-prem is limited (private tenant / hybrid options exist; verify per client)",
       "languages_coverage": "Modules: SAST, SCA (incl. malicious package protection), secrets, IaC (KICS), container, DAST ('DAST for AI'), API security, SBOM/AI-BOM, ASPM (risk orchestration, policy, analytics), autofix (Remediation Assist), Repository Health, AI supply chain (AI Inventory, LLM scanner, MCP scanner forthcoming). Language breadth: 35+ languages / 80+ frameworks for SAST (vendor claim)",
-      "key_features": "Native end-to-end scanner suite plus ASPM layer that correlates and dedups across engines | Attackability-first risk scoring (Triage Assist) | 'Fusion' hybrid scanning (deterministic + AI reasoning, July 2026) | Policy engine and application/asset-owner mapping | Third-party scanner ingestion into ASPM (breadth narrower than pure-play ASPMs) | Enterprise reporting, compliance and executive dashboards",
-      "ai_capabilities": "AI triage: Triage Assist (attackability ranking). AI autofix: Remediation Assist generates merge-ready fixes across SAST/SCA (Safe Refactor for package upgrades); Developer Assist rescans to verify fix. AI agents: 'Checkmarx One Assist' agent family (Developer Assist, Triage Assist, Remediation Assist, Checkmarx MCP Agent), 'self-healing' loop announced July 2026. MCP / IDE-agent: Checkmarx MCP server exposes scanning to MCP-compatible tools and coding agents (Cursor, Copilot, Windsurf, Claude Code claimed in launch material; page verified only says 'MCP-compatible AI tools'). AI code governance: AI Inventory/AI-BOM, LLM scanner, shadow-AI asset visibility (June 2026). AI-SPM: partial (AI asset inventory in supply chain, not full runtime AI-SPM). NL query: via MCP/assistant. Model: vendor-hosted LLMs (Anthropic partnership; Checkmarx joined Anthropic Project Glasswing Sept 2026); BYO-LLM not publicly documented. On-prem AI: not publicly documented.",
+      "key_features": "Native end-to-end scanner suite plus ASPM layer that correlates and dedups across engines | Attackability-first risk scoring (Triage Assist) | 'Fusion' hybrid scanning (deterministic + AI reasoning, July 2026) | Policy engine and application/asset-owner mapping | Third-party scanner ingestion into ASPM (breadth narrower than pure-play ASPMs) | Enterprise reporting, compliance and executive dashboards | Fusion, Triage Assist and Remediation Assist purchasable through the Claude Marketplace with Anthropic spend commitments (US customers, Oct 2026, per vendor)",
+      "ai_capabilities": "AI triage: Triage Assist (attackability ranking). AI autofix: Remediation Assist generates merge-ready fixes across SAST/SCA (Safe Refactor for package upgrades); Developer Assist rescans to verify fix. AI agents: 'Checkmarx One Assist' agent family (Developer Assist, Triage Assist, Remediation Assist, Checkmarx MCP Agent), 'self-healing' loop announced July 2026. MCP / IDE-agent: Checkmarx MCP server exposes scanning to MCP-compatible tools and coding agents (Cursor, Copilot, Windsurf, Claude Code claimed in launch material; page verified only says 'MCP-compatible AI tools'). AI code governance: AI Inventory/AI-BOM, LLM scanner, shadow-AI asset visibility (June 2026). AI-SPM: partial (AI asset inventory in supply chain, not full runtime AI-SPM). NL query: via MCP/assistant. Model: vendor-hosted LLMs; Checkmarx Fusion pairs the deterministic engine with Claude models and Checkmarx is listed on the Claude Marketplace (Oct 15, 2026, per vendor); Checkmarx joined Anthropic Project Glasswing Sept 2026 and participates in Anthropic's Cyber Verification Program; BYO-LLM not publicly documented. On-prem AI: not publicly documented.",
       "ai_maturity": "GA (Assist agents, Developer Assist, MCP); MCP scanner 'forthcoming'",
       "ai_verified_source": "https://checkmarx.com/product/developer-assist/",
       "integrations": "GitHub, GitLab, Azure DevOps, Bitbucket, Jenkins, Jira, ServiceNow, IDEs (VS Code, JetBrains, Visual Studio, Eclipse), Cursor/Copilot via MCP, SIEM/SOAR, Carahsoft channel for US public sector",
       "sectors_reference_customers": "Financial services, government (FedRAMP Moderate), large enterprise; specific logos not verified this session",
       "analyst_position": "Gartner MQ AST Oct 2025: Leader (furthest on Completeness of Vision, 16 vendors evaluated) | Gartner MQ SSCS June 2026: Leader | Forrester Wave SAST Q3 2025: Leader | Gartner Market Guide ASPM: representative vendor (not verified this session) | GigaOm Radar ASPM: not verified",
       "cons_known_gaps": "Lock-in: ASPM layer is strongest with Checkmarx's own engines; third-party ingestion exists but is not the product's centre of gravity | Pricing is enterprise-only and historically premium; multi-module bundles are negotiated per deal | On-prem: legacy CxSAST is on-prem but the modern One platform is SaaS-first, so air-gapped clients get a reduced experience | Module maturity variance: DAST and API security are younger than SAST/SCA | PE ownership (H&F since 2020) means an exit or sale is a standing possibility (no announced transaction; unverified)",
-      "pricing_model": "Enterprise subscription; typically priced per contributing developer with module bundles (Code Security, Supply Chain, Platform/ASPM); Developer Assist free trial",
+      "pricing_model": "Enterprise subscription; typically priced per contributing developer with module bundles (Code Security, Supply Chain, Platform/ASPM); Developer Assist free trial; Fusion, Triage Assist and Remediation Assist can be bought with committed Anthropic spend via the Claude Marketplace (US customers, Oct 2026, per vendor; no list price published)",
       "indicative_cost_usd": "Not publicly disclosed; market anecdotes put full-platform enterprise deals in the low-to-mid six figures per year for 500+ developers (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises wanting one vendor for native scanners plus governance, with strong SAST accuracy requirements and public-sector/FedRAMP needs",
-      "last_verified": "2026-09-28",
-      "sources": "https://checkmarx.com/product/checkmarx-one/ | https://checkmarx.com/product/developer-assist/ | https://checkmarx.com/press-releases/ | https://checkmarx.com/blog/checkmarx-named-a-leader-for-the-7th-time-in-the-2025-gartner-magic-quadrant-for-application-security-testing/ | https://checkmarx.com/checkmarx-named-a-leader-in-the-2026-gartner-magic-quadrant-for-software-supply-chain-security/",
+      "last_verified": "2026-10-19",
+      "sources": "https://checkmarx.com/product/checkmarx-one/ | https://checkmarx.com/product/developer-assist/ | https://checkmarx.com/press-releases/ | https://checkmarx.com/press-releases/checkmarx-joins-the-claude-marketplace/ | https://checkmarx.com/blog/checkmarx-named-a-leader-for-the-7th-time-in-the-2025-gartner-magic-quadrant-for-application-security-testing/ | https://checkmarx.com/checkmarx-named-a-leader-in-the-2026-gartner-magic-quadrant-for-software-supply-chain-security/",
       "recent_updates": [
+        {
+          "date": "2026-10-15",
+          "type": "Feature launch",
+          "summary": "Checkmarx joined the Claude Marketplace: US Anthropic customers can apply committed Anthropic spend to Checkmarx Fusion (deterministic engine plus Claude models), Triage Assist and Remediation Assist, consolidating the purchase onto the Anthropic invoice (per vendor). The release also states Checkmarx participates in Anthropic's Cyber Verification Program using Claude Mythos. No list prices, GA/preview label or Claude surface (Claude Code, Cowork) is given.",
+          "source": "https://checkmarx.com/press-releases/checkmarx-joins-the-claude-marketplace/"
+        },
         {
           "date": "2026-07-01",
           "type": "Feature launch",
@@ -54,9 +60,15 @@
       "indicative_cost_usd": "Team tier historically listed around $25 per product per contributing developer per month; Enterprise custom, commonly quoted at several hundred USD per developer per year for multi-product bundles (unverified)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-centric organisations on modern cloud stacks that accept SaaS and want deep IDE/coding-agent integration with a single scanner family",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://snyk.io/platform/ | https://snyk.io/blog/ | https://snyk.io/blog/snyk-named-a-leader-in-the-2025-forrester-sast-wave-sast-solutions-q3-2025/ | https://snyk.io/lp/forrester-wave-sast/",
       "recent_updates": [
+        {
+          "date": "2026-10-08",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.0 adds HTML report output for 'snyk code test' and 'snyk secrets test' via --html or --html-file-output, changes the experimental 'snyk agent-scan' command to report risk indicators instead of issue codes, and ships reliability fixes for Maven, Gradle and .NET scans.",
+          "source": "https://updates.snyk.io/announcing-snyk-cli-v1-1308-0/"
+        },
         {
           "date": "2026-09-23",
           "type": "Release",
@@ -109,9 +121,15 @@
       "indicative_cost_usd": "Not publicly disclosed; market anecdotes: mid-to-high five figures per year for mid-size estates, six figures for large programmes (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Compliance-driven enterprises and regulated industries that value policy governance and audit-grade reporting over bleeding-edge agentic features",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.veracode.com/products/ | https://www.veracode.com/products/risk-manager/ | https://www.veracode.com/blog/leader-in-sast-forrester-wave-2025/ | https://www.veracode.com/resources/analyst-reports/magic-quadrant-leader-application-security-testing/",
       "recent_updates": [
+        {
+          "date": "2026-10-13",
+          "type": "Release",
+          "summary": "Integration releases between Oct 6 and Oct 13, 2026: GitHub Workflow Integration v2.1.9 (predependency_command for static scans, build_runs_on for SCA scans, fix for stuck check runs), GitLab Workflow Integration v2.1.9 (predependency_command and policy parameters, merge blocking when break-build is enabled, Oct 6), Azure DevOps Workflow Integration v2.4.5 (policy parameter for IaC scans, Oct 7), Java API wrapper v26.10.20.0 and .1 (Git repository and commit metadata auto-attached to Static Analysis scans, Oct 7 and 9) and Veracode Scan for JetBrains v1.8.1 (IDE versions 2024.2 to 2026.3, Oct 8).",
+          "source": "https://docs.veracode.com/updates/r/c_all_int"
+        },
         {
           "date": "2026-09-16",
           "type": "Release",
@@ -140,7 +158,7 @@
       "indicative_cost_usd": "Not publicly disclosed; historically six figures for enterprise Coverity + Black Duck SCA (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated, air-gapped or SBOM-mandated organisations (embedded, medical, defence) needing on-prem ASPM plus best-in-class binary SCA",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.blackduck.com/ | https://www.blackduck.com/software-risk-manager.html | https://www.prnewswire.com/news-releases/black-duck-named-a-leader-in-the-inaugural-2026-gartner-magic-quadrant-for-software-supply-chain-security-302806514.html | https://www.blackduck.com/resources/analyst-reports/gartner-magic-quadrant-appsec.html",
       "recent_updates": [
         {
@@ -194,7 +212,7 @@
       "indicative_cost_usd": "Marketplace pricing published per plan; promotions advertised; enterprise custom (exact figures not captured)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Regulated enterprises needing air-gapped SAST/DAST/IAST/SCA in one self-managed stack at a lower price point than Fortify/Black Duck",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.hcl-software.com/appscan | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/",
       "recent_updates": [
         {
@@ -219,21 +237,51 @@
       "type": "Commercial (CodeQL free for public repos)",
       "deployment": "SaaS (GitHub.com, Enterprise Cloud incl. data residency) / On-prem via GitHub Enterprise Server (Copilot Autofix and some AI features limited or unavailable on GHES)",
       "languages_coverage": "Modules: SAST (CodeQL), SCA (Dependabot, dependency review), secrets (push protection, AI-detected generic secrets), SBOM (dependency graph export), IaC/container (via third-party actions and SARIF upload only), DAST (none native), API (none), ASPM (security overview dashboards, campaigns; org-level only), autofix (Copilot Autofix). Language breadth: CodeQL supports ~12 core languages (C/C++, C#, Go, Java/Kotlin, JS/TS, Python, Ruby, Swift, Rust, GitHub Actions)",
-      "key_features": "Split into two standalone products (April 2025): Secret Protection $19 and Code Security $30 per active committer per month | Copilot Autofix for CodeQL and third-party SARIF alerts | Security campaigns for backlog burn-down | Push protection with bypass workflow | SARIF ingestion lets any scanner surface alerts in PRs | Security overview and enterprise-level risk/coverage dashboards",
-      "ai_capabilities": "AI triage: Copilot-based alert explanations; AI-powered generic secret detection. AI autofix: Copilot Autofix generates fixes for CodeQL alerts and third-party SARIF alerts (suggested in PR); agentic autofix in public preview (July 2026) also remediates Code Quality findings (Sept 2026) and, when Copilot Memory is enabled, reuses and stores repository-specific fix patterns (Sept 25, 2026). AI agents: Copilot coding agent can be assigned security issues; no dedicated 'security agent' name verified. MCP / IDE-agent: GitHub MCP server exposes code scanning, secret scanning and Dependabot alerts to Copilot, Claude Code, Cursor and other MCP clients. AI code governance: Copilot usage metrics; AI-generated code labelling not verified. AI-SPM: none. NL query: via Copilot Chat. Model: OpenAI/Anthropic models via Copilot; BYO-LLM none. On-prem AI: none (GHES lacks Autofix parity).",
-      "ai_maturity": "GA (Copilot Autofix, GitHub MCP server); agentic autofix and Copilot Memory integration: Beta or Preview (public preview)",
-      "ai_verified_source": "https://github.com/security/advanced-security",
+      "key_features": "Split into two standalone products (April 2025): Secret Protection $19 and Code Security $30 per active committer per month | Copilot Autofix for CodeQL and third-party SARIF alerts | Agentic autofix GA on Enterprise Cloud (Oct 15, 2026): codebase-wide fix, CodeQL re-validation, draft PR, batch assignment, billed in AI Credits | AI Scan for pull requests GA (Oct 15, 2026) with enablement status and metrics in security overview | Security campaigns for backlog burn-down | Push protection with bypass workflow; Anthropic keys blocked by default (Oct 2026) | SARIF ingestion lets any scanner surface alerts in PRs | Open source license compliance GA (Oct 16, 2026) | Security overview and enterprise-level risk/coverage dashboards",
+      "ai_capabilities": "AI triage: Copilot-based alert explanations; AI-powered generic secret detection, now with a purpose-built model for leaked secret detection (Oct 7, 2026); AI Scan for pull requests GA (Oct 15, 2026) with enablement status and metrics in security overview. AI autofix: Copilot Autofix generates fixes for CodeQL alerts and third-party SARIF alerts (suggested in PR); agentic autofix GA on GitHub Enterprise Cloud (Oct 15, 2026): explores the codebase, proposes a fix, reruns CodeQL to validate and opens a draft PR, assignable per alert, in batches of up to 25 or via REST API, default-branch alerts only, opt-in via enterprise policy plus org/repo setting, billed in AI Credits from the Code Security budget plus Actions minutes; it also remediates Code Quality findings (Sept 2026) and, when Copilot Memory is enabled, reuses and stores repository-specific fix patterns (Sept 25, 2026). AI agents: Copilot coding agent can be assigned security issues; 'Assign to Copilot' replaces the free 'Generate Fix' button when agentic autofix is enabled; no dedicated 'security agent' name verified. MCP / IDE-agent: GitHub MCP server exposes code scanning, secret scanning and Dependabot alerts to Copilot, Claude Code, Cursor and other MCP clients. AI code governance: Copilot usage metrics; AI-generated code labelling not verified. AI-SPM: none. NL query: via Copilot Chat. Model: OpenAI/Anthropic models via Copilot; BYO-LLM none. On-prem AI: none (GHES lacks Autofix parity; agentic autofix GA is Enterprise Cloud only per changelog).",
+      "ai_maturity": "GA (Copilot Autofix, agentic autofix on Enterprise Cloud from Oct 15, 2026, AI Scan for pull requests, GitHub MCP server); Copilot Memory integration for autofix: Beta or Preview (public preview, status not re-verified after GA)",
+      "ai_verified_source": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
       "integrations": "Native to GitHub; SARIF upload from any scanner; Jira/Azure Boards via apps; Microsoft Defender for Cloud (code-to-cloud), Copilot, third-party ASPM tools ingest GHAS alerts",
       "sectors_reference_customers": "Ubiquitous across sectors for GitHub-hosted code; logos not verified",
       "analyst_position": "Gartner MQ AST Oct 2025: evaluated (placement not verified; historically Visionary) | Forrester Wave SAST Q3 2025: evaluated (placement not verified) | Gartner MQ SSCS June 2026: not verified | ASPM radars: generally not rated as ASPM",
-      "cons_known_gaps": "Only useful for code hosted on GitHub; multi-SCM clients need another layer | No native DAST, IaC, or container scanning; relies on SARIF from other tools | ASPM correlation is shallow (no cross-tool dedup, weak business context) | GHES feature lag for AI capabilities | Per-active-committer pricing is predictable but adds up fast on large monorepos",
-      "pricing_model": "Per active committer per month: Secret Protection $19, Code Security $30 (both together $49); metered on GitHub Enterprise Cloud; GHES via licence",
+      "cons_known_gaps": "Only useful for code hosted on GitHub; multi-SCM clients need another layer | No native DAST, IaC, or container scanning; relies on SARIF from other tools | ASPM correlation is shallow (no cross-tool dedup, weak business context) | GHES feature lag for AI capabilities; agentic autofix GA is Enterprise Cloud only | Agentic autofix is metered in AI Credits plus Actions minutes on top of the per-committer fee, so remediation cost is variable | Per-active-committer pricing is predictable but adds up fast on large monorepos",
+      "pricing_model": "Per active committer per month: Secret Protection $19, Code Security $30 (both together $49); metered on GitHub Enterprise Cloud; GHES via licence; agentic autofix additionally consumes AI Credits from the Code Security budget and GitHub Actions minutes (SKU-level budgets configurable) and requires a Copilot billing method",
       "indicative_cost_usd": "$228 to $588 per active committer per year; e.g., 1,000 committers on both products approx $588k/yr list",
       "pricing_confidence": "High",
       "best_fit_for": "GitHub-standardised organisations wanting frictionless CodeQL/secrets/Dependabot coverage inside the PR, typically paired with a separate ASPM",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-19",
       "sources": "https://github.com/security/advanced-security | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/",
       "recent_updates": [
+        {
+          "date": "2026-10-16",
+          "type": "Feature GA",
+          "summary": "Open source license compliance (supply chain security) is generally available; Dependabot also gained anonymous organization-level registries (Oct 12) and improved detection of withdrawn alerts (Oct 13).",
+          "source": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Feature GA",
+          "summary": "Agentic autofix for code scanning alerts is generally available for GitHub Code Security and GHAS customers on GitHub Enterprise Cloud (incl. data residency). It explores the codebase, proposes a fix, reruns CodeQL to confirm the alert is closed and opens a draft pull request with reasoning and validation steps; alerts can be assigned to Copilot individually, in batches of up to 25 or via REST API (default branch only). It is opt-in (enterprise policy plus org or repo setting), needs a Copilot billing method, and consumes AI Credits from the Code Security budget plus Actions minutes.",
+          "source": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Feature GA",
+          "summary": "AI Scan for pull requests is generally available for code scanning; companion changelog entries add AI Scan enablement status (Oct 6) and AI Scan metrics (Oct 13) to the security overview. Details of the GA post were not fetched beyond the changelog listing.",
+          "source": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available"
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Feature launch",
+          "summary": "Secret scanning push protection now blocks Anthropic API keys by default and adds Salesforce detectors; on Oct 5 detectors for Lovable, Supabase and other services were added, and on Oct 7 GitHub introduced a purpose-built model for leaked secret detection.",
+          "source": "https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce"
+        },
+        {
+          "date": "2026-10-09",
+          "type": "Release",
+          "summary": "CodeQL 2.27.2 improves C++, Go, Rust and JavaScript analysis for code scanning.",
+          "source": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis"
+        },
         {
           "date": "2026-09-25",
           "type": "Feature launch",
@@ -256,21 +304,27 @@
       "type": "Open-core (Community Edition MIT; Ultimate proprietary)",
       "deployment": "SaaS (GitLab.com, Dedicated single-tenant) / On-prem self-managed; air-gap supported (offline environments); self-hosted LLMs supported for Duo on self-managed",
       "languages_coverage": "Modules: SAST (Semgrep-based analyzers + GitLab Advanced SAST cross-file/cross-function), SCA (dependency scanning, malicious package detection beta 19.4), secrets (secret detection, push rules, auto-revocation of GitLab tokens), IaC (KICS), container (Trivy-based), DAST (browser-based DAST, API fuzzing, API security), SBOM (CycloneDX export, dependency list, SPDX licence expressions), ASPM-lite (Vulnerability Report, Security Inventory, security dashboards, policies), autofix (Vulnerability Resolution via Duo), coverage-guided fuzz testing. Language breadth: Advanced SAST covers Java, Python, Go, JS/TS, C#, Ruby, PHP, C/C++, Kotlin, Dart, Scala (19.4)",
-      "key_features": "Broadest native scanner set of any SCM platform (SAST, DAST, SCA, secrets, IaC, container, fuzzing, API) | Security policies as code (scan execution, merge request approval policies) | Vulnerability Report as lightweight ASPM within the DevSecOps platform | Duo Agent Platform: Security Analyst Agent, vulnerability explanation and resolution, agentic chat, flows | Compliance frameworks and audit events | Self-managed and air-gapped with self-hosted models",
-      "ai_capabilities": "AI triage: Vulnerability Explanation; Vulnerability Context Flow (auth, privilege, sensitive-data categorisation, 19.4); Security Analyst Agent analyses vulns and dismisses false positives. AI autofix: Vulnerability Resolution creates merge requests with fixes for SAST findings (auto-MR, human review). AI agents: GitLab Duo Agent Platform (GA for Premium/Ultimate on 18.8+; agents, flows, agentic chat; Security Analyst Agent named); /goal autonomous objective command in Duo CLI (public beta 19.4); flow builder (beta). MCP / IDE-agent: GitLab MCP server tools for CI/CD, merge requests, repositories, work items, semantic code search and vulnerability triage (public beta 19.4) with tool-level governance (write/delete default 'Always Ask'); Duo in VS Code/JetBrains; external agents (Claude Code, Cursor) via MCP. AI code governance: Duo usage analytics, per-user credit caps and usage attribution (19.4); AI-generated code detection not verified. AI-SPM: none. NL query: agentic chat; Duo in Slack (experimental). Model: multi-model with selection (Claude Sonnet 4 default, GPT-5-mini, Claude Haiku, plus GitLab-hosted open-weight Kimi K3, MiniMax M3, GLM 5.3 at up to 4x more calls per credit); BYO/self-hosted LLM on self-managed. On-prem AI: yes (self-hosted models, GitLab Duo Self-Hosted).",
+      "key_features": "Broadest native scanner set of any SCM platform (SAST, DAST, SCA, secrets, IaC, container, fuzzing, API) | Security policies as code (scan execution, merge request approval policies) | Vulnerability Report as lightweight ASPM within the DevSecOps platform, now tracking up to three non-default branches with per-branch policy evaluation (19.5) | Duo Agent Platform: Security Analyst Agent, vulnerability explanation and resolution, agentic chat, flows; Business Logic Security Analyzer flow in closed beta (19.5) | GitLab Secrets Manager (OpenBao-based) GA for Premium/Ultimate (19.5) | GitLab MCP server GA with toolset selection (19.5) | AI Governance dashboard records externally connected agents such as Claude Code, Cursor and Codex (beta, 19.5) | Compliance frameworks and audit events | Self-managed and air-gapped with self-hosted models",
+      "ai_capabilities": "AI triage: Vulnerability Explanation; Vulnerability Context Flow (auth, privilege, sensitive-data categorisation, 19.4); Security Analyst Agent analyses vulns and dismisses false positives; SAST and Secret false positive detection flows now also run on tracked non-default branches (19.5). AI autofix: Vulnerability Resolution creates merge requests with fixes for SAST findings (auto-MR, human review), also on tracked non-default branches (19.5). AI agents: GitLab Duo Agent Platform (GA for Premium/Ultimate on 18.8+; agents, flows, agentic chat; Security Analyst Agent named); Business Logic Security Analyzer flow finds authorization flaws such as BOLA and mass assignment (closed beta on GitLab.com, Ultimate, 19.5); /goal autonomous objective command in Duo CLI (public beta 19.4); Duo CLI auto mode runs tools without per-action approval (off by default, 19.5); flow builder (beta); trigger flows REST API GA (19.5). MCP / IDE-agent: GitLab MCP server GA for all tiers (19.5) exposing GitLab tools plus Agent Platform agents and flows, with toolset selection, tool-level governance (write/delete default 'Always Ask') and GitLab.com rate limits of 60 requests/min on Free and 600 on Premium/Ultimate; Duo in VS Code/JetBrains; external agents (Claude Code, Cursor, Codex) via MCP with sessions recorded in AI Governance (beta, 19.5). AI code governance: Duo usage analytics, per-user credit caps and usage attribution (19.4), subgroup-based Duo access restriction and admin-managed Duo CLI settings (19.5); AI-generated code detection not verified. AI-SPM: none. NL query: agentic chat; Duo in Slack (experimental). Model: multi-model with selection (Claude Sonnet 4 default, GPT-5-mini, Claude Haiku, plus GitLab-hosted open-weight Kimi K3, MiniMax M3, GLM 5.3 at up to 4x more calls per credit); BYO/self-hosted LLM on self-managed, with per-model IAM roles for Bedrock (19.5). On-prem AI: yes (self-hosted models, GitLab Duo Self-Hosted).",
       "ai_maturity": "GA (Duo Agent Platform on 18.8+; usage-credit pricing)",
-      "ai_verified_source": "https://about.gitlab.com/gitlab-duo-agent-platform/",
+      "ai_verified_source": "https://docs.gitlab.com/releases/19/gitlab-19-5-released/",
       "integrations": "Native SCM/CI; Jira, ServiceNow, Slack; third-party scanner output via security report artifacts (SARIF/GitLab report JSON); Kubernetes agent; external ASPMs ingest GitLab Vulnerability Report via API",
       "sectors_reference_customers": "Public sector, defence, financial services, telco (self-managed strongholds); logos not verified",
       "analyst_position": "Gartner MQ AST Oct 2025: evaluated (placement not verified; historically Challenger) | Forrester Wave SAST Q3 2025: evaluated (placement not verified) | Gartner MQ SSCS June 2026: not verified | ASPM radars: not rated",
       "cons_known_gaps": "Scanner depth is below best-of-breed (SAST FP rates, SCA reachability) though Advanced SAST is closing the gap | Vulnerability management is repo/project-centric; weak cross-tool dedup and business-context scoring | Duo Agent Platform is credit-metered on top of Ultimate, so AI cost is variable | Only fully valuable if the client is on GitLab for SCM/CI | Frequent version churn (18.x to 19.x) for self-managed upgrades",
-      "pricing_model": "Per user per month (Ultimate list $99/user/month billed annually); Duo Agent Platform usage credits; Dedicated priced separately",
+      "pricing_model": "Per user per month (Ultimate list $99/user/month billed annually); Duo Agent Platform usage credits (GitLab Credits), which from 19.5 also meter GitLab Secrets Manager and Business Logic Security Analyzer scans; Dedicated priced separately",
       "indicative_cost_usd": "Ultimate approx $1,188 per user per year list; Duo credits additional (rate varies by model; GitLab-hosted open-weight models give up to 4x more calls per credit than frontier models as of 19.4)",
       "pricing_confidence": "High",
       "best_fit_for": "Organisations standardised on GitLab (especially self-managed/air-gapped) that want 'good enough' native scanning, policy-as-code and on-prem AI in one platform",
-      "last_verified": "2026-10-05",
-      "sources": "https://about.gitlab.com/gitlab-duo-agent-platform/ | https://docs.gitlab.com/releases/ | https://about.gitlab.com/pricing/ultimate/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/",
+      "last_verified": "2026-10-19",
+      "sources": "https://about.gitlab.com/gitlab-duo-agent-platform/ | https://docs.gitlab.com/releases/ | https://docs.gitlab.com/releases/19/gitlab-19-5-released/ | https://about.gitlab.com/pricing/ultimate/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/",
       "recent_updates": [
+        {
+          "date": "2026-10-15",
+          "type": "Release",
+          "summary": "GitLab 19.5 (release post dated Oct 15, 2026): GitLab Secrets Manager (OpenBao-based) GA for Premium/Ultimate; GitLab MCP server GA for all tiers with toolset selection and GitLab.com rate limits (60 requests/min Free, 600 Premium/Ultimate); Business Logic Security Analyzer flow for authorization flaws such as BOLA and mass assignment in closed beta (Ultimate, GitLab.com); vulnerability tracking on up to three non-default branches GA with AI flows (SAST false positive detection, Vulnerability Resolution, secret false positive detection) runnable on them; group-level security configuration profiles for SAST and Secret Detection; Externally Connected Agents (Claude Code, Cursor, Codex sessions) recorded in AI Governance (beta); Duo CLI auto mode and admin-managed settings; per-model IAM roles for self-hosted Bedrock models. Secrets Manager and Business Logic Security Analyzer scans consume GitLab Credits.",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-5-released/"
+        },
         {
           "date": "2026-09-23",
           "type": "Release",
@@ -390,7 +444,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises focused on SDLC/supply chain posture and governance of AI-assisted development across many pipelines",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.legitsecurity.com/ | https://appsecsanta.com/aspm-tools",
       "recent_updates": [
         {
@@ -440,21 +494,33 @@
       "type": "Commercial",
       "deployment": "SaaS; Wiz Outpost for in-tenant scanning; no on-prem control plane",
       "languages_coverage": "Modules: SAST (native, added 2025), SCA, secrets, IaC, container/image, SBOM, CI/CD pipeline, ASPM correlation (code-to-cloud on Wiz Security Graph), autofix (Wiz Green agent opens PRs; Dazz remediation engine), plus CNAPP (CSPM, CWPP, CDR, DSPM, AI-SPM). DAST: none. Language breadth: mainstream languages (list not verified)",
-      "key_features": "Code-to-cloud-to-runtime correlation on one context graph | Wiz Green agent turns risks into code fixes via PRs; Wiz Red (automated pentesting/attack paths), Wiz Blue (threat hunting) | Dazz (acquired Nov 2024) remediation and root-cause engine now embedded | Wiz Workflows GA with Remediation and Response in preview (Aug 2026) | Wiz MCP and WIN partner ecosystem | Continuous Vulnerability Assessment (Sept 2026)",
-      "ai_capabilities": "AI triage: graph-based attack-path prioritisation; AI detection engine for malicious AI-agent behaviour (Sept 2026). AI autofix: Wiz Green agent auto-PRs for code/IaC issues; Dazz root-cause remediation. AI agents: Wiz Green, Wiz Red, Wiz Blue (named). MCP / IDE-agent: Wiz MCP server with WIN partners endpoint GA (Sept 22, 2026) for Claude Code, Cursor, GitHub Copilot and partner agents; IDE plugins for VS Code/JetBrains. AI code governance: partial. AI-SPM: yes (Wiz AI-SPM, AI inventory, model/agent discovery). NL query: yes (Wiz AI assistant). Model: Google/OpenAI hosted models (unverified); BYO none. On-prem AI: none.",
-      "ai_maturity": "GA (agents, AI-SPM, MCP); Remediation/Response workflows Public Preview (Aug 2026)",
-      "ai_verified_source": "https://www.wiz.io/blog",
+      "key_features": "Code-to-cloud-to-runtime correlation on one context graph | Wiz Green agent turns risks into code fixes via PRs; Wiz Red (automated pentesting/attack paths), Wiz Blue (threat hunting); agents now also in Wiz for Gov (Oct 2026) | Wiz AI SAST for business-logic and access-control flaws, Public Preview for Wiz Code customers (Oct 2026) | Dazz (acquired Nov 2024) remediation and root-cause engine now embedded | Wiz Workflows GA with Remediation and Response in preview (Aug 2026) | Wiz MCP and WIN partner ecosystem | Continuous Vulnerability Assessment (Sept 2026)",
+      "ai_capabilities": "AI triage: graph-based attack-path prioritisation; AI detection engine for malicious AI-agent behaviour (Sept 2026). AI SAST: Wiz AI SAST (Public Preview, Oct 6, 2026) finds intent-dependent CWEs such as broken access control and IDOR and correlates them with runtime context; extends rather than replaces rules-based scanning (per vendor). AI autofix: Wiz Green agent auto-PRs for code/IaC issues; Dazz root-cause remediation. AI agents: Wiz Green, Wiz Red, Wiz Blue (named), available in Wiz for Gov from Oct 2026. MCP / IDE-agent: Wiz MCP server with WIN partners endpoint GA (Sept 22, 2026) for Claude Code, Cursor, GitHub Copilot and partner agents; IDE plugins for VS Code/JetBrains. AI code governance: partial. AI-SPM: yes (Wiz AI-SPM, AI inventory, model/agent discovery). NL query: yes (Wiz AI assistant). Model: vendor-agnostic harness (Atlas) that swaps in models including Google DeepMind cybermodels per vendor; specific models not named; BYO none. On-prem AI: none.",
+      "ai_maturity": "GA (agents, AI-SPM, MCP); Wiz AI SAST: Beta or Preview (Public Preview, Oct 2026); Remediation/Response workflows Public Preview (Aug 2026)",
+      "ai_verified_source": "https://www.wiz.io/blog/introducing-wiz-ai-sast",
       "integrations": "AWS, Azure, GCP, OCI, Alibaba; GitHub, GitLab, Bitbucket, Azure DevOps; Jira, ServiceNow, Slack; SIEM/SOAR; ingests third-party scanners (Snyk, Checkmarx, etc.) into the graph",
       "sectors_reference_customers": "Large share of Fortune 100 cloud-native enterprises (vendor claim); Snowflake cited in Wiz Red research; logos not verified",
       "analyst_position": "Forrester Wave Proactive Security Platforms Q3 2026 (Sept 2026): Leader, highest possible scores in 8 criteria incl. application visibility and remediation augmentation | Gartner Market Guide ASPM: representative vendor | Gartner MQ CNAPP: Leader (2025; not verified this session) | GigaOm Radar ASPM: rated (position unverified) | Gartner MQ AST / Forrester SAST: not rated",
-      "cons_known_gaps": "AppSec is an extension of a cloud platform: SAST/SCA depth trails dedicated vendors and no DAST | Cloud-first: little value for on-prem, mainframe or non-cloud workloads | Premium pricing tied to cloud workload counts | Google ownership (acquisition closed March 2026): integration and pricing/packaging change risk; continued multicloud support is a vendor statement | Consolidation into CNAPP creates single-vendor concentration risk",
+      "cons_known_gaps": "AppSec is an extension of a cloud platform: SAST/SCA depth trails dedicated vendors and no DAST; the new AI SAST is Public Preview only with no published language list | Cloud-first: little value for on-prem, mainframe or non-cloud workloads | Premium pricing tied to cloud workload counts | Google ownership (acquisition closed March 2026): integration and pricing/packaging change risk; continued multicloud support is a vendor statement | Consolidation into CNAPP creates single-vendor concentration risk",
       "pricing_model": "Enterprise subscription based on cloud workloads/resources; Wiz Code priced per developer or bundled",
       "indicative_cost_usd": "Not publicly disclosed; typically six to seven figures per year for large cloud estates (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Cloud-native enterprises already on Wiz that want code findings correlated to live cloud exposure and auto-PR remediation",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.wiz.io/ | https://www.wiz.io/blog | https://appsecsanta.com/aspm-tools",
       "recent_updates": [
+        {
+          "date": "2026-10-14",
+          "type": "Feature launch",
+          "summary": "Wiz AI Agents (Green, Red, Blue) arrive in Wiz for Gov, the FedRAMP environment for US public sector customers (per vendor blog). A companion post the same day describes centralising third-party AppSec scanners in Wiz as part of an 'ASPM in the AI era' series.",
+          "source": "https://www.wiz.io/blog/wiz-for-gov-agents-fedramp"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "Feature launch",
+          "summary": "Wiz introduced Wiz AI SAST, an AI code scanner (Atlas-based harness, vendor-agnostic models including Google DeepMind cybermodels per vendor) that targets intent-dependent flaws such as broken access control and IDOR, correlates findings with production context on the Security Graph and feeds existing policy and remediation workflows. It is available now in Public Preview to all Wiz Code customers; languages and pricing are not stated.",
+          "source": "https://www.wiz.io/blog/introducing-wiz-ai-sast"
+        },
         {
           "date": "2026-09-24",
           "type": "Release",
@@ -706,10 +772,10 @@
       "deployment": "SaaS; self-hosted/on-prem option for enterprise reported (unverified)",
       "languages_coverage": "Modules: SCA with function-level reachability (flagship), AI SAST (dataflow across repos and PRs), secrets, container scanning (reachability from code; incremental scanning and base-image attribution added Sept 2026), SBOM/VEX (async export jobs), Package Firewall (malicious package blocking; NuGet and VS Code extensions added Sept 2026), Endor Patches (backported fixes), AI Code Governance (coding agents, models, MCP servers, skills), AI Security Review (agent-based architectural risk detection on PRs), Threat Center (emerging threat view, Sept 2026), ASPM-lite (own findings; limited third-party ingestion). DAST: none. Language breadth: reachability for Java, Python, JS/TS, Go, C#, Rust, Kotlin, Ruby, PHP, Swift, Scala (expanding; list partly unverified); Conan C/C++ manifests resolved (Sept 2026)",
       "key_features": "Reachability-based SCA cuts noise up to 95-97% (vendor) | AI Security Code Review agent on every PR (claims 2.6x higher true positives vs frontier models) | Endor Patches for fixes without major upgrades | AI Code Governance: inventory and policy for agents, models, MCP servers | MCP servers for Claude, Cursor, VS Code | Package Firewall at install time, now also blocks malicious VS Code extensions (Sept 2026) | Threat Center: tenant-wide view of emerging malware, packages, vulnerabilities and AI models (Sept 2026) | Incremental container scanning and base-image vs app-layer attribution (Sept 2026) | Conan C/C++ support (Sept 2026)",
-      "ai_capabilities": "AI triage: reachability plus AI SAST dataflow. AI autofix: Endor Patches and remediation workflows with codebase context; auto-PR upgrades. AI agents: AI Security Review agent (PR), AI SAST agents. MCP / IDE-agent: MCP servers for Claude, Cursor, VS Code (verified). AI code governance: yes, GA (agents, models, MCP servers, skills). AI-SPM: partial (AI code/model governance rather than runtime). NL query: via MCP. Model: vendor-hosted (multiple frontier models); BYO not documented. On-prem AI: not documented.",
-      "ai_maturity": "GA (AI SAST, AI Security Review, MCP, AI Code Governance)",
-      "ai_verified_source": "https://www.endorlabs.com/",
-      "integrations": "GitHub, GitLab, Azure DevOps, Bitbucket, Jenkins, CircleCI, Jira, Slack, Artifactory, container registries, Claude/Cursor/VS Code via MCP",
+      "ai_capabilities": "AI triage: reachability plus AI SAST dataflow. AI autofix: Endor Patches and remediation workflows with codebase context; auto-PR upgrades. AI agents: AI Security Review agent (PR), AI SAST agents. MCP / IDE-agent: MCP servers for Claude, Cursor, VS Code (verified). AI code governance: yes, GA (agents, models, MCP servers, skills). AI-SPM: partial (AI code/model governance rather than runtime). NL query: via MCP and AI Chat. Model: vendor-hosted (multiple frontier models); BYOK in private beta (Oct 14, 2026) routes AI SAST and AI Chat requests through the Endor Labs AI Gateway to the customer's own OpenAI, Azure OpenAI, Gemini or Vertex AI account, all-or-nothing with no fallback; Anthropic and Bedrock not listed. On-prem AI: not documented (BYOK is customer-cloud, not on-prem).",
+      "ai_maturity": "GA (AI SAST, AI Security Review, MCP, AI Code Governance); BYOK for AI SAST and AI Chat: Beta or Preview (private beta, Oct 2026)",
+      "ai_verified_source": "https://www.endorlabs.com/learn/byok-for-endor-labs",
+      "integrations": "GitHub, GitLab, Azure DevOps, Bitbucket, Jenkins, CircleCI, Jira, Slack, Artifactory, container registries, Claude/Cursor/VS Code via MCP, Bright Security (DAST partnership, Oct 2026, per vendor), customer LLM accounts via BYOK (OpenAI, Azure OpenAI, Gemini, Vertex AI; private beta)",
       "sectors_reference_customers": "Egnyte, AppLovin, Peloton, Netskope, Atlassian (vendor site); technology, fintech",
       "analyst_position": "Gartner MQ SSCS June 2026: evaluated (placement not verified) | Gartner Cool Vendor / Market Guide SSCS: representative vendor (not verified) | Not rated in MQ AST / Forrester SAST",
       "cons_known_gaps": "No DAST and thin third-party ingestion; not a full ASPM | Younger platform components (AI SAST, container) vs flagship SCA | SaaS-first; on-prem unverified | Premium per-developer pricing | Venture-backed ($93M Series B, April 2025, reported); acquisition target risk",
@@ -717,9 +783,21 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Engineering-led organisations prioritising SCA accuracy, AI-generated code review and governance of coding agents",
-      "last_verified": "2026-10-05",
-      "sources": "https://www.endorlabs.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs",
+      "last_verified": "2026-10-19",
+      "sources": "https://www.endorlabs.com/ | https://www.endorlabs.com/learn | https://www.endorlabs.com/learn/byok-for-endor-labs | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs",
       "recent_updates": [
+        {
+          "date": "2026-10-14",
+          "type": "Feature launch",
+          "summary": "Endor Labs announced BYOK (bring your own key) for AI SAST and AI Chat: model requests route through the Endor Labs AI Gateway to the customer's own LLM provider account (OpenAI, Azure OpenAI, Gemini, Vertex AI; region selection for Azure OpenAI and Vertex AI) with an encrypted key store, provider allowlist and tenant isolation; BYOK is all-or-nothing with no fallback to Endor credentials. Private beta for Endor Labs customers; Anthropic and Bedrock are not listed.",
+          "source": "https://www.endorlabs.com/learn/byok-for-endor-labs"
+        },
+        {
+          "date": "2026-10-12",
+          "type": "Feature launch",
+          "summary": "Endor Labs and Bright Security announced a partnership to connect vulnerability discovery with remediation (integration details per vendor blog; depth not verified).",
+          "source": "https://www.endorlabs.com/learn/endor-labs-and-bright-security-partner-to-close-the-gap-between-discovery-and-remediation"
+        },
         {
           "date": "2026-09-27",
           "type": "Release",
@@ -748,7 +826,7 @@
       "indicative_cost_usd": "Team tier historically around $40 per contributor per month per product; Enterprise custom (verify current pricing page)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Security engineering teams wanting customisable, fast SAST with strong AI triage, typically fed into a separate ASPM",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://semgrep.dev/",
       "recent_updates": [
         {
@@ -791,8 +869,16 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations prioritising dependency hygiene automation (Renovate) and LLM application security alongside SCA",
-      "last_verified": "2026-10-05",
-      "sources": "https://www.mend.io/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/"
+      "last_verified": "2026-10-19",
+      "sources": "https://www.mend.io/ | https://www.mend.io/blog/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions/",
+      "recent_updates": [
+        {
+          "date": "2026-10-08",
+          "type": "Pricing change",
+          "summary": "Mend.io moved 184 open source organisations to the Renovate Community (OSS) plan (per vendor blog); this is a plan change for OSS maintainers, not a list-price change for commercial customers. An Oct 15 vendor post also promotes Mend AI Guardrails inspecting outbound data from sandboxed AI agents, without a launch or GA statement.",
+          "source": "https://www.mend.io/blog/renovate-community-oss-plan-upgrades/"
+        }
+      ]
     },
     {
       "tool": "JFrog Platform (Xray, Advanced Security, Curation, Runtime, AppTrust, AI Catalog)",
@@ -814,7 +900,7 @@
       "indicative_cost_usd": "Published entry tiers start in low hundreds USD/month for SaaS; Enterprise+ with security add-ons custom (typically six figures)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Enterprises standardised on Artifactory needing supply chain gating, SBOM/AI-BOM governance and air-gapped deployment",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-19",
       "sources": "https://jfrog.com/platform/ | https://jfrog.com/gartner-magic-quadrant/"
     },
     {
@@ -825,20 +911,28 @@
       "type": "Commercial (Nexus Repository OSS edition exists)",
       "deployment": "Hybrid: cloud and self-hosted; air-gap supported for Repository/Lifecycle/Firewall (verify per component)",
       "languages_coverage": "Modules: SCA (Lifecycle), Repository Firewall (malware/policy blocking incl. AI model firewall), Nexus Repository, SBOM Manager, Guide (steers developers and AI agents to safer components), MCP Server for agentic dependency management. SAST: none. DAST: none. Secrets/IaC: none. ASPM: none (supply chain governance). Language breadth: broad ecosystem coverage (Maven, npm, PyPI, NuGet, Go, etc.) and AI models (Hugging Face)",
-      "key_features": "Best-known OSS malware intelligence and Firewall blocking | Nexus One unifies Repository, Firewall, Lifecycle and Guide | AI model firewall guides AI coding assistants toward safer components | MCP Server for agents | SBOM Manager for regulatory (EU CRA, US EO) needs | Self-hosted and cloud",
-      "ai_capabilities": "AI triage: policy-based, with AI/ML malware detection in Firewall. AI autofix: upgrade recommendations (auto-PR via integrations; limited). AI agents: Guide steers agents; no autonomous agents. MCP / IDE-agent: Sonatype MCP Server (verified). AI code governance: AI model firewall, governs what AI agents pull. AI-SPM: partial (model supply chain). NL query: via MCP. Model: n/a. On-prem AI: self-hosted governance.",
+      "key_features": "Best-known OSS malware intelligence and Firewall blocking | Nexus One unifies Repository, Firewall, Lifecycle and Guide | Nexus Repository Pro+ embeds Repository Firewall in the repository to screen packages, AI models and MCP servers requested by developers or AI agents (Oct 2026); Enterprise tier announced to follow | AI model firewall guides AI coding assistants toward safer components | MCP Server for agents | SBOM Manager for regulatory (EU CRA, US EO) needs | Self-hosted and cloud",
+      "ai_capabilities": "AI triage: policy-based, with AI/ML malware detection in Firewall. AI autofix: upgrade recommendations (auto-PR via integrations; limited); Pro+ adds validated upgrade-path suggestions and targeted remediation automation (per vendor, Oct 2026). AI agents: Guide steers agents; no autonomous agents. MCP / IDE-agent: Sonatype MCP Server (verified). AI code governance: AI model firewall, governs what AI agents pull; Pro+ screens AI model and MCP server requests from agents at intake (Oct 2026). AI-SPM: partial (model supply chain). NL query: via MCP. Model: n/a. On-prem AI: self-hosted governance.",
       "ai_maturity": "GA (MCP Server, AI model firewall)",
       "ai_verified_source": "https://www.sonatype.com/",
       "integrations": "GitHub, GitLab, Jenkins, Azure DevOps, Jira, IDEs, Artifactory (competitive), Kubernetes, cloud",
       "sectors_reference_customers": "Financial services, government, defence; logos not verified",
       "analyst_position": "Gartner MQ SSCS June 2026: rated (placement not verified) | Not rated in MQ AST / ASPM radars",
       "cons_known_gaps": "Supply chain only: no SAST/DAST/secrets/ASPM | Competes with JFrog for repository standard; value hinges on Nexus adoption | Pricing per developer can be high for Lifecycle + Firewall | Nexus One is a 2025-2026 repackaging; migration effort for existing customers | No finding aggregation",
-      "pricing_model": "Per developer/user subscription with product bundles; Nexus Repository OSS free",
+      "pricing_model": "Per developer/user subscription with product bundles; Nexus Repository OSS free; Nexus Repository Pro+ tier (Firewall embedded) launched Oct 2026 and Enterprise tier announced, prices not published",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Organisations standardised on Nexus needing OSS malware blocking and SBOM governance, paired with a separate AST/ASPM platform",
-      "last_verified": "2026-09-28",
-      "sources": "https://www.sonatype.com/ | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs"
+      "last_verified": "2026-10-19",
+      "sources": "https://www.sonatype.com/ | https://www.sonatype.com/press-releases | https://www.sonatype.com/press-releases/sonatype-unveils-nexus-repository-pro-plus | https://www.reversinglabs.com/blog/5-takeaways-2026-gartner-magic-quadrant-sscs",
+      "recent_updates": [
+        {
+          "date": "2026-10-14",
+          "type": "Feature launch",
+          "summary": "Sonatype unveiled Nexus Repository Pro+, a repository tier that embeds Repository Firewall inside Nexus Repository to screen open source packages, AI models and MCP servers at the moment a developer or AI agent requests them, blocking or quarantining malicious, vulnerable or out-of-policy components (333M+ component catalog, per vendor) and suggesting validated upgrade paths. Pro+ is 'available today'; a Nexus Repository Enterprise tier is due 'in the coming weeks'. No pricing published.",
+          "source": "https://www.sonatype.com/press-releases/sonatype-unveils-nexus-repository-pro-plus"
+        }
+      ]
     },
     {
       "tool": "Contrast One (Contrast Security managed runtime security platform)",
@@ -906,7 +1000,7 @@
       "indicative_cost_usd": "$0 (Community); Pro from $1,200/year upward",
       "pricing_confidence": "High (entry price), Low (enterprise)",
       "best_fit_for": "Consulting delivery teams needing a vendor-neutral, client-deployable aggregation layer, and clients with budget or sovereignty constraints",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-19",
       "sources": "https://github.com/DefectDojo/django-DefectDojo | https://github.com/DefectDojo/django-DefectDojo/releases | https://appsecsanta.com/aspm-tools",
       "recent_updates": [
         {

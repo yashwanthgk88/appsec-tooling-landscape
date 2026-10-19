@@ -9,18 +9,18 @@
       "type": "Commercial",
       "deployment": "Hybrid (SaaS standard; on-site/on-prem deployment offered for US and Canadian federal editions)",
       "languages_coverage": "8,000+ requirements mapped to 100+ frameworks: PCI DSS, NIST 800-53, ISO 27001, SOC 2, HIPAA, NIST SSDF, NIST CSF 2.0 (compliance reports added Aug 2026), OWASP ASVS 5.0 (content for all three levels added in release 2026.8.2, 29 Aug 2026), OWASP Top 10 (2025), CWE, GDPR, EU CRA (countermeasures and weaknesses expanded in 2026.8.2), ANSI/ISA 62443 (four regulations added Aug 2026), NIST SP 800-218A and OWASP Agentic Skills Top 10 (AI content), MITRE EMB3D (threat library), Australian ISM, BSI, FDA, HDS, SAP security baseline (ABAP, Java, HANA, BTP). Tech stacks: survey-driven profiles covering web, mobile, cloud (AWS/Azure/GCP), containers, APIs, embedded, hardware/firmware, SaaS/COTS, AI/ML systems",
-      "key_features": "Survey/questionnaire-driven requirement generation from application profile and architecture|Deterministic requirements engine with 8,000+ requirements and fortnightly content updates|Traceability: push requirements as tasks to Jira (incl. OAuth and comment sync), Azure DevOps, GitHub, GitLab with status sync|Verification mapping: SAST/DAST validation incl. ZeroPath AI SAST and CI hooks (Jenkins, GitHub Actions, GitLab CI)|Agentic AI Workflow: MCP tools and workflow prompts (survey, generate, apply, verify staged handoff; skill-file generation; Devici threat model sync) enabled by default since 2026.8.2|Import of Devici threat models as project-specific countermeasures (since 2026.6.1)|Compliance reporting and audit-ready evidence (vendor claims 50-70% audit-prep reduction)|Just-in-Time Training (JITT) attached to requirements",
+      "key_features": "Survey/questionnaire-driven requirement generation from application profile and architecture|Deterministic requirements engine with 8,000+ requirements and fortnightly content updates|Traceability: push requirements as tasks to Jira (incl. OAuth and comment sync), Azure DevOps, GitHub, GitLab with status sync|Verification mapping: SAST/DAST validation incl. ZeroPath AI SAST and CI hooks (Jenkins, GitHub Actions, GitLab CI); scan report uploads accept listed file types up to a 16 MB default limit (documented in 2026.10.1)|Agentic AI Workflow: MCP tools and workflow prompts (survey, generate, apply, verify staged handoff; skill-file generation; Devici threat model sync) enabled by default since 2026.8.2|MCP server OAuth sign-in: SaaS administrators can enable OAuth for the MCP server and users connect Claude Code, GitHub Copilot in VS Code and ChatGPT Codex with OAuth (release 2026.10.1, no calendar date published)|Import of Devici threat models as project-specific countermeasures (since 2026.6.1)|Compliance reporting and audit-ready evidence (vendor claims 50-70% audit-prep reduction)|Just-in-Time Training (JITT) attached to requirements",
       "ai_capabilities": {
         "ai_generated_requirements": "Requirements are deterministic (library-driven), not LLM-generated; architecture-to-requirements via survey and via Devici OTM import; agentic workflow can drive the survey and apply countermeasures through MCP",
         "ai_assistant_over_standards": "Navigator: built-in AI assistant answering security/regulatory questions in context of a requirement (beta July 2024; Navigator v7 model default since 2026.6.3; disabled by default on AI Services deployments with a disclaimer since 2026.2.1)",
         "ai_mapping_findings_to_requirements": "Automated validation of requirements against SAST results (ZeroPath integration); 'scan-for-verification-validation' workflow prompt uses LLM scans to post verification notes against countermeasures (2026.5.2); '/verify-with-scanner' available by default since 2026.8.2",
         "automated_design_review": "Via Devici (sister product) threat modelling; '/sync-devici-threat-model' workflow prompt exports Open Threat Models from Devici into SD Elements (2026.9.1, 12 Sept 2026); not native LLM design review",
-        "agent_mcp_integration": "MCP server with integration tools and workflow prompts enabled by default (no feature flag) since 2026.8.2; pre-built countermeasure skill files for OWASP Top 10 Web/API, Docker, and OWASP Top 10 for Web in Rust and Go (added in 2026.9.1, 12 Sept 2026); delivers requirements to GitHub Copilot, Cursor, Claude and generic LLM agents; 'SD Elements for Agentic AI Workflow' announced 20 Feb 2026 (paid upgrade)",
+        "agent_mcp_integration": "MCP server with integration tools and workflow prompts enabled by default (no feature flag) since 2026.8.2; OAuth sign-in to the MCP server for Claude Code, GitHub Copilot in VS Code and ChatGPT Codex, enabled per SaaS tenant by administrators (release 2026.10.1, no calendar date published); pre-built countermeasure skill files for OWASP Top 10 Web/API, Docker, and OWASP Top 10 for Web in Rust and Go (added in 2026.9.1, 12 Sept 2026); delivers requirements to GitHub Copilot, Cursor, Claude and generic LLM agents; 'SD Elements for Agentic AI Workflow' announced 20 Feb 2026 (paid upgrade)",
         "model_used": "Not publicly disclosed; no BYO-LLM statement found"
       },
       "ai_maturity": "GA (Agentic AI Workflow / MCP announced Feb 2026 as released; Navigator model and data handling not disclosed)",
       "ai_verified_source": "https://docs.sdelements.com/master/guide/docs/release_notes/",
-      "integrations": "Jira, Azure DevOps, GitHub, GitLab, ServiceNow, Jenkins, GitHub Actions, GitLab CI, REST API, MCP server (Copilot/Cursor/Claude), ZeroPath and other SAST, Devici threat modelling (OTM)",
+      "integrations": "Jira, Azure DevOps, GitHub, GitLab, ServiceNow, Jenkins, GitHub Actions, GitLab CI, REST API, MCP server (Claude Code, GitHub Copilot, ChatGPT Codex, Cursor; OAuth sign-in since 2026.10.1), ZeroPath and other SAST, Devici threat modelling (OTM)",
       "sectors_reference_customers": "Financial services (top-3 North American bank case study: 51% fewer findings in new apps), US and Canadian federal government (dedicated editions), regulated enterprises; 'hundreds of development teams'",
       "analyst_position": "De facto category leader for security requirements management; no dedicated Gartner MQ for this category. Listed as Gartner Peer Insights reviewed; analyst rankings for this niche not available",
       "cons_known_gaps": "Enterprise-only pricing (from ~$75K/yr) excludes small teams|Survey overhead and content tuning effort; requirement volume can overwhelm developers without careful profile scoping|Navigator model, hosting and data-retention details not public; BYO-LLM not documented|Agentic AI Workflow is a paid add-on; MCP tools now on by default so admins must govern agent access|On-prem outside federal editions is by request",
@@ -28,8 +28,9 @@
       "indicative_cost_usd": "Enterprise 'starting at $75K annually' (vendor pricing page, North America); federal editions custom",
       "pricing_confidence": "High",
       "best_fit_for": "Large regulated enterprises needing auditable, deterministic requirements pushed into Jira/ADO with compliance evidence; organizations governing AI coding agents with a policy layer",
-      "last_verified": "2026-10-05",
-      "sources": "https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/sdelements/pricing/|https://www.helpnetsecurity.com/2026/02/20/security-compass-sd-elements-for-agentic-ai-workflow/|https://www.businesswire.com/news/home/20240710201204/en/Security-Compass-Expands-Industry-Leading-AI-Security-Content-and-Introduces-AI-Powered-Navigator-Beta|https://www.securitycompass.com/sdelements/navigator/"
+      "last_verified": "2026-10-19",
+      "sources": "https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/sdelements/pricing/|https://docs.sdelements.com/master/guide/docs/whatsnew.html|https://www.helpnetsecurity.com/2026/02/20/security-compass-sd-elements-for-agentic-ai-workflow/|https://www.businesswire.com/news/home/20240710201204/en/Security-Compass-Expands-Industry-Leading-AI-Security-Content-and-Introduces-AI-Powered-Navigator-Beta|https://www.securitycompass.com/sdelements/navigator/",
+      "recent_updates": []
     },
     {
       "tool": "Devici (threat modelling feeding SD Elements requirements)",
@@ -58,7 +59,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "SD Elements customers wanting a developer-friendly threat model that auto-derives requirements",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.securitycompass.com/devici/|https://www.securitycompass.com/sdelements/|https://www.securitycompass.com/agentic-ai/"
     },
     {
@@ -88,7 +89,7 @@
       "indicative_cost_usd": "Not publicly disclosed; AWS Marketplace listing exists (private offers)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want requirements derived from an architecture-level threat model with strong Jira/ADO round-trip",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.iriusrisk.com/threat-modeling-platform|https://www.iriusrisk.com/documentation/use-our-ai-assistant-jeff|https://www.iriusrisk.com/documentation/countermeasures|https://aws.amazon.com/marketplace/pp/prodview-lw45ujzidwkf2"
     },
     {
@@ -118,7 +119,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises with cloud/OT/product-security scope wanting requirements bound to a governed design graph",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-19",
       "sources": "https://www.threatmodeler.ai/platform|https://www.helpnetsecurity.com/2026/06/26/threatmodeler-introduces-nexus-to-automate-threat-modeling-with-ai-governance/|https://www.threatmodeler.ai/resources/white-paper/2026-buyers-guide",
       "recent_updates": [
         {
@@ -276,7 +277,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline requirement corpus for every engagement; grounding data for LLM prompts",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://github.com/OWASP/ASVS|https://github.com/OWASP/ASVS/blob/master/5.0/en/0x03-What-is-the-ASVS.md|https://www.securecodinghub.com/blog/owasp-asvs-4-vs-5-changes-developers|https://www.cyberchief.ai/2025/10/owasp-asvs-v5-raising-bar-for.html"
     },
     {
@@ -306,7 +307,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Measuring and roadmapping the client's Security Requirements practice maturity",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://owaspsamm.org/model/|https://github.com/owaspsamm/core/releases/tag/v2.1.0|https://github.com/owaspsamm/core/releases/tag/v2.2.0|https://owaspsamm.org/docs/tools/assessment-tools/"
     },
     {
@@ -336,7 +337,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Mobile app requirement baselines and pentest scoping",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://mas.owasp.org/|https://github.com/OWASP/owasp-masvs/releases"
     },
     {
@@ -366,7 +367,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Tracking DevSecOps activity maturity alongside SAMM",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://dsomm.owasp.org/|https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel|https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel/releases"
     },
     {
@@ -426,7 +427,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Building crosswalks (ASVS 5.0 to 800-53/PCI/CRA) for a requirements library",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-19",
       "sources": "https://www.opencre.org/|https://owaspai.org/docs/ai_security_overview/"
     },
     {
@@ -456,7 +457,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "LatAm clients wanting ASPM plus requirements in one platform",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://blog.convisoappsec.com/en/automation-of-security-requirements-with-the-conviso-platform-api/|https://www.convisoappsec.com/conviso-platform|https://docs.convisoappsec.com/|https://aws.amazon.com/marketplace/pp/prodview-mzkypegjogyl2",
       "recent_updates": [
         {
@@ -524,7 +525,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Closing the loop from requirements to verified findings at enterprise scale",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.armorcode.com/platform"
     },
     {
@@ -584,7 +585,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Existing Checkmarx One customers; not a standalone option any more",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-19",
       "sources": "https://www.tromzo.com/|https://checkmarx.com/company/press-releases/"
     },
     {
@@ -685,13 +686,13 @@
       "type": "Open-core (GitLab) / Commercial with free tier (Snyk Learn)",
       "deployment": "SaaS / On-prem (GitLab self-managed, Dedicated)",
       "languages_coverage": "GitLab: scan execution and merge request approval policies (policy-as-code), compliance frameworks; Snyk Learn: lessons aligned to NIST NICE, CWE-based topics, product training",
-      "key_features": "Policy-as-code enforcement of scanners in pipelines|Compliance frameworks and pipelines (Ultimate)|Vulnerability management in MR|GitLab Duo vulnerability explanation/resolution|Automated triage and remediation profiles applied across groups and projects, bulk due-date API and group-level scanner coverage inventory (19.4, Sep 2026)|Vulnerability tools exposed through the GitLab MCP Server for agents (19.4)|Snyk Learn just-in-time lessons tied to Snyk findings",
+      "key_features": "Policy-as-code enforcement of scanners in pipelines|Compliance frameworks and pipelines (Ultimate); compliance framework requirements with five controls can be edited (19.5)|Vulnerability management in MR; MR security report comparison covers up to 1,000 findings per severity (19.5)|GitLab Duo vulnerability explanation/resolution; AI flows run on tracked non-default branches (19.5)|Automated triage and remediation profiles applied across groups and projects, bulk due-date API and group-level scanner coverage inventory (19.4, Sep 2026)|Vulnerability tracking on up to three non-default branches or tags, GA (19.5, Oct 2026)|Customisable SAST and Secret Detection configuration profiles in the UI (19.5)|Business Logic Security Analyzer for authorization flaws, closed beta on GitLab.com (19.5)|GitLab Secrets Manager GA, OpenBao-based (19.5)|Vulnerability tools exposed through the GitLab MCP Server for agents (19.4); MCP Server GA with toolset selection (19.5)|Snyk Learn just-in-time lessons tied to Snyk findings",
       "ai_capabilities": {
         "ai_generated_requirements": "No",
         "ai_assistant_over_standards": "GitLab Duo chat (general)",
         "ai_mapping_findings_to_requirements": "No",
         "automated_design_review": "No",
-        "agent_mcp_integration": "GitLab Duo Agent Platform (2025-2026) and GitLab MCP Server with vulnerability list/get/manage tools (19.4, Sep 2026); not requirement-specific",
+        "agent_mcp_integration": "GitLab Duo Agent Platform (2025-2026); GitLab MCP Server with vulnerability list/get/manage tools (19.4, Sep 2026) and GA on Free, Premium and Ultimate with toolset selection and GitLab.com rate limits (19.5, 15 Oct 2026); Externally Connected Agents can be connected to AI Governance audit events (beta, 19.5); not requirement-specific",
         "model_used": "GitLab: Anthropic/Google models (per GitLab docs, unverified this session)"
       },
       "ai_maturity": "GA (Duo); not security-requirements AI",
@@ -704,9 +705,15 @@
       "indicative_cost_usd": "GitLab Ultimate list ~$99/user/month (unverified this session); Snyk Learn $0",
       "pricing_confidence": "Low",
       "best_fit_for": "Enforcing verification of requirements in CI and training developers",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-19",
       "sources": "https://docs.gitlab.com/user/application_security/|https://learn.snyk.io/",
       "recent_updates": [
+        {
+          "date": "2026-10-15",
+          "type": "Release",
+          "summary": "GitLab 19.5 makes the GitLab MCP Server GA on all tiers with admin and user toolset selection and GitLab.com rate limits (60 requests per minute Free, 600 Premium and Ultimate), ships GitLab Secrets Manager GA (OpenBao-based, Premium and Ultimate), and for Ultimate adds GA vulnerability tracking on up to three non-default branches, customisable SAST and Secret Detection configuration profiles, AI flows (SAST false positive detection and vulnerability resolution) on tracked branches, merge request security report comparison of up to 1,000 findings per severity, and a closed beta Business Logic Security Analyzer (GitLab.com only, consumes GitLab Credits). Externally Connected Agents can be joined to AI Governance audit events in beta; no security-requirements feature is included.",
+          "source": "https://docs.gitlab.com/releases/19/gitlab-19-5-released/"
+        },
         {
           "date": "2026-09-17",
           "type": "Release",
@@ -802,7 +809,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Watchlist; evaluate alongside Seezo",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-19",
       "sources": "https://www.primesecurity.ai/|https://news.crunchbase.com/cybersecurity/solid-startup-venture-funding-growth-h1-2026/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown",
       "recent_updates": [
         {
