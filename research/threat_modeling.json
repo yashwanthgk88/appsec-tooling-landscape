@@ -33,8 +33,8 @@
       "type": "Commercial",
       "deployment": "SaaS (ThreatModeler Nexus FedRAMP Moderate authorised, Sept 2026, Knox-sponsored) / On-prem and private cloud historically offered (confirm current availability with vendor)",
       "languages_coverage": "Diagrams and EA imports, IaC (Terraform, CloudFormation, Azure Resource Manager via IaC-Assist), live cloud accounts (AWS, Azure, GCP via CloudModeler), documents, natural language via MCP-connected AI assistants",
-      "key_features": "Agentic platform with System Mapping, Graph and Reporting agents over a 'Secure Design Graph' | STRIDE, PASTA and CSA MAESTRO for agentic systems | Control mapping to NIST, ISO 27001, PCI DSS, HIPAA, DORA, EU AI Act; claims 180+ frameworks | CloudModeler live import and threat-drift tracking for AWS/Azure/GCP | IaC-Assist analyses Terraform/CloudFormation/ARM in the IDE | ThreatModeler MCP server for GitHub, IDEs and AI assistants",
-      "ai_capabilities": "AI-generated threat model from documents, diagrams, IaC and cloud context (System Mapping Agent) | AI assistant for threats and mitigations (Graph Agent enrichment, Reporting Agent) | LLM-based diagram creation (system map generated from inputs) | AI threat libraries for AI/agentic systems (MAESTRO support, EU AI Act mapping) | Agent/MCP integration (ThreatModeler MCP Server, GA per product pages) | Model used: not publicly disclosed; BYO-LLM not documented | On-prem AI option: not publicly disclosed",
+      "key_features": "Agentic platform with System Mapping, Graph and Reporting agents over a 'Secure Design Graph' | STRIDE, PASTA and CSA MAESTRO for agentic systems | Control mapping to NIST, ISO 27001, PCI DSS, HIPAA, DORA, EU AI Act; claims 180+ frameworks | CloudModeler live import and threat-drift tracking for AWS/Azure/GCP | IaC-Assist analyses Terraform/CloudFormation/ARM in the IDE | ThreatModeler MCP server for GitHub, IDEs and AI assistants | NexusAI (launched 20 Oct 2026, vendor claim): threat model creation from natural language, diagrams, documentation and application context, AI-generated threat and requirement recommendations, and architectural-change detection that proposes threat model updates for human review",
+      "ai_capabilities": "AI-generated threat model from documents, diagrams, IaC and cloud context (System Mapping Agent; NexusAI, launched Oct 2026, adds natural-language and documentation inputs, vendor claim) | AI assistant for threats and mitigations (Graph Agent enrichment, Reporting Agent; NexusAI AI-generated recommendations) | LLM-based diagram creation (system map generated from inputs) | AI threat libraries for AI/agentic systems (MAESTRO support, EU AI Act mapping) | Agent/MCP integration (ThreatModeler MCP Server, GA per product pages) | Continuous maintenance: NexusAI detects architectural changes and proposes threat model updates for human review (vendor claim, Oct 2026) | Model used: not publicly disclosed; BYO-LLM not documented | On-prem AI option: not publicly disclosed",
       "ai_maturity": "GA (Nexus agents and MCP server are marketed as shipping; independent validation of agent quality limited to 1 Gartner PI review)",
       "ai_verified_source": "https://www.threatmodeler.ai/products/cloudmodeler",
       "integrations": "Jira and ticketing, CI/CD, GitHub, IDEs, diagram and EA import, AWS/Azure/GCP connectors, MCP server, REST API",
@@ -45,9 +45,15 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals typically six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises and US federal agencies needing cloud-native, portfolio-scale threat modeling with FedRAMP and MCP-driven automation",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.threatmodeler.ai/ | https://www.threatmodeler.ai/products/cloudmodeler | https://www.threatmodeler.ai/platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://finance.yahoo.com/news/threatmodeler-raises-60-million-invictus-133000790.html",
       "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "ThreatModeler launched NexusAI, an AI component of the ThreatModeler Nexus platform that generates and explores threat models from natural language, diagrams, documentation and existing application context, identifies threats, security requirements and risks with AI-generated recommendations, and detects architectural changes to propose threat model updates for human review (vendor claim). It runs on the Secure Design Graph; availability dates and pricing were not stated.",
+          "source": "https://www.helpnetsecurity.com/?p=388486"
+        },
         {
           "date": "2026-09-14",
           "type": "Feature GA",
@@ -138,7 +144,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams that want AI-first, code-to-threat-model automation with their own LLM keys and existing SecureFlag training",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.secureflag.com/threat-modeling/ | https://blog.secureflag.com/2026/01/13/code-repo-to-threatcanvas/ | https://owasp.github.io/blog/2024/05/30/secureflag-threatcanvas-member-benefit | https://www.gartner.com/reviews/market/threat-modeling-automation/vendor/secureflag/product/threat-canvas | https://www.securecodewarrior.com/article/threat-modeling-with-ai-turning-every-developer-into-a-threat-modeler",
       "recent_updates": [
         {
@@ -169,7 +175,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Quick STRIDE DFD exercises, training, Microsoft-stack teams with no budget",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-releases | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://www.gartner.com/reviews/market/threat-modeling-automation"
     },
     {
@@ -192,7 +198,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Teams needing a free, auditable diagram-based tool with Git-native storage and Cornucopia gameplay",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/owasp/threat-dragon/releases | https://owasp.org/www-project-threat-dragon/ | https://github.com/OWASP/threat-dragon"
     },
     {
@@ -215,7 +221,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Platform and DevSecOps teams that want threat models versioned next to code in CI",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/OWASP/pytm | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://cybersectools.com/categories/threat-modeling"
     },
     {
@@ -238,7 +244,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "DevSecOps teams wanting version-controlled, pipeline-executed threat models with PDF evidence",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/Threagile/threagile | https://versprite.com/threat-modeling-tools/threat-modeling-tools-compared/ | https://plurilock.com/glossary/threat-modeling-as-code/"
     },
     {
@@ -261,7 +267,7 @@
       "indicative_cost_usd": "$0 plus LLM tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AppSec teams prototyping AI-assisted STRIDE, or as a reference implementation for an internal BYO-LLM tool",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/mrwadams/stride-gpt | https://github.com/mrwadams/stride-gpt/releases | https://github.com/mrwadams/mcp-stride-gpt | https://pypi.org/project/stride-gpt/",
       "recent_updates": [
         {
@@ -280,9 +286,9 @@
       "type": "Open source (Apache-2.0)",
       "deployment": "Web (GitHub Pages demo or self-hosted via CDK) / Desktop (VS Code extension via AWS Toolkit, browser extension) / CLI and MCP server",
       "languages_coverage": "Structured threat statements (grammar-based), .tc.json files, source code (CLI/MCP generate starter model from codebase), natural language through MCP clients",
-      "key_features": "Threat statement grammar and reference packs | Assumptions, mitigations, insights dashboards | VS Code and browser extensions rendering .tc.json in GitHub/GitLab/Bitbucket | AI-assisted CLI and MCP server built on AWS Bedrock and Strands agents | Separate awslabs threat-modeling-mcp-server: 9-phase STRIDE workflow, 11 tools incl. code validation evidence",
-      "ai_capabilities": "AI-generated threat model from code: yes (CLI/MCP multi-agent, Bedrock) | AI assistant for threats and mitigations: yes via MCP | LLM-based diagram creation: no | AI threat libraries for AI systems: not specific | Agent/MCP: yes, two AWS MCP servers | Model: Amazon Bedrock, default Claude Sonnet 4.5 since v1.0.83 (June 2026), per-model sampling params since v1.0.84 | On-prem AI: no (Bedrock)",
-      "ai_maturity": "GA (active releases through v1.0.85, 2026-08-24)",
+      "key_features": "Threat statement grammar and reference packs | Assumptions, mitigations, insights dashboards | VS Code and browser extensions rendering .tc.json in GitHub/GitLab/Bitbucket | AI-assisted CLI and MCP server built on AWS Bedrock and Strands agents | Separate awslabs threat-modeling-mcp-server: 9-phase STRIDE workflow, 11 tools incl. code validation evidence | Basic quality evaluation of AI-generated threat modeling output (v1.0.86, Oct 2026)",
+      "ai_capabilities": "AI-generated threat model from code: yes (CLI/MCP multi-agent, Bedrock) | AI assistant for threats and mitigations: yes via MCP | LLM-based diagram creation: no | AI threat libraries for AI systems: not specific | Agent/MCP: yes, two AWS MCP servers | Model: Amazon Bedrock, default Claude Sonnet 4.5 since v1.0.83 (June 2026), per-model sampling params since v1.0.84 | On-prem AI: no (Bedrock) | Output quality: basic built-in quality evaluation of AI threat modeling output since v1.0.86 (Oct 2026)",
+      "ai_maturity": "GA (active releases through v1.0.87, 2026-10-21)",
       "ai_verified_source": "https://github.com/awslabs/threat-composer/releases",
       "integrations": "VS Code, GitHub/GitLab/Bitbucket (browser extension), MCP clients (Claude, Amazon Q Developer, Cursor), AWS CDK deploy; no Jira",
       "sectors_reference_customers": "AWS customers and Solutions Architects; 780 stars",
@@ -292,8 +298,22 @@
       "indicative_cost_usd": "$0 plus Bedrock tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AWS-centric teams wanting lightweight threat statements in Git and agent-driven starter models from code",
-      "last_verified": "2026-10-19",
-      "sources": "https://github.com/awslabs/threat-composer | https://github.com/awslabs/threat-composer/releases | https://github.com/awslabs/threat-modeling-mcp-server | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/"
+      "last_verified": "2026-10-26",
+      "sources": "https://github.com/awslabs/threat-composer | https://github.com/awslabs/threat-composer/releases | https://github.com/awslabs/threat-modeling-mcp-server | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/",
+      "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Release",
+          "summary": "Threat Composer v1.0.87 is a bug-fix release for the AI component that pins strands-agents version floors to avoid placeholder dependency resolution (#362, #363).",
+          "source": "https://github.com/awslabs/threat-composer/releases/tag/v1.0.87"
+        },
+        {
+          "date": "2026-10-14",
+          "type": "Release",
+          "summary": "Threat Composer v1.0.86 adds a basic quality evaluation for AI-generated threat modeling output in the AI (CLI/MCP) component (PR #354, closes #346).",
+          "source": "https://github.com/awslabs/threat-composer/releases/tag/v1.0.86"
+        }
+      ]
     },
     {
       "tool": "Seezo",
@@ -380,12 +400,12 @@
       "integrations": "Diagram tools import; no Jira/ADO documented",
       "sectors_reference_customers": "Not publicly disclosed",
       "analyst_position": "not rated",
-      "cons_known_gaps": "Website copyright 2024 and blog last updated Nov 2023: low visible activity | No AI | Narrow input set | No published pricing or customers | Vendor viability risk",
+      "cons_known_gaps": "Website copyright 2024 and blog last updated Nov 2023: low visible activity | Toreon Threat Modeling Tool Directory (README version 2 May 2026) lists Tutamen Threat Model Automator as archived (third-party listing, not vendor confirmed; vendor site unreachable this run) | No AI | Narrow input set | No published pricing or customers | Vendor viability risk",
       "pricing_model": "Quote",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Small teams with Visio/draw.io diagrams wanting rules-based automation; treat as niche/legacy",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-26",
       "sources": "https://tutamantic.com/ | https://sourceforge.net/software/product/Tutamen-Threat-Model-Automator4/ | https://tutamanticsec.ghost.io/how-threat-model-automation-solves-the-challenge-for-small-development-teams-in-large-organisations/"
     },
     {
@@ -408,7 +428,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Research or human-factors-heavy security requirements work; not recommended for enterprise programmes",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/cairis-platform/cairis | https://cybersectools.com/categories/threat-modeling"
     },
     {
@@ -454,7 +474,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Validating that threats identified in a model have working detections; not a threat modeling tool",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/DataDog/threatest"
     },
     {
@@ -619,7 +639,7 @@
       "type": "Framework or method",
       "deployment": "SaaS (Microsoft cloud)",
       "languages_coverage": "Natural language, Azure architecture docs, code via GitHub Copilot agent mode; no TMT (.tm7) ingestion",
-      "key_features": "Prompt-based STRIDE drafts using Copilot | Microsoft SDL and AI/ML threat modeling guidance (11 AI/ML threat classes, updated Mar 2025) as prompt context | GitHub Copilot can call threat modeling MCP servers | Security Copilot focuses on SOC, not design threat modeling",
+      "key_features": "Prompt-based STRIDE drafts using Copilot | Microsoft SDL and AI/ML threat modeling guidance (11 AI/ML threat classes, updated Mar 2025) as prompt context | Microsoft SFI 'Complete AI threat modeling' guidance for generative and agentic systems (updated Feb 2026) as additional prompt context | GitHub Copilot can call threat modeling MCP servers | Security Copilot focuses on SOC, not design threat modeling",
       "ai_capabilities": "AI-generated threat model: via prompting only; no first-party threat modeling agent or TMT integration found | AI assistant: yes | Model: OpenAI/Microsoft models | On-prem AI: no",
       "ai_maturity": "Marketing claim / method (no dedicated Microsoft threat modeling AI product verified)",
       "ai_verified_source": "https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml",
@@ -631,7 +651,7 @@
       "indicative_cost_usd": "GitHub Copilot Business ~$19/user/month; M365 Copilot ~$30/user/month (list prices, subject to change)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Microsoft-centric teams using Copilot in IDE with the AI/ML SDL guidance as a checklist",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-26",
       "sources": "https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml | https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-releases"
     },
     {
@@ -642,7 +662,7 @@
       "type": "Framework or method (open-source MCP servers on Bedrock)",
       "deployment": "SaaS (Bedrock inference) / self-hosted MCP servers",
       "languages_coverage": "Source code, natural language, CDK/CloudFormation context via Amazon Q Developer or any MCP client",
-      "key_features": "awslabs threat-modeling-mcp-server: 9-phase guided STRIDE workflow, 11 tools, code-validation evidence, export | Threat Composer CLI/MCP: multi-agent starter threat model from codebase on Bedrock (Strands agents) | Runs in Amazon Q Developer CLI, Claude Code, Cursor",
+      "key_features": "awslabs threat-modeling-mcp-server: 9-phase guided STRIDE workflow, 11 tools, code-validation evidence, export | Threat Composer CLI/MCP: multi-agent starter threat model from codebase on Bedrock (Strands agents), with basic output quality evaluation since v1.0.86 (Oct 2026) | Runs in Amazon Q Developer CLI, Claude Code, Cursor",
       "ai_capabilities": "AI-generated threat model from code: yes | AI assistant: yes | LLM diagram creation: no | AI threat libraries for AI systems: no specific | Agent/MCP: yes (core) | Model: Bedrock, default Claude Sonnet 4.5 | On-prem AI: no",
       "ai_maturity": "GA as open-source (awslabs); not an AWS supported service",
       "ai_verified_source": "https://github.com/awslabs/threat-composer/releases",
@@ -654,8 +674,16 @@
       "indicative_cost_usd": "Amazon Q Developer Pro ~$19/user/month plus Bedrock tokens",
       "pricing_confidence": "Medium",
       "best_fit_for": "AWS-native teams embedding threat modeling into agentic developer workflows",
-      "last_verified": "2026-10-19",
-      "sources": "https://github.com/awslabs/threat-modeling-mcp-server | https://github.com/awslabs/threat-composer | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/"
+      "last_verified": "2026-10-26",
+      "sources": "https://github.com/awslabs/threat-modeling-mcp-server | https://github.com/awslabs/threat-composer | https://cafeai.home.blog/2026/05/27/threat-modeling-mcp-server/",
+      "recent_updates": [
+        {
+          "date": "2026-10-14",
+          "type": "Release",
+          "summary": "The Threat Composer CLI/MCP AI component used in this workflow gained a basic quality evaluation for AI-generated threat modeling output in v1.0.86 (followed by v1.0.87 on 2026-10-21 pinning strands-agents dependency floors). The separate awslabs threat-modeling-mcp-server repo could not be checked this run.",
+          "source": "https://github.com/awslabs/threat-composer/releases/tag/v1.0.86"
+        }
+      ]
     },
     {
       "tool": "Shostack + Associates tools (Elevation of Privilege, Threats book, Fast Cheap + Good, training)",
@@ -755,7 +783,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline threat checklist for any LLM-integrated feature",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://genai.owasp.org/llm-top-10/ | https://genai.owasp.org/ | https://github.com/OWASP/pytm"
     },
     {
@@ -778,7 +806,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Primary threat catalogue for agentic and MCP-based systems",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://genai.owasp.org/initiatives/agentic-security-initiative/ | https://genai.owasp.org/initiatives/ | https://genai.owasp.org/"
     },
     {
@@ -859,19 +887,19 @@
       "type": "Framework or method",
       "deployment": "Web",
       "languages_coverage": "Microsoft: SDL questions plus 11 AI/ML threat classes (adversarial perturbation, targeted and indiscriminate data poisoning, model inversion, membership inference, model stealing, neural net reprogramming, physical-domain adversarial examples, malicious ML providers, ML supply chain, backdoored models, software dependencies); last updated 2025-03-12 | Google SAIF Risk Map: risk-to-control map across data, infrastructure, model, application and agent layers (unverified this session)",
-      "key_features": "Microsoft AETHER-authored living guidance with Failure Modes in ML taxonomy and AI/ML bug bar | Google SAIF risk map with self-assessment and control mapping",
+      "key_features": "Microsoft AETHER-authored living guidance with Failure Modes in ML taxonomy and AI/ML bug bar (visible last-updated 2025-03-12) | Microsoft Secure Future Initiative pattern 'Complete AI threat modeling' (Zero Trust docs, ms.date 2025-08-05, page last updated 2026-02-24): five-step practice for generative and agentic AI covering prompt construction, memory, tool calls, trust boundaries, human-in-the-loop controls and observability, linking to OWASP Agentic Threats and Mitigations and Entra Agent ID | Google SAIF risk map with self-assessment and control mapping, plus a Focus on Agents section and an Agent Risk Self Assessment",
       "ai_capabilities": "Framework only",
       "ai_maturity": "None",
       "ai_verified_source": "https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml",
       "integrations": "None",
       "sectors_reference_customers": "Industry reference",
       "analyst_position": "not rated",
-      "cons_known_gaps": "Microsoft guidance predates LLM/agentic era in structure despite 2025 refresh | SAIF page not fetched this session",
+      "cons_known_gaps": "Microsoft AETHER guidance predates LLM/agentic era in structure despite 2025 refresh; agentic coverage lives in the separate SFI page | SAIF pages carry no publication or last-updated dates, so changes cannot be tracked by date | Framework only: no tooling, templates or code samples",
       "pricing_model": "Free",
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Question sets for security engineer and data scientist threat modeling conversations",
-      "last_verified": "2026-09-26 (partially)",
+      "last_verified": "2026-10-26",
       "sources": "https://learn.microsoft.com/en-us/security/engineering/threat-modeling-aiml | https://saif.google/secure-ai-framework/risks"
     },
     {
@@ -894,7 +922,7 @@
       "indicative_cost_usd": "Free; self-hosting infrastructure and LLM token costs only",
       "pricing_confidence": "High",
       "best_fit_for": "Teams wanting a free, self-hosted, AI-assisted successor to Threat Dragon with TM-BOM portability; pilots and internal accelerators; not yet for regulated client delivery",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.precogly.org/ | https://github.com/precogly/precogly | https://github.com/OWASP/Precogly | https://precogly.github.io/precogly/concepts/threat-model-as-code/",
       "recent_updates": [
         {

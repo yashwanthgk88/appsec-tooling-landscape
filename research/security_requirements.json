@@ -100,12 +100,12 @@
       "type": "Commercial",
       "deployment": "SaaS (on-prem historically offered; FedRAMP Moderate authorization achieved via Knox Systems partnership, announced 16 Sept 2026)",
       "languages_coverage": "3,500+ security requirements, 1,500+ threats, 3,000+ components, 180+ compliance frameworks incl. NIST, ISO 27001, PCI DSS, HIPAA, DORA, EU AI Act; methodologies STRIDE, PASTA, CSA MAESTRO; app, cloud/hybrid, OT, automotive, medical devices",
-      "key_features": "Secure Design Graph as single source of truth for components-threats-controls-compliance|Requirements/controls generated from model and exported to ticketing|Multi-agent automation (System Mapping, Graph, Reporting agents)|Audit-ready compliance reporting|Integrations with diagram/EA tools, CI/CD, cloud",
+      "key_features": "Secure Design Graph as single source of truth for components-threats-controls-compliance|Requirements/controls generated from model and exported to ticketing|Multi-agent automation (System Mapping, Graph, Reporting agents)|Audit-ready compliance reporting|Integrations with diagram/EA tools, CI/CD, cloud|NexusAI: AI threat modelling partner inside Nexus that creates threat models from natural language, diagrams and documentation, surfaces threats, security requirements and risks with AI recommendations, and detects architecture changes to propose threat model updates for human review (launched 20 Oct 2026; GA/preview status and pricing not stated, vendor claim)",
       "ai_capabilities": {
-        "ai_generated_requirements": "System Mapping Agent builds models from docs, diagrams, IaC, code; Graph Agent enriches controls; requirements derive from graph",
+        "ai_generated_requirements": "System Mapping Agent builds models from docs, diagrams, IaC, code; Graph Agent enriches controls; requirements derive from graph; NexusAI (launched 20 Oct 2026) generates threat models from natural language, diagrams, documentation and application context and surfaces security requirements and risks with AI-generated recommendations (vendor claim)",
         "ai_assistant_over_standards": "Not specifically described",
         "ai_mapping_findings_to_requirements": "Not described",
-        "automated_design_review": "Yes, agentic secure design control plane (GA 26 June 2026)",
+        "automated_design_review": "Yes, agentic secure design control plane (GA 26 June 2026); NexusAI adds architectural change detection that proposes threat model updates for human review (launched 20 Oct 2026; availability tier not stated)",
         "agent_mcp_integration": "MCP server for AI coding tools and agentic workflows",
         "model_used": "Bring Your Own AI model supported (vendor site)"
       },
@@ -114,14 +114,20 @@
       "integrations": "Ticketing (Jira, ADO), diagram and EA tools, CI/CD, cloud platforms (AWS/Azure/GCP), IDEs, MCP",
       "sectors_reference_customers": "Global financial services firm at scale (50% threat-modelling effort reduction claim); US federal agencies via FedRAMP Moderate authorization (Sept 2026)",
       "analyst_position": "Established threat-modelling automation vendor; Nexus is a 2026 repositioning as agentic secure design platform; acquired IriusRisk in Jan 2026 (Invictus Growth Partners majority owner), making the combined company the category leader in threat-modelling automation",
-      "cons_known_gaps": "Requirements are a by-product of threat models; weak fit for questionnaire-only requirement programs|Pricing undisclosed|Rebrand to threatmodeler.ai in 2026 creates documentation churn|Independent validation of agent accuracy not available",
+      "cons_known_gaps": "Requirements are a by-product of threat models; weak fit for questionnaire-only requirement programs|Pricing undisclosed|Rebrand to threatmodeler.ai in 2026 creates documentation churn|Independent validation of agent accuracy not available|NexusAI launch coverage (20 Oct 2026) does not state GA or preview status, pricing, model or data-handling details",
       "pricing_model": "Enterprise subscription",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises with cloud/OT/product-security scope wanting requirements bound to a governed design graph",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.threatmodeler.ai/platform|https://www.helpnetsecurity.com/2026/06/26/threatmodeler-introduces-nexus-to-automate-threat-modeling-with-ai-governance/|https://www.threatmodeler.ai/resources/white-paper/2026-buyers-guide",
       "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "ThreatModeler launched NexusAI, an AI threat modelling partner inside the ThreatModeler Nexus platform. It generates threat models from natural language, diagrams, documentation and existing application context, identifies threats, security requirements and risks with AI-generated recommendations, and detects architecture changes to propose threat model updates for human review (vendor claim). GA or preview status, pricing and MCP support were not stated in the launch coverage.",
+          "source": "https://www.helpnetsecurity.com/2026/10/20/threatmodeler-nexusai/"
+        },
         {
           "date": "2026-09-16",
           "type": "Feature launch",
@@ -142,13 +148,13 @@
       "ai_capabilities": {
         "ai_generated_requirements": "No; plans are curated tool-control bundles, not textual requirements",
         "ai_assistant_over_standards": "Not described",
-        "ai_mapping_findings_to_requirements": "Findings mapped to plan items/controls (rules-based); AI agents for triage/fix marketed",
+        "ai_mapping_findings_to_requirements": "Findings mapped to plan items/controls (rules-based); AI agents for triage/fix marketed; Company Knowledge Graph adds OWASP ASVS, PCI DSS and SOC 2 compliance context to prioritisation (vendor blog, 7 Oct 2025)",
         "automated_design_review": "No",
-        "agent_mcp_integration": "AI agents for product security marketed (2026 review sites); MCP not verified",
+        "agent_mcp_integration": "Agentic AppSec platform launched 7 Oct 2025 (vendor blog): Sera (Security Evaluation and Remediation Agent) runs risk assessments and mitigation plans, recurring workflow agents run assessments and reporting, ad-hoc triage agents search Jira, create Slack channels, write Notion summaries and change S3 bucket ACLs; agents connect to tools and data through Model Context Protocol; custom agents announced as coming; GA status not stated",
         "model_used": "Not publicly disclosed"
       },
-      "ai_maturity": "Marketing claim (AI agents marketed; requirement-specific AI not verified)",
-      "ai_verified_source": "https://appsecsanta.com/jit",
+      "ai_maturity": "Marketing claim (agentic platform launch verified on vendor blog 7 Oct 2025; GA status not stated; requirement-specific AI not described)",
+      "ai_verified_source": "https://www.jit.io/blog/introducing-jits-agentic-appsec-platform-that-gets-real-work-done",
       "integrations": "GitHub, GitLab, AWS, Jira, Slack, CI",
       "sectors_reference_customers": "Startups and mid-market cloud-native teams; named references not verified",
       "analyst_position": "ASPM/DevSecOps orchestration vendor; 'security plans' are a control-coverage construct rather than requirements management",
@@ -157,7 +163,7 @@
       "indicative_cost_usd": "Not verified this session (pricing page blocked); third-party sites list per-developer tiers",
       "pricing_confidence": "Low",
       "best_fit_for": "Small cloud-native teams wanting 'ASVS-lite' automated coverage without a requirements program",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-26",
       "sources": "https://www.jit.io/aspm-platform/security-plans|https://www.jit.io/jit-pricing|https://appsecsanta.com/jit|https://www.g2.com/products/jit/reviews"
     },
     {
@@ -307,7 +313,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Measuring and roadmapping the client's Security Requirements practice maturity",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://owaspsamm.org/model/|https://github.com/owaspsamm/core/releases/tag/v2.1.0|https://github.com/owaspsamm/core/releases/tag/v2.2.0|https://owaspsamm.org/docs/tools/assessment-tools/"
     },
     {
@@ -438,7 +444,7 @@
       "type": "Commercial",
       "deployment": "SaaS (AWS Marketplace listing)",
       "languages_coverage": "OWASP ASVS (4.0.2 cited in vendor blog; 5.0 update not confirmed) with CWE mapping; CAPEC-based threat patterns; PCI DSS ASV services",
-      "key_features": "Requirements generated from threat modelling (CAPEC x architecture item)|ASVS-based requirement library|GraphQL API for requirements and vulnerabilities|Requirements vs findings compliance reporting|ASPM vulnerability management|Continuous Living Threat Modeling with persistent Architecture-as-Code and Automated Requirement Sync (release notes, 23 Mar 2026)|Custom Project Requirements to tailor security activities per project (release notes, 12 Mar 2026)|AI Pentest: autonomous runs plus Assisted mode with a human-in-the-loop war room (2 Oct 2026)",
+      "key_features": "Requirements generated from threat modelling (CAPEC x architecture item)|ASVS-based requirement library|GraphQL API for requirements and vulnerabilities|Requirements vs findings compliance reporting|ASPM vulnerability management|Continuous Living Threat Modeling with persistent Architecture-as-Code and Automated Requirement Sync (release notes, 23 Mar 2026)|Custom Project Requirements to tailor security activities per project (release notes, 12 Mar 2026)|AI Pentest: autonomous runs plus Assisted mode with a human-in-the-loop war room (2 Oct 2026)|Security Gate enforced only on administrator-selected pull request target branches, set globally or per asset (release 4.27, 23 Oct 2026)|ACME-based SSL certificate automation and team-profile access control with change-impact preview (release 4.27, 23 Oct 2026)",
       "ai_capabilities": {
         "ai_generated_requirements": "Not documented for requirements module",
         "ai_assistant_over_standards": "AI Pentest (autonomous and, since 2 Oct 2026, analyst-supervised Assisted mode) is documented in platform release notes; no AI assistant over standards documented for the requirements module",
@@ -449,7 +455,7 @@
       },
       "ai_maturity": "None (for requirements module)",
       "ai_verified_source": "https://blog.convisoappsec.com/en/automation-of-security-requirements-with-the-conviso-platform-api/",
-      "integrations": "GraphQL API, Jira (platform-level), CI/CD, scanners",
+      "integrations": "GraphQL API, Jira (platform-level), CI/CD, scanners, GitHub (multiple organisation connections since release 4.27, 23 Oct 2026), Azure DevOps (OAuth or Service Principal authentication since release 4.27, 23 Oct 2026)",
       "sectors_reference_customers": "Brazil/LatAm enterprises, financial services (vendor marketing)",
       "analyst_position": "Regional ASPM vendor with rare built-in requirements module",
       "cons_known_gaps": "ASVS version lag|Limited English documentation depth|Pricing undisclosed|Small footprint outside LatAm",
@@ -457,9 +463,15 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "LatAm clients wanting ASPM plus requirements in one platform",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://blog.convisoappsec.com/en/automation-of-security-requirements-with-the-conviso-platform-api/|https://www.convisoappsec.com/conviso-platform|https://docs.convisoappsec.com/|https://aws.amazon.com/marketplace/pp/prodview-mzkypegjogyl2",
       "recent_updates": [
+        {
+          "date": "2026-10-23",
+          "type": "Release",
+          "summary": "Conviso Platform Release 4.27 (release notes dated 23 Oct 2026) bundles AI Pentest Assisted (already recorded 2 Oct 2026) with ACME-based SSL certificate automation, Azure DevOps Service Principal authentication as an alternative to OAuth, Security Gate enforcement limited to administrator-selected pull request target branches (global or per asset), team-profile access control with change-impact preview, multiple GitHub organisation connections, DAST custom headers and cookie-based authentication secrets, and a tabbed Trust Center configuration. No requirements-module, MCP or ASVS changes are listed.",
+          "source": "https://docs.convisoappsec.com/releases/2026-10-23-release-4-27"
+        },
         {
           "date": "2026-10-02",
           "type": "Feature launch",
@@ -525,7 +537,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Closing the loop from requirements to verified findings at enterprise scale",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.armorcode.com/platform"
     },
     {
@@ -585,7 +597,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Existing Checkmarx One customers; not a standalone option any more",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.tromzo.com/|https://checkmarx.com/company/press-releases/"
     },
     {
@@ -626,26 +638,26 @@
       "type": "Commercial",
       "deployment": "Hybrid (on-prem and SaaS)",
       "languages_coverage": "Standards-agnostic requirements management; security standards handled through imported modules (IEC 62443, ISO 21434); no ASVS content",
-      "key_features": "Baselines, variants, ReqIF exchange|Traceability to tests and work items|Reviews and audit trails|OSLC integrations|AI: IBM watsonx requirements quality assistant; Polarion AI assistant (details not verified this session)",
+      "key_features": "Baselines, variants, ReqIF exchange|Traceability to tests and work items|Reviews and audit trails|OSLC integrations|AI: IBM Requirements Intelligence Assistant for DOORS Next answers questions about module content (jazz.net 'try it yourself' post, 14 Feb 2025); IBM ELM 7.2 productivity, change management and reporting enhancements (18 Dec 2025)|Polarion ALM 2606 (28 May 2026): Copilot API for building AI features into custom Polarion content, custom LLM connectors for on-premises deployments, Security Events logging, built-in Secrets Manager, Variant Configurator replacing Polarion VARIANTS, Tomcat 11 and Groovy removal; vendor states the security work aligns Polarion with the EU Cyber Resilience Act|Polarion X (cloud) 2606 what's new published 18 Sept 2026",
       "ai_capabilities": {
-        "ai_generated_requirements": "Requirement quality/authoring assistants marketed by both vendors (unverified detail)",
+        "ai_generated_requirements": "IBM: Requirements Intelligence Assistant for DOORS Next (question answering over modules, jazz.net Feb 2025); Polarion 2606: Copilot API lets customers build AI features into custom content (May 2026); neither vendor documents security-requirement generation",
         "ai_assistant_over_standards": "No",
         "ai_mapping_findings_to_requirements": "No",
         "automated_design_review": "No",
-        "agent_mcp_integration": "Not verified",
-        "model_used": "IBM watsonx (IBM); Polarion not disclosed"
+        "agent_mcp_integration": "Not documented in Polarion 2606 release post or jazz.net DOORS Next blog as of 26 Oct 2026",
+        "model_used": "IBM watsonx (IBM); Polarion: hosted model not disclosed, custom LLM connectors (bring your own LLM) available for on-premises deployments since 2606"
       },
-      "ai_maturity": "Marketing claim (not verified this session)",
-      "ai_verified_source": "https://www.ibm.com/products/requirements-management",
+      "ai_maturity": "GA (Polarion 2606 Copilot API and custom LLM connectors, May 2026); IBM DOORS Next Requirements Intelligence Assistant verified on jazz.net (Feb 2025) but its GA status is not stated",
+      "ai_verified_source": "https://blogs.sw.siemens.com/polarion/polarion-alm-2606-whats-new-and-noteworthy/|https://jazz.net/blog/index.php/category/engineering-requirements-doors-next/",
       "integrations": "Jira (connectors), OSLC, ReqIF, Git",
       "sectors_reference_customers": "Defence, aerospace, automotive, rail",
       "analyst_position": "Established ALM/RM leaders; not AppSec category",
-      "cons_known_gaps": "Vendor pages not fetched this session|Heavy licensing|No AppSec libraries|Slow for agile AppSec teams",
+      "cons_known_gaps": "Vendor blogs fetched 26 Oct 2026 (Polarion blog, jazz.net DOORS Next category); product and pricing pages still not fetched|Heavy licensing|No AppSec libraries|Slow for agile AppSec teams|No MCP or agent integration documented",
       "pricing_model": "Per user / floating licences",
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Safety-critical clients where security requirements must live beside safety requirements",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-10-26",
       "sources": "https://www.ibm.com/products/requirements-management|https://www.sw.siemens.com/en-US/technology/application-lifecycle-management-alm/"
     },
     {
@@ -670,13 +682,21 @@
       "integrations": "Native Jira/ADO ecosystems",
       "sectors_reference_customers": "Universal",
       "analyst_position": "Commodity backbone; not a security requirements product",
-      "cons_known_gaps": "No security content or updates|Traceability must be built manually|Marketplace pages could not be fetched this session (pricing unverified)",
+      "cons_known_gaps": "No security content or updates|Traceability must be built manually|Marketplace version history fetched 26 Oct 2026 but it shows no pricing, so pricing remains unverified|Requirement Yogi Data Center line receives security-only updates (4.6.2, 12 Oct 2026); Xray release notes not checked this run",
       "pricing_model": "Per user per month marketplace pricing",
       "indicative_cost_usd": "Requirement Yogi and Xray: low single-digit USD per user/month at scale (unverified this session)",
       "pricing_confidence": "Low",
       "best_fit_for": "Clients that refuse a new tool and will import ASVS as Jira requirement sets",
-      "last_verified": "2026-09-28",
-      "sources": "https://marketplace.atlassian.com/apps/1212220/requirement-yogi-for-jira|https://www.getxray.app/"
+      "last_verified": "2026-10-26",
+      "sources": "https://marketplace.atlassian.com/apps/1212220/requirement-yogi-for-jira|https://www.getxray.app/",
+      "recent_updates": [
+        {
+          "date": "2026-10-12",
+          "type": "Release",
+          "summary": "Requirement Yogi for Jira Data Center 4.6.2 (Jira 10.3.15 to 10.3.26) and 4.6.2-c10 (Jira 11.3.3 to 11.3.12) shipped on 12 Oct 2026 as an 'important security update' per the Atlassian Marketplace version history; no functional changes are listed.",
+          "source": "https://marketplace.atlassian.com/apps/1214094/requirement-yogi-requirements-management-for-jira/version-history"
+        }
+      ]
     },
     {
       "tool": "GitLab Ultimate security policies and Snyk Learn (adjacent)",
@@ -847,7 +867,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Not recommended; remove from shortlists",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-26",
       "sources": "https://www.remysec.com/|https://www.upstartsmedia.com/p/rising-in-cyber-2026-breakdown",
       "recent_updates": [
         {

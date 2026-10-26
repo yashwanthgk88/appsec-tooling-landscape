@@ -7,16 +7,16 @@
       "type": "Commercial",
       "deployment": "SaaS (multi-tenant) / Single-tenant hosted; legacy CxSAST on-prem being migrated to Checkmarx One (air-gap: unverified for Checkmarx One)",
       "languages_coverage": "35+ languages / 80+ frameworks incl. Java, C#, JavaScript/TypeScript, Python, Go, PHP, Ruby, Kotlin, Swift, C/C++, Scala, Apex, COBOL, PL/SQL (vendor claim); AI SAST engine adds coverage for emerging and AI-generated languages (announced Mar 2026)",
-      "key_features": "Query-language based SAST with customizable CxQL queries | Incremental and diff scans | Unified platform: SAST, SCA, IaC, API security, DAST, container, ASPM | Developer Assist agent in IDE (Cursor, Windsurf, Copilot, VS Code, JetBrains) | Best Fix Location and result grouping | AI Supply Chain Security (AI-BOM, model/agent governance) | Triage & Remediation Assist agent: exploitability triage, suggested fixes, GitHub auto-PR, decision propagation across scans (Sep 2026, credit-metered)",
+      "key_features": "Query-language based SAST with customizable CxQL queries | Incremental and diff scans | Unified platform: SAST, SCA, IaC, API security, DAST, container, ASPM | Developer Assist agent in IDE (Cursor, Windsurf, Copilot, VS Code, JetBrains) | Best Fix Location and result grouping | AI Supply Chain Security (AI-BOM, model/agent governance) | Triage & Remediation Assist agent: exploitability triage, suggested fixes, GitHub auto-PR, decision propagation across scans (Sep 2026, credit-metered) | Checkmarx Fusion SAST: deterministic/AI engine first pass followed by frontier-model (Anthropic) review producing one verified finding per vulnerability, on by default (GA 25 Oct 2026, vendor claim)",
       "ai_capabilities": {
-        "ai_triage_false_positive_reduction": "Triage Assist agent: autonomous prioritisation by reachability and exploitability with context; triage decisions propagate automatically to identical findings in subsequent scans (Sep 2026); also AI Security Champion / result confidence scoring (GA per Mar 2026 release)",
+        "ai_triage_false_positive_reduction": "Triage Assist agent: autonomous prioritisation by reachability and exploitability with context; triage decisions propagate automatically to identical findings in subsequent scans (Sep 2026); also AI Security Champion / result confidence scoring (GA per Mar 2026 release); Fusion SAST: frontier model reviews engine results to emit one verified finding per vulnerability (GA Oct 2026, vendor claim, F1 0.741 vendor-reported)",
         "ai_autofix": "Remediation Assist: generates review-ready fixes for eligible SAST and SCA findings and can open pull requests directly on GitHub-integrated repos (SCM-neutral guidance elsewhere); consumes Checkmarx Credits (Sep 2026 blog). Developer Assist provides real-time IDE fixes (GA Aug 2025)",
         "ai_generated_custom_rules": "AI SAST engine is LLM-plus-query hybrid; user AI-generated custom CxQL queries not documented",
         "ai_reachability_or_dataflow_explanation": "Attack-vector / data-flow visualisation is native; AI explanation via Developer Assist chat",
         "natural_language_query": "Developer Assist chat in IDE (vendor description)",
         "agent_mcp_ide_agent_integration": "Developer Assist runs inside AI IDEs (Cursor, Windsurf, GitHub Copilot); Checkmarx One Assist agent family; MCP server offered (vendor claim, not independently verified)",
-        "llm_generated_code_scanning": "Explicitly positioned for AI-generated code; AI SAST hybrid engine (Mar 2026)",
-        "model_used_or_byo_llm": "Not publicly disclosed (vendor-hosted)"
+        "llm_generated_code_scanning": "Explicitly positioned for AI-generated code; AI SAST hybrid engine (Mar 2026); Fusion SAST hybrid deterministic plus frontier-model scanning GA Oct 2026",
+        "model_used_or_byo_llm": "Fusion uses Anthropic frontier models with an option to choose Claude models for the most complex analysis (Jul 2026 PR); other AI features vendor-hosted, model not disclosed"
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.globenewswire.com/news-release/2026/03/16/3256259/0/en/Checkmarx-Redefines-Application-Security-for-the-Age-of-Agentic-Development.html",
@@ -28,12 +28,18 @@
       "indicative_cost_usd": "Not published. Vendr: median $60,950/yr, range $26,400 to $205,350/yr (Checkmarx One contracts); roughly $600 to $1,500 per dev/yr implied at mid-market volumes (third-party estimate)",
       "pricing_confidence": "Medium",
       "best_fit_for": "Large enterprises wanting a single AST platform with mature SAST, strong analyst standing, and agentic remediation; consulting teams delivering multi-client managed AppSec on one console",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://checkmarx.com/blog/checkmarx-named-a-leader-for-the-7th-time-in-the-2025-gartner-magic-quadrant-for-application-security-testing/ | https://www.businesswire.com/news/home/20251008500376/en/Checkmarx-Named-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Application-Security-Testing-for-Seventh-Time | https://checkmarx.com/blog/checkmarx-named-a-leader-in-the-forrester-wave-static-application-security-testing-solutions-q3-2025/ | https://www.globenewswire.com/news-release/2026/03/16/3256259/0/en/Checkmarx-Redefines-Application-Security-for-the-Age-of-Agentic-Development.html | https://www.vendr.com/marketplace/checkmarx | https://docs.checkmarx.com/en/34965-201743-deployment-guide.html",
       "product_url": "https://checkmarx.com/product/cxone-sast/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established vendor; AI Assist agents launched 2025-2026 but not a new entrant",
       "recent_updates": [
+        {
+          "date": "2026-10-25",
+          "type": "Feature GA",
+          "summary": "Checkmarx Fusion SAST is listed as generally available on 25 Oct 2026 on the Checkmarx Latest Innovations page: a rules-based or AI-based engine runs first, then a frontier model reviews the code to produce one verified finding per vulnerability, and it is on by default (vendor claim). Fusion was announced in early access on 28 Jul 2026 using Anthropic frontier models with an option to choose Claude models; pricing is not stated.",
+          "source": "https://checkmarx.com/latest-innovations/"
+        },
         {
           "date": "2026-10-15",
           "type": "Feature launch",
@@ -57,7 +63,7 @@
       "key_features": "Binary SAST (compiled artefact upload) with low FP policy scan | Pipeline Scan (fast, CI-friendly) and IDE Scan | Veracode Fix AI remediation for SAST and (Mar 2026) SCA | Veracode Risk Manager (ASPM, ex-Longbow) | Policy and compliance reporting, eLearning | Unified platform: SAST, DAST, SCA, container, IaC, Phylum malicious-package protection | Veracode CLI 'scan static' and 'findings static' commands for static scanning in Git workflows (CLI v2.53.0, Oct 2026)",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "ML-based flaw confidence and policy tuning; AI triage marketed as part of Risk Manager prioritisation (limited public detail)",
-        "ai_autofix": "Veracode Fix: suggested fixes for SAST flaws (IDE/CLI, developer selects a fix, covers >70% of detected flaws in 10 languages); Veracode Fix for SCA (Mar 2026) produces multi-file, ready-to-merge PRs (auto-PR)",
+        "ai_autofix": "Veracode Fix: suggested fixes for SAST flaws (IDE/CLI, developer selects a fix, covers >70% of detected flaws in 10 languages); Veracode Fix for SCA (Mar 2026) produces multi-file, ready-to-merge PRs (auto-PR); 'veracode fix sca' gains asynchronous Fire-and-Forget mode in CLI v2.54.0 (Oct 2026)",
         "ai_generated_custom_rules": "Not offered",
         "ai_reachability_or_dataflow_explanation": "Data-path/call-stack detail is native; AI explanation of flaws in IDE (Veracode Fix)",
         "natural_language_query": "Not documented",
@@ -75,12 +81,18 @@
       "indicative_cost_usd": "Not published. Vendr: median $23,774/yr, range $9,840 to $143,693/yr; third-party estimates $50k to $120k/yr for 5 to 20 apps",
       "pricing_confidence": "Medium",
       "best_fit_for": "Regulated enterprises standardising on a SaaS AST platform with policy-driven compliance reporting and low-FP binary SAST; not for on-prem mandates",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.businesswire.com/news/home/20251010276937/en/Veracode-Named-a-Leader-in-the-Gartner-Magic-Quadrant-Application-Security-Testing-for-11th-Consecutive-Time | https://www.veracode.com/blog/leader-in-sast-forrester-wave-2025/ | https://www.helpnetsecurity.com/2026/03/18/veracode-fix-for-sca/ | https://www.vendr.com/marketplace/veracode | https://www.businesswire.com/news/home/20260728207685/en/",
       "product_url": "https://www.veracode.com/products/static-analysis/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established vendor",
       "recent_updates": [
+        {
+          "date": "2026-10-23",
+          "type": "Release",
+          "summary": "Veracode CLI v2.54.0 adds an asynchronous Fire-and-Forget mode to 'veracode fix sca', so remediation requests run in the background without waiting for fixes and pull requests to be generated.",
+          "source": "https://docs.veracode.com/updates"
+        },
         {
           "date": "2026-10-13",
           "type": "Release",
@@ -101,7 +113,7 @@
       "type": "Commercial (free tier)",
       "deployment": "SaaS (multi-region incl. EU, AU, US Gov); Snyk Broker for private SCM connectivity; no full on-prem; air-gap not supported",
       "languages_coverage": "Java (incl. Java SE 25 support, Sep 2026), JavaScript/TypeScript, Python, C#, Go, PHP, Ruby, Kotlin, Swift, Scala, C/C++, Apex, VB.NET, Groovy, Rust (beta) and others (~19 languages, vendor docs)",
-      "key_features": "Fast symbolic-AI SAST engine (DeepCode) with real-time IDE scanning | Snyk Agent Fix: verified AI fixes in IDE with re-scan loop | Snyk Studio / MCP server for AI coding assistants | Unified developer platform: Code, Open Source, Container, IaC, AppRisk (ASPM) | PR checks and security gates | Evo AI security products (AI-SPM, Continuous Offensive Security, Agentic Development Security) | CLI 'snyk studio' command (experimental, Sep 2026) wires Snyk scanning into AI coding tools; 'snyk fix --agentic' with severity/breakability filters | October 2026 engine update (live 26 Oct 2026): config-aware import resolution (go.mod, tsconfig paths), broader Java/PHP/Go/Ruby/C# detection, new Mass Assignment (Spring) and SSRF (Ruby) rules | HTML reports for 'snyk code test' (CLI v1.1308.0)",
+      "key_features": "Fast symbolic-AI SAST engine (DeepCode) with real-time IDE scanning | Snyk Agent Fix: verified AI fixes in IDE with re-scan loop | Snyk Studio / MCP server for AI coding assistants | Unified developer platform: Code, Open Source, Container, IaC, AppRisk (ASPM) | PR checks and security gates | Evo AI security products (AI-SPM, Continuous Offensive Security, Agentic Development Security) | CLI 'snyk studio' command (experimental, Sep 2026) wires Snyk scanning into AI coding tools; 'snyk fix --agentic' with severity/breakability filters | October 2026 engine update (announced 12 Oct, scheduled to go live 26 Oct 2026; not yet confirmed live in the vendor feed as of 25 Oct): config-aware import resolution (go.mod, tsconfig paths), broader Java/PHP/Go/Ruby/C# detection, new Mass Assignment (Spring) and SSRF (Ruby) rules | HTML reports for 'snyk code test' (CLI v1.1308.0) and for 'snyk test' without preview flags (v1.1308.1, Oct 2026)",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "ML-driven prioritisation; DeepCode engine trained on curated dataset; explicit 'AI triage' agent not documented as separate product",
         "ai_autofix": "Snyk Agent Fix (ex-DeepCode AI Fix): agentic loop (generate, verify by re-scan, retry) suggests fixes in IDE plugin; developer applies; no auto-PR for SAST fixes (docs, May 2026)",
@@ -122,17 +134,41 @@
       "indicative_cost_usd": "Team $25/dev/month list (max 10 devs, 1,000 Code tests/mo); Enterprise custom, third-party median ~$45k/yr; ~$1,000 to $1,300 per dev/yr commonly cited (Low confidence)",
       "pricing_confidence": "High (Team list) / Medium (Enterprise)",
       "best_fit_for": "Developer-first organisations on cloud SCMs wanting fast IDE/PR feedback plus SCA and container in one tool; teams heavy on AI coding assistants",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/ | https://snyk.io/blog/snyk-named-a-leader-in-the-2025-forrester-sast-wave-sast-solutions-q3-2025/ | https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-code/manage-code-vulnerabilities/fix-code-vulnerabilities-automatically | https://snyk.io/plans/ | https://siliconangle.com/2026/06/23/snyk-launches-evo-agentic-development-security-police-ai-coding-agents/",
       "product_url": "https://snyk.io/product/snyk-code/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established vendor",
       "recent_updates": [
         {
+          "date": "2026-10-23",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.3 security release following the eMudhra intermediate CA compromise: blocks trust in the affected certificates and updates the embedded Node.js runtime and the toml library used by 'snyk fix' for Poetry; Snyk strongly advises all customers to upgrade.",
+          "source": "https://updates.snyk.io/rss/"
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.2: fixes for .NET NETSDK1067 handling, clearer --source-dir validation error, --fail-on=patchable fix, improved IDE authentication and base-branch detection through the Snyk Language Server, and Go runtime updated to 1.26.10.",
+          "source": "https://updates.snyk.io/rss/"
+        },
+        {
+          "date": "2026-10-14",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.1: 'snyk test --html' and '--html-file-output' no longer require preview features, the project name appears consistently in the snyk test summary, plus several CVE fixes in bundled components.",
+          "source": "https://updates.snyk.io/rss/"
+        },
+        {
           "date": "2026-10-13",
           "type": "Feature launch",
           "summary": "Snyk announced the Snyk Code October 2026 update (post shows only a relative date, approx. 13 Oct; the update itself goes live on 26 Oct 2026): deeper analysis for Java, Kotlin, Go, TypeScript, JavaScript, Python, C#, PHP and Ruby, import resolution from go.mod, tsconfig.json and jsconfig.json, new Java framework coverage (Spring Data MongoDB, AWS SDK DynamoDB, Commons FileUpload), new Mass Assignment (Java/Spring) and SSRF (Ruby) rules, and a PHP typing fix. Snyk warns that affected projects will report significantly more findings on their next scan, which can affect PR gates.",
           "source": "https://updates.snyk.io/snyk-code-october-update/"
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Feature launch",
+          "summary": "Issues awaiting an ignore decision now show a 'Pending Ignore Request' status on the Project Issues page, can be filtered, and are reported as 'pending' by the issues API; gradual rollout over about two weeks.",
+          "source": "https://updates.snyk.io/rss/"
         },
         {
           "date": "2026-10-08",
@@ -163,12 +199,6 @@
           "type": "Release",
           "summary": "Snyk CLI v1.1307.4 adds an experimental 'snyk studio' command that installs background security scanning into AI coding tools (Cursor, Claude Code, Codex, Copilot, Gemini, Kiro, Windsurf), and adds severity, breakability and exclude-ID filters to 'snyk fix --agentic', which now keeps failed fix changes for review by default. It also fixes --code and other scan flags being silently dropped for orgs on the unified test API.",
           "source": "https://github.com/snyk/cli/releases/tag/v1.1307.4"
-        },
-        {
-          "date": "2026-09-14",
-          "type": "Release",
-          "summary": "Snyk Code September 2026 release (documented via the snyk/user-docs PR for the 14 Sep 2026 release): Java SE 25 support and eight new Java frameworks (incl. Apache Commons Collections, Flyway, MSAL4J), LangChain LiteLLM modelled as an untrusted source for Python, expanded Kotlin framework list, new rules (HSTS Disabled for Ruby and Java, CRLF Sequences and UI Layers/Frames for Python, XPath Injection for Rust), corrected COBOL CWE mappings, and a behaviour change so that .gitignore rules now exclude only untracked files, meaning committed files are analysed.",
-          "source": "https://github.com/snyk/user-docs/pull/1664"
         }
       ]
     },
@@ -194,17 +224,23 @@
       "integrations": "IDE: VS Code (CodeQL extension), JetBrains via Copilot | CI/CD: GitHub Actions native; CodeQL CLI in Jenkins/Azure DevOps | SCM: GitHub only (Azure DevOps has GHAzDO variant) | Ticketing: Jira via marketplace apps, GitHub Issues",
       "sectors_reference_customers": "Vendor: 90%+ of Fortune 100 use GitHub; GHAS customers cited include Mercado Libre, Telus, 3M (GitHub customer stories); sectors: technology, financial services, telecom, public sector",
       "analyst_position": "Forrester Wave SAST Q3 2025: evaluated (one of 10 vendors; placement not stated in public sources, unverified); Gartner MQ AST 2025: not confirmed as included",
-      "cons_known_gaps": "GitHub-only SCM (GitLab/Bitbucket estates cannot use it) | Autofix is non-deterministic; no AI triage or dismissal of CodeQL alerts; AI Scan findings are advisory only and cannot block merges, skip fork and Dependabot PRs | AI Scan and agentic autofix consume Code Security AI Credits (rate not published) and agentic autofix needs Enterprise Cloud, an enterprise policy and a Copilot billing method; the free 'Generate Fix' option is replaced when agentic autofix is enabled | GHES lags cloud on AI features (AI Scan and agentic autofix GHES availability not stated); Code Quality not on GHES | Per-active-committer metering can spike costs on large monorepos; Code Security and Secret Protection now separate SKUs | CodeQL language list narrower than Checkmarx/Fortify (no PHP, COBOL, ABAP), partly mitigated by AI Scan for PHP/Bash/Terraform",
+      "cons_known_gaps": "GitHub-only SCM (GitLab/Bitbucket estates cannot use it) | Autofix is non-deterministic; no AI triage or dismissal of CodeQL alerts; AI Scan findings are advisory only and cannot block merges, skip fork and Dependabot PRs | AI Scan and agentic autofix consume Code Security AI Credits (rate not published) and agentic autofix needs Enterprise Cloud, an enterprise policy and a Copilot billing method; the free 'Generate Fix' option is replaced when agentic autofix is enabled | GHES lags cloud on AI features (AI Scan and agentic autofix GHES availability not stated); Code Quality not on GHES | Per-active-committer metering can spike costs on large monorepos; Code Security and Secret Protection now separate SKUs | CodeQL language list narrower than Checkmarx/Fortify (no PHP, COBOL, ABAP), partly mitigated by AI Scan for PHP/Bash/Terraform | CodeQL does not support Swift 6.4 or traced builds on macOS 27/Xcode 27 (pin to macOS 26/Xcode 26); Intel Mac support deprecated mid-Dec 2026 (Oct 2026)",
       "pricing_model": "Per active committer per month (metered); free for public repos; AI Scan and agentic autofix usage metered in Code Security AI Credits (SKU-level budgets, rate not published) plus Actions minutes for agentic autofix (Oct 2026)",
       "indicative_cost_usd": "Code Security $30/active committer/month ($360/yr) list; Secret Protection $19/month; Code Quality $10/month plus usage-based AI billing (effective Apr 2025 / Jul 2026)",
       "pricing_confidence": "High",
       "best_fit_for": "GitHub-centric engineering organisations wanting zero-friction SAST in PRs with transparent per-committer pricing and an open query language for custom rules",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://github.blog/changelog/2025-03-04-introducing-github-secret-protection-and-github-code-security/ | https://docs.github.com/en/code-security/code-scanning/managing-code-scanning-alerts/responsible-use-autofix-code-scanning | https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available/ | https://www.forrester.com/blogs/announcing-the-forrester-wave-static-application-security-testing-solutions-and-buyers-guide-ai-brings-opportunity-to-sast-solutions",
       "product_url": "https://github.com/security/advanced-security",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established; Code Security SKU re-packaged Apr 2025",
       "recent_updates": [
+        {
+          "date": "2026-10-19",
+          "type": "Release",
+          "summary": "CodeQL changes for macOS 27, Xcode 27 and Swift 6.4: Apple removed Intel code from system binaries used for traced builds, so CodeQL traced scans are not supported on macOS 27/Xcode 27 and Swift 6.4 is not supported on any platform; Swift and traced-build users should pin workflows to macOS 26/Xcode 26, while C/C++, C# and Java users can use build mode none. CodeQL support for Intel-based Macs is deprecated from mid-December 2026.",
+          "source": "https://github.blog/changelog/2026-10-19-codeql-changes-for-macos-27-xcode-27-and-swift-6-4/"
+        },
         {
           "date": "2026-10-15",
           "type": "Feature GA",
@@ -258,12 +294,6 @@
           "type": "Feature launch",
           "summary": "Code scanning AI Scan (AI-based vulnerability detection on pull requests, public preview) no longer requires CodeQL default setup on the repository; GHAS customers on github.com only, not GHES.",
           "source": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup"
-        },
-        {
-          "date": "2026-09-15",
-          "type": "Feature GA",
-          "summary": "Enterprise admins can now enforce GitHub Advanced Security configurations so organisation and repository owners cannot override enterprise-level security settings (new three-level enforcement dropdown).",
-          "source": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations"
         }
       ]
     },
@@ -294,12 +324,18 @@
       "indicative_cost_usd": "Ultimate: custom pricing as of Sep 2026 (historically $99/user/month, ~$1,188/user/yr list); Premium $29/user/month does not include Advanced SAST",
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab-standardised enterprises, sovereign/air-gapped environments needing on-prem SAST plus AI with self-hosted models",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://docs.gitlab.com/user/application_security/sast/gitlab_advanced_sast/ | https://softprom.com/the-forrester-wave-sast-analyzing-the-positions-of-veracode-opentext-and-gitlab | https://about.gitlab.com/pricing/ | https://about.gitlab.com/blog/quick-vulnerability-remediation-with-gitlab-advanced-sast-duo-ai/",
       "product_url": "https://about.gitlab.com/solutions/application-security-testing/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established vendor",
       "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Release",
+          "summary": "Critical patch release 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 and 18.11.13 fixes CVE-2026-110264 (CVSS 10.0, integer overflow in the regular expression compiler allowing unauthenticated RCE), two high-severity auth/OIDC flaws, and lower-severity issues including CVE-2026-112378 (paid AI features usable without subscription), CVE-2026-103515 (group Owners could re-enable Duo/Amazon Q data egress despite admin lock) and CVE-2026-112326 (read-only users could delete security finding records). Self-managed users are urged to upgrade immediately.",
+          "source": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+        },
         {
           "date": "2026-10-15",
           "type": "Release",
@@ -345,7 +381,7 @@
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.sonarsource.com/company/press-releases/sonarqube-server-2026-5-lta-release/",
-      "integrations": "IDE: VS Code, JetBrains, Visual Studio, Eclipse (SonarQube for IDE) | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines | SCM: GitHub, GitLab, Bitbucket, Azure DevOps (PR decoration) | Ticketing: Jira (Enterprise), webhooks",
+      "integrations": "IDE: VS Code, JetBrains, Visual Studio, Eclipse (SonarQube for IDE) | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines | SCM: GitHub, GitLab, Bitbucket, Azure DevOps (PR decoration); bulk organisation-wide repository import on SonarQube Cloud for GitHub, GitLab, Azure DevOps and Bitbucket (Oct 2026) | Ticketing: Jira (Enterprise), webhooks",
       "sectors_reference_customers": "Vendor: 7M+ developers, 500k+ organisations; named on site: Barclays, IBM, Samsung, Cognizant (historical); broad sectors",
       "analyst_position": "Forrester Wave SAST Q3 2025: evaluated (Sonar one of 10; placement not disclosed publicly, unverified); Gartner MQ AST 2025: not included (third-party report)",
       "cons_known_gaps": "Security depth still behind dedicated SAST leaders (fewer sinks/sources, no binary analysis) | Taint analysis only in Developer edition and above; Advanced Security is an extra SKU | LoC-based pricing scales steeply on large monoliths | AI features on Server still need an LLM endpoint (cloud provider, proxy or BYO), which complicates fully air-gapped use; agents limited to Enterprise and Data Center editions | Vortex is consumption-priced (metered by tool calls), adding a variable cost line | Rapid AI product churn (Gitar, Vortex, agents) with limited independent validation | Security Hotspots deprecation (2026.5) requires an admin-run migration of hotspot findings",
@@ -353,7 +389,7 @@
       "indicative_cost_usd": "Cloud Team from $34/month (promo, list $68) for 100k LoC incl. Advanced Security; Server Developer historically from ~$750/yr (100k LoC) to Enterprise ~$20k+/yr (1M LoC); Data Center from ~$130k/yr (third-party figures)",
       "pricing_confidence": "High (Cloud list) / Medium (Server)",
       "best_fit_for": "Teams that want quality and security in one gate, on-prem friendly, cost-effective for smaller codebases; complement rather than replacement for enterprise SAST",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.sonarsource.com/products/sonarqube/advanced-security/ | https://www.sonarsource.com/plans-and-pricing/ | https://www.prnewswire.com/news-releases/sonar-launches-sonar-vortex-and-sonarqube-remediation-agent-to-improve-agentic-effectiveness-302814173.html | https://www.sonarsource.com/company/press-releases/sonar-acquires-gitar/ | https://appsecsanta.com/sonarqube",
       "product_url": "https://www.sonarsource.com/products/sonarqube/",
       "is_new_entrant": false,
@@ -364,6 +400,12 @@
           "type": "Feature launch",
           "summary": "Sonar joined the OpenAI Daybreak Defense Network (cyber partner programme), gaining access to OpenAI GPT Cyber Models, which it says expand the guided reasoning behind the SonarQube Hunter Agent for logic and access-control flaw detection. Sonar states it can now deploy the models across multiple products but gives no availability dates; Remediation Agent and Vortex are not named.",
           "source": "https://www.sonarsource.com/company/press-releases/sonar-joins-openai-daybreak-cyber-partner-program/"
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Feature launch",
+          "summary": "SonarQube Cloud: bulk import for Azure DevOps and Bitbucket lets administrators import every repository in an organisation in one action with live progress and a downloadable summary report, matching the existing bulk import for GitHub and GitLab.",
+          "source": "https://www.sonarsource.com/products/sonarqube/cloud/whats-new/"
         },
         {
           "date": "2026-09-29",
@@ -386,13 +428,13 @@
         "ai_generated_custom_rules": "Assistant can generate custom Semgrep rules from natural-language prompts and from triage patterns (vendor docs)",
         "ai_reachability_or_dataflow_explanation": "Assistant explains dataflow and why a finding matters; taint trace native in Pro",
         "natural_language_query": "Rule generation from NL; no free-form query over findings documented",
-        "agent_mcp_ide_agent_integration": "Semgrep MCP server (open source) for Cursor/Claude Code/Copilot; IDE extensions; Semgrep in AI coding agent workflows",
+        "agent_mcp_ide_agent_integration": "Semgrep MCP server (open source) for Cursor/Claude Code/Copilot; IDE extensions; Semgrep Guardian runs inside Claude Code and Codex with the fixed guardian-default ruleset on a Semgrep-hosted server (Codex support week of 5 Oct 2026); Cursor Origin support in public beta (week of 28 Sep 2026)",
         "llm_generated_code_scanning": "Marketed for scanning AI-generated code in PRs",
-        "model_used_or_byo_llm": "OpenAI / Anthropic via Semgrep cloud; BYO LLM not offered (unverified)"
+        "model_used_or_byo_llm": "OpenAI / Anthropic via Semgrep cloud; AI provider settings now offer Automatic (Semgrep-managed provider list incl. Amazon Bedrock, Cloudflare Workers AI and OpenAI) or Manual selection (week of 5 Oct 2026); BYO LLM not offered (unverified)"
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://semgrep.dev/blog/2025/announcing-ai-noise-filtering-and-triage-memories/",
-      "integrations": "IDE: VS Code, JetBrains, Cursor (MCP) | CI/CD: GitHub Actions, GitLab CI, Jenkins, Azure Pipelines, CircleCI, Bitbucket Pipelines, Buildkite | SCM: GitHub, GitLab, Bitbucket, Azure Repos | Ticketing: Jira, Slack, webhooks | Identity: SCIM provisioning from Okta and Microsoft Entra ID (public beta, Sep 2026)",
+      "integrations": "IDE: VS Code, JetBrains, Cursor (MCP); Cursor Origin (public beta, Sep 2026) with repository sync, Managed Scans and PR check comments | CI/CD: GitHub Actions, GitLab CI, Jenkins, Azure Pipelines, CircleCI, Bitbucket Pipelines, Buildkite | SCM: GitHub, GitLab, Bitbucket, Azure Repos | Ticketing: Jira, Slack, webhooks | Identity: SCIM provisioning from Okta and Microsoft Entra ID (public beta, Sep 2026) | Registries: AWS CodeArtifact for Maven and Gradle (private beta, Sep 2026)",
       "sectors_reference_customers": "Named (Oct 2025 PR): Snowflake, Dropbox; site lists Figma, Lyft, Reddit, GitLab; sectors: technology, fintech, SaaS",
       "analyst_position": "Gartner MQ AST 2025: included for the first time (quadrant not stated in Semgrep PR; third-party reports say not a Leader); Forrester Wave SAST Q3 2025: not evaluated",
       "cons_known_gaps": "Dec 2024 licence change moved rules/registry and Pro features away from permissive OSS (triggered Opengrep fork); CE lacks interfile analysis | SaaS control plane only; no on-prem for regulated clients | Quality depends on rule curation; enterprise coverage for legacy languages (COBOL, ABAP) absent | Per-contributor pricing escalates for large orgs; Assistant tied to Teams/Enterprise | Not in Forrester SAST Wave 2025",
@@ -400,7 +442,7 @@
       "indicative_cost_usd": "Third-party: Teams Code ~$30 to $40/contributor/month ($360 to $480/yr); Vendr list range $40 to $80/dev/month, median contract $54k/yr",
       "pricing_confidence": "Medium",
       "best_fit_for": "AppSec teams that want to write and own rules, fast PR feedback, and AI triage to keep noise down; consulting teams building reusable client-specific rule packs",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://semgrep.dev/blog/2025/announcing-ai-noise-filtering-and-triage-memories/ | https://www.prnewswire.com/news-releases/semgrep-recognized-in-the-2025-gartner-magic-quadrant-for-application-security-testing-302583749.html | https://www.vendr.com/marketplace/semgrep | https://github.com/semgrep/semgrep | https://www.augmentcode.com/tools/best-ai-sast-tools",
       "product_url": "https://semgrep.dev/products/semgrep-code/",
       "is_new_entrant": false,
@@ -431,8 +473,8 @@
       "vendor": "Opengrep consortium (Aikido Security, Endor Labs, Amplify, Kodem, Orca Security, Jit, Arnica, Mobb, Legit and others)",
       "type": "Open source (LGPL 2.1 fork of Semgrep CE)",
       "deployment": "On-prem / CLI anywhere; air-gap supported (binary plus rules offline)",
-      "languages_coverage": "Same base as Semgrep CE (30+ languages incl. Java, JS/TS, Python, Go, C#, Ruby, PHP, Kotlin, Swift, C/C++, Rust); roadmap adds cross-file and cross-function analysis previously Pro-only",
-      "key_features": "Drop-in Semgrep-compatible CLI and rule syntax | Consortium-governed, full-time dev team, merit-based contributions | Restores SARIF/JSON outputs and fingerprinting removed from Semgrep CE | Roadmap: inter-procedural and cross-file analysis, extended languages | Embedded in Aikido, Endor Labs, Amplify, Kodem products",
+      "languages_coverage": "Same base as Semgrep CE (30+ languages incl. Java, JS/TS, Python, Go, C#, Ruby, PHP, Kotlin, Swift, C/C++, Rust); C# 14 syntax supported from 1.32.0 (Oct 2026); roadmap adds cross-file and cross-function analysis previously Pro-only",
+      "key_features": "Drop-in Semgrep-compatible CLI and rule syntax | Consortium-governed, full-time dev team, merit-based contributions | Restores SARIF/JSON outputs and fingerprinting removed from Semgrep CE | Roadmap: inter-procedural and cross-file analysis, extended languages | Embedded in Aikido, Endor Labs, Amplify, Kodem products | --exclude-minified-files option and improved switch/when taint analysis (1.31.0 and 1.32.0, Oct 2026)",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "None in engine (AI features come from commercial wrappers such as Aikido, Endor)",
         "ai_autofix": "None (rule-based 'fix' patterns only)",
@@ -453,32 +495,46 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Teams wanting a permissively licensed Semgrep-compatible engine for air-gapped or cost-constrained pipelines; base engine for internal tooling",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://www.opengrep.dev/ | https://www.prnewswire.com/news-releases/security-rivals-unite-to-launch-opengrep-following-semgrep-clampdown-302358962.html | https://www.darkreading.com/application-security/code-scanning-tool-s-license-at-heart-of-security-breakup | https://www.aikido.dev/blog/launching-opengrep-why-we-forked-semgrep",
       "product_url": "https://www.opengrep.dev/",
       "is_new_entrant": true,
-      "is_new_entrant_basis": "Project launched January 2025 (fork of Semgrep CE)"
+      "is_new_entrant_basis": "Project launched January 2025 (fork of Semgrep CE)",
+      "recent_updates": [
+        {
+          "date": "2026-10-22",
+          "type": "Release",
+          "summary": "Opengrep 1.32.0: C# 14 support via updated tree-sitter grammar, more accurate taint analysis of switch/when/case statements across Kotlin, Ruby, Python, Scala, Move, VB, Rust and Crystal, Elixir and Move pattern improvements, --jobs now also limits parallelism for rule loading and tests, the install-ci command was removed, and baseline-scan and non-UTF-8 locale fixes.",
+          "source": "https://github.com/opengrep/opengrep/releases/tag/v1.32.0"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Release",
+          "summary": "Opengrep 1.31.0: new --exclude-minified-files option for scan and ci in the Python CLI, larger per-domain minor heap for faster scans, build moved to OCaml 5.5.1 with a forked visitors library for performance, and -o now writes to /dev/null and named pipes.",
+          "source": "https://github.com/opengrep/opengrep/releases/tag/v1.31.0"
+        }
+      ]
     },
     {
       "tool": "Black Duck Coverity / Polaris (incl. Black Duck Assist and Signal)",
       "vendor": "Black Duck Software (formerly Synopsys Software Integrity Group; owned by Clearlake Capital and Francisco Partners since Oct 2024)",
       "type": "Commercial",
       "deployment": "On-prem (Coverity Connect) / SaaS (Polaris platform) / Hybrid; air-gap supported for Coverity on-prem; AI triage can run against customer-chosen LLM",
-      "languages_coverage": "22+ languages incl. C/C++, C#, Java, JavaScript/TypeScript, Python, Go, Kotlin, Swift, Ruby, PHP, Scala, Rust (extended to Rust 1.92 in Jul 2026), Objective-C, VB.NET; 200+ frameworks; MISRA/CERT/AUTOSAR coding standards",
-      "key_features": "Deep whole-program C/C++ analysis, industry standard in embedded/automotive/medical | Coding standards and compliance (MISRA, CERT, CWE, ISO 26262, CRA-aligned checker option Jul 2026) | Polaris SaaS unifies Coverity, Black Duck SCA, Continuous Dynamic | Black Duck Assist (IDE AI assistant) and Signal (agentic AppSec for AI-generated code, Dec 2025 / Mar 2026) | Coverity MCP server for AI coding agents | Software Risk Manager ASPM | Polaris central rule profiles and BYO-LLM Signal findings ingested as SARIF 'AI tool type' (Sep 2026)",
+      "languages_coverage": "22+ languages incl. C/C++, C#, Java, JavaScript/TypeScript, Python, Go (Go 1.27 in Rapid Scan Static, Oct 2026), Kotlin, Swift, Ruby, PHP, Scala, Rust (extended to Rust 1.92 in Jul 2026), Objective-C, VB.NET; 200+ frameworks; MISRA/CERT/AUTOSAR coding standards",
+      "key_features": "Deep whole-program C/C++ analysis, industry standard in embedded/automotive/medical | Coding standards and compliance (MISRA, CERT, CWE, ISO 26262, CRA-aligned checker option Jul 2026) | Polaris SaaS unifies Coverity, Black Duck SCA, Continuous Dynamic | Black Duck Assist (IDE AI assistant) and Signal (agentic AppSec for AI-generated code, Dec 2025 / Mar 2026) | Coverity MCP server for AI coding agents | Software Risk Manager ASPM | Polaris central rule profiles and BYO-LLM Signal findings ingested as SARIF 'AI tool type' (Sep 2026) | Polaris Oct 2026: Rapid Scan Static (Sigma 2026.9.1) analyses AI frameworks (Anthropic and OpenAI SDKs, LangChain), selectable static/SCA AI fix PRs incl. via Jenkins plug-in, container scans from CI, GitHub Enterprise Cloud data residency",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "AI-assisted issue triage in Coverity (GA Jul 2026) targeting C/C++ false positives, runs on customer's own LLM; Signal ranks and validates findings",
-        "ai_autofix": "Black Duck Assist: IDE-integrated fix suggestions; Signal: agentic remediation suggestions (auto-PR not confirmed)",
+        "ai_autofix": "Black Duck Assist: IDE-integrated fix suggestions; Signal: agentic remediation suggestions; Polaris static AI fix PRs: users choose fix PRs for SCA only, Static only or both in UI/CLI, also delivered through the Jenkins plug-in and Black Duck Security Setup workflows (Oct 2026, vendor blog)",
         "ai_generated_custom_rules": "AI-powered checker for IDOR in JS/TS (Jul 2026); user AI-generated custom checkers not documented",
         "ai_reachability_or_dataflow_explanation": "Coverity path/event trace native; Assist explains findings",
         "natural_language_query": "Not documented",
         "agent_mcp_ide_agent_integration": "Coverity MCP server lets agents trigger local scans and pull findings; Signal integrates with AI coding agents",
-        "llm_generated_code_scanning": "Signal is explicitly positioned to secure AI-generated code",
+        "llm_generated_code_scanning": "Signal is explicitly positioned to secure AI-generated code; Rapid Scan Static adds security analysis for code using the Anthropic and OpenAI SDKs and LangChain (Oct 2026)",
         "model_used_or_byo_llm": "Customer's choice of LLM (BYO) for Coverity AI triage; Signal agents can run on customer infrastructure or Black Duck-managed endpoints with a different provider/model per agent, results uploaded to Polaris as SARIF (Sep 2026); Assist model not disclosed"
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.itsecurityguru.org/2026/07/14/black-duck-adds-ai-powered-triage-and-cra-ready-checks-to-coverity-static-analysis/",
-      "integrations": "IDE: VS Code, IntelliJ, Eclipse, Visual Studio (Code Sight) | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bamboo | SCM: GitHub, GitLab, Bitbucket, Azure Repos incl. self-hosted GitHub Enterprise Server, GitLab self-managed, Azure DevOps Server, Bitbucket Server/DC PR workflows in Polaris (Sep 2026) | Ticketing: Jira, ServiceNow",
+      "integrations": "IDE: VS Code, IntelliJ, Eclipse, Visual Studio (Code Sight) | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bamboo | SCM: GitHub, GitLab, Bitbucket, Azure Repos incl. self-hosted GitHub Enterprise Server, GitLab self-managed, Azure DevOps Server, Bitbucket Server/DC PR workflows in Polaris (Sep 2026); GitHub Enterprise Cloud with data residency (regional tenants, Oct 2026) | Ticketing: Jira, ServiceNow",
       "sectors_reference_customers": "Vendor sectors: automotive, embedded/ISV, financial services, medical devices, public sector; named customers not in 2025 PR (site cites e.g. Bosch, Siemens historically)",
       "analyst_position": "Gartner MQ AST 2025: Leader (8th consecutive; highest Ability to Execute 6th year); Forrester Wave SAST Q3 2025: evaluated (placement not public; Leader in 2023 Wave)",
       "cons_known_gaps": "Full Coverity scans are slow on large C/C++ builds; build-capture setup is heavy | Polaris SaaS and Coverity on-prem have feature drift; consolidation still in progress after spin-out | Pricing opaque and premium; per-LoC/per-app models hard to compare | AI features fragmented across Assist, Signal and Coverity triage with staggered GA | Private-equity ownership; product roadmap and support continuity questioned by users",
@@ -486,12 +542,18 @@
       "indicative_cost_usd": "Not publicly disclosed; third-party estimates typically $50k+/yr entry for enterprise Coverity",
       "pricing_confidence": "Low",
       "best_fit_for": "Embedded, automotive, medical device and safety-critical C/C++ estates needing coding-standard compliance and on-prem/air-gap; not the fastest choice for web-app dev teams",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://news.blackduck.com/2025-10-14-Black-Duck-Named-a-Leader-in-the-2025-Gartner-R-Magic-Quadrant-TM-for-Application-Security-Testing-for-Eighth-Consecutive-Time | https://www.itsecurityguru.org/2026/07/14/black-duck-adds-ai-powered-triage-and-cra-ready-checks-to-coverity-static-analysis/ | https://news.blackduck.com/2026-03-23-Black-Duck-Signal-Sets-a-New-Standard-for-Securing-AI-Generated-Code | https://www.prnewswire.com/news-releases/introducing-black-duck-signal-agentic-ai-application-security-for-modern-development-302637175.html",
       "product_url": "https://www.blackduck.com/static-analysis-tools-sast/coverity.html",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established; Black Duck spun out of Synopsys Oct 2024",
       "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Feature launch",
+          "summary": "Polaris October 2026 update (vendor blog): Rapid Scan Static (Sigma 2026.9.1) adds security analysis for AI frameworks (Anthropic and OpenAI SDKs, LangChain), Go 1.27 support and better Groovy, JavaScript and Python detection including hard-coded secrets; users can choose fix PRs for SCA only, Static only or both in the UI and CLI, and static AI fix PRs are available via the Jenkins plug-in and Security Setup workflows; container scans can be started from GitHub Actions, GitLab, Jenkins, Bitbucket, Azure DevOps and the CLI; GitHub Enterprise Cloud data residency tenants are supported.",
+          "source": "https://www.blackduck.com/blog/blog-polaris-october-2026-update.html"
+        },
         {
           "date": "2026-09-23",
           "type": "Feature launch",
@@ -508,7 +570,7 @@
       "languages_coverage": "30+ languages incl. Java, C#, JavaScript/TypeScript, Python, Go, PHP, Ruby, Kotlin, Swift, C/C++, COBOL, ABAP, PL/SQL, Apex; CodeSweep covers a smaller set (Java, JS, Python, Go, etc.)",
       "key_features": "SAST with Intelligent Finding Analytics (ML FP reduction, long-standing) | RapidFix: agentic AI triage plus deterministic Codemodder-based fixes | CodeSweep free IDE/GitHub Action scanner | Unified SAST/DAST/IAST/SCA with AppScan 360 cloud-native deployment | Compliance reporting (PCI, OWASP, ISO) | Strong DAST heritage (ex-IBM) | AI SAST with business-logic flaw detection and per-asset-group AI controls on AppScan on Cloud (Sep 2026)",
       "ai_capabilities": {
-        "ai_triage_false_positive_reduction": "Intelligent Finding Analytics (ML) plus RapidFix agentic triage that prioritises and filters FPs with 'humanized insights' (any language); RapidFix now enable/disable at organisation and asset-group level (Sep 2026)",
+        "ai_triage_false_positive_reduction": "Intelligent Finding Analytics (ML) plus RapidFix agentic triage that prioritises and filters FPs with 'humanized insights' (any language); RapidFix now enable/disable at organisation and asset-group level (Sep 2026); SAST results view summarises RapidFix autofix and triage recommendations with filters and suggested severity/status changes (AppScan on Cloud, Oct 2026)",
         "ai_autofix": "RapidFix: production-ready fixes via deterministic Codemodder framework with LLM assist; delivered on PRs/repos (auto-PR mechanics not fully documented)",
         "ai_generated_custom_rules": "Not documented",
         "ai_reachability_or_dataflow_explanation": "RapidFix explanations; trace view native",
@@ -519,7 +581,7 @@
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.hcl-software.com/appscan/products/rapidfix",
-      "integrations": "IDE: VS Code, IntelliJ, Eclipse, Visual Studio | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bamboo | SCM: GitHub, GitLab, Bitbucket, Azure Repos | Ticketing: Jira, ServiceNow, Azure Boards",
+      "integrations": "IDE: VS Code, IntelliJ, Eclipse, Visual Studio | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Bamboo | SCM: GitHub, GitLab, Bitbucket, Azure Repos; AppScan on Cloud can scan Azure DevOps repositories via AppScan Presence with unified SAST plus SCA repository configuration (Oct 2026) | Ticketing: Jira, ServiceNow, Azure Boards",
       "sectors_reference_customers": "Vendor sectors: banking, insurance, government, telecom (ex-IBM install base); named customers not in 2025 MQ page",
       "analyst_position": "Gartner MQ AST 2025: Leader (Oct 2025); Forrester Wave SAST Q3 2025: evaluated (placement not public; Strong Performer in 2023 Wave)",
       "cons_known_gaps": "Smaller developer mindshare and community than Snyk/GitHub/Semgrep | UI and workflow perceived as dated on Source/Enterprise | RapidFix is new (2025-2026) with limited independent validation | Pricing opaque and historically per-app/per-scan | Multiple product lines (Source, 360, on Cloud, Enterprise) confuse packaging",
@@ -527,12 +589,18 @@
       "indicative_cost_usd": "Not publicly disclosed (sales-led)",
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises with existing IBM/HCL estates, on-prem mandates, and combined SAST+DAST needs; lower-cost Leader alternative in RFPs",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://www.hcl-software.com/appscan/gartner-application-security-testing-report-2025 | https://www.hcl-software.com/appscan/products/rapidfix | https://help.hcl-software.com/appscan/360/2.1.0/360_whats_new.html | https://github.com/marketplace/actions/hcl-appscan-codesweep",
       "product_url": "https://www.hcl-software.com/appscan",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Established vendor",
       "recent_updates": [
+        {
+          "date": "2026-10-25",
+          "type": "Feature launch",
+          "summary": "AppScan on Cloud update: the SAST results view now shows a summary of available RapidFix autofix and triage recommendations, lets users filter SAST issues by recommendation type and shows suggested severity and status changes; SAST and SCA can be configured for the same repository in one configuration; Azure DevOps repositories can be scanned through AppScan Presence.",
+          "source": "https://help.hcl-software.com/appscan/ASoC/appseccloud_whats_new_cm.html"
+        },
         {
           "date": "2026-09-29",
           "type": "Release",
@@ -609,13 +677,13 @@
       "ai_verified_source": "https://docs.contrastsecurity.com/en/contrast-ai-smartfix.html",
       "integrations": "IDE: VS Code, IntelliJ, Visual Studio, Eclipse | CI/CD: Jenkins, GitHub Actions, GitLab CI, Azure DevOps | SCM: GitHub, GitLab, Bitbucket, Azure Repos | Ticketing: Jira, ServiceNow, Slack, Splunk/SIEM for ADR",
       "sectors_reference_customers": "Vendor sectors: financial services, healthcare, government; named customers not in 2025 MQ blog",
-      "analyst_position": "Gartner MQ AST 2025: Visionary; Forrester Wave SAST Q3 2025: not evaluated",
+      "analyst_position": "Gartner MQ AST 2025: Visionary; Forrester Wave SAST Q3 2025: not evaluated; IDC MarketScape Worldwide Dynamic Application Security Testing 2026: Leader (vendor press release 7 Oct 2026; DAST assessment, not SAST)",
       "cons_known_gaps": "SAST (Scan) is the junior product; value is in IAST/ADR, which requires agent deployment in running apps | Narrower language coverage than SAST leaders (no C/C++, COBOL) | SmartFix requires GitHub and customer LLM; limited to 4-5 languages | SaaS-first; on-prem options limited | Pricing per app/per server opaque; third-party median ~$36k/yr",
       "pricing_model": "Per application / per server (agents), platform bundle (Northstar); Contrast One managed tier; custom",
       "indicative_cost_usd": "Not publicly disclosed; third-party median ~$36,000/yr",
       "pricing_confidence": "Low",
       "best_fit_for": "Java/.NET-heavy enterprises that want runtime-verified findings (IAST) plus SAST for pipelines, and a managed option (Contrast One) for lean security teams",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-26",
       "sources": "https://www.contrastsecurity.com/security-influencers/visionary-2025-gartner-magic-quadrant-for-application-security-testing | https://docs.contrastsecurity.com/en/contrast-ai-smartfix.html | https://www.helpnetsecurity.com/2025/06/09/contrast-security-northstar/ | https://appsecsanta.com/application-security/appsec-pricing-guide",
       "product_url": "https://www.contrastsecurity.com/contrast-scan",
       "is_new_entrant": false,
@@ -625,9 +693,9 @@
       "tool": "Aikido Security",
       "vendor": "Aikido Security (Belgium)",
       "type": "Commercial (free tier; open-source Opengrep engine underneath)",
-      "deployment": "SaaS (EU/US regions) / On-prem scanning (Pro+) and full on-prem deployment (Enterprise); FedRAMP ATO listed on Advanced tier",
+      "deployment": "SaaS (EU/US regions) / On-prem scanning (Pro+) and full on-prem deployment (Enterprise); FedRAMP Moderate authorization achieved (announced 6 Oct 2026), FedRAMP listed on Advanced tier",
       "languages_coverage": "Opengrep-based SAST plus AI SAST: 30+ languages incl. Java, JS/TS, Python, Go, C#, PHP, Ruby, Kotlin, Swift, Rust, C/C++, Scala",
-      "key_features": "All-in-one: SAST, SCA, secrets, IaC, container, CSPM, DAST, malware, licence in one console | AI AutoFix (SAST and IaC) and AutoTriage noise reduction | Free IDE plugin and free Developer tier | Opengrep founding sponsor; own AI SAST layer | Transparent published pricing and marketplace purchase | Aikido Zen in-app runtime protection",
+      "key_features": "All-in-one: SAST, SCA, secrets, IaC, container, CSPM, DAST, malware, licence in one console | AI AutoFix (SAST and IaC) and AutoTriage noise reduction | Free IDE plugin and free Developer tier | Opengrep founding sponsor; own AI SAST layer | Transparent published pricing and marketplace purchase | Aikido Zen in-app runtime protection | Noon workforce security (AI governance, device and email protection, employee training) launched Oct 2026 as an adjacent product",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "AutoTriage: AI marks irrelevant findings/FPs and applies reachability and context (Basic tier and above)",
         "ai_autofix": "AI AutoFix: one-click fix opens a pull request (auto-PR) for SAST and IaC findings; 10/month on free tier, unlimited on paid",
@@ -648,12 +716,18 @@
       "indicative_cost_usd": "Basic $300/month (10 users, ~$360/user/yr), Pro $600/month, Advanced from $600/month; Enterprise custom; 10% off annual (published Sep 2026)",
       "pricing_confidence": "High",
       "best_fit_for": "Mid-market and scale-ups that want one affordable console with AI autofix and transparent pricing; consulting teams servicing SMB clients",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://www.aikido.dev/pricing | https://www.aikido.dev/features/autofix | https://www.aikido.dev/blog/launching-opengrep-why-we-forked-semgrep | https://appsecsanta.com/aikido",
       "product_url": "https://www.aikido.dev/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Founded 2022; Series A 2024, Series B 2025 (unverified in this session); not first funded in 2025-2026",
       "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "Aikido launched Noon, a workforce security offering covering AI governance, device and email protection, and employee training against AI-powered phishing and deepfakes (vendor claim). Adjacent to, not part of, the SAST product.",
+          "source": "https://www.aikido.dev/category/product-company-updates"
+        },
         {
           "date": "2026-09-22",
           "type": "Feature launch",
@@ -715,14 +789,14 @@
       "type": "Open-core (Bearer CLI OSS; Cycode platform commercial)",
       "deployment": "Cycode SaaS (multi-region) with hybrid scanning agents; on-prem: Cycode offers self-hosted options for regulated clients (unverified detail); Bearer CLI runs anywhere incl. air-gap",
       "languages_coverage": "Bearer CLI: Ruby, JavaScript/TypeScript, Java, PHP, Go, Python (plus C# beta); Cycode SAST expands via additional engines to 20+ languages (vendor)",
-      "key_features": "Bearer: privacy/data-flow aware SAST (sensitive data detection) with fast CLI | Cycode Complete ASPM: SAST, SCA, secrets, IaC, CI/CD posture, pipeline security in one graph | Sep 2026: Agentic Code Scanning and Attack Chaining (LLM plans from threat model, validates exploitability) | AI-generated rule configuration and AI exploitability triage | Cygives free OSS tools (Bearer, Raven, Cimon) | Workstation Protection: real-time package-install interception and cooldown policies on developer machines (early access, Sep 2026)",
+      "key_features": "Bearer: privacy/data-flow aware SAST (sensitive data detection) with fast CLI | Cycode Complete ASPM: SAST, SCA, secrets, IaC, CI/CD posture, pipeline security in one graph | Sep 2026: Agentic Code Scanning and Attack Chaining (LLM plans from threat model, validates exploitability) | AI-generated rule configuration and AI exploitability triage | Cygives free OSS tools (Bearer, Raven, Cimon) | Workstation Protection: real-time package-install interception and cooldown policies on developer machines (early access, Sep 2026) | Cycode MCP Server bringing security intelligence into AI-native development tools and Cycode AI / Maestro for automated security investigations (named in Oct 2026 press release, vendor claim)",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "AI exploitability triage and ranking; agentic scanning 'disproves' findings before developer review (GA Sep 2026 per PR)",
         "ai_autofix": "AI-powered code resolution / fix suggestions in PR (suggested); auto-PR not confirmed",
         "ai_generated_custom_rules": "Yes: LLM generates and customises SAST rule configurations (Cycode 'AI-powered SAST' dimension)",
         "ai_reachability_or_dataflow_explanation": "Attack chaining explains exploit paths across findings",
         "natural_language_query": "Not documented",
-        "agent_mcp_ide_agent_integration": "IDE plugins; Cycode MCP server (vendor site, unverified); agentic scanning uses reasoning-tier models selectively",
+        "agent_mcp_ide_agent_integration": "IDE plugins; Cycode MCP Server for AI-native development tools (named in Oct 2026 press release; vendor claim, capabilities not independently verified); Cycode AI and Maestro automate security investigations; agentic scanning uses reasoning-tier models selectively",
         "llm_generated_code_scanning": "Positioned for 'post-Mythos era' AI-generated code",
         "model_used_or_byo_llm": "Reasoning-tier frontier models used selectively; provider not disclosed"
       },
@@ -730,18 +804,30 @@
       "ai_verified_source": "https://www.prnewswire.com/news-releases/cycode-releases-agentic-code-scanning-and-attack-chaining-post-mythos-eras-answer-to-cost-vs-precision-tradeoff-302866093.html",
       "integrations": "IDE: VS Code, JetBrains | CI/CD: GitHub Actions, GitLab CI, Jenkins, Azure DevOps, CircleCI, Bitbucket | SCM: GitHub, GitLab, Bitbucket, Azure DevOps | Ticketing: Jira, ServiceNow, Slack",
       "sectors_reference_customers": "Cycode named customers (site): Grubhub, Rapyd, Payoneer, Zoom (historical claims); sectors: fintech, SaaS",
-      "analyst_position": "Not rated in Gartner MQ AST 2025 or Forrester SAST Wave 2025 (Cycode appears in ASPM analyst coverage)",
+      "analyst_position": "Not rated in Gartner MQ AST 2025 or Forrester SAST Wave 2025 (Cycode appears in ASPM analyst coverage); Cycode states it is a Leader in the 2026 Gartner Magic Quadrant for Software Supply Chain Security (Oct 2026 press release, SCA/supply chain category rather than SAST)",
       "cons_known_gaps": "Bearer standalone SAST is effectively frozen; value now tied to buying the Cycode ASPM platform | Bearer OSS language coverage narrow (6-7 languages) | Cycode SAST maturity and independent benchmarks limited | Pricing undisclosed | Agentic scanning is weeks old (Sep 2026); production evidence thin",
       "pricing_model": "Platform bundle per developer (Cycode); Bearer CLI free",
       "indicative_cost_usd": "Not publicly disclosed (Cycode); $0 for Bearer CLI",
       "pricing_confidence": "None",
       "best_fit_for": "Teams wanting ASPM with pipeline/CI security plus SAST in one graph; Bearer CLI for privacy-aware scanning in Ruby/JS/Java/Go/Python projects",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-26",
       "sources": "https://cycode.com/press/cycode-completes-acquisition-of-bearer-and-announces-new-cygives-developer-initiative/ | https://techcrunch.com/2024/03/05/cycode-acquires-bearer-to-accelerate-its-move-into-ai-enhanced-security-remediation/ | https://www.prnewswire.com/news-releases/cycode-releases-agentic-code-scanning-and-attack-chaining-post-mythos-eras-answer-to-cost-vs-precision-tradeoff-302866093.html | https://cycode.com/blog/ai-sast/",
       "product_url": "https://cycode.com/platform/sast/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Bearer acquired 2024; Cycode established ASPM vendor",
       "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "Cycode announced a Canadian expansion with dedicated pre-sales, post-sales and customer success teams, citing 500% growth of its Canadian customer base in 18 months and customers such as Clio, Benevity, BDO Canada and theScore (vendor claim). The release lists current platform capabilities: ADLC Security, Agentic Code Scanning and Attack Chaining, Cycode AI and Maestro, Workstation Protection, and a Cycode MCP Server for AI-native development tools, and cites a Leader placement in the 2026 Gartner Magic Quadrant for Software Supply Chain Security.",
+          "source": "https://www.globenewswire.com/news-release/2026/10/20/3384753/0/en/cycode-expands-canadian-presence-building-on-global-momentum-in-agentic-development-security.html"
+        },
+        {
+          "date": "2026-10-19",
+          "type": "Rebrand",
+          "summary": "Cycode refreshed its brand (new logo, colours, website and tagline 'Protect where AI risk is born. With Cycode, you're in command'), positioning itself as 'the leader in Agentic Development Security' (vendor claim). Company name and product names (ADLC Security, Agentic Code Scanning) are unchanged.",
+          "source": "https://cycode.com/blog/new-cycode-brand/"
+        },
         {
           "date": "2026-09-23",
           "type": "Feature launch",
@@ -777,7 +863,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Cloud-native product teams on GitHub/GitLab wanting low-noise PR review and natural-language policies; a complement to deterministic SAST, not a compliance replacement",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-26",
       "sources": "https://www.dryrun.security/product/sast | https://www.dryrun.security/blog/top-ai-sast-tools-2026 | https://www.g2.com/products/dryrun-security/reviews | https://www.crunchbase.com/organization/dryrun-security",
       "product_url": "https://www.dryrun.security/",
       "is_new_entrant": false,
@@ -788,8 +874,8 @@
       "vendor": "Corgea",
       "type": "Commercial",
       "deployment": "SaaS; on-prem/self-hosted not listed (unverified)",
-      "languages_coverage": "20+ languages and frameworks (vendor) incl. Python, JS/TS, Java, Go, C#, Ruby, PHP, Kotlin, Swift, C/C++",
-      "key_features": "BLAST: AI-native SAST combining static analysis, project context, reachability, framework understanding and LLM reasoning (business-logic flaws) | Auto-triage of own and third-party findings (imports Snyk, Semgrep, Checkmarx etc.) with up to 90% noise reduction claim | AI autofix with PR generation and >90% fix-accuracy claim; ranked first in Latio autofix report (vendor cites) | IDE, PR, CI/CD, MCP integrations | Also SCA, secrets, IaC, containers | File include rules and CycloneDX SBOM export (Sep 2026) | Per-CWE SAST finding tracking with independent triage history, Vulnerabilities Workbench with bulk triage, CLI --project-name for multiple projects per repo (Oct 2026) | AI pentesting (beta) and triage approvals (Q3 2026)",
+      "languages_coverage": "20+ languages and frameworks (vendor) incl. Python, JS/TS, Java, Go, C#, Ruby, PHP, Kotlin, Swift, C/C++; VB6 and VB.NET added Oct 2026",
+      "key_features": "BLAST: AI-native SAST combining static analysis, project context, reachability, framework understanding and LLM reasoning (business-logic flaws) | Auto-triage of own and third-party findings (imports Snyk, Semgrep, Checkmarx etc.) with up to 90% noise reduction claim | AI autofix with PR generation and >90% fix-accuracy claim; ranked first in Latio autofix report (vendor cites) | IDE, PR, CI/CD, MCP integrations | Also SCA, secrets, IaC, containers | File include rules and CycloneDX SBOM export (Sep 2026) | Per-CWE SAST finding tracking with independent triage history, Vulnerabilities Workbench with bulk triage, CLI --project-name for multiple projects per repo (Oct 2026) | AI pentesting (beta) and triage approvals (Q3 2026) | Focused PR scans, dedicated Agent permission and expanded Workbench bulk status changes (mid/late Oct 2026)",
       "ai_capabilities": {
         "ai_triage_false_positive_reduction": "Auto-triage re-grades severity using exploitability, impact, reachability; vendor claim up to 90% noise reduction; works on imported scanner results",
         "ai_autofix": "AI fix generation delivered as PR / suggestion for developer review (vendor: >90% accuracy)",
@@ -810,12 +896,24 @@
       "indicative_cost_usd": "Not publicly disclosed (third-party listings suggest low-hundreds USD per dev/yr; Low confidence)",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams wanting an AI triage and autofix layer over existing scanners, or a lightweight AI SAST for modern web stacks",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "sources": "https://corgea.com/auto-triage | https://corgea.com/blog/top-ai-sast-tools-for-2026/ | https://corgea.com/learn/best-sast-tools | https://toolradar.com/tools/corgea",
       "product_url": "https://corgea.com/",
       "is_new_entrant": false,
       "is_new_entrant_basis": "Founded 2023 (funding dates unverified); emerging vendor",
       "recent_updates": [
+        {
+          "date": "2026-10-22",
+          "type": "Release",
+          "summary": "Corgea changelog 22 Oct 2026: pull request scans now focus on the changes that matter most, SAST support added for VB6 and VB.NET, and Corgea Agent feedback is easier to follow (per blog index summary; full post not read).",
+          "source": "https://corgea.com/blog"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Release",
+          "summary": "Corgea changelog 15 Oct 2026: a dedicated permission for the Corgea Agent, expanded bulk status changes in the Vulnerabilities Workbench, and faster browsing of SCA packages (per blog index summary; full post not read).",
+          "source": "https://corgea.com/blog"
+        },
         {
           "date": "2026-10-08",
           "type": "Release",
@@ -869,7 +967,7 @@
       "indicative_cost_usd": "Team from $1,000/month plus $60/dev/month (published); ~$720/dev/yr plus $12k/yr base",
       "pricing_confidence": "High",
       "best_fit_for": "Security teams hunting logic flaws AI can reason about, and centralising multi-scanner triage; enterprises needing self-hosted AI SAST",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://zeropath.com/pricing | https://zeropath.com/products/sast | https://zeropath.com/products/sast-autofix | https://thectoclub.com/tools/zeropath-review/",
       "product_url": "https://zeropath.com/",
       "is_new_entrant": true,
@@ -902,7 +1000,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Security engineering teams that want to codify their own detections and auto-remediation over Opengrep and existing scanners",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://amplify.security/ | https://aws.amazon.com/marketplace/pp/prodview-mj7b22bmjhupe | https://blogs.amplify.security/blog/ai-appsec-vendors-auto-fix-code | https://www.opengrep.dev/",
       "product_url": "https://amplify.security/",
       "is_new_entrant": false,
@@ -935,7 +1033,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Quick Python hygiene gate in CI; supplement to a taint-capable SAST",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/PyCQA/bandit | https://github.com/PyCQA/bandit/releases | https://appsecsanta.com/bandit",
       "product_url": "https://bandit.readthedocs.io/",
       "is_new_entrant": false,
@@ -968,7 +1066,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Any Rails codebase; near-zero cost, low noise",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://rubygems.org/gems/brakeman/versions | https://brakemanscanner.org/ | https://github.com/presidentbeef/brakeman",
       "product_url": "https://brakemanscanner.org/",
       "is_new_entrant": false,
@@ -1001,7 +1099,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Java/Kotlin shops needing a free bytecode security scan in the build; baseline in OWASP Benchmark comparisons",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://find-sec-bugs.github.io/ | https://github.com/find-sec-bugs/find-sec-bugs | https://appsecsanta.com/spotbugs | https://github.com/spotbugs/spotbugs",
       "product_url": "https://find-sec-bugs.github.io/",
       "is_new_entrant": false,
@@ -1034,7 +1132,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Go microservices; run in golangci-lint alongside a commercial SAST",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "sources": "https://github.com/securego/gosec | https://newreleases.io/project/github/securego/gosec/release/v2.25.0 | https://appsecsanta.com/gosec",
       "product_url": "https://github.com/securego/gosec",
       "is_new_entrant": false,
@@ -1184,7 +1282,7 @@
       "tool": "Kodem (Runtime-aware AI SAST, Kai agents)",
       "vendor": "Kodem Security",
       "type": "Commercial",
-      "deployment": "SaaS with out-of-band runtime sensors in customer environment; on-prem not documented",
+      "deployment": "SaaS with out-of-band runtime sensors in customer environment (Linux, Kubernetes and, from Oct 2026, Windows Server In-Host Sensor); on-prem not documented",
       "languages_coverage": "Java, JavaScript/TypeScript (Node.js, Deno, Bun), Python, Go, Rust, C/C++, Ruby, Scala",
       "key_features": "Blends deterministic and LLM analysis, then validates findings against runtime execution data (memory forensics, patented) | Kai Red proves exploitability, Kai Blue generates ready-to-review PR fixes and verifies, Kai Defend ADR | Runtime-aware SCA and secrets | Function-level reachability persisting across builds | Opengrep founding sponsor | Member of OpenAI Daybreak cyber partner programme (2026)",
       "ai_capabilities": {
@@ -1207,12 +1305,18 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Cloud-native teams that can deploy runtime sensors and want reachability-validated SAST with auto-PR fixes",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-26",
       "sources": "https://www.kodemsecurity.com/ | https://www.kodemsecurity.com/platform/sast | https://www.kodemsecurity.com/resources/press-release-security-rivals-unite-to-launch-opengrep-following-semgrep-clampdown",
       "product_url": "https://www.kodemsecurity.com/platform/sast",
       "is_new_entrant": true,
       "is_new_entrant_basis": "Runtime-aware AI SAST and Kai agents launched 2025-2026 (company founded 2023, $25M seed 2023 per prior knowledge, unverified)",
       "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Feature launch",
+          "summary": "Kodem's In-Host Sensor now runs on Windows Server, so runtime evidence from Windows hosts feeds the same analysis and workflows as Linux and Kubernetes; the post also cites C# SAST rules and NuGet/VB.Net coverage correlated with runtime data (vendor claim). Availability tiers and pricing not stated.",
+          "source": "https://www.kodemsecurity.com/resources/kodem-runs-on-windows-now"
+        },
         {
           "date": "2026-09-22",
           "type": "Feature launch",
@@ -1262,9 +1366,9 @@
       "languages_coverage": "Language-agnostic LLM review across major languages (not enumerated)",
       "key_features": "Agentic analysis tracing exploitable paths across files, services and trust boundaries | Detects IDOR, prompt injection, business-logic flaws, injection chains, SSRF, race conditions | Verification engine (reachability, exploitability, blast radius) to cut FPs | Drafts fixes as PRs | Scheduled deep scans plus PR-time monitoring | Dependency vulnerability scanning | Sits on the most-installed AI review app (17k+ customers, 6M repos)",
       "ai_capabilities": {
-        "ai_triage_false_positive_reduction": "Yes: three-tier verification (reachability, exploitability, blast radius)",
-        "ai_autofix": "Yes: drafts fix PRs ('all you have to do is merge')",
-        "ai_generated_custom_rules": "Custom review instructions in natural language (core product)",
+        "ai_triage_false_positive_reduction": "Yes: three-tier verification (reachability, exploitability, blast radius); Runtime verification tab with Reproducer Guide per Deep Scan finding, and Runtime Analysis that executes the guide in a CodeRabbit environment and stores evidence (closed beta, Oct 2026)",
+        "ai_autofix": "Yes: drafts fix PRs ('all you have to do is merge'); 'Fix comments' repairs selected review comments and 'Autofix' (formerly Autopilot) drives a coding-agent PR through review feedback, findings and failing CI (renamed Oct 2026)",
+        "ai_generated_custom_rules": "Custom review instructions in natural language (core product); also reads Claude Code rules from .claude/rules/ with path scoping (Oct 2026)",
         "ai_reachability_or_dataflow_explanation": "Exploit path explanation",
         "natural_language_query": "Chat with CodeRabbit in PR",
         "agent_mcp_ide_agent_integration": "Native GitHub/GitLab/Azure DevOps/Bitbucket app; IDE extension; MCP for context (vendor)",
@@ -1281,12 +1385,30 @@
       "indicative_cost_usd": "Code review $288 to $864 per dev/yr list; Security add-on not publicly disclosed",
       "pricing_confidence": "High (review) / None (security add-on)",
       "best_fit_for": "Teams already using CodeRabbit that want reasoning-based security review of PRs alongside a deterministic SAST",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-26",
       "sources": "https://www.coderabbit.ai/security | https://www.coderabbit.ai/pricing | https://www.coderabbit.ai/",
       "product_url": "https://www.coderabbit.ai/security",
       "is_new_entrant": true,
       "is_new_entrant_basis": "CodeRabbit Security / AI Deep Scan is a 2026 product line on an existing code-review vendor (CodeRabbit raised Series B in 2025 per prior knowledge, unverified)",
       "recent_updates": [
+        {
+          "date": "2026-10-23",
+          "type": "Feature launch",
+          "summary": "Runtime verification for Deep Scan findings: each Deep Scan vulnerability gets a Runtime verification tab with a Reproducer Guide for confirming the issue in the customer's staging or test environment; Runtime Analysis (closed beta) runs that guide inside a CodeRabbit environment and keeps the evidence.",
+          "source": "https://docs.coderabbit.ai/changelog"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Feature launch",
+          "summary": "CodeRabbit now reads rules from .claude/rules/ in Code Guidelines; rules with 'paths' frontmatter apply only to matching files and a matching filePatterns entry can override those paths.",
+          "source": "https://docs.coderabbit.ai/changelog"
+        },
+        {
+          "date": "2026-10-14",
+          "type": "Feature launch",
+          "summary": "CodeRabbit renamed its fix features: 'Autofix' became 'Fix comments' (one-off repair of selected review comments) and 'Autopilot' became 'Autofix', which carries a coding-agent pull request through review feedback, CodeRabbit findings and failing CI checks; old commands remain as temporary aliases.",
+          "source": "https://docs.coderabbit.ai/changelog"
+        },
         {
           "date": "2026-09-15",
           "type": "Feature launch",
@@ -1314,7 +1436,7 @@
       },
       "ai_maturity": "GA",
       "ai_verified_source": "https://cursor.com/changelog",
-      "integrations": "IDE: Cursor | CI/CD: PR checks | SCM: GitHub (GitLab unverified) | Ticketing: none native",
+      "integrations": "IDE: Cursor | CI/CD: PR checks | SCM: GitHub, GitLab and Bitbucket referenced in Bugbot release notes (Oct 2026); Security Review availability per SCM unverified | Ticketing: none native",
       "sectors_reference_customers": "Not disclosed for Security Review; Bugbot used by 'thousands of teams' (vendor)",
       "analyst_position": "Not rated",
       "cons_known_gaps": "Days old (Sep 2026); no benchmarks | Consumes usage credits; cost per PR not published | Cursor-only ecosystem, GitHub-first | No compliance reporting, SBOM, or dashboards | Not a substitute for enterprise SAST evidence",
@@ -1322,12 +1444,18 @@
       "indicative_cost_usd": "Included via credits; trial credits at launch; net cost not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Cursor-standardised engineering teams wanting a lightweight security gate on PRs before enterprise SAST",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-10-26",
       "sources": "https://cursor.com/changelog | https://cursor.com/bugbot",
       "product_url": "https://cursor.com/bugbot",
       "is_new_entrant": true,
       "is_new_entrant_basis": "Security Review launched 2026-09-23; Bugbot launched mid-2025",
       "recent_updates": [
+        {
+          "date": "2026-10-12",
+          "type": "Release",
+          "summary": "Bugbot release notes, week of 12 Oct 2026: shared GitHub installations across teams with per-repository settings and an 'Enabled by' badge, Mercurial support for local reviews, findings that correctly flag rule violations are kept even if the PR calls the change deliberate, time-limited long local reviews return verified bugs, allowlist/blocklist checks for PRs opened by Cursor agents use the launching user's account, Manual Only mode across linked GitLab/Bitbucket accounts, and team MCP server sign-in from the dashboard. No Security Review-specific changes listed.",
+          "source": "https://cursor.com/docs/release-notes/bugbot"
+        },
         {
           "date": "2026-09-23",
           "type": "Feature launch",
@@ -1359,11 +1487,11 @@
       "sectors_reference_customers": "Not disclosed in verified sources",
       "analyst_position": "Not rated",
       "cons_known_gaps": "Security is secondary to code review | Credit-based review tiers | No compliance reporting | Opengrep depth limits | Young vendor",
-      "pricing_model": "Per seat plus credits",
+      "pricing_model": "Per seat plus credits; review tiers Base (1 credit per review), Plus (3 credits, deeper review) and Apex (10 credits, most intensive review for large PRs) introduced Sep 2026",
       "indicative_cost_usd": "Pro $30/seat/month ($360/yr) with 50 credits; Enterprise custom",
       "pricing_confidence": "High",
       "best_fit_for": "Small teams wanting one AI reviewer that also runs Opengrep and SCA; not an enterprise SAST",
-      "last_verified": "2026-09-28",
+      "last_verified": "2026-10-26",
       "sources": "https://www.greptile.com/content-library/best-security-code-review-tools | https://www.greptile.com/pricing",
       "product_url": "https://www.greptile.com/",
       "is_new_entrant": true,

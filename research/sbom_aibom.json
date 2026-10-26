@@ -29,7 +29,7 @@
       "pricing_confidence": "High",
       "best_fit_for": "Teams standardising on CycloneDX who want the widest ecosystem and AI-BOM coverage in an OSS generator, feeding Dependency-Track or a commercial manager",
       "sources": "https://cyclonedx.org/news/cyclonedx-v1.7-released/|https://github.com/CycloneDX/cdxgen|https://github.com/CycloneDX/cyclonedx-cli|https://ecma-international.org/publications-and-standards/standards/ecma-424/|https://cyclonedx.org/tool-center/",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-10-02",
@@ -72,7 +72,7 @@
       "pricing_confidence": "High",
       "best_fit_for": "Best OSS SBOM management platform for organisations willing to self-host and pair with cdxgen/Syft",
       "sources": "https://github.com/DependencyTrack/dependency-track/releases/latest|https://docs.dependencytrack.org/changelog/|https://owasp.org/www-project-dependency-track/|https://dependencytrack.org/",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-09-20",
@@ -96,7 +96,7 @@
       "type": "Open source",
       "deployment": "CLI / Go library / container / GitHub Action",
       "languages_coverage": "Container images (OCI/Docker), filesystems, archives; OS packages (apk, deb, rpm, etc.) and language ecosystems (Java, JS, Python, Go, Rust, Ruby, PHP, .NET, Swift, Dart, Erlang, Haskell, Perl/CPAN from v1.54.0, etc.); Go and other binaries; GGUF/AI model artefacts added in 2026 (Anchore Enterprise 6.2 notes); no firmware unpacking",
-      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.54.0 (1 Oct 2026) Perl/CPAN cataloger and non-daemon Podman analysis | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data; v0.120.0 (2 Oct 2026) NVD SSVC decision points in the v6 database, SLES comprehensive distro matching, Sigstore-signed release checksums | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
+      "key_features": "Output CycloneDX (JSON/XML), SPDX 2.x (JSON/tag-value), Syft JSON; v1.54.0 (1 Oct 2026) Perl/CPAN cataloger and non-daemon Podman analysis; v1.54.1 (6 Oct 2026) deterministic packages.lock resolution; v1.55.0 (19 Oct 2026) IPK package scanning through the deb-archive cataloger | Grype: vulnerability matching from SBOM or image, OpenVEX support (--vex), EPSS/KEV data; v0.120.0 (2 Oct 2026) NVD SSVC decision points in the v6 database, SLES comprehensive distro matching, Sigstore-signed release checksums; v0.121.0 (19 Oct 2026) OS end-of-life warnings from distro SupportEnd dates and Swift Package Manager matching against GitHub Swift advisories | cosign attestation of SBOMs (syft attest) | Cataloger configuration, licence detection, file metadata | No SBOM quality scoring; no management layer | Regulatory: mainstream generator used to meet EO 14028 and CISA 2026 element expectations (hash, licence, tool metadata)",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial (GGUF and Docker Model artefact detection reported in Anchore 6.2 blog; broader model/dataset ML-BOM not native) | AI model file scanning: no | AI license/provenance: no | AI-assisted enrichment: no | Natural-language query: no | MCP/agent integration: Anchore Enterprise MCP server (commercial); community MCP wrappers for Syft/Grype unverified",
       "ai_maturity": "Beta or Preview",
       "ai_verified_source": "https://anchore.com/blog/extending-supply-chain-security-to-ai-models-with-anchore-enterprise-v6-2/",
@@ -115,8 +115,20 @@
       "pricing_confidence": "High",
       "best_fit_for": "Container-heavy pipelines needing a fast, scriptable SBOM and vulnerability pair with attestation support",
       "sources": "https://github.com/anchore/syft/releases|https://github.com/anchore/grype|https://anchore.com/blog/|https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-19",
+          "type": "Release",
+          "summary": "Syft v1.55.0 adds scanning of IPK packages through the deb-archive cataloger, pins the GGUF library to stop dropped packages, fixes a missing copyright holder field needed for Debian packaging and fixes panics when cli.Command() is invoked multiple times.",
+          "source": "https://github.com/anchore/syft/releases"
+        },
+        {
+          "date": "2026-10-19",
+          "type": "Release",
+          "summary": "Grype v0.121.0 adds OS end-of-life warnings using distro SupportEnd dates, handles missing copyright owners for Debian packaging, matches Swift Package Manager packages against GitHub Swift advisories (previously missed), carries AlmaLinux fix dates and extended-support fix availability through merged matches, makes the DB build SQLite cache size configurable and upgrades golang.org/x/net to v0.61.0 (five advisories). Release page shows '19 Oct' without a year; year inferred from the linked advisories.",
+          "source": "https://github.com/anchore/grype/releases/tag/v0.121.0"
+        },
         {
           "date": "2026-10-02",
           "type": "Release",
@@ -199,8 +211,14 @@
       "pricing_confidence": "High (OSS) / None (Aqua)",
       "best_fit_for": "Teams already using Trivy for image scanning who want SBOM plus VEX filtering in CI with minimal tooling",
       "sources": "https://trivy.dev/latest/docs/supply-chain/sbom/|https://trivy.dev/latest/docs/supply-chain/vex/|https://github.com/aquasecurity/trivy/releases",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Release",
+          "summary": "Trivy v0.76.1 is a security update for the eMudhra intermediate CA key compromise: official binaries are built with Go 1.27.3 (certificate distrust mitigation, CVE-2026-111943) and container images ship an updated Alpine CA trust store that rejects the affected chains, plus dependency bumps. No SBOM, VEX or CBOM changes.",
+          "source": "https://github.com/aquasecurity/trivy/releases"
+        },
         {
           "date": "2026-10-14",
           "type": "Release",
@@ -323,8 +341,20 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first enterprises on Snyk wanting a GA, code-level AI-BOM that maps MCP dependencies",
       "sources": "https://docs.snyk.io/developer-tools/snyk-cli/commands/aibom.md|https://docs.snyk.io/developer-tools/snyk-cli/commands/sbom|https://labs.snyk.io/resources/mcps-snyk-ai-bom/|https://labs.snyk.io/resources/aibom-cli-snyk/",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-14",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.1: 'snyk test --html' and '--html-file-output' no longer require preview features, project name shown consistently in the snyk test summary, several CVE fixes. No SBOM or AI-BOM changes.",
+          "source": "https://updates.snyk.io"
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Feature launch",
+          "summary": "Pending ignore requests are now visible on the Project Issues page with a 'Pending Ignore Request' status and filter, also reported by the issues API; rollout over about two weeks.",
+          "source": "https://updates.snyk.io"
+        },
         {
           "date": "2026-10-08",
           "type": "Release",
@@ -372,7 +402,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises needing binary/firmware SBOMs plus licence compliance and CRA-grade reporting",
       "sources": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/resources/analyst-reports/gartner-magic-quadrant-software-supply-chain-security.html",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-09-23",
@@ -409,7 +439,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises on Nexus/Lifecycle wanting SBOM lifecycle management with regulatory mapping and AI component visibility",
       "sources": "https://www.sonatype.com/products/sbom-manager|https://www.sonatype.com/press-releases/sonatype-named-a-leader-in-the-2026-gartner-magic-quadrant|https://www.sonatype.com/products/open-source-security-dependency-management",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-10-14",
@@ -433,7 +463,7 @@
       "type": "Commercial",
       "deployment": "SaaS (multi-cloud) or self-hosted",
       "languages_coverage": "All Artifactory package types (Maven, npm, PyPI, Docker/OCI, Helm, Go, NuGet, Conan, etc.), binaries in repositories, ML models via Hugging Face remote repos and Model Registry",
-      "key_features": "SBOM export CycloneDX and SPDX for builds and release bundles (versions not verified from docs) | Xray SCA, contextual analysis, secrets, IaC; Advanced Security; Threat Hub feed with impact search for SBOM-entitled users (Xray 3.155.3, Sep 2026); Curation Integrity Violation condition blocks cached packages whose checksum does not match the JFrog Catalog, plus Chainguard remediated Java and Echo Maven/npm support (Xray 3.157.2, Oct 2026) | JFrog Evidence / AppTrust: signed attestations (in-toto/Sigstore style) attached to packages | AI Catalog: policy-driven control of AI models and agents; MCP Registry | VEX: Xray exports CycloneDX VEX/VDR per docs (unverified) | Regulatory: FedRAMP High offering, SSDF and CRA positioning",
+      "key_features": "SBOM export CycloneDX and SPDX for builds and release bundles (versions not verified from docs) | Xray SCA, contextual analysis, secrets, IaC; Advanced Security; Threat Hub feed with impact search for SBOM-entitled users (Xray 3.155.3, Sep 2026); Curation Integrity Violation condition blocks cached packages whose checksum does not match the JFrog Catalog, plus Chainguard remediated Java and Echo Maven/npm support (Xray 3.157.2, Oct 2026); project-scoped Curation and Apply Policy to Projects (Xray 3.157.3, Oct 2026) | JFrog Evidence / AppTrust: signed attestations (in-toto/Sigstore style) attached to packages | AI Catalog: policy-driven control of AI models and agents; MCP Registry | VEX: Xray exports CycloneDX VEX/VDR per docs (unverified) | Regulatory: FedRAMP High offering, SSDF and CRA positioning",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial (model lineage through Artifactory, model registry; formal CycloneDX ML-BOM output unverified) | AI model file scanning: Xray scans Hugging Face models for malicious code/licence (GA per JFrog docs, unverified here) | AI license/provenance: yes (model licence and provenance in catalog) | AI-assisted: JFrog AI-driven curation and MCP server for Artifactory | Natural-language query: via JFrog MCP server | MCP/agent: MCP Registry in AI Catalog (2026)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/",
@@ -452,8 +482,20 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Artifactory wanting SBOM, attestations and AI model governance in one control plane",
       "sources": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/|https://jfrog.com/gartner-magic-quadrant/|https://investors.jfrog.com/news/news-details/2026/JFrog-Positioned-as-a-Leader-in-the-First-Gartner-Magic-Quadrant-for-Software-Supply-Chain-Security/default.aspx",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-22",
+          "type": "Release",
+          "summary": "Xray 3.157.7 fixes a Contextual Analysis results discrepancy between on-demand and Platform scans; 3.156.21 fixes New Watch form access for users in project groups and repository visibility for path-restricted users. No SBOM, AI Catalog or AppTrust changes.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
+        {
+          "date": "2026-10-18",
+          "type": "Release",
+          "summary": "Xray 3.157.3 makes Curation available within a selected project and adds Apply Policy to Projects with a Specific projects scope; same-day maintenance release 3.156.16 adds Oracle Linux OS package detection for Docker images and RPMs.",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
         {
           "date": "2026-10-15",
           "type": "Release",
@@ -482,11 +524,11 @@
       "type": "Commercial (feature free on all plans)",
       "deployment": "SaaS (GitHub.com); GitHub Enterprise Server support for dependency graph",
       "languages_coverage": "Manifest/lockfile ecosystems supported by dependency graph (npm, Maven, pip, Go, NuGet, RubyGems, Composer, Cargo, pub, Swift, etc.); no containers or binaries",
-      "key_features": "SPDX 2.3 JSON export via UI and REST API | Includes versions, package identifiers, licences, transitive paths | Open source license compliance GA (16 Oct 2026, GitHub Enterprise Cloud incl. data residency, repositories with GitHub Code Security): licence data in dependency graph and SBOM exports, pull request annotations for noncompliant dependencies, enterprise licence policy enforced through the ruleset condition 'Require license compliance results before merging', Enterprise Open-Source License Manager role, audit log events, and dependency graph, policy and package compliance-check APIs | Actions available for Syft or sbom-tool for CycloneDX | Dependabot alerts and dependency review | No VEX; no ingestion | Regulatory: meets basic NTIA elements; lacks hashes and signatures required by CISA 2026",
+      "key_features": "SPDX 2.3 JSON export via UI and REST API | Includes versions, package identifiers, licences, transitive paths | Open source license compliance GA (16 Oct 2026, GitHub Enterprise Cloud incl. data residency, repositories with GitHub Code Security): licence data in dependency graph and SBOM exports, pull request annotations for noncompliant dependencies, enterprise licence policy enforced through the ruleset condition 'Require license compliance results before merging', Enterprise Open-Source License Manager role, audit log events, and dependency graph, policy and package compliance-check APIs | GitHub package firewall (public preview, 20 Oct 2026): install-time policy gate between CI runners or coding agents and upstream npm with enterprise policies for cooldown periods, GitHub Advisory Database malware and vulnerability checks and attestation-downgrade checks; GitHub Enterprise Cloud incl. data residency, npm only, free in preview with metered billing planned at GA | Actions available for Syft or sbom-tool for CycloneDX | Dependabot alerts and dependency review; Dependabot alerts REST API includes dependency versions (Oct 2026) | No VEX; no ingestion | Regulatory: meets basic NTIA elements; lacks hashes and signatures required by CISA 2026",
       "ai_capabilities": "AI BOM: no | Model scanning: no | AI license: no | AI-assisted: Copilot agentic autofix for code security and code quality alerts, now using Copilot Memory for context and fix-pattern reuse (Sep 2026; not SBOM) | NL query: GitHub MCP server (general); package licence compliance-check API intended so coding agents avoid recommending noncompliant packages (Oct 2026) | MCP/agent: GitHub MCP server GA (not SBOM-specific)",
       "ai_maturity": "None",
       "ai_verified_source": "https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository",
-      "integrations": "REST API, GitHub Actions, Dependabot",
+      "integrations": "REST API, GitHub Actions, Dependabot; package firewall endpoint for npm clients, CI runners and coding agents (public preview, Oct 2026)",
       "sectors_reference_customers": "All GitHub users",
       "analyst_position": "GitHub listed on Gartner SSCS Peer Insights market; MQ position unverified",
       "cons_known_gaps": [
@@ -496,18 +538,36 @@
         "No management, VEX or quality scoring",
         "Accuracy depends on dependency graph parser coverage"
       ],
-      "pricing_model": "Included free",
+      "pricing_model": "Included free; package firewall free during public preview, metered billing (Actions-style) planned at GA (Oct 2026)",
       "indicative_cost_usd": "$0 (GitHub Advanced Security for alerts is $49/committer/month list)",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline repo-level SBOM for inventory and open-source hygiene, not for regulatory submission",
       "sources": "https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "GitHub package firewall entered public preview: an install-time policy gate that sits between CI runners, coding agents or internal registries and upstream npm, inspecting metadata requests and downloads against enterprise policies (configurable cooldown period, GitHub Advisory Database malware and vulnerability checks, attestation-downgrade checks). npm only, for GitHub Enterprise Cloud including data residency; free during preview with metered billing planned at GA.",
+          "source": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview"
+        },
+        {
+          "date": "2026-10-20",
+          "type": "Feature launch",
+          "summary": "Dependabot alerts REST API now includes dependency version details, and Dependabot added support for npm 12, pnpm 11 and 12, and Bun 1.4 (changelog listing; titles read on the changelog index).",
+          "source": "https://github.blog/changelog/"
+        },
         {
           "date": "2026-10-16",
           "type": "Feature GA",
           "summary": "Open source license compliance is generally available for GitHub Enterprise Cloud customers (including data residency) on repositories with GitHub Code Security: licence data now appears in the dependency graph and SBOM exports, pull requests are annotated for noncompliant dependencies, an enterprise licence policy is enforced via a new ruleset condition, and new APIs cover the dependency graph, policy management and a package compliance check aimed at coding agents. Same week: Dependabot gained anonymous organization-level registries (12 Oct) and improved detection of withdrawn alerts (13 Oct).",
           "source": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/"
+        },
+        {
+          "date": "2026-10-14",
+          "type": "Feature launch",
+          "summary": "GitHub Actions workflow lockfiles entered public preview (supply-chain tagged changelog item; title read on the changelog index, details not fetched).",
+          "source": "https://github.blog/changelog/"
         },
         {
           "date": "2026-09-25",
@@ -550,8 +610,14 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab Ultimate shops wanting pipeline-native CycloneDX SBOMs feeding an external manager",
       "sources": "https://docs.gitlab.com/user/application_security/dependency_scanning/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Release",
+          "summary": "GitLab critical patch release 19.5.1 (and 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10, 18.11.13) fixes CVE-2026-110264, a CVSS 10.0 integer overflow in the regular expression compiler allowing unauthenticated remote code execution, plus SAML/LDAP account takeover and OAuth discovery cache poisoning issues. No dependency scanning or SBOM changes.",
+          "source": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+        },
         {
           "date": "2026-10-15",
           "type": "Release",
@@ -574,11 +640,11 @@
       "type": "Commercial",
       "deployment": "SaaS; on-premises agent options",
       "languages_coverage": "200+ languages/package managers claimed, containers, images; Mend AI: AI models, frameworks, datasets, agents, MCP servers, RAG components discovered in code",
-      "key_features": "SBOM export SPDX and CycloneDX; import third-party SBOMs; continuously regenerated | VEX exploitability context embedded per component | EO 14028 and EU CRA positioning; CISA-compatible formatting claims | Reachability analysis, malicious package detection | Mend AI: AI-BOM, policy engine, system prompt hardening, AI red teaming, runtime protection | Regulatory: EU AI Act and NIST AI RMF alignment claims",
+      "key_features": "SBOM export SPDX and CycloneDX; import third-party SBOMs; continuously regenerated | Aggregated SBOM: one combined CycloneDX or SPDX file for application and multi-project scopes with deduplicated components (26.9.3, 18 Oct 2026); SPDX and CycloneDX import fixes for circular relationships and newer SPDX licence identifiers | VEX exploitability context embedded per component | EO 14028 and EU CRA positioning; CISA-compatible formatting claims | Reachability analysis, malicious package detection | Mend AI: AI-BOM, policy engine, system prompt hardening, AI red teaming, runtime protection | Regulatory: EU AI Act and NIST AI RMF alignment claims",
       "ai_capabilities": "AI BOM / ML-BOM generation: GA (models, frameworks, datasets, agents, MCP connections; export format not documented, CycloneDX unverified) | AI model file scanning: not documented | AI license/provenance: model licence policy enforcement | AI-assisted enrichment/VEX: Mend AI remediation features (marketing) | NL query: unverified | MCP/agent: agent and MCP discovery GA",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.mend.io/mend-ai/",
-      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, Artifactory, Jira, IDEs, ServiceNow",
+      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, Artifactory, Jira, IDEs, ServiceNow; Bun package manager (GA, Oct 2026); GitHub repository-level security advisories as an import source (Oct 2026)",
       "sectors_reference_customers": "Mend cites customers in FS, healthcare, tech (e.g. Siemens, Vonage historically)",
       "analyst_position": "Visionary in Gartner AST MQ 2025; SSCS MQ 2026 position unverified (listed on Peer Insights market)",
       "cons_known_gaps": [
@@ -593,7 +659,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Mend SCA customers wanting AI component discovery and governance inside the existing AppSec platform",
       "sources": "https://www.mend.io/mend-ai/|https://www.mend.io/sbom/|https://www.mend.io/blog/the-vision-behind-mends-recognition/",
-      "last_verified": "2026-10-19"
+      "last_verified": "2026-10-26",
+      "recent_updates": [
+        {
+          "date": "2026-10-18",
+          "type": "Release",
+          "summary": "Mend 26.9.3 adds an option to generate one aggregated SBOM for application and multi-project scopes in CycloneDX or SPDX with duplicate components merged; fixes SPDX imports hanging on circular or duplicate relationships and CycloneDX imports rejecting valid newer SPDX licence identifiers such as FSL-1.1-MIT; Bun package manager support reaches GA in the Mend CLI and repository integrations; GitHub repository-level security advisories added as an import source; Jira Data Center duplicate ticket fix.",
+          "source": "https://docs.mend.io/platform/latest/mend-sca-release-notes"
+        }
+      ]
     },
     {
       "tool": "Cybeats SBOM Studio",
@@ -622,7 +696,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Product security teams managing supplier SBOMs for FDA and CRA obligations",
       "sources": "https://www.cybeats.com/sbom-studio|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-10-26"
     },
     {
       "tool": "Finite State Platform",
@@ -764,8 +838,8 @@
       "type": "Open-core",
       "deployment": "CLI tools (OSS); Interlynk SBOM Automation Platform SaaS/on-prem",
       "languages_coverage": "Format-level tooling for SPDX and CycloneDX (JSON); platform ingests from any generator; lynkctl (commercial) post-build SBOM generation for embedded C/C++ built with GNU Make, CMake, IAR Embedded Workbench or TI Code Composer Studio (gcc, clang, LLVM, GNU ld, IAR toolchains; Eclipse CDT, Keil, vcpkg, Conan in development); no native generation of ML-BOM",
-      "key_features": "sbomqs: 0-10 quality score across identification, provenance, integrity, completeness, licensing, vulnerability, structural, component; compliance profiles NTIA, BSI TR-03183-2 (1.1/2.0/2.1), OpenChain Telco, FSCT v3; v2.1.x (Sep 2026) NTIA option selects the 2026 profile | sbomasm: assemble, edit, enrich (ClearlyDefined), remove, sign/verify | sbomgr: search across SBOMs | lynkctl embedded C/C++ generator: CycloneDX 1.6+ and SPDX 3.0+ with per-component evidence (source files, compile lines, include paths, confidence tiers), deterministic output, air-gapped operation, positioned for FDA 524B, EU CRA, ISO/SAE 21434 (promoted Sep 2026) | Platform: SBOM lifecycle, VEX, sharing, compliance mapping to CRA/BSI/CISA (per vendor claims) | Apache-2.0 for OSS tools",
-      "ai_capabilities": "AI BOM: no native generation; can score/merge AIBOM documents as CycloneDX | Model scanning: no | AI license: no | AI-assisted: unverified | NL query: unverified | MCP/agent: unverified",
+      "key_features": "sbomqs: 0-10 quality score across identification, provenance, integrity, completeness, licensing, vulnerability, structural, component; compliance profiles NTIA, BSI TR-03183-2 (1.1/2.0/2.1), OpenChain Telco, FSCT v3; v2.1.x (Sep 2026) NTIA option selects the 2026 profile | sbomasm: assemble, edit, enrich (ClearlyDefined), remove, sign/verify | sbomgr: search across SBOMs | lynkctl embedded C/C++ generator: CycloneDX 1.6+ and SPDX 3.0+ with per-component evidence (source files, compile lines, include paths, confidence tiers), deterministic output, air-gapped operation, positioned for FDA 524B, EU CRA, ISO/SAE 21434 (promoted Sep 2026) | Platform: SBOM lifecycle, VEX, sharing, compliance mapping to CRA/BSI/CISA (per vendor claims); platform v4.0.3 and v4.0.4 (Oct 2026, month only): Okta SSO, scoped personal and service API tokens including tokens for AI agents and MCP clients, Metrics (Alpha) open-backlog trend charts, one-step SBOM acceptance on the Requests page, VEX disposition timeline and time-to-disposition metric for all organisations, bulk attribution export from the SBOM Licenses table, faster CycloneDX and SPDX 3 downloads, Free plan with locked enterprise features and trial prompts | Apache-2.0 for OSS tools",
+      "ai_capabilities": "AI BOM: no native generation; can score/merge AIBOM documents as CycloneDX | Model scanning: no | AI license: no | AI-assisted: unverified | NL query: unverified | MCP/agent: scoped API tokens for AI agents and MCP clients in the Interlynk platform (v4.0.4, Oct 2026, month only); no Interlynk MCP server documented",
       "ai_maturity": "None",
       "ai_verified_source": "https://github.com/interlynk-io/sbomqs",
       "integrations": "GitHub Actions, CI, Dependency-Track, Interlynk platform",
@@ -778,12 +852,12 @@
         "Generation limited to the commercial embedded C/C++ lynkctl tool; no OSS generator",
         "Limited enterprise references"
       ],
-      "pricing_model": "OSS free; platform subscription",
+      "pricing_model": "OSS free; platform subscription with a Free plan (enterprise features locked, trial offers) per Oct 2026 release notes",
       "indicative_cost_usd": "not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Best OSS quality-scoring and assembly toolkit for SBOM intake gates",
       "sources": "https://github.com/interlynk-io/sbomqs|https://github.com/interlynk-io/sbomasm|https://www.interlynk.io/resources/all-about-spdx-3-0",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-09-19",
@@ -830,11 +904,11 @@
       "type": "Commercial",
       "deployment": "SaaS; self-hosted option",
       "languages_coverage": "Major ecosystems with function-level reachability (Java, JS/TS, Python, Go, C#, Rust, etc.), containers; AI: Hugging Face models (50 risk metrics), coding agents, MCP servers, skills, AGENTS.md/CLAUDE.md context files",
-      "key_features": "SBOM Hub: generate and ingest external SBOMs; asynchronous SBOM and VEX export jobs with AsyncJob REST resource (Sep 2026); VEX generation with reachability justification | Compliance guidance for PCI DSS 4.0 and EU CRA | AI Code Governance: inventory of coding agents, models, MCP servers and skills; policy enforcement (Ask Permission policies advisory-only in Codex, Block still enforced) | AI SAST with dataflow; AI Security Review agents on PRs | Free MCP server (npx endorctl ai-tools mcp-server) for Cursor, Claude Code, VS Code, Codex | Package Firewall for VS Code extensions and NuGet; Conan C/C++ SCA; Threat Center; incremental container scanning and base image remediation (Sep 2026) | License notice reports (Beta, Oct 2026): report of open source dependencies with licence texts and copyright notices for attribution obligations",
+      "key_features": "SBOM Hub: generate and ingest external SBOMs; asynchronous SBOM and VEX export jobs with AsyncJob REST resource (Sep 2026); VEX generation with reachability justification | Compliance guidance for PCI DSS 4.0 and EU CRA | AI Code Governance: inventory of coding agents, models, MCP servers and skills; policy enforcement (Ask Permission policies advisory-only in Codex, Block still enforced) | AI SAST with dataflow; AI Security Review agents on PRs | Free MCP server (npx endorctl ai-tools mcp-server) for Cursor, Claude Code, VS Code, Codex, Grok Build | Package Firewall for VS Code extensions and NuGet, with configurable fail-open or fail-closed behaviour when a policy check cannot complete (malware feed or upstream registry unreachable), Slack notifications and a 'Package not evaluated' log filter (Oct 2026 release notes, month only); Conan C/C++ SCA; Threat Center; incremental container scanning and base image remediation (Sep 2026) | License notice reports (Beta, Oct 2026): report of open source dependencies with licence texts and copyright notices for attribution obligations",
       "ai_capabilities": "AI BOM / ML-BOM generation: partial-to-GA (AI component inventory of models, agents, MCP servers, skills; formal CycloneDX ML-BOM export unverified) | AI model file scanning: no (risk scoring of Hugging Face models, not byte-level malware scan) | AI license/provenance: yes (model risk metrics incl. licence) | AI-assisted VEX: yes (reachability-driven VEX) | NL query: via MCP server | MCP/agent: GA",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, CircleCI, Jira, IDEs, coding agents via MCP",
+      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, CircleCI, Jira, IDEs, coding agents via MCP (Cursor, Claude Code, VS Code, Codex, and Grok Build via .cursor/mcp.json, Oct 2026)",
       "sectors_reference_customers": "Noma Security lists Endor Labs as a customer; Endor cites FS and tech customers (names not disclosed here)",
       "analyst_position": "Visionary, Gartner MQ Software Supply Chain Security (June 2026)",
       "cons_known_gaps": [
@@ -849,7 +923,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs that want reachability-driven SBOM/VEX plus governance of AI coding agents and MCP servers",
       "sources": "https://www.endorlabs.com/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
         {
           "date": "2026-10-19",
@@ -1334,7 +1408,7 @@
       "ai_capabilities": "AI BOM / ML-BOM generation: yes (AI Inventory / AI-BOM, CycloneDX 1.7 export, GA June 2026 per press release) | AI model file scanning (pickle/safetensors malware): not publicly disclosed (product page cites model-poisoning indicators and unverified model sources, not file-level malware scanning) | AI license/provenance analysis: partial (unverified model sources, dataset exposure risks per marketing) | AI-assisted enrichment/VEX: no VEX; Triage Assist and Remediation Assist agents act on findings, not SBOM | Natural-language query: via Checkmarx MCP server (SAST, SCA, secrets, IaC exposed; SBOM query via MCP unverified) | MCP/agent integration: Checkmarx MCP server (platform add-on) for Claude Code, Windsurf, Claude.ai, ChatGPT; Developer Assist IDE agents",
       "ai_maturity": "GA",
       "ai_verified_source": "https://vmblog.com/news/checkmarx-delivers-complete-ai-asset-visibility-and-governance-for-the-software-supply-chain-closing-the-shadow-ai-gap/",
-      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps SCM triggers on push/PR; Jenkins, Azure Pipelines, GitHub Actions, GitLab CI via Checkmarx One CLI; IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse) with Developer Assist; Jira/ServiceNow; SIEM/webhooks; MCP-compatible AI assistants",
+      "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps SCM triggers on push/PR; Jenkins, Azure Pipelines, GitHub Actions, GitLab CI via Checkmarx One CLI; IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse) with Developer Assist; Jira/ServiceNow; SIEM/webhooks; MCP-compatible AI assistants; Checkmarx Fusion, Triage Assist and Remediation Assist listed in the Claude Marketplace for US Anthropic customers (Oct 2026)",
       "sectors_reference_customers": "Enterprise and federal; specific SBOM reference customers not publicly disclosed",
       "analyst_position": "Leader, 2026 Gartner Magic Quadrant for Software Supply Chain Security (per Checkmarx press release); cited as Representative Vendor in Gartner Innovation Insight for AI-BOMs",
       "cons_known_gaps": [
@@ -1344,12 +1418,20 @@
         "SBOM generation requires the SCA engine to have completed successfully on the scan; third-party SBOM import is described in marketing only",
         "Pricing is quote-based (developer seats, applications, usage); no public list price"
       ],
-      "pricing_model": "Subscription, quote-based; modular add-ons (SCA, AI Supply Chain Security / AI-BOM, Checkmarx MCP, Developer/Triage/Remediation Assist) priced by developer seats, applications and usage",
+      "pricing_model": "Subscription, quote-based; modular add-ons (SCA, AI Supply Chain Security / AI-BOM, Checkmarx MCP, Developer/Triage/Remediation Assist) priced by developer seats, applications and usage; Fusion and Assist agents also purchasable through the Claude Marketplace against committed Anthropic spend (US customers, Oct 2026, no public list price)",
       "indicative_cost_usd": "Not publicly disclosed; custom quote",
       "pricing_confidence": "Low",
       "best_fit_for": "Existing Checkmarx One customers who want SBOM export and AI asset inventory from the same SCA scans without adding a separate SBOM tool",
       "sources": "https://checkmarx.com/product/sbom/|https://checkmarx.com/solutions/ai-supply-chain-security/|https://vmblog.com/news/checkmarx-delivers-complete-ai-asset-visibility-and-governance-for-the-software-supply-chain-closing-the-shadow-ai-gap/|https://github.com/Checkmarx/ast-cli/blob/main/internal/commands/result.go|https://checkmarx.com/blog/sbom-how-to-create-one-using-checkmarx-sca/|https://checkmarx.com/solutions/checkmarx-mcp/|https://checkmarx.com/packaging/|https://docs.checkmarx.com/en/34965-388392-checkmarx-one-sbom-reports.html",
-      "last_verified": "2026-10-19"
+      "last_verified": "2026-10-26",
+      "recent_updates": [
+        {
+          "date": "2026-10-15",
+          "type": "Feature launch",
+          "summary": "Checkmarx joined the Claude Marketplace (vendor claim): Checkmarx Fusion (deterministic engine paired with Claude), Triage Assist and Remediation Assist agents can be bought by US Anthropic customers against committed Anthropic spend on a single Anthropic invoice. No list prices stated; SCA, SBOM and AI-BOM are not part of the marketplace listing.",
+          "source": "https://checkmarx.com/press-releases/checkmarx-joins-the-claude-marketplace/"
+        }
+      ]
     },
     {
       "tool": "Veracode SBOM (SCA SBOM API, Veracode CLI sbom/scan, Package Firewall)",
@@ -1360,7 +1442,7 @@
       "deployment": "SaaS (Veracode Platform); Veracode CLI and SCA agent run locally/in CI for source and container SBOM generation",
       "languages_coverage": "Veracode SCA agent-based and upload scans across mainstream ecosystems (Java, .NET, JavaScript/npm, Python, Ruby, PHP, Go, Scala, Swift/Objective-C, C/C++ per Veracode SCA docs; exact matrix not re-verified); CLI sbom command: container images (Alpine, Amazon Linux, CentOS, Debian, Oracle Linux, RHEL, Ubuntu), git repos, archives, directories; limited output for unbuilt Gradle projects",
       "key_features": "REST SBOM API (/srcclr/sbom/v1/targets/{guid}/cyclonedx) for application profiles and agent-based projects: CycloneDX 1.4 JSON and SPDX 2.3 JSON, optional vulnerability data, 13-month scan window | veracode sbom CLI (Syft-based): cyclonedx-json, cyclonedx-xml (CycloneDX 1.6), spdx-json, spdx-tag-value (SPDX 2.3), Syft JSON, GitHub dependency snapshot | veracode scan (container/IaC) outputs CycloneDX 1.6 XML or Syft JSON | veracode sca agent-based scans publish SBOMs in CycloneDX 1.6 and SPDX 2.3 (CLI 2.41.0, July 2025) | SBOM upload-and-scan: ingest CycloneDX (up to 1.6) or SPDX (up to 2.3) JSON alongside lockfiles for SCA analysis | Package Firewall (June 2025, enhanced Jan 2026) blocks malicious/risky packages at npm, PyPI, Maven, Nexus, Artifactory, Azure Artifacts | VEX: no public documentation (unverified)",
-      "ai_capabilities": "AI BOM / ML-BOM generation: no public statement (not publicly disclosed) | AI model file scanning (pickle/safetensors malware): no | AI license/provenance analysis: no | AI-assisted enrichment/VEX: no VEX; Veracode Fix (GenAI, CLI since June 2023) generates SAST fixes and, since CLI 2.52.0 (Aug 2026), 'veracode fix sca' fixes for vulnerable dependencies found in SCA scans; Veracode Fix does not act on SBOM documents | Natural-language query: no | MCP/agent integration: no official Veracode MCP server found; community MCP servers exist on GitHub (unsupported)",
+      "ai_capabilities": "AI BOM / ML-BOM generation: no public statement (not publicly disclosed) | AI model file scanning (pickle/safetensors malware): no | AI license/provenance analysis: no | AI-assisted enrichment/VEX: no VEX; Veracode Fix (GenAI, CLI since June 2023) generates SAST fixes and, since CLI 2.52.0 (Aug 2026), 'veracode fix sca' fixes for vulnerable dependencies found in SCA scans, with an asynchronous Fire-and-Forget mode since CLI 2.54.0 (Oct 2026); Veracode Fix does not act on SBOM documents | Natural-language query: no | MCP/agent integration: no official Veracode MCP server found; community MCP servers exist on GitHub (unsupported)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://docs.veracode.com/updates/r/Veracode_CLI_Updates",
       "integrations": "Veracode CLI in GitHub Actions, GitLab CI, Jenkins, Azure DevOps (per-repo assets in ADO, CLI 2.44.0); IDE plugins (VS Code, Visual Studio, Eclipse, JetBrains) with OAuth SSO; Veracode Risk Manager; Package Firewall with npm/PyPI/Maven/Nexus/Artifactory/Azure Artifacts; REST API with HMAC auth",
@@ -1378,8 +1460,14 @@
       "pricing_confidence": "None",
       "best_fit_for": "Veracode SCA customers who need CycloneDX/SPDX SBOMs from existing policy scans or container images and prefer a single AST vendor over a dedicated SBOM manager",
       "sources": "https://docs.veracode.com/r/Generate_an_SBOM_with_the_REST_API|https://docs.veracode.com/r/veracode_sbom|https://docs.veracode.com/r/veracode_scan|https://docs.veracode.com/r/Supply_chain_management_and_SBOMs|https://docs.veracode.com/updates/r/Veracode_CLI_Updates|https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-10-26",
       "recent_updates": [
+        {
+          "date": "2026-10-23",
+          "type": "Release",
+          "summary": "Veracode CLI v2.54.0 adds an asynchronous Fire-and-Forget mode to 'veracode fix sca' so remediation requests are submitted for background processing without the CLI waiting for fixes or pull requests. No SBOM, scan or package changes.",
+          "source": "https://docs.veracode.com/updates/r/Veracode_CLI_Updates"
+        },
         {
           "date": "2026-10-13",
           "type": "Release",
@@ -1431,11 +1519,11 @@
       "type": "Commercial",
       "deployment": "SaaS (AppScan on Cloud); self-managed AppScan 360 on Kubernetes for on-prem, sovereign cloud and air-gapped environments; AppScan Enterprise on-prem",
       "languages_coverage": "AppScan SCA covers mainstream package ecosystems (Java/Maven, JavaScript/npm, Python, .NET/NuGet, Go, Ruby, PHP and others per HCL SCA docs; exact matrix not re-verified); SBOM is generated only from SCA scans with a valid SCA licence",
-      "key_features": "SBOM report from SCA scans in SPDX (tag-value or JSON) and CycloneDX (XML or JSON) with document name, organisation and creator fields; also CSV/JSON/SARIF exports and open-source licence report | AppScan 360 2.0 (Sep 2025) added SCA with automated SBOM generation; 2.1 added SBOM and SARIF via get_report API, built-in malware scanning of open-source packages, EPSS scoring | AppScan Supply Chain Security (with OX Security): Pipeline Bill of Materials (PBOM) tracking version lineage, SLSA, SaaSBOM, tool results and build hashes; OSC&R mapping | CycloneDX/SPDX spec version numbers: not publicly disclosed | VEX: not publicly documented (unverified) | SBOM import/ingestion: not publicly documented (unverified)",
-      "ai_capabilities": "AI BOM / ML-BOM generation: no | AI model file scanning (pickle/safetensors malware): no (malware scanning covers open-source packages, not model files) | AI license/provenance analysis: no | AI-assisted enrichment/VEX: no VEX; RapidFix uses agentic AI for triage and generates validated code fixes via OSS Codemodder framework, documented for SAST; SCA dependency fixes not confirmed | Natural-language query: via AppScan MCP server (AppScan 360 2.1) for AI development environments; SBOM retrieval via MCP unverified | MCP/agent integration: AppScan MCP server (360 2.1; ASoC availability unverified); IAST GenAI testing and DAST for LLM apps address AI application risk, not AI BOM",
+      "key_features": "SBOM report from SCA scans in SPDX (tag-value or JSON) and CycloneDX (XML or JSON) with document name, organisation and creator fields; also CSV/JSON/SARIF exports and open-source licence report | AppScan 360 2.0 (Sep 2025) added SCA with automated SBOM generation; 2.1 added SBOM and SARIF via get_report API, built-in malware scanning of open-source packages, EPSS scoring | AppScan Supply Chain Security (with OX Security): Pipeline Bill of Materials (PBOM) tracking version lineage, SLSA, SaaSBOM, tool results and build hashes; OSC&R mapping | CycloneDX/SPDX spec version numbers: not publicly disclosed | VEX: not publicly documented (unverified) | SBOM import/ingestion: not publicly documented (unverified) | AppScan on Cloud Sep to Oct 2026: SCA scanning of SCM repositories and ZIP archives with manifest-file fallback when build artefacts are unavailable, multi-application reports, admin controls to enable or restrict AI Assistant, RapidFix and AI SAST (27 Sep 2026); interactive SCA dependency graph, single-configuration SAST plus SCA scan per repository, Azure DevOps repositories via AppScan Presence, OWASP MCP Top 10 2025 and OWASP ASVS 5.0 compliance reports (25 Oct 2026) | AppScan 360 2.2.0 what's new (undated page): CycloneDX XML or JSON SBOM reports, continuous CVE monitoring of scanned open-source packages, licence-based custom SCA policies, F# and UV support",
+      "ai_capabilities": "AI BOM / ML-BOM generation: no | AI model file scanning (pickle/safetensors malware): no (malware scanning covers open-source packages, not model files) | AI license/provenance analysis: no | AI-assisted enrichment/VEX: no VEX; RapidFix uses agentic AI for triage and generates validated code fixes via OSS Codemodder framework, documented for SAST; SCA dependency fixes not confirmed; ASoC admins can enable or disable AI Assistant, RapidFix, AI SAST and DAST IFA and restrict RapidFix and AI SAST to selected asset groups (27 Sep 2026); AI SAST business logic flaw detection (27 Sep 2026) | Natural-language query: via AppScan MCP server (AppScan 360 2.1) for AI development environments; SBOM retrieval via MCP unverified | MCP/agent integration: AppScan MCP server (360 2.1; ASoC availability unverified); IAST GenAI testing and DAST for LLM apps address AI application risk, not AI BOM; IAST Python agent 1.0.3 adds generative AI monitoring for the OpenAI Python library (29 Sep 2026)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://help.hcl-software.com/appscan/360/2.1.0/360_whats_new.html",
-      "integrations": "Jenkins, GitHub Actions, GitLab CI, Azure DevOps plugins; IDE plugins (VS Code, IntelliJ, Eclipse, Visual Studio); Jira; REST API (get_report); OX Security Active ASPM for Supply Chain Security; AppScan MCP server for AI coding assistants",
+      "integrations": "Jenkins, GitHub Actions, GitLab CI, Azure DevOps plugins; Azure DevOps repository scanning through AppScan Presence (ASoC, Oct 2026); Bitbucket CI/CD and Azure Boards (AppScan 360 2.2.0, undated); IDE plugins (VS Code, IntelliJ, Eclipse, Visual Studio); Jira; REST API (get_report); OX Security Active ASPM for Supply Chain Security; AppScan MCP server for AI coding assistants",
       "sectors_reference_customers": "Financial services, government/federal (HCL Federal) and enterprise; SBOM-specific reference customers not publicly disclosed",
       "analyst_position": "HCL AppScan historically placed in Gartner AST Magic Quadrant; 2025-2026 placement unverified; not identified in SSCS MQ",
       "cons_known_gaps": [
@@ -1450,7 +1538,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "HCL AppScan customers, especially regulated or air-gapped environments on AppScan 360, who need CycloneDX/SPDX SBOM exports from SCA without a separate SBOM platform",
       "sources": "https://help.hcl-software.com/appscan/ASoC/ent_generate_report.html|https://help.hcl-software.com/appscan/360/2.1.0/360_whats_new.html|https://www.helpnetsecurity.com/2025/09/12/hclsoftware-hclsoftware-appscan-360o-v2/|https://www.hcl-software.com/appscan/products/rapidfix|https://www.hcl-software.com/appscan/products/supply-chain-security|https://www.hcl-software.com/blog/appscan/how-software-bill-of-materials-sboms-reduce-risk-in-your-software-supply-chain",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-10-26",
+      "recent_updates": [
+        {
+          "date": "2026-10-25",
+          "type": "Feature launch",
+          "summary": "AppScan on Cloud 25 Oct 2026 deployment adds an interactive SCA dependency graph showing open-source libraries and their dependencies, single-configuration SAST plus SCA scanning of the same repository, Azure DevOps repository support through AppScan Presence, RapidFix recommendation filters, and new compliance reports (OWASP ASVS 5.0, CWE SANS 2025, DISA STIG V6R4, OWASP MCP Top 10 2025). CWE Top 25 2021 and 2023 reports are planned for removal in November 2026.",
+          "source": "https://help.hcl-software.com/appscan/ASoC/appseccloud_whats_new_cm.html"
+        }
+      ]
     }
   ],
   "owasp": {
