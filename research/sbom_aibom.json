@@ -294,10 +294,10 @@
       "deployment": "SaaS; on-premises option available",
       "languages_coverage": "30+ language ecosystems via fossa-cli, containers, binaries (limited), vendored code snippet scanning; no firmware; AI model detection not documented",
       "key_features": "Export CycloneDX and SPDX with custom templates | Import third-party SBOMs; central repository with versioning | Automated VEX attestations | Licence compliance engine with obligation tracking | Regulatory mapping: EU CRA, FDA, PCI DSS, DORA, NTIA minimum elements, SEBI (India) | Snippet and vendored code detection",
-      "ai_capabilities": "AI BOM / ML-BOM: not documented on product pages (unverified) | AI model file scanning: no | AI license/provenance: licence engine could cover model licences if declared; not marketed | AI-assisted enrichment: FOSSA AI features for licence and vulnerability triage claimed in 2025 marketing (unverified) | Natural-language query: unverified | MCP/agent: unverified",
+      "ai_capabilities": "AI BOM / ML-BOM: not documented on product pages (unverified) | AI model file scanning: no | AI license/provenance: licence engine could cover model licences if declared; not marketed | AI-assisted enrichment: Context-Aware Remediation via fossabot (Oct 2026) generates upgrade impact analysis and fix commits from CI failures for JS/TS, Python and Java (add-on subscription; underlying model not disclosed); FOSSA AI triage features claimed in 2025 marketing (unverified) | Natural-language query: unverified | MCP/agent: unverified",
       "ai_maturity": "Marketing claim",
       "ai_verified_source": "https://fossa.com/product/sbom-management/",
-      "integrations": "GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Azure DevOps, Jira, Slack, Artifactory",
+      "integrations": "GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Azure DevOps, Jira, Slack, Artifactory; fossabot GitHub app for Context-Aware Remediation, also analyses Dependabot, Renovate and Snyk PRs (Oct 2026)",
       "sectors_reference_customers": "Tech and enterprise customers (e.g. Uber, Twilio, Zendesk historically cited by FOSSA)",
       "analyst_position": "not rated in 2026 SSCS MQ (Gartner Peer Insights listed); Forrester SCA Wave prior participation",
       "cons_known_gaps": [
@@ -312,7 +312,15 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Licence-compliance-driven organisations needing SBOM export plus third-party SBOM intake with regulatory mapping",
       "sources": "https://fossa.com/product/sbom-management/|https://fossa.com/blog/cisa-releases-2026-minimum-sbom-elements/|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-10-19"
+      "last_verified": "2026-11-02",
+      "recent_updates": [
+        {
+          "date": "2026-10-29",
+          "type": "Feature launch",
+          "summary": "FOSSA announced Context-Aware Remediation, built on the fossabot dependency upgrade engine: 'Fix with fossabot' opens a PR for a security issue, analyses the upgrade's impact using test suites, interfaces and CI signals, explains its reasoning in a PR comment, and on '@fossabot fix' generates a fix from CI failure output and commits it to the branch; it can also analyse Dependabot, Renovate and Snyk PRs. Available for GitHub projects in JS/TS, Python and Java; requires the fossabot add-on subscription (free usage credits offered); list price not stated.",
+          "source": "https://fossa.com/blog/announcing-context-aware-remediation-fossa"
+        }
+      ]
     },
     {
       "tool": "Snyk SBOM and Snyk AI-BOM",
@@ -334,15 +342,28 @@
         "AI-BOM limited to four languages and source-level heuristics; no dataset or runtime discovery",
         "No SBOM management/portal for supplier SBOM intake beyond sbom test",
         "VEX authoring/export immature",
-        "Snyk AI-BOM inventory is per-repo; enterprise-wide AI governance views still developing"
+        "Snyk AI-BOM inventory is per-repo; enterprise-wide AI governance views still developing",
+        "Kubernetes connector (kubernetes-scanner) reached end of life 2 Nov 2026; cluster workload import must move to other integrations"
       ],
       "pricing_model": "Free / Team per developer / Enterprise quote",
       "indicative_cost_usd": "Team list price ~$25/dev/month (product-dependent); Enterprise not disclosed",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-first enterprises on Snyk wanting a GA, code-level AI-BOM that maps MCP dependencies",
       "sources": "https://docs.snyk.io/developer-tools/snyk-cli/commands/aibom.md|https://docs.snyk.io/developer-tools/snyk-cli/commands/sbom|https://labs.snyk.io/resources/mcps-snyk-ai-bom/|https://labs.snyk.io/resources/aibom-cli-snyk/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-11-02",
+          "type": "Shutdown",
+          "summary": "Snyk Kubernetes connector (kubernetes-scanner agent) reached end of life effective 2 Nov 2026: Snyk stops accepting data from the connector and advises uninstalling it from clusters. Affects container workload import only, not SBOM or AI-BOM features.",
+          "source": "https://updates.snyk.io/"
+        },
+        {
+          "date": "2026-10-23",
+          "type": "Release",
+          "summary": "Snyk CLI v1.1308.3 is a security release that blocks trust in the compromised eMudhra intermediate certificate authorities and updates the embedded Node.js runtime and the toml library; v1.1308.2 (21 Oct 2026) fixed .NET, 'snyk test' and IDE authentication issues and patched several vulnerabilities. No SBOM or AI-BOM command changes in either release.",
+          "source": "https://updates.snyk.io/"
+        },
         {
           "date": "2026-10-14",
           "type": "Release",
@@ -387,7 +408,7 @@
       "ai_capabilities": "AI BOM / ML-BOM generation: GA (AI model components inside SBOM output) | AI model file scanning (pickle malware): no | AI license/provenance: yes (model licence and origin analysis) | AI-assisted enrichment/VEX: Black Duck Assist/AI triage features claimed (unverified); Black Duck Signal AI code analysis in Polaris supports bring-your-own-LLM with AI findings managed alongside deterministic results (Sep 2026, code-level not SBOM-level) | Natural-language query: unverified | MCP/agent: unverified",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html",
-      "integrations": "Jenkins, GitHub, GitLab, Azure DevOps, Bamboo, Artifactory, Jira, ServiceNow, Coverity, Polaris, Code Sight IDE; Polaris on-premises SCM support for self-hosted GitHub, GitLab, Azure DevOps Server and Bitbucket (Sep 2026)",
+      "integrations": "Jenkins, GitHub, GitLab, Azure DevOps, Bamboo, Artifactory, Jira, ServiceNow, Coverity, Polaris, Code Sight IDE; Polaris on-premises SCM support for self-hosted GitHub, GitLab, Azure DevOps Server and Bitbucket (Sep 2026); Claude Code via Signal Agentic Fix (early access, Oct 2026); Polaris container scanning triggered from GitHub Actions, GitLab templates, Jenkins, Bitbucket pipe, ADO extension and CLI (Oct 2026)",
       "sectors_reference_customers": "Automotive, medical devices, FS, semiconductors; Black Duck cites 1,000s of enterprise customers",
       "analyst_position": "Leader, Gartner MQ Software Supply Chain Security (June 2026); Leader in Forrester SCA Wave (Q4 2024)",
       "cons_known_gaps": [
@@ -402,8 +423,20 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises needing binary/firmware SBOMs plus licence compliance and CRA-grade reporting",
       "sources": "https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html|https://news.blackduck.com/2026-06-22-Black-Duck-Named-a-Leader-in-the-Inaugural-2026-Gartner-R-Magic-Quadrant-TM-for-Software-Supply-Chain-Security|https://www.blackduck.com/resources/analyst-reports/gartner-magic-quadrant-software-supply-chain-security.html",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-10-27",
+          "type": "Feature launch",
+          "summary": "Black Duck launched Signal Agentic Fix, an AI agent in the Black Duck Signal family that runs a scan, triage, fix, validate and submit remediation loop using the Black Duck SAST and SCA engines, with human review before merge (vendor claim). Early Access, available first for Claude Code, with further coding agent and DevOps pipeline integrations planned across Polaris, Coverity and Black Duck SCA; pricing not stated.",
+          "source": "https://news.blackduck.com/2026-10-27-Black-Duck-Launches-Signal-Agentic-Fix-Vulnerability-Remediation-at-the-Speed-of-AI-Driven-Attacks"
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Feature launch",
+          "summary": "Polaris October 2026 update: SCA container scanning can be triggered from GitHub Actions, GitLab templates, Jenkins, the Bitbucket pipe, the ADO extension, the CLI or Security Setup workflows, with results attributing vulnerabilities to the layer that introduced them; Rapid Scan Static (Sigma 2026.9.1) adds checks for the Anthropic and OpenAI SDKs and LangChain, including AI agent configuration files and risky tool enablement; fix PR generation can be limited to SCA, Static or both; GitHub Enterprise Cloud with data residency is supported.",
+          "source": "https://www.blackduck.com/blog/blog-polaris-october-2026-update.html"
+        },
         {
           "date": "2026-09-23",
           "type": "Feature launch",
@@ -439,7 +472,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises on Nexus/Lifecycle wanting SBOM lifecycle management with regulatory mapping and AI component visibility",
       "sources": "https://www.sonatype.com/products/sbom-manager|https://www.sonatype.com/press-releases/sonatype-named-a-leader-in-the-2026-gartner-magic-quadrant|https://www.sonatype.com/products/open-source-security-dependency-management",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
         {
           "date": "2026-10-14",
@@ -482,8 +515,14 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Enterprises standardised on Artifactory wanting SBOM, attestations and AI model governance in one control plane",
       "sources": "https://jfrog.com/blog/jfrog-named-a-leader-in-the-gartner-magic-quadrant/|https://jfrog.com/gartner-magic-quadrant/|https://investors.jfrog.com/news/news-details/2026/JFrog-Positioned-as-a-Leader-in-the-First-Gartner-Magic-Quadrant-for-Software-Supply-Chain-Security/default.aspx",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-10-29",
+          "type": "Release",
+          "summary": "Xray 3.157.15 ships security fixes and resolves an out-of-memory condition when loading ignore rules scoped to many watches (XRAY-167560); 3.157.13 (25 Oct) and 3.157.14 (26 Oct) carried security fixes, version upgrades and disabled a verbose analytics event. The 3.156 maintenance line reached 3.156.33 on 1 Nov 2026, fixing wrong package type propagation in Curation on-demand (XRAY-167970).",
+          "source": "https://docs.jfrog.com/releases/docs/xray"
+        },
         {
           "date": "2026-10-22",
           "type": "Release",
@@ -543,8 +582,20 @@
       "pricing_confidence": "High",
       "best_fit_for": "Baseline repo-level SBOM for inventory and open-source hygiene, not for regulatory submission",
       "sources": "https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-10-28",
+          "type": "Feature GA",
+          "summary": "GitHub Actions workflow lockfiles are generally available on GitHub Enterprise Cloud (including data residency), Team and Free plans, pinning the actions a workflow resolves so supply-chain substitution of action versions is blocked.",
+          "source": "https://github.blog/changelog/month/10-2026/page/2/"
+        },
+        {
+          "date": "2026-10-28",
+          "type": "Feature launch",
+          "summary": "Dependabot alerts gain reachability analysis in public preview: each open alert gets a verdict (Reachable, Potentially reachable, Unreachable, Reachability unavailable) based on whether the code has a call path to the vulnerable functions, filterable in the UI and the Dependabot alerts REST API. JavaScript and TypeScript only (npm, Yarn or pnpm lockfile), runs as a managed Actions workflow on GitHub-hosted runners, GitHub Enterprise Cloud only, off by default, free during preview and no GHAS licence required.",
+          "source": "https://github.blog/changelog/2026-10-28-prioritize-dependabot-alerts-with-reachability-analysis/"
+        },
         {
           "date": "2026-10-20",
           "type": "Feature launch",
@@ -610,7 +661,7 @@
       "pricing_confidence": "Medium",
       "best_fit_for": "GitLab Ultimate shops wanting pipeline-native CycloneDX SBOMs feeding an external manager",
       "sources": "https://docs.gitlab.com/user/application_security/dependency_scanning/|https://docs.gitlab.com/user/application_security/dependency_scanning/dependency_scanning_sbom/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
         {
           "date": "2026-10-21",
@@ -641,7 +692,7 @@
       "deployment": "SaaS; on-premises agent options",
       "languages_coverage": "200+ languages/package managers claimed, containers, images; Mend AI: AI models, frameworks, datasets, agents, MCP servers, RAG components discovered in code",
       "key_features": "SBOM export SPDX and CycloneDX; import third-party SBOMs; continuously regenerated | Aggregated SBOM: one combined CycloneDX or SPDX file for application and multi-project scopes with deduplicated components (26.9.3, 18 Oct 2026); SPDX and CycloneDX import fixes for circular relationships and newer SPDX licence identifiers | VEX exploitability context embedded per component | EO 14028 and EU CRA positioning; CISA-compatible formatting claims | Reachability analysis, malicious package detection | Mend AI: AI-BOM, policy engine, system prompt hardening, AI red teaming, runtime protection | Regulatory: EU AI Act and NIST AI RMF alignment claims",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA (models, frameworks, datasets, agents, MCP connections; export format not documented, CycloneDX unverified) | AI model file scanning: not documented | AI license/provenance: model licence policy enforcement | AI-assisted enrichment/VEX: Mend AI remediation features (marketing) | NL query: unverified | MCP/agent: agent and MCP discovery GA",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA (models, frameworks, datasets, agents, MCP connections; export format not documented, CycloneDX unverified) | AI model file scanning: not documented | AI license/provenance: model licence policy enforcement | AI-assisted enrichment/VEX: Mend AI remediation features (marketing) | NL query: Mend Intelligent Agent (26.10.1, Nov 2026) answers natural-language questions and gives risk summaries inside the platform; enabled only for organisations with signed AI consent | MCP/agent: agent and MCP discovery GA",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.mend.io/mend-ai/",
       "integrations": "GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, Artifactory, Jira, IDEs, ServiceNow; Bun package manager (GA, Oct 2026); GitHub repository-level security advisories as an import source (Oct 2026)",
@@ -659,8 +710,14 @@
       "pricing_confidence": "None",
       "best_fit_for": "Mend SCA customers wanting AI component discovery and governance inside the existing AppSec platform",
       "sources": "https://www.mend.io/mend-ai/|https://www.mend.io/sbom/|https://www.mend.io/blog/the-vision-behind-mends-recognition/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-11-01",
+          "type": "Feature launch",
+          "summary": "Mend 26.10.1 introduces the Mend Intelligent Agent, an AI assistant inside the Mend Platform that answers natural-language questions, points users to relevant views and gives executive-level risk summaries across applications and projects. Enabled by default only for organisations with signed AI consent in their Mend.io contract; others must contact their CSM. The release also stops .pom files being reported as libraries, fixes duplicated vulnerability trace data and improves PHP and Gradle toolchain version reporting in CLI scans.",
+          "source": "https://docs.mend.io/platform/latest/mend-sca-release-notes"
+        },
         {
           "date": "2026-10-18",
           "type": "Release",
@@ -725,7 +782,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "IoT/OT and medical device manufacturers needing binary-derived SBOMs and CRA/FDA evidence",
       "sources": "https://finitestate.io/platform|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-11-02"
     },
     {
       "tool": "Manifest Platform (SBOM, AIBOM, AI Risk)",
@@ -783,7 +840,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises wanting one vendor for SBOM, AIBOM, CBOM management plus hardened OSS supply",
       "sources": "https://finance.yahoo.com/technology/ai/articles/lineaje-recognized-visionary-2026-gartner-154300110.html|https://www.lineaje.com/",
-      "last_verified": "2026-09-27",
+      "last_verified": "2026-11-02",
       "recent_updates": [
         {
           "date": "2026-09-25",
@@ -923,7 +980,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs that want reachability-driven SBOM/VEX plus governance of AI coding agents and MCP servers",
       "sources": "https://www.endorlabs.com/|https://www.endorlabs.com/learn/endor-labs-is-a-visionary-in-the-2026-gartner-r-magic-quadrant-tm-for-software-supply-chain-security",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
         {
           "date": "2026-10-19",
@@ -1128,7 +1185,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Organisations consuming many third-party models needing deep model file scanning and MLOps integration",
       "sources": "https://hiddenlayer.com/|https://www.gartner.com/reviews/market/software-supply-chain-security",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-11-02"
     },
     {
       "tool": "Palo Alto Networks Prisma AIRS (ex-Protect AI Guardian, Radar, Recon; ModelScan OSS)",
@@ -1139,12 +1196,12 @@
       "deployment": "SaaS (Prisma AIRS); ModelScan CLI local",
       "languages_coverage": "Model files: pickle, H5/HDF5, SavedModel/protobuf, Keras v3 (ModelScan); Guardian extended to safetensors and more (vendor claim); Hugging Face gateway; AI apps, agents, MCP servers in Prisma AIRS",
       "key_features": "Acquisition of Protect AI completed 22 Jul 2025; Guardian model scanning, Radar posture (AI BOM inventory), Recon red teaming folded into Prisma AIRS | Model scanning, posture management, red teaming, runtime protection, AI agent security | ModelScan OSS: static byte-level scan of unsafe serialisation | Regulatory: OWASP LLM Top 10, NIST AI RMF alignment",
-      "ai_capabilities": "AI BOM / ML-BOM generation: GA (Radar-derived AI asset inventory; CycloneDX export unverified) | AI model file scanning: GA (Guardian; ModelScan OSS) | AI license/provenance: partial | AI-assisted: yes | NL query: unverified | MCP/agent: AI agent security module (2025-2026)",
+      "ai_capabilities": "AI BOM / ML-BOM generation: GA (Radar-derived AI asset inventory; CycloneDX export unverified) | AI model file scanning: GA (Guardian; ModelScan OSS) | AI license/provenance: partial | AI-assisted: yes | NL query: unverified | MCP/agent: AI agent security module (2025-2026); Agent Identity Security (Oct 2026, AI Gateway add-on) issues each registered agent an Agent ID and OAuth 2.1 client credentials with per-user-agent MCP server tool access policies and dual-attribution audit logs; AI Red Teaming adds multi-turn Crescendo and GOAT attacks for agent scans and image-modality attacks",
       "ai_maturity": "GA",
       "ai_verified_source": "https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai",
-      "integrations": "Hugging Face, MLflow, SageMaker, Azure ML, Databricks, Prisma Cloud, Cortex, SIEM",
+      "integrations": "Hugging Face, MLflow, SageMaker, Azure ML, Databricks, Prisma Cloud, Cortex, SIEM; OpenAI Marketplace listing (Oct 2026); Istio service mesh on EKS/GKE/AKS (Oct 2026)",
       "sectors_reference_customers": "Palo Alto enterprise base; Protect AI federal and FS customers",
-      "analyst_position": "not rated in SSCS MQ",
+      "analyst_position": "not rated in SSCS MQ; Market Shaper in Gartner Emerging Market Quadrant for AI Application Security (Sep 2026, per Palo Alto Networks blog, vendor claim)",
       "cons_known_gaps": [
         "Post-acquisition packaging and roadmap changes; standalone Protect AI SKUs retired",
         "ModelScan OSS maintenance cadence slowed (safetensors not listed)",
@@ -1156,7 +1213,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Palo Alto customers wanting model scanning and AI posture inside Prisma; ModelScan for free CI gating of pickle risk",
       "sources": "https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai|https://github.com/protectai/modelscan",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-11-02",
+      "recent_updates": [
+        {
+          "date": "2026-10-23",
+          "type": "Feature launch",
+          "summary": "Prisma AIRS is now listed on the newly launched OpenAI Marketplace so OpenAI enterprise customers can procure it with committed OpenAI spend (vendor claim); the post also states Prisma AIRS scans models and agent artifacts including skills and MCP servers for supply chain risks, and that Gartner named Palo Alto Networks a Market Shaper in its September 2026 Emerging Market Quadrant for AI Application Security (vendor claim). Pricing and regional availability not stated.",
+          "source": "https://www.paloaltonetworks.com/blog/2026/10/palo-alto-networks-brings-continuous-ai-defense-and-prisma-airs-to-the-openai-marketplace/"
+        }
+      ]
     },
     {
       "tool": "Cisco AI Defense (incl. Foundation AI; Aim Security acquired 2025)",
@@ -1184,7 +1249,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Cisco-standardised enterprises wanting AI asset visibility and runtime guardrails at the network layer",
       "sources": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html|https://www.aim.security/",
-      "last_verified": "2026-09-28"
+      "last_verified": "2026-11-02"
     },
     {
       "tool": "Legit Security ASPM (AI-BOM, VibeGuard)",
@@ -1248,7 +1313,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Enterprises needing runtime discovery and control of agents/MCPs beyond code scanning",
       "sources": "https://noma.security/|https://www.securityweek.com/noma-security-raises-100-million-for-ai-security-platform/",
-      "last_verified": "2026-10-05",
+      "last_verified": "2026-11-02",
       "recent_updates": [
         {
           "date": "2026-09-28",
@@ -1284,7 +1349,7 @@
       "pricing_confidence": "None",
       "best_fit_for": "Complementing static SBOM/AIBOM with runtime truth of which models and agents actually execute",
       "sources": "https://www.oligo.security/|https://www.businesswire.com/news/home/20260804840699/en/OLIGO-Security-Crosses-$140M-in-Total-Funding-with-$60M-Round-to-Stop-AI-Driven-Attacks",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-11-02"
     },
     {
       "tool": "Prompt Security (SentinelOne)",
@@ -1295,10 +1360,10 @@
       "deployment": "SaaS gateway, browser extension, endpoint agent integration",
       "languages_coverage": "GenAI interactions, shadow AI app usage, agents and MCP traffic (vendor claims)",
       "key_features": "AI gateway and prompt injection/data leakage prevention | Shadow AI discovery | Agentic and MCP security | Acquisition by SentinelOne announced 5 Aug 2025 and completed 2025 (reported ~$250M; SEC filing cites lower cash consideration; unverified)",
-      "ai_capabilities": "AI BOM: no (usage inventory only) | Model file scanning: no | AI license: no | AI-assisted: yes | NL query: n/a | MCP/agent: GA claim",
+      "ai_capabilities": "AI BOM: partial (Singularity ADR agent and MCP inventory of agents, tools, skills, connectors and MCP servers with permissions and owners, early access Oct 2026; usage inventory, not a standards-format BOM) | Model file scanning: no | AI license: no | AI-assisted: yes | NL query: n/a | MCP/agent: GA claim (Prompt AI Agent Security, Mar 2026); Singularity ADR early access (Oct 2026)",
       "ai_maturity": "GA",
       "ai_verified_source": "https://prompt.security/blog/prompt-security-sentinelone-a-new-chapter-begins",
-      "integrations": "SentinelOne Singularity, browsers, IdPs",
+      "integrations": "SentinelOne Singularity (Singularity Data Lake, Unified Storyline via Singularity ADR, early access Oct 2026), browsers, IdPs",
       "sectors_reference_customers": "Dozens of enterprises (vendor claim)",
       "analyst_position": "not rated in SSCS MQ",
       "cons_known_gaps": [
@@ -1311,7 +1376,15 @@
       "pricing_confidence": "None",
       "best_fit_for": "Runtime GenAI usage governance, not AI supply chain inventory",
       "sources": "https://prompt.security/blog/prompt-security-sentinelone-a-new-chapter-begins|https://en.wikipedia.org/wiki/Prompt_Security",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-11-02",
+      "recent_updates": [
+        {
+          "date": "2026-10-21",
+          "type": "Feature launch",
+          "summary": "SentinelOne launched Singularity Agentic Detection and Response (ADR) at OneCon 2026, drawing on the Prompt Security and Purple product lines: an agent and MCP inventory covering agents, tools, skills, connectors and MCP servers across endpoints, SaaS and cloud with permissions and owners, allow/block policy and approval workflows, in-line blocking of prompt injection, credential exfiltration and tool poisoning, agent traces in the Singularity Data Lake, intent drift detection and per-agent containment (vendor claims). Immediately available in early access; pricing not stated.",
+          "source": "https://www.sentinelone.com/press/sentinelone-launches-singularity-agentic-detection-and-response-to-stop-rogue-and-malicious-ai-agents-at-machine-speed/"
+        }
+      ]
     },
     {
       "tool": "AIR (air.security)",
@@ -1460,8 +1533,14 @@
       "pricing_confidence": "None",
       "best_fit_for": "Veracode SCA customers who need CycloneDX/SPDX SBOMs from existing policy scans or container images and prefer a single AST vendor over a dedicated SBOM manager",
       "sources": "https://docs.veracode.com/r/Generate_an_SBOM_with_the_REST_API|https://docs.veracode.com/r/veracode_sbom|https://docs.veracode.com/r/veracode_scan|https://docs.veracode.com/r/Supply_chain_management_and_SBOMs|https://docs.veracode.com/updates/r/Veracode_CLI_Updates|https://www.businesswire.com/news/home/20260128773416/en/Veracode-Releases-Platform-Enhancements-as-Software-Supply-Chain-Attacks-Surge",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "recent_updates": [
+        {
+          "date": "2026-10-27",
+          "type": "Release",
+          "summary": "Veracode CLI v2.54.1 improves vulnerability detection for binary packages inside container images when running 'veracode scan'. No SBOM command or Package Firewall changes recorded in the window.",
+          "source": "https://docs.veracode.com/updates"
+        },
         {
           "date": "2026-10-23",
           "type": "Release",
@@ -1484,11 +1563,11 @@
     },
     {
       "tool": "OpenText Core SCA (Debricked) SBOM with Fortify SSC / Core Application Security",
-      "vendor": "OpenText (Fortify; Debricked acquired 2022, rebranded OpenText Core SCA)",
+      "vendor": "OpenText (Fortify; Debricked acquired 2022, rebranded OpenText Core SCA, renamed OpenText Fortify Software Composition Analysis (Fortify SCA) in Fortify on Demand release 26.3)",
       "product_url": "https://docs.debricked.com/product/exporting-sbom/sbom-export",
       "is_new_entrant": false,
       "type": "Commercial (Free tier available)",
-      "deployment": "SaaS (Debricked / OpenText Core SCA cloud); results surface in Fortify Software Security Center (on-prem) and OpenText Core Application Security (formerly Fortify on Demand); CLI (github.com/debricked/cli) runs in CI",
+      "deployment": "SaaS (Debricked / OpenText Fortify SCA cloud, formerly OpenText Core SCA); results surface in OpenText Application Security (formerly Fortify Software Security Center, on-prem) and OpenText Fortify on Demand (renamed back from OpenText Core Application Security in 26.3); CLI (github.com/debricked/cli) runs in CI",
       "languages_coverage": "npm, yarn, pnpm, pip, Poetry, Maven, Gradle, Go, Composer, Bundler, NuGet, Cargo (12 ecosystems per third-party review; official matrix in docs.debricked.com); Docker images only via workaround (generate CycloneDX with docker sbom, upload via CLI)",
       "key_features": "SBOM export in CycloneDX and SPDX 2.3 JSON via web UI (global, repository or group scope), REST API (/api/1.0/open/sbom/generate and /download) and CLI (manual or auto after scan); toggles for licenses, vulnerabilities and root fixes | Enterprise tier only for SBOM export | Fortify SSC 25.4: download Debricked CycloneDX JSON SBOM per application version | OpenText Core Application Security 26.2 (Apr 2026): CycloneDX SBOM import extended to CycloneDX 1.7 JSON | Open Source Select: dependency health scoring (maintenance, community, release cadence) | ML-based vulnerability data enrichment (exploit likelihood, time-to-fix predictions per vendor marketing) | VEX: not publicly documented (unverified) | CycloneDX export spec version: not stated in docs (unverified)",
       "ai_capabilities": "AI BOM / ML-BOM generation: no | AI model file scanning (pickle/safetensors malware): no | AI license/provenance analysis: no | AI-assisted enrichment/VEX: no VEX; Debricked uses ML for vulnerability database curation and risk prediction; Application Security Aviator (Remediation Aviator) is SAST-only audit and fix generation and does not cover SCA or SBOM | Natural-language query: no | MCP/agent integration: no official MCP server found for Core SCA or Fortify (unverified)",
@@ -1509,7 +1588,7 @@
       "pricing_confidence": "Low",
       "best_fit_for": "Fortify SSC or Core Application Security shops that want SCA and CycloneDX/SPDX SBOMs consolidated with SAST results under one OpenText contract",
       "sources": "https://docs.debricked.com/product/exporting-sbom/sbom-export|https://www.microfocus.com/documentation/fortify-software-security-center/2540/ssc-ugd-html-25.4.0/doc/2405_25.4.0/a4e94d0554cc_download_sbom.html|https://www.microfocus.com/documentation/fortify-on-demand/262/core-appsec-rn-26.2-en.pdf|https://docs.debricked.com/tips-and-tricks/workarounds/scanning-docker-images|https://www.opentext.com/products/application-security-aviator|https://appsecsanta.com/debricked",
-      "last_verified": "2026-09-26"
+      "last_verified": "2026-11-02"
     },
     {
       "tool": "HCL AppScan SBOM (AppScan on Cloud, AppScan 360 SCA reports, Supply Chain Security)",

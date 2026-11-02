@@ -11,10 +11,10 @@
       "deployment": "SaaS / On-prem (self-hosted enterprise); Jeff AI is SaaS-first, on-prem via CSM arrangement",
       "languages_coverage": "Diagrams (draw.io-style canvas, image import PNG/JPEG/WEBP/HEIC), IaC (Terraform/CloudFormation import), code snippets, architecture docs, user stories, meeting transcripts, SBOMs, questionnaires, natural language prompts, Jira feature descriptions (Bex)",
       "key_features": "Rules-engine-driven threat and countermeasure generation from architecture | Large security content library mapped to PCI DSS, NIST, GDPR, ISO and others | Dedicated AI/ML application threat libraries ('first to threat model AI and ML applications') | Jira and ticketing sync of countermeasures | Community Edition free forever | Smart Views for mitigation, compliance or critical-threat perspectives",
-      "ai_capabilities": "AI-generated threat model from image/diagram, text description, code snippet, docs, user stories, SBOM (Jeff, one-shot model generation) | AI assistant for threats and mitigations (Jeff chat; Bex AI conversational security in Jira analyses feature descriptions) | LLM-based diagram creation (yes, Jeff renders components into canvas that feeds the rules engine) | AI threat libraries for AI/ML systems (yes, curated AI/ML libraries, not LLM-generated) | Agent/MCP: post-acquisition parent ThreatModeler ships an MCP server; IriusRisk-native MCP not confirmed | Model: OpenAI Enterprise (Ireland instance), RAG over component data, no cross-customer training; no BYO-LLM | On-prem AI: only by CSM arrangement, not standard",
+      "ai_capabilities": "AI-generated threat model from image/diagram, text description, code snippet, docs, user stories, SBOM (Jeff, one-shot model generation) | AI assistant for threats and mitigations (Jeff chat; Bex AI conversational security in Jira analyses feature descriptions) | LLM-based diagram creation (yes, Jeff renders components into canvas that feeds the rules engine) | AI threat libraries for AI/ML systems (yes, curated AI/ML libraries, not LLM-generated) | Agent/MCP: yes, IriusRisk-native via the open-source iriusrisk-cli (PyPI, MIT, public beta from IriusRisk Labs; 'iriusrisk mcp' stdio MCP server with tool filtering, custom prompts, Agent Skills for Cursor/Windsurf/Cline, AI-assisted threat model creation from source code, AI questionnaire answering, CI/CD verification tools; latest 0.6.3 released 2026-03-27); iriusrisk.com home page advertises 'MCP-enabled threat modeling'; parent ThreatModeler also ships the ThreatModeler MCP Server | Model: OpenAI Enterprise (Ireland instance), RAG over component data, no cross-customer training; no BYO-LLM | On-prem AI: only by CSM arrangement, not standard",
       "ai_maturity": "GA (Jeff in SaaS and Community Edition; OpenAI usage cost absorbed by vendor for first year per vendor page)",
       "ai_verified_source": "https://www.iriusrisk.com/ai-threat-modeling",
-      "integrations": "Jira, Azure DevOps, ServiceNow (via ticketing), GitHub/GitLab (IaC import, CI/CD API), REST API, Visio/draw.io/Lucid import, Bex for Jira",
+      "integrations": "Jira, Azure DevOps, ServiceNow (via ticketing), GitHub/GitLab (IaC import, CI/CD API), REST API, Visio/draw.io/Lucid import, Bex for Jira, IriusRisk CLI and MCP server (iriusrisk-cli on PyPI, public beta) for AI-enabled IDEs and agents (Cursor, Windsurf, Cline via Agent Skills)",
       "sectors_reference_customers": "Financial services (regulated bank on-prem case study), technology, public sector; vendor claims include large banks; specific logos on site rotate",
       "analyst_position": "Gartner Peer Insights Threat Modeling Automation: 4.3/5 (4 reviews) listed under ThreatModeler (IriusRisk); Gartner has no Magic Quadrant for this market; no Forrester Wave",
       "cons_known_gaps": "Acquired by ThreatModeler Jan 2026: roadmap and product-consolidation risk, reviewers flag uncertainty | Jeff runs only on vendor-managed OpenAI; no Azure OpenAI or customer-hosted LLM, which blocks strict data-residency clients | Rules-engine models need tuning; large libraries produce noisy countermeasure lists | On-prem Jeff is bespoke, not productised | Enterprise pricing historically per-user/per-project and opaque",
@@ -22,7 +22,7 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals commonly reported in the mid five to six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Regulated enterprises wanting library-driven, compliance-mapped threat models with an AI on-ramp; teams already on IriusRisk Community",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://www.iriusrisk.com/ai-threat-modeling | https://www.iriusrisk.com/documentation/use-our-ai-assistant-jeff | https://www.iriusrisk.com/threat-modeling-platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://www.gartner.com/reviews/market/threat-modeling-automation"
     },
     {
@@ -45,7 +45,7 @@
       "indicative_cost_usd": "Not publicly disclosed; enterprise deals typically six figures per year (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Large enterprises and US federal agencies needing cloud-native, portfolio-scale threat modeling with FedRAMP and MCP-driven automation",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "sources": "https://www.threatmodeler.ai/ | https://www.threatmodeler.ai/products/cloudmodeler | https://www.threatmodeler.ai/platform | https://siliconangle.com/2026/01/08/threatmodeler-acquires-competing-threat-modeling-startup-iriusrisk/ | https://finance.yahoo.com/news/threatmodeler-raises-60-million-invictus-133000790.html",
       "recent_updates": [
         {
@@ -113,7 +113,7 @@
       "indicative_cost_usd": "Free tier $0; enterprise custom, marketed as not scaling with users or models",
       "pricing_confidence": "Medium",
       "best_fit_for": "Developer-led teams wanting fast collaborative diagram-based modelling with MAESTRO and AI drafts, without per-seat cost growth",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://www.securitycompass.com/devici/ai-infusion/ | https://www.securitycompass.com/devici/pricing | https://www.businesswire.com/news/home/20250603655492/en/Security-Compass-Acquires-Devici-to-Expand-Threat-Modeling-Capabilities | https://www.crunchbase.com/organization/devici",
       "recent_updates": [
         {
@@ -267,7 +267,7 @@
       "indicative_cost_usd": "$0 plus LLM tokens",
       "pricing_confidence": "High",
       "best_fit_for": "AppSec teams prototyping AI-assisted STRIDE, or as a reference implementation for an internal BYO-LLM tool",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "sources": "https://github.com/mrwadams/stride-gpt | https://github.com/mrwadams/stride-gpt/releases | https://github.com/mrwadams/mcp-stride-gpt | https://pypi.org/project/stride-gpt/",
       "recent_updates": [
         {
@@ -382,7 +382,7 @@
       "indicative_cost_usd": "Unverified third-party mention of $4,999 entry price for autonomous testing",
       "pricing_confidence": "Low",
       "best_fit_for": "Teams wanting runtime-validated, exploitability-driven security rather than design-phase threat models",
-      "last_verified": "2026-09-26",
+      "last_verified": "2026-11-02",
       "sources": "https://www.aptori.com/ | https://www.helpnetsecurity.com/2026/04/27/aptori-autonomous-offensive-testing-capabilities/ | https://www.aptori.com/blog/what-is-api-threat-modeling"
     },
     {
@@ -497,7 +497,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Mapping threat models to ATT&CK-based detection coverage; adjacent, not core",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://www.tidalcyber.com/"
     },
     {
@@ -543,7 +543,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "None",
       "best_fit_for": "Engineering orgs adopting AI coding agents that want design-time guardrails and PR enforcement",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://www.devarmor.com/ | https://cybersectools.com/categories/threat-modeling",
       "recent_updates": [
         {
@@ -597,7 +597,7 @@
       "indicative_cost_usd": "Not publicly disclosed",
       "pricing_confidence": "Low",
       "best_fit_for": "Watch-list only until independently validated",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://cybersectools.com/categories/threat-modeling?page=2 | https://www.prime.security/",
       "recent_updates": [
         {
@@ -705,9 +705,16 @@
       "indicative_cost_usd": "Free to several thousand USD per training seat (unverified)",
       "pricing_confidence": "Low",
       "best_fit_for": "Building the human practice and culture before or alongside tooling",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://shostack.org/resources/threat-modeling | https://shostack.org/blog | https://owasp.org/www-project-cumulus/ | https://owasp.org/www-project-cornucopia/",
-      "recent_updates": []
+      "recent_updates": [
+        {
+          "date": "2026-10-20",
+          "type": "Release",
+          "summary": "Shostack + Associates confirmed the second edition of the Threat Modeling book, titled 'Threat Modeling: Designing for Security in an AI World', is open for preorder and 'arrives in February' (year not stated, presumably 2027), and published its OWASP Global AppSec USA schedule: the 3-day 'Threat Modeling Intensive Using AI' training on 2026-11-02 to 2026-11-04 and ThreatModCon sessions on 2026-11-06 to 2026-11-07 in San Francisco. No new tool or pricing was announced (vendor claim).",
+          "source": "https://shostack.org/blog/updated-plans-for-owasp-and-threatmodcon-in-san-francisco/"
+        }
+      ]
     },
     {
       "tool": "OWASP Cornucopia and Elevation of Privilege / Cumulus (card games)",
@@ -760,7 +767,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Threat library for AI-system models and red-team scenario mapping",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://atlas.mitre.org/ | https://github.com/mrwadams/stride-gpt"
     },
     {
@@ -783,7 +790,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Baseline threat checklist for any LLM-integrated feature",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "sources": "https://genai.owasp.org/llm-top-10/ | https://genai.owasp.org/ | https://github.com/OWASP/pytm"
     },
     {
@@ -806,7 +813,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Primary threat catalogue for agentic and MCP-based systems",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "sources": "https://genai.owasp.org/initiatives/agentic-security-initiative/ | https://genai.owasp.org/initiatives/ | https://genai.owasp.org/"
     },
     {
@@ -852,7 +859,7 @@
       "indicative_cost_usd": "$0",
       "pricing_confidence": "High",
       "best_fit_for": "Framing AI threat modeling outputs for risk committees and audits",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://www.nist.gov/itl/ai-risk-management-framework | https://genai.owasp.org/",
       "recent_updates": []
     },
@@ -959,7 +966,7 @@
       "indicative_cost_usd": "$0 plus LLM/agent subscription costs",
       "pricing_confidence": "High",
       "best_fit_for": "Teams already on Claude Code/Cursor wanting a free, methodology-driven threat model and mitigation list per PR before buying a platform",
-      "last_verified": "2026-10-19",
+      "last_verified": "2026-11-02",
       "sources": "https://developers.redhat.com/articles/2026/09/21/ai-threat-modeling-shouldnt-be-a-bottleneck-so-we-open-sourced-ours|https://github.com/RedHatProductSecurity/agentic-threat-modeling",
       "recent_updates": [
         {
