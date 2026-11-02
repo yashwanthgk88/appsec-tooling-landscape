@@ -1,0 +1,57 @@
+Subject: AppSec tooling landscape weekly update 2026-11-02: 0 new tools, 79 updates
+Run: weekly sweep, window 2026-10-19 to 2026-11-02, run started 2026-11-02 07:49 IST
+Headline: 241 tools tracked, 0 new tools, 65 tool rows updated (79 dated updates on 60 rows, plus 5 rows with data corrections only), 176 unchanged (67 checked with no change, 44 could not be verified, 65 not reached this run).
+
+New tools added:
+None
+Note: all seven category sweeps ran. Candidates found were launched or funded before the window (Anthropic OSS Scanner, Cytix, OpenAI Codex Security, projectdiscovery depx, Google k8s-aibom, SBOMix, Clover Security, Dawnguard, Clearly AI, Evoke Security, tmdd), were outside the seven categories (A Security, Asymptote Labs, Data Theorem, Qoder Security, The Obsidia Project), or had no dated launch (OWASP ThreatAtlas, OWASP SAP Threat Modeling Builder). Google k8s-aibom, SBOMix, OWASP ThreatAtlas, Clearly AI, Evoke Security, Clover and Remy are worth adding as regular rows in a later run.
+
+AI maturity changes:
+None
+Wording changed, level unchanged, on five rows: GitHub Advanced Security and GitHub Secret Protection (the 28 Oct public previews now listed under Beta or Preview next to the GA items; AI push protection moved from private to public preview), Black Duck Polaris Platform (Signal Agentic Fix added as early access), Phoenix Security (Purple, Token Hub, Orange MCP and Purple Hook listed as GA, Green remediation PRs as private preview).
+
+Notable updates:
+GitHub, SAST, SCA, Secret Scanning, SBOM and AI BOM and Platforms and ASPM, 2026-10-28: at GitHub Universe five things entered public preview: AI Scan for whole repositories (billed in AI Credits), code scanning for AI applications (prompt injection, excessive agency, data leaks in agent code), a github-security plugin for the Copilot app, an AI classifier that extends push protection beyond known secret patterns, and CodeQL reachability verdicts on Dependabot alerts (JavaScript and TypeScript); public monitoring for enterprises and Actions workflow lockfiles went GA
+Black Duck, SCA, SBOM and AI BOM and Platforms and ASPM, 2026-10-27: Signal Agentic Fix, an AI agent that triages SAST and SCA findings, writes and validates fixes and opens pull requests for human approval; early access, Claude Code integration first (vendor claim)
+GitLab, Security Requirements and Platforms and ASPM, 2026-10-29: Orbit context graph is GA on Premium and Ultimate; Duo agents and outside agents such as Claude Code can query code, pipelines, vulnerabilities and ownership through MCP; priced at $30 in GitLab Credits per user per month per 1,000 pooled queries
+Mend, SCA and SBOM and AI BOM, 2026-11-01: release 26.10.1 adds the Mend Intelligent Agent, a natural-language assistant inside the platform, enabled only for organisations that have signed AI consent
+Endor Labs and FOSSA, SCA, 2026-10-27 and 2026-10-29: AURI Fix for Open Source (private beta) and Context-Aware Remediation both check whether a dependency upgrade would break the application before raising a pull request
+Snyk, SAST and SBOM and AI BOM, 2026-10-26 and 2026-11-02: the Snyk Code October engine update is confirmed live (deeper analysis across eight languages); the Snyk Kubernetes connector reached end of life on 2 Nov (container workload import only, not SBOM or AI-BOM)
+CodeRabbit, SAST, 2026-10-24 to 2026-10-27: $1M of free Deep Scan usage (up to $5,000 per organisation until 8 Nov), cross-repository context across up to 20 linked repositories, and Delta Deep Scans; vendor says CodeRabbit Secure runs on OpenAI GPT 6.1 Sol and GPT Cyber models
+GitGuardian, Secret Scanning, 2026-10-27 and 2026-10-29: Detection Engine 2.175, endpoint machine scan with validity checks for 501 secret types, and GitHub team and repository ownership sync
+ArmorCode, Security Requirements, 2026-10-27: Forge, a family of purpose-built exposure-management models (Assess, Verify, Decide, Resolve) on open base models including NVIDIA Nemotron; early rollout with design partners, no pricing
+Phoenix Security, Platforms and ASPM, 2026-10-19 and 2026-10-29: Purple threat-led hunt with evidence gate, bring-your-own-model Token Hub, Orange MCP server, and Purple Hook, a security gate that runs inside Claude Code sessions
+SentinelOne / Prompt Security, SBOM and AI BOM, 2026-10-21: Singularity Agentic Detection and Response in early access, with an inventory of agents, skills and MCP servers across endpoints, SaaS and cloud
+HCL AppScan on Cloud, SAST, SCA and Secret Scanning, 2026-10-29: static client 8.0.1757 adds a CLI flag to turn on AI SAST, .env and .npmrc secrets scanning and more COBOL file types; AppScan Go! 2.4.0 and the IAST Node.js agent fix the Node2Shell flaw (CVE-2026-111497)
+eMudhra certificate authority compromise, SCA and Secret Scanning, 2026-10-22 to 2026-10-26: security-only releases of Sonatype IQ Server 208.1, Snyk CLI 1.1308.3 and ggshield 1.56.1 stop trusting the affected certificates; upgrade
+Aikido, Cycode and Legit, SAST, SCA, Secret Scanning and Platforms and ASPM, 2026-10-20 to 2026-10-29: Aikido launched external network pentesting by AI agents; Cycode gained ISO/IEC 42001 certification for its AI management system; Legit Security launched a rebranded website with no product or pricing change
+OWASP DefectDojo Pro, Platforms and ASPM, 2026-10-19 to 2026-10-30: v3.4.200 to v3.4.304 add AI Guardrails for Claude Code, OpenVEX export and StackHawk and Qualys connectors; v3.4.300 was pulled for a sign-in regression
+
+Other updates recorded:
+All dated updates per category, including the ones listed above: SAST 15, SCA 16, Secret Scanning 13, SBOM and AI BOM 12, Threat Modeling 1, Security Requirements 4, Platforms and ASPM 18.
+The same news item is counted once on each row it applies to.
+Rows with data corrections only (older or undated facts fixed, no dated entry): SAST 0, SCA 0, Secret Scanning 2, SBOM and AI BOM 1, Threat Modeling 1, Security Requirements 1, Platforms and ASPM 0.
+
+Checked with no change:
+SAST 7, SCA 6, Secret Scanning 7, SBOM and AI BOM 9, Threat Modeling 12, Security Requirements 10, Platforms and ASPM 16
+
+Could not be verified this run:
+44 rows had no dated vendor page that could be read (pages not reachable by the fetch tool, undated or month-level release notes, or stale release pages):
+SAST (4): Jit, Veracode Static Analysis, PMD, Mobb
+SCA (4): OpenText Fortify Software Composition Analysis / Core Open Source Select, Checkmarx SCA, Xygeni, Chainguard
+Secret Scanning (4): OpenText Fortify hardcoded-credential detection, Checkmarx One Secrets Detection and 2ms, TruffleHog, Spectral
+SBOM and AI BOM (10): Checkmarx One SBOM, Anchore Enterprise, agent-bom, Chainloop, sbom-scorecard, bomctl, Microsoft sbom-tool, Kusari, ZeroPath AI-BOM, Scribe Security
+Threat Modeling (10): IriusRisk, SD Elements, LLM prompt-based threat modeling, Microsoft Copilot-based threat modeling, Seezo, Oplane, Threat Composer, OWASP Threat Dragon, Threagile, OWASP pytm
+Security Requirements (6): Jama Connect, Secure Code Warrior, SAMMY, OWASP DSOMM, Seezo, RequirementONE
+Platforms and ASPM (8): Mobb, Pixee, HCL AppScan 360, Apiiro, Jit Open ASPM, Nullify, Sysdig Secure, Cortex Cloud Application Security
+A further 65 rows were not reached before the per-category web search allowance ran out:
+SAST 14, SCA 9, Secret Scanning 3, SBOM and AI BOM 13, Threat Modeling 14, Security Requirements 7, Platforms and ASPM 5.
+They keep their old check date and go first next week. Names are in CHANGELOG.md under 2026-11-02.
+Main reason again this week: the fetch tool only accepted pages that a web search had returned first, and the GitHub API was limited to this repository, so vendor pages and open source release pages each cost a search and the allowance ran out in the long tail.
+
+Where to look:
+Sheet tabs changed: Feature Updates (308 to 375 rows), SAST, SCA, Secret Scanning, SBOM & AI BOM, Threat Modeling, Security Requirements, Platforms & ASPM, AI Capabilities, Scoring Matrix, Executive Summary (research cut-off date only; totals unchanged at 241 tools, AI maturity GA 162, Beta or Preview 11, Marketing claim 15, None 53); New Entrants tab has no new rows
+Commit: https://github.com/yashwanthgk88/appsec-tooling-landscape/commit/07ef4db62ffeaba3839fb74ea337623a6839ad7a
+Workbook: https://github.com/yashwanthgk88/appsec-tooling-landscape/blob/main/AppSec_Tooling_Landscape_2026.xlsx
+
+Email to yashwanth.k@gds.ey.com was not sent: no Gmail or Outlook mail tool is connected in this session.
